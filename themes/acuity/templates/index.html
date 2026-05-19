@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<div class="relative overflow-hidden">
+  <div class="absolute inset-0 hero-grid opacity-30"></div>
+  <div class="navbar relative z-10 mx-auto max-w-7xl px-6 py-6">
+    <div class="navbar-start">
+      <a class="btn btn-ghost text-xl font-extrabold tracking-tight">{{ config.extra.brand }}</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal gap-2 rounded-box glass-panel px-3 py-2 text-sm">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#token">Token</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn btn-primary" href="#token">Join the waitlist</a>
+    </div>
+  </div>
+
+  <main class="relative z-10 mx-auto flex max-w-7xl flex-col gap-24 px-6 pb-24 pt-8 lg:pt-16">
+    <section class="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+      <div class="space-y-8">
+        <div class="badge badge-success badge-outline badge-lg">{{ config.extra.tagline }}</div>
+        <div class="space-y-5">
+          <h1 class="max-w-4xl font-display text-5xl font-black tracking-tight text-white md:text-6xl xl:text-7xl">
+            Fund the next generation of open knowledge infrastructure.
+          </h1>
+          <p class="max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+            {{ config.extra.mission }}
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a class="btn btn-primary btn-lg" href="{{ config.extra.cta_primary_url }}">{{ config.extra.cta_primary }}</a>
+          <a class="btn btn-outline btn-lg" href="{{ config.extra.cta_secondary_url }}">{{ config.extra.cta_secondary }}</a>
+        </div>
+        <div class="alert glass-panel max-w-3xl border-warning/40 text-sm text-slate-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current text-warning" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v4m0 4h.01M10.29 3.86l-7.19 12.46A2 2 0 004.82 19h14.36a2 2 0 001.72-3.01L13.71 3.86a2 2 0 00-3.42 0z" /></svg>
+          <span>{{ config.extra.risk_notice }}</span>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 shadow-glow">
+        <div class="mb-6 flex items-center justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-success">Launch design</p>
+            <h2 class="mt-2 text-2xl font-bold text-white">Vested ICO structure</h2>
+          </div>
+          <div class="badge badge-primary badge-outline">Transparent</div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Contributor treasury</p>
+            <p class="mt-2 text-3xl font-black text-white">40%</p>
+            <p class="mt-3 text-sm text-slate-300">For grants, curation mining, and long-term protocol stewardship.</p>
+          </div>
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Public sale unlock</p>
+            <p class="mt-2 text-3xl font-black text-white">12 mo</p>
+            <p class="mt-3 text-sm text-slate-300">Linear vesting to align token holders with ecosystem adoption.</p>
+          </div>
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Knowledge proofs</p>
+            <p class="mt-2 text-3xl font-black text-white">On-chain</p>
+            <p class="mt-3 text-sm text-slate-300">Revision attestations, moderation actions, and treasury flows stay auditable.</p>
+          </div>
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Governance</p>
+            <p class="mt-2 text-3xl font-black text-white">DAO</p>
+            <p class="mt-3 text-sm text-slate-300">Token-based voting with public forums and staged proposal thresholds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="grid gap-6 lg:grid-cols-3">
+      <div class="rounded-3xl border border-white/10 bg-base-200/70 p-8 lg:col-span-1">
+        <p class="text-sm uppercase tracking-[0.3em] text-success">Why Acuity</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">A verifiable alternative to closed knowledge platforms.</h2>
+      </div>
+      <div class="grid gap-6 lg:col-span-2 md:grid-cols-2">
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Provenance by default</h3>
+          <p class="mt-3 text-slate-300">Every revision can be signed, traced, and reviewed with transparent moderation records.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Aligned incentives</h3>
+          <p class="mt-3 text-slate-300">Contributors, editors, and reviewers earn for improving accuracy, depth, and maintenance.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Community ownership</h3>
+          <p class="mt-3 text-slate-300">Protocol rules, grants, and treasury use are governed by an open token-holder process.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Resilient distribution</h3>
+          <p class="mt-3 text-slate-300">Static mirrors, open data exports, and decentralized storage reduce platform capture risk.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="token" class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm uppercase tracking-[0.3em] text-secondary">Token overview</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">A vesting-first launch built for long-term participation.</h2>
+        <ul class="mt-6 space-y-4 text-slate-300">
+          <li><span class="font-semibold text-white">Public sale:</span> allocation released on a linear vesting schedule after network milestones.</li>
+          <li><span class="font-semibold text-white">Treasury:</span> reserved for protocol operations, ecosystem grants, and contributor incentives.</li>
+          <li><span class="font-semibold text-white">Governance rights:</span> proposal, delegation, and voting powers attached to the native token.</li>
+          <li><span class="font-semibold text-white">Safeguards:</span> transfer restrictions and transparent unlock calendars to reduce short-term dumping pressure.</li>
+        </ul>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="stat rounded-3xl bg-base-200/80">
+          <div class="stat-title text-slate-400">Sale structure</div>
+          <div class="stat-value text-primary">Vested</div>
+          <div class="stat-desc text-slate-300">Milestone-based participation windows</div>
+        </div>
+        <div class="stat rounded-3xl bg-base-200/80">
+          <div class="stat-title text-slate-400">Knowledge rewards</div>
+          <div class="stat-value text-secondary">Editor</div>
+          <div class="stat-desc text-slate-300">Curators and maintainers earn over time</div>
+        </div>
+        <div class="stat rounded-3xl bg-base-200/80">
+          <div class="stat-title text-slate-400">Treasury visibility</div>
+          <div class="stat-value text-accent">Public</div>
+          <div class="stat-desc text-slate-300">Wallets, proposals, and grants stay auditable</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="space-y-6">
+      <div class="max-w-3xl">
+        <p class="text-sm uppercase tracking-[0.3em] text-accent">Roadmap</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">Three phases from protocol design to public knowledge network.</h2>
+      </div>
+      <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+        <li>
+          <div class="timeline-middle text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882L9.75 11.29 8.28 9.82a.75.75 0 10-1.06 1.06l2.06 2.06a.75.75 0 001.137-.08l3.44-4.67z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-start mb-10 rounded-3xl bg-base-200/80 p-6 md:text-end">
+            <time class="font-mono text-sm text-slate-400">Phase 01</time>
+            <div class="text-lg font-black text-white">Protocol specification</div>
+            Publish governance, curation, attribution, and treasury mechanics for public review.
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-middle text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882L9.75 11.29 8.28 9.82a.75.75 0 10-1.06 1.06l2.06 2.06a.75.75 0 001.137-.08l3.44-4.67z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-end mb-10 rounded-3xl bg-base-200/80 p-6">
+            <time class="font-mono text-sm text-slate-400">Phase 02</time>
+            <div class="text-lg font-black text-white">Vested token launch</div>
+            Open the sale with transparent caps, lockups, disclosures, and public treasury reporting.
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-middle text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882L9.75 11.29 8.28 9.82a.75.75 0 10-1.06 1.06l2.06 2.06a.75.75 0 001.137-.08l3.44-4.67z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-start mb-10 rounded-3xl bg-base-200/80 p-6 md:text-end">
+            <time class="font-mono text-sm text-slate-400">Phase 03</time>
+            <div class="text-lg font-black text-white">Open network activation</div>
+            Launch contributor rewards, governance proposals, and public article mirrors across the network.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="faq" class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+      <div>
+        <p class="text-sm uppercase tracking-[0.3em] text-info">FAQ</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">Questions future contributors and participants will ask.</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="collapse collapse-plus glass-panel rounded-2xl">
+          <input type="radio" name="faq-accordion" checked="checked" />
+          <div class="collapse-title text-lg font-semibold text-white">Why use a vested ICO instead of an immediate unlock sale?</div>
+          <div class="collapse-content text-slate-300">A vesting schedule can better align token access with product milestones, contributor growth, and long-term governance participation.</div>
+        </div>
+        <div class="collapse collapse-plus glass-panel rounded-2xl">
+          <input type="radio" name="faq-accordion" />
+          <div class="collapse-title text-lg font-semibold text-white">How does Acuity differ from a normal wiki?</div>
+          <div class="collapse-content text-slate-300">Acuity emphasizes verifiable provenance, public governance, contributor incentives, and open protocol infrastructure rather than a single centralized platform.</div>
+        </div>
+        <div class="collapse collapse-plus glass-panel rounded-2xl">
+          <input type="radio" name="faq-accordion" />
+          <div class="collapse-title text-lg font-semibold text-white">What should be disclosed before a launch?</div>
+          <div class="collapse-content text-slate-300">Token supply, lockups, governance rights, treasury controls, jurisdictional restrictions, and technology risks should all be communicated clearly before participation.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+{% endblock content %}

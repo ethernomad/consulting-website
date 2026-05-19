@@ -1,8 +1,11 @@
 # The URL the site will be built for
 base_url = "https://acuity.wiki"
+title = "Acuity"
+description = "A vested token launch for a decentralized, verifiable encyclopedia protocol."
+theme = "acuity"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
@@ -13,4 +16,11 @@ build_search_index = true
 theme = "catppuccin-mocha"
 
 [extra]
-# Put all your custom variables here
+brand = "Acuity"
+tagline = "A vested token launch for a decentralized Wikipedia alternative"
+mission = "Acuity funds a community-owned knowledge protocol where articles, revisions, and governance stay transparent, attributable, and censorship-resistant."
+cta_primary = "Read the token overview"
+cta_primary_url = "#token"
+cta_secondary = "Explore the roadmap"
+cta_secondary_url = "#roadmap"
+risk_notice = "Cryptoassets are volatile and participation in any token sale involves significant risk. Nothing on this site is investment, legal, or tax advice."

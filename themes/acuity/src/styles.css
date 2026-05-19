@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@source "../templates/**/*.html";
+@source "../../../content/**/*.{md,html}";
+@source "../../../templates/**/*.html";
+
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "acuity";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-primary: #22c55e;
+  --color-secondary: #60a5fa;
+  --color-accent: #a78bfa;
+  --color-neutral: #111827;
+  --color-base-100: #020617;
+  --color-base-200: #0f172a;
+  --color-base-300: #1e293b;
+  --color-base-content: #e2e8f0;
+  --color-info: #38bdf8;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
+
+@theme {
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --shadow-glow: 0 0 0 1px rgb(34 197 94 / 0.2), 0 20px 80px rgb(34 197 94 / 0.2);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-base-100);
+    color: var(--color-base-content);
+    background-image:
+      radial-gradient(circle at top, rgb(34 197 94 / 0.10), transparent 32%),
+      linear-gradient(180deg, rgba(2, 6, 23, 1) 0%, rgba(2, 6, 23, 0.98) 45%, rgba(15, 23, 42, 1) 100%);
+  }
+}
+
+@utility hero-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgb(148 163 184 / 0.15) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+@utility glass-panel {
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.05);
+  backdrop-filter: blur(12px);
+}
+
+@utility metric-card {
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-glow);
+}

@@ -1,0 +1,11 @@
+{
+  "name": "acuity-wiki",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./themes/acuity/src/styles.css -o ./themes/acuity/static/app.css && lightningcss ./themes/acuity/static/app.css -o ./themes/acuity/static/app.css --minify",
+    "dev:css": "tailwindcss -i ./themes/acuity/src/styles.css -o ./themes/acuity/static/app.css --watch"
+  },
+  "devDependencies": {
+    "daisyui": "^5.5.20"
+  }
+}

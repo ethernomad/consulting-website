@@ -1,0 +1,15 @@
+# Zola build output
+/public/
+
+# Generated theme assets
+/themes/acuity/static/app.css
+
+# Node / pnpm dependencies
+/node_modules/
+
+# Package-manager artifacts we do not use
+/package-lock.json
+
+# OS/editor junk
+.DS_Store
+Thumbs.db

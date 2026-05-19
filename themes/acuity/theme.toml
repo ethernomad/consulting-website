@@ -1,0 +1,10 @@
+name = "Acuity"
+description = "A Tailwind + DaisyUI landing-page theme for crypto and protocol launches."
+license = "MIT"
+homepage = "https://acuity.wiki"
+min_version = "0.19.2"
+demo = "https://acuity.wiki"
+
+[author]
+name = "Acuity"
+homepage = "https://acuity.wiki"
