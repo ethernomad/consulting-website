@@ -3,12 +3,606 @@
 {% block title %}{{ section.title }} · {{ config.title }}{% endblock title %}
 
 {% block content %}
-<main class="mx-auto max-w-4xl px-6 py-16">
-  <article class="prose prose-invert max-w-none">
-    {% if section.title %}
-    <h1>{{ section.title }}</h1>
-    {% endif %}
-    {{ section.content | safe }}
-  </article>
-</main>
+<div class="relative overflow-hidden">
+  <div class="absolute inset-0 hero-grid opacity-30"></div>
+  <div class="navbar relative z-10 mx-auto max-w-7xl px-6 py-6">
+    <div class="navbar-start">
+      <a class="btn btn-ghost text-xl font-extrabold tracking-tight">{{ config.extra.brand }}</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal gap-2 rounded-box glass-panel px-3 py-2 text-sm">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#wikipedia">Wikipedia</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#stack">Software stack</a></li>
+        <li><a href="#incentives">Incentives</a></li>
+        <li><a href="#token">Token</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn btn-primary" href="#token">Join the waitlist</a>
+    </div>
+  </div>
+
+  <main class="relative z-10 mx-auto flex max-w-7xl flex-col gap-24 px-6 pb-24 pt-8 lg:pt-16">
+    <section class="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+      <div class="space-y-8">
+        <div class="badge badge-success badge-outline badge-lg">{{ config.extra.tagline }}</div>
+        <div class="space-y-5">
+          <h1 class="max-w-4xl font-display text-5xl font-black tracking-tight text-white md:text-6xl xl:text-7xl">
+            Fund the next generation of open knowledge infrastructure.
+          </h1>
+          <p class="max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+            {{ config.extra.mission }}
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a class="btn btn-primary btn-lg" href="{{ config.extra.cta_primary_url }}">{{ config.extra.cta_primary }}</a>
+          <a class="btn btn-outline btn-lg" href="{{ config.extra.cta_secondary_url }}">{{ config.extra.cta_secondary }}</a>
+        </div>
+        <div class="alert glass-panel max-w-3xl border-warning/40 text-sm text-slate-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current text-warning" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v4m0 4h.01M10.29 3.86l-7.19 12.46A2 2 0 004.82 19h14.36a2 2 0 001.72-3.01L13.71 3.86a2 2 0 00-3.42 0z" /></svg>
+          <span>{{ config.extra.risk_notice }}</span>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 shadow-glow">
+        <div class="mb-6 flex items-center justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-success">Launch design</p>
+            <h2 class="mt-2 text-2xl font-bold text-white">Vested ICO structure</h2>
+          </div>
+          <div class="badge badge-primary badge-outline">Transparent</div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Contributor treasury</p>
+            <p class="mt-2 text-3xl font-black text-white">40%</p>
+            <p class="mt-3 text-sm text-slate-300">For grants, curation mining, and long-term protocol stewardship.</p>
+          </div>
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Public sale unlock</p>
+            <p class="mt-2 text-3xl font-black text-white">12 mo</p>
+            <p class="mt-3 text-sm text-slate-300">Linear vesting to align token holders with ecosystem adoption.</p>
+          </div>
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Knowledge proofs</p>
+            <p class="mt-2 text-3xl font-black text-white">On-chain</p>
+            <p class="mt-3 text-sm text-slate-300">Revision attestations, moderation actions, and treasury flows stay auditable.</p>
+          </div>
+          <div class="metric-card">
+            <p class="text-sm text-slate-400">Governance</p>
+            <p class="mt-2 text-3xl font-black text-white">DAO</p>
+            <p class="mt-3 text-sm text-slate-300">Token-based voting with public forums and staged proposal thresholds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="grid gap-6 lg:grid-cols-3">
+      <div class="rounded-3xl border border-white/10 bg-base-200/70 p-8 lg:col-span-1">
+        <p class="text-sm uppercase tracking-[0.3em] text-success">Why Acuity</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">A verifiable alternative to closed knowledge platforms.</h2>
+      </div>
+      <div class="grid gap-6 lg:col-span-2 md:grid-cols-2">
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Provenance by default</h3>
+          <p class="mt-3 text-slate-300">Every revision can be signed, traced, and reviewed with transparent moderation records.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Aligned incentives</h3>
+          <p class="mt-3 text-slate-300">Contributors, editors, and reviewers earn for improving accuracy, depth, and maintenance.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Community ownership</h3>
+          <p class="mt-3 text-slate-300">Protocol rules, grants, and treasury use are governed by an open token-holder process.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Resilient distribution</h3>
+          <p class="mt-3 text-slate-300">Static mirrors, open data exports, and decentralized storage reduce platform capture risk.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="wikipedia" class="space-y-6">
+      <div class="max-w-3xl">
+        <p class="text-sm uppercase tracking-[0.3em] text-warning">Why legacy wikis fall short</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">The dominant wiki model has structural limits.</h2>
+        <p class="mt-3 text-slate-300">Acuity is designed around the weaknesses of centralized encyclopedias: rigid neutrality norms, missing provenance, fragile hosting, and narrow control over who can participate and innovate.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Neutrality is limited in practice</h3>
+          <p class="mt-3 text-slate-300">Wikipedia often presents itself as an authority of truth instead of acknowledging that many topics contain a range of legitimate interpretations. Views outside the prevailing Overton window can struggle to persist, while revision wars and alternative forks are weak mechanisms for reaching durable consensus.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Notability rules leave real gaps</h3>
+          <p class="mt-3 text-slate-300">Many worthwhile subjects are excluded because they are too small, too local, or insufficiently covered by established institutions, leaving valid knowledge out of the public record.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Knowledge stays downstream of existing sources</h3>
+          <p class="mt-3 text-slate-300">Wikipedia depends on already-published material. It organizes knowledge, but does not provide a framework for original research, direct evidence trails, or new knowledge formation inside the network itself.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Trust is centralized</h3>
+          <p class="mt-3 text-slate-300">The system ultimately depends on databases and infrastructure controlled by a single foundation. There is no collaborative hosting model at the protocol level, no cryptographic proof of who did what when, and no shared base layer for independent operators.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Availability and censorship remain risks</h3>
+          <p class="mt-3 text-slate-300">A centralized service can go down, degrade, or become inaccessible. The same chokepoints also make the platform more susceptible to legal, political, and institutional censorship pressure.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Innovation is permissioned at the platform layer</h3>
+          <p class="mt-3 text-slate-300">The backend is not fully decoupled from the frontend, so only the foundation has complete ability to innovate across the full system. Everyone else builds at the edges rather than on equal footing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="space-y-10">
+      <div class="max-w-4xl">
+        <p class="text-sm uppercase tracking-[0.3em] text-secondary">How Acuity works</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">One article does not have to mean one official version.</h2>
+        <p class="mt-3 text-lg leading-8 text-slate-300">Acuity Wiki treats knowledge more like open-source software than a single locked page. Articles are namespaced by author, edits to someone else's work create forks, and links between articles help the network discover which branches are most trusted.</p>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-2">
+        <article class="glass-panel rounded-3xl p-3">
+          <div class="h-full rounded-[1.25rem] border border-warning/20 bg-base-200/60 p-8">
+            <p class="text-sm uppercase tracking-[0.25em] text-warning">Wikipedia</p>
+            <h3 class="mt-3 text-2xl font-semibold text-white">One page competing for control</h3>
+            <ul class="mt-6 space-y-4 text-slate-300">
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span><span>One canonical article tries to represent the final consensus.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span><span>Editors push changes into the same page and fight over what stays.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span><span>Disagreement is usually settled by reversion, policy, or administrator process.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span><span>Links point to one approved article rather than competing interpretations.</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="glass-panel rounded-3xl p-3">
+          <div class="h-full rounded-[1.25rem] border border-success/20 bg-base-200/60 p-8">
+            <p class="text-sm uppercase tracking-[0.25em] text-success">Acuity Wiki</p>
+            <h3 class="mt-3 text-2xl font-semibold text-white">A network of article branches</h3>
+            <ul class="mt-6 space-y-4 text-slate-300">
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-success"></span><span>Every article lives in an author namespace such as <span class="font-mono text-white">@alice/Quantum_Mechanics</span>.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-success"></span><span>Editing someone else's article creates your fork, like a GitHub project.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-success"></span><span>You can merge upstream changes, propose improvements back upstream, or maintain a divergent branch.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-success"></span><span>Other articles choose which fork to link to, creating visible trust and popularity signals.</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-4 lg:p-6">
+        <div class="rounded-[1.75rem] border border-white/10 bg-base-200/60 p-6 lg:p-8">
+          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div class="max-w-2xl">
+              <p class="text-sm uppercase tracking-[0.25em] text-accent">Visual model</p>
+              <h3 class="mt-2 text-2xl font-bold text-white">Articles fork, discuss, merge, and earn trust through links.</h3>
+            </div>
+            <div class="badge badge-outline badge-accent">Links act like votes of confidence</div>
+          </div>
+
+          <div class="mt-8 grid gap-6 xl:grid-cols-[1.25fr_0.85fr]">
+            <div class="glass-panel rounded-3xl p-5 lg:p-6">
+              <div class="rounded-2xl border border-success/30 bg-success/10 p-5 shadow-glow">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.2em] text-success">Upstream article</p>
+                    <p class="mt-2 font-mono text-lg font-bold text-white">@alice/Quantum_Mechanics</p>
+                  </div>
+                  <div class="badge badge-success badge-outline">Original article</div>
+                </div>
+              </div>
+
+              <div class="mx-auto my-3 h-10 w-px bg-gradient-to-b from-success via-info to-transparent"></div>
+
+              <div class="grid gap-6 lg:grid-cols-2">
+                <div class="space-y-4 rounded-2xl border border-info/30 bg-info/10 p-5">
+                  <div class="flex items-center justify-between gap-3">
+                    <div>
+                      <p class="text-sm uppercase tracking-[0.2em] text-info">Fork</p>
+                      <p class="mt-2 font-mono font-semibold text-white">@bob/Quantum_Mechanics</p>
+                    </div>
+                    <div class="badge badge-info badge-outline">Active fork</div>
+                  </div>
+                  <p class="text-sm leading-7 text-slate-300">Bob rewrites several sections and proposes corrections back to Alice.</p>
+                  <div class="mx-auto h-8 w-px bg-gradient-to-b from-info via-warning to-transparent"></div>
+                  <div class="rounded-xl border border-warning/30 bg-warning/10 p-4 text-sm leading-7 text-slate-200">
+                    <p class="font-semibold text-white">Pull request discussion</p>
+                    <p class="mt-1">Editors debate whether Bob's evidence is correct and should be merged upstream.</p>
+                  </div>
+                  <div class="rounded-xl border border-success/30 bg-success/10 p-4 text-sm leading-7 text-slate-200">
+                    <p class="font-semibold text-white">Merge path</p>
+                    <p class="mt-1">Good changes can flow back into <span class="font-mono text-white">@alice/...</span> without deleting Bob's branch.</p>
+                  </div>
+                </div>
+
+                <div class="space-y-4 rounded-2xl border border-accent/30 bg-accent/10 p-5">
+                  <div class="flex items-center justify-between gap-3">
+                    <div>
+                      <p class="text-sm uppercase tracking-[0.2em] text-accent">Fork</p>
+                      <p class="mt-2 font-mono font-semibold text-white">@carol/Quantum_Mechanics</p>
+                    </div>
+                    <div class="badge badge-accent badge-outline">Divergent fork</div>
+                  </div>
+                  <p class="text-sm leading-7 text-slate-300">Carol reaches different conclusions and keeps maintaining her own article lineage.</p>
+                  <div class="mx-auto h-8 w-px bg-gradient-to-b from-accent via-white/40 to-transparent"></div>
+                  <div class="rounded-xl border border-white/10 bg-base-200/80 p-4 text-sm leading-7 text-slate-200">
+                    <p class="font-semibold text-white">No forced resolution</p>
+                    <p class="mt-1">If participants cannot agree, both branches remain visible instead of one being erased.</p>
+                  </div>
+                  <div class="rounded-xl border border-white/10 bg-base-200/80 p-4 text-sm leading-7 text-slate-200">
+                    <p class="font-semibold text-white">Maintenance cost</p>
+                    <p class="mt-1">Because divergent branches take work to maintain, most activity tends to consolidate around a smaller set of forks.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel rounded-3xl p-5 lg:p-6">
+              <div class="rounded-2xl border border-white/10 bg-base-200/70 p-5">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.25em] text-primary">Link graph</p>
+                  <h4 class="mt-2 text-xl font-semibold text-white">Other authors choose which version to cite.</h4>
+                  <p class="mt-3 text-sm leading-7 text-slate-300">Those links are not neutral plumbing. They reveal which branch each author considers credible enough to build on.</p>
+                </div>
+                <div class="mt-5 space-y-3 text-sm text-slate-300">
+                  <div class="rounded-xl border border-success/30 bg-success/10 p-4">
+                    <p class="font-mono text-white">@dana/Energy_Policy → @alice/Quantum_Mechanics</p>
+                  </div>
+                  <div class="rounded-xl border border-info/30 bg-info/10 p-4">
+                    <p class="font-mono text-white">@eli/Interpretations_of_QM → @bob/Quantum_Mechanics</p>
+                  </div>
+                  <div class="rounded-xl border border-success/30 bg-success/10 p-4">
+                    <p class="font-mono text-white">@faye/Science → @alice/Quantum_Mechanics</p>
+                  </div>
+                  <div class="rounded-xl border border-accent/30 bg-accent/10 p-4">
+                    <p class="font-mono text-white">@grace/Knowledge_Disputes → @carol/Quantum_Mechanics</p>
+                  </div>
+                </div>
+                <div class="mt-5 grid gap-3 sm:grid-cols-3 xl:grid-cols-1 2xl:grid-cols-3">
+                  <div class="rounded-xl border border-success/30 bg-success/10 p-4 text-center">
+                    <p class="text-xs uppercase tracking-[0.2em] text-success">Most linked</p>
+                    <p class="mt-2 font-mono text-sm text-white">@alice/...</p>
+                  </div>
+                  <div class="rounded-xl border border-info/30 bg-info/10 p-4 text-center">
+                    <p class="text-xs uppercase tracking-[0.2em] text-info">Rising fork</p>
+                    <p class="mt-2 font-mono text-sm text-white">@bob/...</p>
+                  </div>
+                  <div class="rounded-xl border border-accent/30 bg-accent/10 p-4 text-center">
+                    <p class="text-xs uppercase tracking-[0.2em] text-accent">Minority fork</p>
+                    <p class="mt-2 font-mono text-sm text-white">@carol/...</p>
+                  </div>
+                </div>
+                <p class="mt-5 text-sm leading-7 text-slate-400">The result is a living graph of diverging and converging articles. Link analysis can then identify which branches are most widely trusted across the network.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-4 lg:p-6">
+        <div class="rounded-[1.75rem] border border-white/10 bg-base-200/60 p-6 lg:p-8">
+          <div class="mb-6 max-w-3xl">
+            <p class="text-sm uppercase tracking-[0.25em] text-primary">From edit to trust</p>
+            <h3 class="mt-2 text-2xl font-bold text-white">The lifecycle of an Acuity article branch.</h3>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+            <div class="rounded-2xl border border-white/10 bg-base-100/50 p-5">
+              <p class="text-sm uppercase tracking-[0.2em] text-success">1. Write</p>
+              <p class="mt-2 font-semibold text-white">Publish in your namespace</p>
+              <p class="mt-2 text-sm leading-7 text-slate-300">Create an article such as <span class="font-mono text-white">@author/article</span>.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-base-100/50 p-5">
+              <p class="text-sm uppercase tracking-[0.2em] text-info">2. Fork</p>
+              <p class="mt-2 font-semibold text-white">Edit by creating your version</p>
+              <p class="mt-2 text-sm leading-7 text-slate-300">Improving someone else's page creates a fork you control.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-base-100/50 p-5">
+              <p class="text-sm uppercase tracking-[0.2em] text-warning">3. Discuss</p>
+              <p class="mt-2 font-semibold text-white">Propose changes upstream</p>
+              <p class="mt-2 text-sm leading-7 text-slate-300">Pull request discussion focuses on the correctness of the changes.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-base-100/50 p-5">
+              <p class="text-sm uppercase tracking-[0.2em] text-accent">4. Merge or diverge</p>
+              <p class="mt-2 font-semibold text-white">Consensus is optional</p>
+              <p class="mt-2 text-sm leading-7 text-slate-300">Agreement merges branches; disagreement leaves them separate.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-base-100/50 p-5">
+              <p class="text-sm uppercase tracking-[0.2em] text-primary">5. Rank</p>
+              <p class="mt-2 font-semibold text-white">The network reveals trust</p>
+              <p class="mt-2 text-sm leading-7 text-slate-300">Links and graph analysis surface the forks most endorsed by other authors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="space-y-6">
+      <div class="max-w-3xl">
+        <p class="text-sm uppercase tracking-[0.3em] text-info">Software stack</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">A modular stack for verifiable, scalable wiki infrastructure.</h2>
+        <p class="mt-3 text-slate-300">Acuity Wiki combines Polkadot security, a dedicated parachain, on-chain content events, decentralized storage, and a cross-platform client to create an open knowledge network with verifiable provenance.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Polkadot Relay Chain</h3>
+          <ul class="mt-4 space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-info"></span>
+              <span>Provides shared security and direct access to Hydration DEX.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Acuity Wiki Parachain</h3>
+          <ul class="mt-4 space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-primary"></span>
+              <span>All writes to the wiki are transactions on this chain.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-primary"></span>
+              <span>Provides massive transaction capacity and low fees.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-primary"></span>
+              <span>Native coin <span class="font-mono text-white">ACW</span> is tradeable on Hydration.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Content Pallet</h3>
+          <ul class="mt-4 space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-success"></span>
+              <span>Lightweight Substrate pallet.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-success"></span>
+              <span>Emits an IPFS CID for each article revision.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-success"></span>
+              <span>Already written by Jonathan Brown.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Acuity Index</h3>
+          <ul class="mt-4 space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span>
+              <span>A Polkadot event index.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span>
+              <span>Indexes events from the Content Pallet.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span>
+              <span>Query results contain finality proofs.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-warning"></span>
+              <span>
+                Funded by two
+                <a class="link link-hover text-white" href="https://github.com/w3f/Grants-Program/blob/master/applications/hybrid.md">Web3 Foundation grants</a>,
+                <a class="link link-hover text-white" href="https://github.com/w3f/Grants-Program/blob/master/applications/hybrid2.md">including a second follow-on grant</a>,
+                and a
+                <a class="link link-hover text-white" href="https://kusama.subsquare.io/referenda/534">Kusama Treasury referendum</a>.
+              </span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">IPFS</h3>
+          <ul class="mt-4 space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-accent"></span>
+              <span>Provides a shared filesystem for users to share their content.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-accent"></span>
+              <span>Content can be pinned by dedicated services subscribed to the Content Pallet.</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Acuity Wiki Dapp</h3>
+          <ul class="mt-4 space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"></span>
+              <span>Written in the Dioxus Rust framework.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"></span>
+              <span>Targets Web, macOS, Windows, iOS, and Android.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"></span>
+              <span>Includes a light client to verify event proofs.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"></span>
+              <span>Forked from the existing <span class="font-mono text-white">acuity-dioxus</span> codebase.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="incentives" class="space-y-6">
+      <div class="max-w-3xl">
+        <p class="text-sm uppercase tracking-[0.3em] text-primary">Why incentives are misaligned</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">Wikipedia is not built to discover reality.</h2>
+        <p class="mt-3 text-slate-300">Its incentive structure is strongest at preserving acceptable consensus, citing approved institutions, and resolving disputes procedurally. It is much weaker at uncovering overlooked truths, integrating direct evidence, or rewarding contributors for being right before a view becomes mainstream.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Consensus is rewarded over truth</h3>
+          <p class="mt-3 text-slate-300">Editors are rewarded for producing text that survives community review and policy enforcement, not for discovering what is most accurate. What remains is often what is most acceptable to the editing culture.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Original discovery is structurally blocked</h3>
+          <p class="mt-3 text-slate-300">Because original research is discouraged, contributors cannot use the platform to test claims, surface new evidence, or build knowledge from first principles. The system follows reality only after others have already documented it.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Institutional approval outranks independent judgment</h3>
+          <p class="mt-3 text-slate-300">Claims gain legitimacy mainly when they are backed by recognized sources. This gives existing institutions disproportionate power even when they are incomplete, biased, slow to update, or simply wrong.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Conflict resolution replaces epistemic progress</h3>
+          <p class="mt-3 text-slate-300">When editors disagree, the platform tends to reward compromise, reversion, and policy argument rather than rigorous methods for determining what is true. Debate becomes procedural instead of truth-seeking.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Accurate minority views struggle to survive</h3>
+          <p class="mt-3 text-slate-300">Views outside the mainstream are often filtered out unless they already have broad recognition. That makes it difficult for emerging, heterodox, or unpopular truths to gain durable representation.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">There is no reward for being right early</h3>
+          <p class="mt-3 text-slate-300">The system offers little incentive to investigate overlooked topics or identify truths before they are socially accepted. Contributors benefit more from maintaining acceptable pages than from pushing knowledge forward.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="token" class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm uppercase tracking-[0.3em] text-secondary">Token overview</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">A vesting-first launch built for long-term participation.</h2>
+        <ul class="mt-6 space-y-4 text-slate-300">
+          <li><span class="font-semibold text-white">Public sale:</span> allocation released on a linear vesting schedule after network milestones.</li>
+          <li><span class="font-semibold text-white">Treasury:</span> reserved for protocol operations, ecosystem grants, and contributor incentives.</li>
+          <li><span class="font-semibold text-white">Governance rights:</span> proposal, delegation, and voting powers attached to the native token.</li>
+          <li><span class="font-semibold text-white">Safeguards:</span> transfer restrictions and transparent unlock calendars to reduce short-term dumping pressure.</li>
+        </ul>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="stat rounded-3xl bg-base-200/80">
+          <div class="stat-title text-slate-400">Sale structure</div>
+          <div class="stat-value text-primary">Vested</div>
+          <div class="stat-desc text-slate-300">Milestone-based participation windows</div>
+        </div>
+        <div class="stat rounded-3xl bg-base-200/80">
+          <div class="stat-title text-slate-400">Knowledge rewards</div>
+          <div class="stat-value text-secondary">Editor</div>
+          <div class="stat-desc text-slate-300">Curators and maintainers earn over time</div>
+        </div>
+        <div class="stat rounded-3xl bg-base-200/80">
+          <div class="stat-title text-slate-400">Treasury visibility</div>
+          <div class="stat-value text-accent">Public</div>
+          <div class="stat-desc text-slate-300">Wallets, proposals, and grants stay auditable</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="marketing" class="space-y-6">
+      <div class="max-w-3xl">
+        <p class="text-sm uppercase tracking-[0.3em] text-success">Marketing</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">Growing awareness through demos, calls, and in-person events.</h2>
+        <p class="mt-3 text-slate-300">Acuity Wiki plans to build momentum with regular online updates and real-world community outreach.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Weekly video call</h3>
+          <p class="mt-3 text-slate-300">A weekly video call for anyone interested in the project to ask questions, follow progress, and help shape the direction of Acuity Wiki.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Regular screencasts</h3>
+          <p class="mt-3 text-slate-300">Frequent screencast videos will showcase the latest Acuity Wiki dapp functionality, making development visible and easy to follow.</p>
+        </article>
+        <article class="glass-panel rounded-3xl p-8">
+          <h3 class="text-xl font-semibold text-white">Acuity Wiki on tour</h3>
+          <p class="mt-3 text-slate-300">Previous Acuity events have been held in Ho Chi Minh City, Bangkok, Chiang Mai, Kuala Lumpur, Bali, and San Francisco, with more in-person meetups planned.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="space-y-6">
+      <div class="max-w-3xl">
+        <p class="text-sm uppercase tracking-[0.3em] text-accent">Roadmap</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">Four one-month phases from prototype to trading.</h2>
+      </div>
+      <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+        <li>
+          <div class="timeline-middle text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882L9.75 11.29 8.28 9.82a.75.75 0 10-1.06 1.06l2.06 2.06a.75.75 0 001.137-.08l3.44-4.67z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-start mb-10 rounded-3xl bg-base-200/80 p-6 md:text-end">
+            <time class="font-mono text-sm text-slate-400">Phase 1 ~ 1 month</time>
+            <div class="text-lg font-black text-white">Pre-launch development</div>
+            Develop prototype Acuity Wiki Dapp on testnet.
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-middle text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882L9.75 11.29 8.28 9.82a.75.75 0 10-1.06 1.06l2.06 2.06a.75.75 0 001.137-.08l3.44-4.67z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-end mb-10 rounded-3xl bg-base-200/80 p-6">
+            <time class="font-mono text-sm text-slate-400">Phase 2 ~ 1 month</time>
+            <div class="text-lg font-black text-white">Launch ACW chain</div>
+            2000 day vesting begins. Testing of Acuity Wiki dapp begins.
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-middle text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882L9.75 11.29 8.28 9.82a.75.75 0 10-1.06 1.06l2.06 2.06a.75.75 0 001.137-.08l3.44-4.67z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-start mb-10 rounded-3xl bg-base-200/80 p-6 md:text-end">
+            <time class="font-mono text-sm text-slate-400">Phase 3 ~ 1 month</time>
+            <div class="text-lg font-black text-white">Become a live Polkadot parachain</div>
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-middle text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882L9.75 11.29 8.28 9.82a.75.75 0 10-1.06 1.06l2.06 2.06a.75.75 0 001.137-.08l3.44-4.67z" clip-rule="evenodd" /></svg>
+          </div>
+          <div class="timeline-end mb-10 rounded-3xl bg-base-200/80 p-6">
+            <time class="font-mono text-sm text-slate-400">Phase 4 ~ 1 month</time>
+            <div class="text-lg font-black text-white">Start trading ACW on Hydration</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="faq" class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+      <div>
+        <p class="text-sm uppercase tracking-[0.3em] text-info">FAQ</p>
+        <h2 class="mt-4 text-3xl font-bold text-white">Questions future contributors and participants will ask.</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="collapse collapse-plus glass-panel rounded-2xl">
+          <input type="radio" name="faq-accordion" checked="checked" />
+          <div class="collapse-title text-lg font-semibold text-white">Why use a vested ICO instead of an immediate unlock sale?</div>
+          <div class="collapse-content text-slate-300">A vesting schedule can better align token access with product milestones, contributor growth, and long-term governance participation.</div>
+        </div>
+        <div class="collapse collapse-plus glass-panel rounded-2xl">
+          <input type="radio" name="faq-accordion" />
+          <div class="collapse-title text-lg font-semibold text-white">How does Acuity differ from a normal wiki?</div>
+          <div class="collapse-content text-slate-300">Acuity emphasizes verifiable provenance, public governance, contributor incentives, and open protocol infrastructure rather than a single centralized platform.</div>
+        </div>
+        <div class="collapse collapse-plus glass-panel rounded-2xl">
+          <input type="radio" name="faq-accordion" />
+          <div class="collapse-title text-lg font-semibold text-white">What should be disclosed before a launch?</div>
+          <div class="collapse-content text-slate-300">Token supply, lockups, governance rights, treasury controls, jurisdictional restrictions, and technology risks should all be communicated clearly before participation.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
 {% endblock content %}
