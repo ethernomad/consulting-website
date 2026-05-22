@@ -12,6 +12,12 @@
         <p class="text-lg text-slate-300">{{ page.description }}</p>
       {% endif %}
     </div>
+
+    {% if page.content %}
+      <div class="mt-10 max-w-3xl text-lg leading-8 text-slate-300">
+        {{ page.content | safe }}
+      </div>
+    {% endif %}
   </section>
 </main>
 {% endblock content %}
