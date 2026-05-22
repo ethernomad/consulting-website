@@ -2,8 +2,8 @@
   "name": "acuity-wiki",
   "private": true,
   "scripts": {
-    "build:css": "tailwindcss -i ./themes/acuity/src/styles.css -o ./themes/acuity/static/app.css && lightningcss ./themes/acuity/static/app.css -o ./themes/acuity/static/app.css --minify",
-    "dev:css": "tailwindcss -i ./themes/acuity/src/styles.css -o ./themes/acuity/static/app.css --watch"
+    "build:css": "tailwindcss -i ./themes/acuity/src/styles.css -o ./themes/acuity/static/theme.css && lightningcss ./themes/acuity/static/theme.css -o ./themes/acuity/static/theme.css --minify",
+    "dev:css": "tailwindcss -i ./themes/acuity/src/styles.css -o ./themes/acuity/static/theme.css --watch"
   },
   "devDependencies": {
     "daisyui": "^5.5.20"
