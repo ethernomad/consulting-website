@@ -11,6 +11,23 @@
   <link rel="stylesheet" href="{{ get_url(path='theme.css') }}">
 </head>
 <body>
+  <header class="mx-auto max-w-7xl px-6 pt-6">
+    <div class="navbar rounded-box glass-panel">
+      <div class="navbar-start">
+        <a href="{{ get_url(path='@/_index.md') }}" class="font-display text-lg font-bold text-white">{{ config.extra.brand }}</a>
+      </div>
+      <div class="navbar-end hidden gap-2 md:flex md:flex-wrap">
+        <a href="{{ get_url(path='@/_index.md') }}" class="btn btn-ghost btn-sm">Home</a>
+        <a href="{{ get_url(path='@/ai-strategy.md') }}" class="btn btn-ghost btn-sm">AI Strategy</a>
+        <a href="{{ get_url(path='@/process-automation.md') }}" class="btn btn-ghost btn-sm">Process Automation</a>
+        <a href="{{ get_url(path='@/custom-solutions.md') }}" class="btn btn-ghost btn-sm">Custom Solutions</a>
+        <a href="{{ get_url(path='@/generative-ai.md') }}" class="btn btn-ghost btn-sm">Generative AI</a>
+        <a href="{{ get_url(path='@/startup-support.md') }}" class="btn btn-ghost btn-sm">Startup Support</a>
+        <a href="{{ get_url(path='@/training.md') }}" class="btn btn-ghost btn-sm">Training</a>
+        <a href="{{ get_url(path='@/about.md') }}" class="btn btn-primary btn-sm">About</a>
+      </div>
+    </div>
+  </header>
   {% block content %}{% endblock content %}
 </body>
 </html>

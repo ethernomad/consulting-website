@@ -7,18 +7,6 @@
   <section class="hero-grid relative overflow-hidden">
     <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_left,rgba(96,165,250,0.12),transparent_30%)]"></div>
     <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-16">
-      <div class="navbar rounded-box glass-panel mb-10">
-        <div class="navbar-start">
-          <a href="#top" class="font-display text-lg font-bold text-white">{{ config.extra.brand }}</a>
-        </div>
-        <div class="navbar-end hidden gap-2 md:flex">
-          <a href="#services" class="btn btn-ghost btn-sm">Services</a>
-          <a href="#industries" class="btn btn-ghost btn-sm">Industries</a>
-          <a href="#packages" class="btn btn-ghost btn-sm">Packages</a>
-          <a href="#contact" class="btn btn-primary btn-sm">Contact</a>
-        </div>
-      </div>
-
       <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div class="space-y-6">
           <div class="space-y-5">
@@ -32,7 +20,7 @@
           </div>
           <div class="flex flex-wrap gap-4">
             <a href="{{ config.extra.cta_primary_url }}" class="btn btn-primary btn-lg">{{ config.extra.cta_primary }}</a>
-            <a href="{{ config.extra.cta_secondary_url }}" class="btn btn-outline btn-lg">{{ config.extra.cta_secondary }}</a>
+            <a href="{{ get_url(path='@/ai-strategy.md') }}" class="btn btn-outline btn-lg">{{ config.extra.cta_secondary }}</a>
           </div>
           <div class="alert border-warning/40 bg-base-200/70 text-sm">
             <span>{{ config.extra.risk_notice }}</span>
@@ -358,10 +346,13 @@
     </aside>
     <nav>
       <h6 class="footer-title">Navigate</h6>
-      <a href="#services" class="link link-hover">Services</a>
-      <a href="#industries" class="link link-hover">Industries</a>
-      <a href="#packages" class="link link-hover">Packages</a>
-      <a href="#contact" class="link link-hover">Contact</a>
+      <a href="{{ get_url(path='@/ai-strategy.md') }}" class="link link-hover">AI Strategy</a>
+      <a href="{{ get_url(path='@/process-automation.md') }}" class="link link-hover">Process Automation</a>
+      <a href="{{ get_url(path='@/custom-solutions.md') }}" class="link link-hover">Custom Solutions</a>
+      <a href="{{ get_url(path='@/generative-ai.md') }}" class="link link-hover">Generative AI</a>
+      <a href="{{ get_url(path='@/startup-support.md') }}" class="link link-hover">Startup Support</a>
+      <a href="{{ get_url(path='@/training.md') }}" class="link link-hover">Training</a>
+      <a href="{{ get_url(path='@/about.md') }}" class="link link-hover">About</a>
     </nav>
     <nav>
       <h6 class="footer-title">Contact</h6>
