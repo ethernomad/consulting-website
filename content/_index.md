@@ -1,6 +1,4 @@
 +++
-title = "Acuity"
-description = "A vested token launch for a decentralized, verifiable encyclopedia protocol."
+title = "AI Consulting"
+description = "AI consulting, development, automation, and language AI services."
 +++
-
-Acuity is building an open knowledge network where governance, provenance, and incentives align around public-interest information.

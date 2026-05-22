@@ -1,7 +1,7 @@
 # The URL the site will be built for
-base_url = "https://acuity.wiki"
-title = "Acuity"
-description = "A vested token launch for a decentralized, verifiable encyclopedia protocol."
+base_url = "https://example.com"
+title = "AI Consulting"
+description = "AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses."
 theme = "acuity"
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -16,11 +16,11 @@ build_search_index = true
 theme = "catppuccin-mocha"
 
 [extra]
-brand = "Acuity"
-tagline = "A vested token launch for a decentralized Wikipedia alternative"
-mission = "Acuity funds a community-owned knowledge protocol where articles, revisions, and governance stay transparent, attributable, and censorship-resistant."
-cta_primary = "Read the token overview"
-cta_primary_url = "#token"
-cta_secondary = "Explore the roadmap"
-cta_secondary_url = "#roadmap"
-risk_notice = "Cryptoassets are volatile and participation in any token sale involves significant risk. Nothing on this site is investment, legal, or tax advice."
+brand = "[Your Firm Name]"
+tagline = "AI consulting and product development for modern businesses"
+mission = "We help companies turn AI into practical systems, measurable ROI, and localized experiences for users, teams, and operations."
+cta_primary = "Book a strategy call"
+cta_primary_url = "#contact"
+cta_secondary = "Explore services"
+cta_secondary_url = "#services"
+risk_notice = "Working name only — final firm name and contact details to be added."
