@@ -1,0 +1,379 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(52,211,153,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Agentic Coding
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Learn to write software effectively with AI coding agents — from solo practice to enterprise team workflows.  We recommend <strong>OpenCode</strong>.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a training session</a>
+            <a href="#what-we-teach" class="btn btn-outline btn-lg">What we teach</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Context engineering — curate what the agent sees, when</li>
+              <li>• Instruction files — AGENTS.md, CLAUDE.md, project rules</li>
+              <li>• Multi-agent orchestration — teams of agents for complex work</li>
+              <li>• Automated verification — linting, types, tests as quality gates</li>
+              <li>• Model strategy — frontier vs. local, cost vs. capability</li>
+              <li>• Security & sandboxing — safe autonomous execution</li>
+              <li>• 75+ LLM providers — no vendor lock-in with OpenCode</li>
+              <li>• Privacy-first — local models keep your code on your machine</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What Is Agentic Coding ─────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is Agentic Coding?</h2>
+      <p class="text-lg text-base-content/80">
+        Agentic coding is a software development approach where AI agents autonomously handle coding tasks — planning, executing, and iterating with minimal human intervention. The agent observes the codebase, plans changes, executes them, verifies results, and loops until the task is done.
+      </p>
+      <p class="text-lg text-base-content/80">
+        This is not "vibe coding." It is a disciplined engineering practice centred on the agentic loop: <strong>gather context → take action → verify → repeat</strong>. The developer's role shifts from writing every line of code to orchestrating agents that write it — applying architectural judgment, reviewing diffs, and steering the system toward quality outcomes.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Analyse</p>
+        <p class="mt-1 text-sm text-base-content/80">Understand the codebase, task, and surrounding context before acting</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Plan</p>
+        <p class="mt-1 text-sm text-base-content/80">Design the approach — files to change, tests to write, risks to avoid</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Execute</p>
+        <p class="mt-1 text-sm text-base-content/80">Edit files, run commands, and iterate with the agent's tools</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Verify</p>
+        <p class="mt-1 text-sm text-base-content/80">Lint, type-check, test, and review — quality gates at every step</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Tool Landscape ─────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Tool landscape</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Leading Coding Agents in 2026</h2>
+      <p class="text-lg text-base-content/80">
+        The agentic coding ecosystem has matured rapidly. Here are the tools we work with and teach — each with different strengths depending on your workflow and priorities.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔵</span>
+        <h3 class="text-xl font-bold text-base-content">Claude Code</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Anthropic's official CLI for agentic coding. Runs in your terminal with full filesystem and command access. Deep Claude model integration with Agent Teams, background scheduling, and computer use.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Best-in-class Claude model integration</li>
+          <li>• Agent Teams for parallel sub-agents</li>
+          <li>• Scheduled background tasks</li>
+          <li>• Proprietary, Claude models only</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4 ring-1 ring-primary/30">
+        <span class="text-3xl">🟢</span>
+        <h3 class="text-xl font-bold text-base-content">OpenCode</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          <strong class="text-primary">Our top recommendation.</strong> Open-source (MIT) terminal-based agent with 175K+ GitHub stars. Supports 75+ LLM providers, LSP integration, parallel agents, and session sharing. Model-agnostic and privacy-first.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• 175K+ GitHub stars, MIT license</li>
+          <li>• 75+ providers via models.dev</li>
+          <li>• LSP integration for deep code understanding</li>
+          <li>• Plan mode — read-only analysis before edits</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🟣</span>
+        <h3 class="text-xl font-bold text-base-content">Pi</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Minimalist, open-source coding agent with a primitives-first design philosophy. Four core tools (read, write, edit, bash), fast execution, and excellent local model support via MLX and GGUF.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• ~1,000-token system prompt — minimal overhead</li>
+          <li>• RPC mode for embedding in automation systems</li>
+          <li>• Excellent local model performance (MLX, GGUF)</li>
+          <li>• 15+ provider support, extensible via MCP</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🟠</span>
+        <h3 class="text-xl font-bold text-base-content">Codex CLI</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          OpenAI's agentic coding CLI, deeply integrated with the GPT model family. Strong reasoning capabilities and native tool calling. Best for teams already in the OpenAI ecosystem.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Native GPT-5/5.5 integration</li>
+          <li>• Strong reasoning and planning</li>
+          <li>• OpenAI ecosystem integration</li>
+          <li>• Less mature than Claude Code or OpenCode</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Our Recommendation: OpenCode ───────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 ring-1 ring-primary/20">
+      <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
+        <div class="flex justify-center lg:justify-start">
+          <img src="{{ get_url(path='opencode-logo-dark.svg') }}" alt="OpenCode logo" class="w-48 lg:w-56 hidden [html[data-theme='acuity']_&]:block" />
+          <img src="{{ get_url(path='opencode-logo-light.svg') }}" alt="OpenCode logo" class="w-48 lg:w-56 hidden [html[data-theme='acuity-light']_&]:block" />
+        </div>
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Our recommendation</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">OpenCode</h2>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            We recommend <strong><a href="https://opencode.ai" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">OpenCode</a></strong> — the open-source AI coding agent with over 175,000 GitHub stars, released under the MIT license. It is the most popular and most flexible coding agent available in 2026, trusted by over 7.5 million developers every month.
+          </p>
+          <p class="text-base-content/80 leading-relaxed">
+            OpenCode is model-agnostic: connect any LLM provider — Claude, GPT, Gemini, DeepSeek, or local models via Ollama — and switch between them freely. Its LSP integration gives the agent compiler-level understanding of your codebase. Parallel agents let you run multiple sessions on the same project. Plan mode provides read-only analysis before any file changes. And because it's open source with zero telemetry, your code never leaves your machine.
+          </p>
+          <div class="grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+              <p class="text-2xl font-extrabold text-primary">175K+</p>
+              <p class="text-xs text-base-content/70">GitHub stars</p>
+            </div>
+            <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+              <p class="text-2xl font-extrabold text-secondary">7.5M</p>
+              <p class="text-xs text-base-content/70">Monthly developers</p>
+            </div>
+            <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+              <p class="text-2xl font-extrabold text-accent">75+</p>
+              <p class="text-xs text-base-content/70">LLM providers</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://opencode.ai" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit opencode.ai</a>
+            <a href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What We Teach ──────────────────────────── #}
+  <section id="what-we-teach" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Curriculum</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What We Teach</h2>
+      <p class="text-lg text-base-content/80">
+        Our training covers the full discipline of agentic coding — from the fundamentals of the agentic loop to advanced multi-agent orchestration and enterprise workflows.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧠</span>
+        <h3 class="text-xl font-bold text-base-content">Context Engineering</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          The practice of curating what information the agent has access to, and when. Covers the altitude problem (too specific vs. too vague), just-in-time context retrieval, and the feedback-driven approach to evolving your setup.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📋</span>
+        <h3 class="text-xl font-bold text-base-content">Instruction Files</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          AGENTS.md, CLAUDE.md, skills, and project rules. What belongs in each, how to structure them, scoped vs. global rules, and the skill pattern for on-demand expertise loaded only when needed.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">✅</span>
+        <h3 class="text-xl font-bold text-base-content">Verification Loops</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Three layers of quality: the agent checking its own work, automated gates (linting, type checking, tests), and human review of the diff. TDD with agents, end-to-end verification, and building a complete quality pipeline.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">👥</span>
+        <h3 class="text-xl font-bold text-base-content">Sub-Agents & Teams</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Delegating tasks to specialised sub-agents for parallel work. Primary vs. sub-agent patterns, agent teams with lead coordination, and when to use each approach for complex multi-file changes.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔒</span>
+        <h3 class="text-xl font-bold text-base-content">Security & Sandboxing</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Safe autonomous execution through containerised isolation, least-privilege permissions, YOLO mode risk assessment, credential management, and blast radius minimisation strategies.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎯</span>
+        <h3 class="text-xl font-bold text-base-content">Model Strategy</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Choosing between frontier and local models based on task complexity, cost, and privacy requirements. Multi-provider setups, model switching patterns, and when to use each tier of capability.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help Teams Adopt Agentic Coding</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We design and deliver hands-on training programmes that take developers and teams from first exposure to confident, production-grade use of AI coding agents.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess</h3>
+              <p class="mt-2 text-sm text-base-content/80">Understand your team's current workflow, tooling, and skill level. Identify high-impact opportunities for agentic coding adoption.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Configure</h3>
+              <p class="mt-2 text-sm text-base-content/80">Set up the agent harness, instruction files, MCP servers, quality gates, and project conventions. Establish the foundation for consistent, safe agent use.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Workshop</h3>
+              <p class="mt-2 text-sm text-base-content/80">Hands-on training with real codebases. Context engineering, instruction file authoring, verification loop setup, and team workflow design.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Support</h3>
+              <p class="mt-2 text-sm text-base-content/80">Ongoing guidance as the team scales its agentic practice. Advanced topics: multi-agent orchestration, CI/CD integration, and custom sub-agents.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Who is this training for?</summary>
+        <div class="collapse-content text-base-content/80">
+          Developers and engineering teams who want to move beyond chat-based AI assistants and build a structured, repeatable workflow for agentic coding. Suitable for everyone from solo practitioners to enterprise teams. We tailor the curriculum to your experience level and tech stack.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Which coding agent should I use?</summary>
+        <div class="collapse-content text-base-content/80">
+          We recommend <strong>OpenCode</strong> for most teams because it is open source (MIT), model-agnostic, and privacy-first. It supports 75+ LLM providers including Claude, GPT, Gemini, and local models, with no vendor lock-in. That said, we teach the concepts in a tool-agnostic way — the skills transfer across Claude Code, Pi, Codex, and any other agentic harness.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What are the prerequisites?</summary>
+        <div class="collapse-content text-base-content/80">
+          You should be comfortable with the command line, Git, and your programming language of choice. No prior experience with AI coding agents is required — we start from fundamentals and build up. For team workshops, we'll assess your group's baseline and adjust accordingly.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is this different from vibe coding?</summary>
+        <div class="collapse-content text-base-content/80">
+          Vibe coding treats AI as a quick prototyping tool — describe, generate, and hope it works. Agentic coding is a disciplined engineering practice with structured workflows, verification gates, and architectural oversight. The developer stays firmly in charge as an orchestrator and reviewer, not a prompt writer hoping for the best.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I use local / private models?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. With OpenCode and local inference via Ollama, your code never leaves your machine. This is a key advantage for regulated industries, proprietary codebases, and air-gapped environments. We cover local model setup and strategy in our training.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What is the format and duration?</summary>
+        <div class="collapse-content text-base-content/80">
+          We offer half-day introductory workshops, full-day deep dives, and multi-day team bootcamps. All sessions are hands-on and exercise-driven — you learn by working with real agents on real codebases, not by watching slides. Remote and on-site options available.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you help with tool selection and setup?</summary>
+        <div class="collapse-content text-base-content/80">
+          Absolutely. The first step of our engagement is assessing your workflow and recommending the right toolchain. We handle installation, configuration, instruction file authoring, MCP server setup, and security hardening so your team can focus on learning the practice, not wrestling with setup.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to master agentic coding?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        Book a consultation and we'll design a training programme tailored to your team's workflow, tech stack, and skill level.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
