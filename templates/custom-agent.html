@@ -1,0 +1,361 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<style>
+  [data-theme="acuity"] .logo-invert {
+    filter: invert(1);
+  }
+</style>
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(167,139,250,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Custom Agent
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Build bespoke AI agent applications with ADK-Rust — a production-grade Rust framework for realtime voice agents, autonomous workflows, and agent-to-agent communication.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Rust-native framework — compile to a small, fast binary</li>
+              <li>• Voice agents with built-in STT/TTS pipelines</li>
+              <li>• A2A (agent-to-agent) protocol for multi-agent systems</li>
+              <li>• Graph-based workflow orchestration engine</li>
+              <li>• WASM sandboxed tool execution with fuel metering</li>
+              <li>• 26+ LLM providers with intelligent model routing</li>
+              <li>• Persistent memory via SQLite + vector embeddings</li>
+              <li>• Apache 2.0 licensed — fully open source</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What Is a Custom Agent ───────────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is a Custom Agent?</h2>
+      <p class="text-lg text-base-content/80">
+        A custom agent is an AI application purpose-built for your workflow — not a generic chatbot or a pre-packaged product, but a tailored agent system that speaks your domain language, connects to your tools, and executes the specific logic your business needs.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Unlike off-the-shelf AI products, a custom agent is built from the ground up to solve one thing well. It may be a voice agent that handles customer calls in Vietnamese, a coding assistant that knows your codebase's conventions, a RAG pipeline over your proprietary documents, or a multi-agent system that orchestrates research, drafting, and review.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Purpose-built</p>
+        <p class="mt-1 text-sm text-base-content/80">Designed for your specific domain, workflow, and data — not a generic product</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Developer-controlled</p>
+        <p class="mt-1 text-sm text-base-content/80">Full access to every layer — model, memory, tools, security, deployment</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Production-hardened</p>
+        <p class="mt-1 text-sm text-base-content/80">Rust-native performance, WASM sandboxing, and zero-cost abstractions</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Use Cases ────────────────────────── #}
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Use cases</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Can You Build With ADK-Rust?</h2>
+      <p class="text-lg text-base-content/80">
+        ADK-Rust is a developer framework for building agent applications — from realtime voice agents to autonomous multi-agent systems.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎙️</span>
+        <h3 class="text-xl font-bold text-base-content">Voice Agents</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build realtime voice agents with built-in speech-to-text and text-to-speech pipelines. Handle customer calls, multilingual support, and voice-enabled workflows with low latency.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💻</span>
+        <h3 class="text-xl font-bold text-base-content">Coding Assistants</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build AI coding agents that understand your codebase's architecture, conventions, and patterns. Automate refactoring, test generation, documentation, and code review.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📚</span>
+        <h3 class="text-xl font-bold text-base-content">RAG Pipelines</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build grounded question-answering systems over your proprietary documents, knowledge bases, and data sources — with full control over chunking, embedding, retrieval, and synthesis.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🤖</span>
+        <h3 class="text-xl font-bold text-base-content">Autonomous Workflows</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build agents that plan, execute, observe, and iterate autonomously. Define graph-based workflows with conditional branching, sub-agents, and human-in-the-loop checkpoints.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔗</span>
+        <h3 class="text-xl font-bold text-base-content">Multi-Agent Systems</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build agent-to-agent systems using the A2A protocol. Specialised agents collaborate — one researches, another drafts, a third reviews — all communicating through a standard protocol.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧩</span>
+        <h3 class="text-xl font-bold text-base-content">Custom Tool Integration</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Connect agents to your APIs, databases, and internal systems. Custom tools run in WASM sandboxes with fuel metering for safe, predictable execution.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Our Recommendation: ADK-Rust ─────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
+        <div class="flex justify-center lg:justify-start">
+          <img src="{{ get_url(path='adk-rust-logo.svg') }}" alt="ADK-Rust" class="w-24 h-24 lg:w-32 lg:h-32" />
+        </div>
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Our recommendation</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">ADK-Rust</h2>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            We recommend <strong><a href="https://github.com/zavora-ai/adk-rust" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">ADK-Rust</a></strong> — the open-source AI Development Kit built in Rust. It is a developer framework, not a product you configure. You use it to build, test, and deploy agent applications with fine-grained control over every layer: model routing, tool execution, memory, security, and deployment topology.
+          </p>
+          <p class="text-base-content/80 leading-relaxed">
+            ADK-Rust supports voice agents with built-in STT/TTS pipelines, the A2A (agent-to-agent) protocol for multi-agent collaboration, graph-based workflow orchestration, WASM sandboxed tool execution with fuel metering, and 26+ LLM providers — all from a single Rust-native codebase that compiles to a small binary with minimal dependencies.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/zavora-ai/adk-rust" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View on GitHub</a>
+            <a href="https://google.github.io/adk-rust/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Documentation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── ADK-Rust Features Grid ─────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Features</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Makes ADK-Rust Different</h2>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Built in Rust</h3>
+        <p class="mt-3 text-base-content/80">Rust-native framework with zero-cost abstractions, memory safety, and high performance. Compiles to a small binary that deploys anywhere — no Python runtime, no Node, no Docker required.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Voice Agent Pipeline</h3>
+        <p class="mt-3 text-base-content/80">Built-in speech-to-text and text-to-speech support. Build realtime voice agents that handle customer calls, multilingual support, and voice-enabled workflows with low latency.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">A2A Protocol</h3>
+        <p class="mt-3 text-base-content/80">Native support for Google's Agent-to-Agent protocol. Build multi-agent systems where specialised agents collaborate through a standard communication protocol — one researches, another drafts, a third reviews.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Graph-Based Orchestration</h3>
+        <p class="mt-3 text-base-content/80">Define agent workflows as directed graphs with conditional branching, parallel execution, sub-agent delegation, and human-in-the-loop checkpoints. Compile and validate at build time.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">WASM Sandboxed Tools</h3>
+        <p class="mt-3 text-base-content/80">Custom tool code runs inside WebAssembly sandboxes with dual fuel + epoch metering. File operations are workspace-confined. Subprocesses are env-cleared and timeout-enforced.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">26+ LLM Providers</h3>
+        <p class="mt-3 text-base-content/80">Anthropic, Gemini, OpenAI, Groq, DeepSeek, and 20+ more via OpenAI-compatible endpoints. Intelligent model routing with built-in cost tracking and per-agent model overrides.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Persistent Memory</h3>
+        <p class="mt-3 text-base-content/80">SQLite-backed storage with vector embeddings for semantic memory. Sessions persist across invocations, and agents maintain context, preferences, and learned patterns over time.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Streaming & Realtime</h3>
+        <p class="mt-3 text-base-content/80">First-class support for streaming responses, server-sent events, and WebSocket connections. Build realtime agent applications that stream tokens, audio, and tool outputs.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Apache 2.0 License</h3>
+        <p class="mt-3 text-base-content/80">Fully open source under the Apache 2.0 license. No vendor lock-in, no usage restrictions, no hidden telemetry. Fork it, audit it, deploy it anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Security & Considerations ──────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Security</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Built-In Security Model</h2>
+        <p class="text-base-content/80 leading-relaxed">
+          ADK-Rust is built in Rust, which eliminates entire classes of memory-safety vulnerabilities at compile time. On top of that, its WASM sandbox provides a second layer of defence for tool execution.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• WASM dual-metered sandbox — tool code cannot escape its environment</li>
+          <li>• Fuel metering — prevent runaway execution and denial-of-service</li>
+          <li>• Workspace-confined file operations — agents cannot access files outside their scope</li>
+          <li>• Env-cleared subprocesses — no leaked environment variables or secrets</li>
+          <li>• Rust's memory safety — no buffer overflows, use-after-free, or null pointer dereferences</li>
+          <li>• Secret zeroization — API keys and credentials wiped from memory when not in use</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Considerations</p>
+        <h2 class="font-display text-2xl font-extrabold text-base-content">What to Know Before You Start</h2>
+        <ul class="space-y-4 text-base-content/80">
+          <li><strong class="text-base-content">A development project, not a product.</strong> Building a custom agent requires a software development team. You are not configuring a pre-built tool — you are building an application from scratch.</li>
+          <li><strong class="text-base-content">Rust expertise helps.</strong> While we handle the heavy lifting, teams that understand Rust will get the most value from customising and extending their agent over time.</li>
+          <li><strong class="text-base-content">Ongoing operating cost.</strong> The framework is free (Apache 2.0). You pay for LLM inference via your chosen provider and infrastructure costs for hosting your agent binary.</li>
+          <li><strong class="text-base-content">Iterate toward production.</strong> Start with a focused pilot, validate with real users, then expand scope. Custom agents are most successful when built incrementally.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Build a Custom Agent</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We design, build, and deploy custom agent applications with ADK-Rust — from concept to production, with your data, your tools, and your workflows.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess & Design</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map your workflow, identify the agent's role, define success criteria, and design the architecture — agent topology, tool set, memory model, and deployment target.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Build & Integrate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Develop the agent with ADK-Rust, connect your APIs and data sources, implement custom tools, and set up the voice or chat interface.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Test & Harden</h3>
+              <p class="mt-2 text-sm text-base-content/80">Test with real data, validate tool execution against edge cases, harden security boundaries, and set up monitoring and observability.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy & Iterate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Deploy to your infrastructure, train your team, establish feedback loops, and iterate on the agent's behaviour over time.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is a custom agent different from a Business Agent?</summary>
+        <div class="collapse-content text-base-content/80">
+          A Business Agent is a pre-built product (OpenFang) that we deploy and configure for you — it is an always-on agent OS that manages communications and automations. A Custom Agent is built from scratch with ADK-Rust to solve a specific problem. Think of it as the difference between buying a turnkey piece of software and commissioning custom software development.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is this just a chatbot?</summary>
+        <div class="collapse-content text-base-content/80">
+          No. While a custom agent can include chat interfaces, it is fundamentally an application that uses AI to execute specific logic — voice processing, document analysis, multi-step research, tool orchestration, and more. Chat is one interface among many.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do I need Rust expertise?</summary>
+        <div class="collapse-content text-base-content/80">
+          Not necessarily. We handle the ADK-Rust development. However, if your team plans to maintain and extend the agent after launch, some Rust familiarity is beneficial. We can include knowledge transfer and training as part of the engagement.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What infrastructure do I need?</summary>
+        <div class="collapse-content text-base-content/80">
+          ADK-Rust compiles to a single binary that runs on any Linux or macOS system. Deployment options include a VPS, dedicated server, Docker container, or edge environment. We recommend based on your latency, scale, and compliance requirements.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I use my own LLM provider?</summary>
+        <div class="collapse-content text-base-content/80">
+          Absolutely. ADK-Rust supports 26+ providers including Anthropic, Gemini, OpenAI, Groq, DeepSeek, and any OpenAI-compatible endpoint. You choose the model per agent or per task — no code changes needed to switch.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to build your custom agent?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We design, build, and deploy custom agent applications with ADK-Rust — tailored to your workflow, your data, and your infrastructure.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
