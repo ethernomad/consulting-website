@@ -1,0 +1,363 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(167,139,250,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Business Agent
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Deploy an always-on AI agent that manages communications, automates workflows, runs on your own infrastructure, and gets smarter the longer it runs.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Always-on — runs 24/7 on your own server or VPS</li>
+              <li>• Persistent memory across every session</li>
+              <li>• Self-improving — writes reusable skills from experience</li>
+              <li>• Multi-platform — Discord, Telegram, Slack, WhatsApp, Signal, CLI</li>
+              <li>• Scheduled automations via natural-language cron jobs</li>
+              <li>• Sub-agent delegation for parallel workstreams</li>
+              <li>• 200+ model backends — no vendor lock-in</li>
+              <li>• MIT licensed — fully open source, no tracking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What Is a Business Agent ───────────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is a Business Agent?</h2>
+      <p class="text-lg text-base-content/80">
+        A business agent is a persistent AI assistant that lives on your infrastructure — not in a company's cloud. It plans, acts, observes results, and loops until tasks are done. Unlike chatbots or copilots, it maintains state, memory, and learned skills across sessions, so it doesn't start from zero every time you talk to it.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Think of it as a capable team member who works around the clock: triaging emails, checking calendars, running reports, syncing data across tools, and alerting you when something needs attention. It reaches you on whatever messaging platform you already use and gets more useful the longer it runs.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">24/7</p>
+        <p class="mt-1 text-sm text-base-content/80">Always-on operation — no session limits, no timeouts</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Self-hosted</p>
+        <p class="mt-1 text-sm text-base-content/80">Your data stays on your machines under your control</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Self-improving</p>
+        <p class="mt-1 text-sm text-base-content/80">Builds reusable skills automatically from experience</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── How It Empowers Business Owners ────────── #}
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Capabilities</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">How It Empowers Business Owners</h2>
+      <p class="text-lg text-base-content/80">
+        Business owners wear many hats. A business agent offloads the administrative overhead that fragments focus, so you can spend time on work that actually moves the business forward.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📬</span>
+        <h3 class="text-xl font-bold text-base-content">Email & Inbox Management</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Triage multiple inboxes, categorize incoming messages, flag urgent items, draft replies, and surface action items. The agent learns your priorities over time.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📅</span>
+        <h3 class="text-xl font-bold text-base-content">Calendar & Scheduling</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Check availability, schedule meetings, send reminders, and reschedule conflicts. It can coordinate across time zones and sync with your email for travel confirmations.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⏰</span>
+        <h3 class="text-xl font-bold text-base-content">Scheduled Automations</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Set up daily briefings, weekly digests, nightly backups, and recurring reports — all in natural language. The agent runs them unattended on your schedule.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔗</span>
+        <h3 class="text-xl font-bold text-base-content">Cross-Platform Reach</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Interact via Discord, Telegram, Slack, WhatsApp, Signal, or CLI from a single agent. Start a conversation on one platform, pick it up on another seamlessly.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧠</span>
+        <h3 class="text-xl font-bold text-base-content">Persistent Memory & Skills</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Remembers your preferences, projects, and environment across sessions. When it solves a hard problem, it writes a reusable skill so it never forgets how.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧩</span>
+        <h3 class="text-xl font-bold text-base-content">Data & Tool Integration</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Connect Gmail, Google Drive, Notion, Todoist, Slack, CRM systems, databases, and more. The agent can read, summarise, and act across your entire toolchain.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Our Recommendation: Hermes Agent ───────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
+        <div class="flex justify-center lg:justify-start">
+          <img src="{{ get_url(path='hermes-logo.png') }}" alt="Hermes Agent" class="w-24 h-24 lg:w-32 lg:h-32" />
+        </div>
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Our recommendation</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">Hermes Agent</h2>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            We recommend <strong><a href="https://hermes-agent.org" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">Hermes Agent</a></strong> — the open-source, self-improving AI agent built by <a href="https://nousresearch.com" target="_blank" rel="noopener noreferrer" class="link link-hover">Nous Research</a> and released in February 2026 under the MIT license. It is the only agent with a built-in learning loop: it creates skills from experience, improves them during use, persists knowledge across sessions, and builds a deepening model of who you are over time.
+          </p>
+          <p class="text-base-content/80 leading-relaxed">
+            Hermes runs on a $5 VPS, a home server, or serverless infrastructure. It is not tied to your laptop — you can message it from Telegram while it works on a cloud VM. It supports 200+ models via OpenRouter, OpenAI, Anthropic, and local backends, with no code changes to switch.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://hermes-agent.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit hermes-agent.org</a>
+            <a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Hermes Features Grid ───────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Features</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Makes Hermes Different</h2>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Persistent Memory</h3>
+        <p class="mt-3 text-base-content/80">SQLite + LLM summarisation across sessions. No re-explaining context every conversation.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Automated Skill Creation</h3>
+        <p class="mt-3 text-base-content/80">When Hermes solves a hard problem, it writes a reusable SKILL.md document. Skills are searchable and shareable via the agentskills.io open standard.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Cron Scheduler</h3>
+        <p class="mt-3 text-base-content/80">Natural-language scheduled jobs — daily reports, weekly audits, morning briefings — delivered to any messaging platform.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Sub-Agent Delegation</h3>
+        <p class="mt-3 text-base-content/80">Spawn isolated sub-agents for parallel workstreams. Each gets its own conversation and terminal via RPC.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Multi-Platform Gateway</h3>
+        <p class="mt-3 text-base-content/80">Single gateway process for Telegram, Discord, Slack, WhatsApp, Signal, and CLI. Voice memo transcription included.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Sandboxed Execution</h3>
+        <p class="mt-3 text-base-content/80">Local, Docker, SSH, Modal, Daytona — six terminal backends. Docker provides containerised isolation with read-only root and dropped capabilities.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">200+ Model Backends</h3>
+        <p class="mt-3 text-base-content/80">Nous Portal, OpenRouter, OpenAI, Anthropic, local Ollama/vLLM, and any OpenAI-compatible endpoint. Switch with <code class="text-sm">hermes model</code>.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Permission System</h3>
+        <p class="mt-3 text-base-content/80">Built-in approve/deny prompts in Discord for sensitive actions. Extensible via API hooks for automated approval flows.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Privacy First</h3>
+        <p class="mt-3 text-base-content/80">Zero telemetry, zero data collection. All data stays in <code class="text-sm">~/.hermes/</code> on your machine. MIT license — audit every line.</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Security & Considerations ──────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Security</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Minimising the Blast Radius</h2>
+        <p class="text-base-content/80 leading-relaxed">
+          The more capabilities you give an agent, the more useful — and more powerful — it becomes. The same access that enables email triage (read, write, delete) is also a potential attack surface. Our approach is to embrace the power while ruthlessly minimising the blast radius.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Dedicated hardware or VLAN isolation for the agent</li>
+          <li>• MCP gateway pattern — credentials never live on the agent machine</li>
+          <li>• Least-privilege tool permissions (read-only where possible)</li>
+          <li>• Firewall rules limiting agent-to-NAS communication to specific ports</li>
+          <li>• Off-site backups for data preservation</li>
+          <li>• Permission prompts for destructive or sensitive actions</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Considerations</p>
+        <h2 class="font-display text-2xl font-extrabold text-base-content">What to Know Before You Start</h2>
+        <ul class="space-y-4 text-base-content/80">
+          <li><strong class="text-base-content">Not a plug-and-play product.</strong> Setting up a business agent securely requires understanding of servers, networking, OAuth, and permission models.</li>
+          <li><strong class="text-base-content">Ongoing operating cost.</strong> The software is free (MIT). You pay for the LLM inference via your chosen provider — typically $20-200/month depending on usage and model choice.</li>
+          <li><strong class="text-base-content">Model selection matters.</strong> Start with frontier models (GPT-5, Claude 4) to define workflows, then swap to smaller, cheaper models once processes are locked in.</li>
+          <li><strong class="text-base-content">You are the operator.</strong> A business agent needs oversight, especially in the early days. Review its work, tune its permissions, and iterate on its skills.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Deploy a Business Agent</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We design, deploy, and secure a Hermes Agent tailored to your business — connecting the data sources, tools, and platforms you already use.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess & Design</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map your workflows, identify high-value automations, and design the agent's toolset, permissions, and security model.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy & Connect</h3>
+              <p class="mt-2 text-sm text-base-content/80">Provision infrastructure (VPS or bare metal), install Hermes, configure messaging gateways, and connect data sources.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Harden Security</h3>
+              <p class="mt-2 text-sm text-base-content/80">Set up VLAN isolation, MCP gateway, firewall rules, least-privilege permissions, and off-site backup strategy.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Configure & Train</h3>
+              <p class="mt-2 text-sm text-base-content/80">Set up cron jobs, skill libraries, and interaction patterns. Train your team on how to work with the agent effectively.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is a business agent different from ChatGPT or Claude?</summary>
+        <div class="collapse-content text-base-content/80">
+          Standard chatbots are stateless — each conversation starts fresh. A business agent runs persistently, remembers everything across sessions, writes its own skills, executes scheduled tasks, and takes multi-step actions on your behalf. It is an employee, not a conversation.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is my data safe?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. Hermes Agent is self-hosted on your infrastructure. All data stays in <code class="text-sm">~/.hermes/</code> on your machine. Zero telemetry, zero data collection, MIT license — you can audit every line of code. We implement additional security layers including VLAN isolation and MCP gateways to minimise blast radius.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How much does it cost to run?</summary>
+        <div class="collapse-content text-base-content/80">
+          The software is free (MIT license). You pay for the LLM inference — typically $20-200/month depending on the model and usage volume. A $5/month VPS is enough to run the agent continuously. We help you select the right model and infrastructure for your budget.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do I need technical skills to use it?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes — setting up and maintaining a business agent securely requires comfort with servers, networking, OAuth, and permission models. That is exactly where we come in. We handle the infrastructure and security so you can focus on using the agent, not configuring it.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What messaging platforms are supported?</summary>
+        <div class="collapse-content text-base-content/80">
+          Discord, Telegram, Slack, WhatsApp, Signal, and direct CLI. All from a single gateway process. Voice memo transcription is also supported on compatible platforms.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I use my own AI model?</summary>
+        <div class="collapse-content text-base-content/80">
+          Absolutely. Hermes is model-agnostic and connects to 200+ models via OpenRouter, OpenAI, Anthropic, Nous Portal, local Ollama/vLLM, or any OpenAI-compatible endpoint. No code changes needed to switch models.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to deploy your own business agent?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We design, deploy, and secure Hermes Agent for business owners who want always-on AI assistance without the security headaches.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}

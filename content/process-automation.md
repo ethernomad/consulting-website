@@ -16,8 +16,6 @@ Typical services in this area include:
 
 Projects in this area often combine AI with workflow tools, RPA, ERP systems, CRMs, or custom internal dashboards. These dashboards give C-level and operational teams real-time visibility into business performance, bottlenecks, and cost drivers. The goal is not only automation, but also operational visibility and measurable efficiency gains.
 
-hermes
-
 Many clients do not just need a standalone AI prototype. They need AI connected to the systems they already use. Integration services ensure AI fits into daily workflows rather than becoming an isolated experiment.
 
 Typical services in this area include:
