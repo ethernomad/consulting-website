@@ -2,7 +2,7 @@
 /public/
 
 # Generated theme assets
-/themes/acuity/static/app.css
+/themes/acuity/static/*.css
 
 # Node / pnpm dependencies
 /node_modules/
