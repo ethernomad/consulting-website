@@ -9,7 +9,7 @@ We help companies turn AI ideas into practical systems, workflows, and measurabl
 
 - **Email:** [hello@example.com](mailto:hello@example.com)
 - **Response time:** Typically within 1–2 business days
-- **Best for:** AI strategy, process automation, custom solutions, generative AI, startup support, and training
+- **Best for:** AI strategy, custom solutions, generative AI, startup support, and training
 
 ## What to include
 
