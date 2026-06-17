@@ -1,0 +1,445 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(244,63,94,0.10),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Model Training
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Train custom deep learning models with Rust and <strong>Burn</strong> — the native Rust framework that delivers PyTorch-class performance with C-level portability. No Python overhead, no runtime bloat, no vendor lock-in.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Train from scratch or fine-tune existing open-weight models</li>
+              <li>• Full training pipeline — data loading, autodiff, optimizers, checkpointing</li>
+              <li>• Deploy on any hardware: CPU, CUDA, ROCm, Metal, Vulkan, WebGPU</li>
+              <li>• Quantization (PTQ & QAT) for efficient inference on modest hardware</li>
+              <li>• Single-binary deployment — zero Python or runtime dependencies</li>
+              <li>• ONNX import/export — interop with the broader ML ecosystem</li>
+              <li>• Distributed training across multiple GPUs</li>
+              <li>• Privacy-first — train on your data, on your infrastructure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What Is Model Training ─────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is Model Training?</h2>
+      <p class="text-lg text-base-content/80">
+        Model training is the process of teaching a neural network to perform a specific task by exposing it to labelled data and iteratively adjusting its parameters to minimise prediction error. The result is a custom model purpose-built for your domain, data, and performance requirements — rather than relying on a generic off-the-shelf model.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Most teams train models using Python frameworks (PyTorch, TensorFlow) and then face a difficult deployment problem: the Python runtime, its dependency tree, and the model format all need to be packaged and served. With <strong>Burn</strong>, you train and deploy in the same language — Rust — producing a single native binary that runs anywhere without a runtime interpreter.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Your data</p>
+        <p class="mt-1 text-sm text-base-content/80">Train on proprietary or sensitive data — never send it to a third-party API. Full privacy from day one.</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Your infrastructure</p>
+        <p class="mt-1 text-sm text-base-content/80">Train on your own GPUs or cloud instances. Deploy the trained model as a single static binary anywhere.</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Your schedule</p>
+        <p class="mt-1 text-sm text-base-content/80">Fine-tune quarterly, retrain monthly, or update continuously. No per-token costs, no vendor rate limits.</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Training Approaches ─────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Approaches</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">How We Train Models</h2>
+      <p class="text-lg text-base-content/80">
+        Every project is different. We match the training strategy to your data volume, performance targets, and operational constraints.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🏗️</span>
+        <h3 class="text-xl font-bold text-base-content">Train from Scratch</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Design and train a custom neural network architecture for your specific problem. Best when you have substantial domain-specific data, unique input modalities, or hard performance/latency constraints that off-the-shelf models cannot meet.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Custom architecture design</li>
+          <li>• Full training pipeline from scratch</li>
+          <li>• Maximum control over model behaviour</li>
+          <li>• Ideal for vision, audio, or tabular domains</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔄</span>
+        <h3 class="text-xl font-bold text-base-content">Fine-Tune & Adapt</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Start from a pre-trained open-weight model (Llama, Mistral, Qwen, Gemma, Phi) and fine-tune on your domain data. LoRA, QLoRA, and full fine-tuning options. The fastest path to a specialised model with minimal data requirements.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• LoRA / QLoRA for efficient fine-tuning</li>
+          <li>• Domain adaptation with as little as 1K examples</li>
+          <li>• Catastrophic forgetting mitigation</li>
+          <li>• HuggingFace model import via Candle bridge</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧩</span>
+        <h3 class="text-xl font-bold text-base-content">RAG & Adapters</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Augment a pre-trained model with external knowledge or task-specific adapters without modifying the base model weights. Best for knowledge-intensive tasks, multi-tenant setups, or when model updates must be isolated per customer.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Retrieval-Augmented Generation pipelines</li>
+          <li>• Lightweight adapter modules</li>
+          <li>• Per-tenant model personalisation</li>
+          <li>• Hot-swappable knowledge bases</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Python vs Burn ───────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Comparison</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Python vs Burn for Model Training</h2>
+      <p class="text-lg text-base-content/80">
+        Python (PyTorch / TensorFlow) remains the dominant ecosystem for ML research and experimentation. Burn is the right choice when deployment simplicity, portability, and long-term operational cost matter more than having the absolute latest research feature on day one.
+      </p>
+    </div>
+
+    <div class="mt-10 overflow-x-auto">
+      <table class="table w-full max-w-4xl">
+        <thead>
+          <tr class="text-base-content/80">
+            <th></th>
+            <th class="text-center">Python (PyTorch)</th>
+            <th class="text-center">Rust (Burn)</th>
+          </tr>
+        </thead>
+        <tbody class="text-base-content/80">
+          <tr>
+            <td class="font-semibold text-base-content">Ecosystem maturity</td>
+            <td class="text-center text-success">Massive — every model, paper, and tool</td>
+            <td class="text-center text-warning">Growing — core features solid, niche ops manual</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Training speed</td>
+            <td class="text-center text-success">Highly optimised CUDA kernels</td>
+            <td class="text-center text-success">Competitive — CubeCL fuses kernels automatically</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Deployment binary</td>
+            <td class="text-center text-warning">Python runtime + venv + 2GB+ of deps</td>
+            <td class="text-center text-success">Single static binary (~8 MB)</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">GPU backends</td>
+            <td class="text-center text-success">CUDA (NVIDIA only)</td>
+            <td class="text-center text-success">CUDA, ROCm, Metal, Vulkan, WebGPU</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Memory safety</td>
+            <td class="text-center text-warning">GC + GIL — memory leaks in long-running services</td>
+            <td class="text-center text-success">Ownership model — no GC, no data races</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Cross-platform</td>
+            <td class="text-center text-warning">Requires platform-specific Python builds</td>
+            <td class="text-center text-success">Compile once — runs on any target</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">HuggingFace interop</td>
+            <td class="text-center text-success">Native — transformers, datasets, safetensors</td>
+            <td class="text-center text-success">Safetensors import via Candle bridge</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Quantization</td>
+            <td class="text-center text-warning">Via third-party libs (bitsandbytes, GPTQ)</td>
+            <td class="text-center text-success">First-class PTQ and QAT support</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Distributed training</td>
+            <td class="text-center text-success">Mature — DDP, FSDP, DeepSpeed</td>
+            <td class="text-center text-success">Multi-GPU via NCCL, growing support</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 glass-panel rounded-3xl p-6 max-w-4xl">
+      <p class="text-base-content/80 leading-relaxed">
+        <strong class="text-base-content">Our recommendation:</strong> Use Python during research and prototyping when you need the broadest ecosystem. Migrate to Burn for production training and deployment when you need a single binary, predictable performance, and the ability to run on any hardware without runtime dependencies. We specialise in this transition.
+      </p>
+    </div>
+  </section>
+
+  {# ─── Our Recommendation: Burn ─────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 ring-1 ring-primary/20">
+      <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
+        <div class="flex justify-center lg:justify-start">
+          <div class="flex h-32 w-32 items-center justify-center rounded-2xl bg-base-200/80 text-5xl font-black text-primary lg:h-40 lg:w-40 lg:text-6xl">
+            B
+          </div>
+        </div>
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Our recommendation</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">Burn</h2>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            We recommend <strong><a href="https://burn.dev" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">Burn</a></strong> — the open-source, next-generation deep learning framework built in Rust. It is the only Rust-native framework designed from the ground up for both training and inference, without compromising on flexibility, efficiency, or portability.
+          </p>
+          <p class="text-base-content/80 leading-relaxed">
+            Burn's backend-agnostic architecture means you write your model once and train it on any hardware — NVIDIA CUDA, AMD ROCm, Apple Metal, Vulkan, WebGPU, or plain CPU. Its CubeCL kernel system automatically fuses operations and tunes them for your specific hardware, delivering performance that often exceeds LibTorch (PyTorch's C++ backend). The same code that trains your model also serves it in production, eliminating the training-to-deployment gap that plagues Python-based workflows.
+          </p>
+          <div class="grid gap-4 sm:grid-cols-4">
+            <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+              <p class="text-2xl font-extrabold text-primary">11K+</p>
+              <p class="text-xs text-base-content/70">GitHub stars</p>
+            </div>
+            <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+              <p class="text-2xl font-extrabold text-secondary">8</p>
+              <p class="text-xs text-base-content/70">Hardware backends</p>
+            </div>
+            <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+              <p class="text-2xl font-extrabold text-accent">2</p>
+              <p class="text-xs text-base-content/70">Licenses (MIT + Apache 2.0)</p>
+            </div>
+            <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+              <p class="text-2xl font-extrabold text-primary">v0.20</p>
+              <p class="text-xs text-base-content/70">Latest release</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://burn.dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit burn.dev</a>
+            <a href="https://github.com/tracel-ai/burn" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Our Training Services ────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Services</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What We Deliver</h2>
+      <p class="text-lg text-base-content/80">
+        End-to-end model training — from problem scoping and data preparation through architecture design, training, optimisation, and production deployment.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📐</span>
+        <h3 class="text-xl font-bold text-base-content">Architecture Design</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Design neural network architectures tailored to your data modality (text, image, audio, tabular) and performance requirements. We select the right building blocks — transformers, CNNs, state-space models, or hybrid architectures.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚙️</span>
+        <h3 class="text-xl font-bold text-base-content">Training Pipeline Engineering</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build robust training pipelines in Burn: data loading and augmentation, automatic differentiation, learning rate scheduling, checkpointing, metrics logging, and experiment tracking. Production-grade pipelines that resume gracefully from failures.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📦</span>
+        <h3 class="text-xl font-bold text-base-content">Quantization & Optimisation</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Reduce model size and inference latency through post-training quantisation (PTQ) and quantisation-aware training (QAT). Run on consumer GPUs, edge devices, or CPUs with minimal accuracy loss.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🚀</span>
+        <h3 class="text-xl font-bold text-base-content">Production Deployment</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Package the trained model into a single Rust binary with an HTTP API (via Actix or Axum), deploy on bare metal, container, or serverless, and integrate with your existing infrastructure. No Python runtime required.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎯</span>
+        <h3 class="text-xl font-bold text-base-content">Fine-Tuning & Adaptation</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Fine-tune open-weight models on your domain data using LoRA, QLoRA, or full fine-tuning. We handle data preparation, hyperparameter search, evaluation, and deployment of the adapted model.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔗</span>
+        <h3 class="text-xl font-bold text-base-content">Distributed Training</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Scale training across multiple GPUs and nodes for large models or massive datasets. We configure NCCL-based multi-GPU training in Burn, manage data parallelism, and optimise throughput.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our process</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Train Models</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We take you from problem definition to production deployment — with a trained, optimised model running as a single Rust binary on your infrastructure.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess & Scope</h3>
+              <p class="mt-2 text-sm text-base-content/80">Understand your problem, data, and success criteria. Evaluate whether training from scratch, fine-tuning, or a RAG approach is the right path. Define accuracy, latency, and throughput targets.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Design & Prepare</h3>
+              <p class="mt-2 text-sm text-base-content/80">Design or select the model architecture. Clean, augment, and split your data. Set up the Burn training pipeline with data loading, augmentation, and metrics logging. Establish evaluation benchmarks.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Train & Optimise</h3>
+              <p class="mt-2 text-sm text-base-content/80">Train the model, monitor convergence, and iterate on hyperparameters. Apply quantisation, pruning, or distillation to meet deployment constraints. Validate against your success criteria.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy & Integrate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Package the model into a Rust binary with an inference API. Deploy on your infrastructure — cloud, on-prem, edge, or air-gapped. Integrate with your application via REST, gRPC, or message queue.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 5</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Monitor & Iterate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Track model performance in production, collect feedback, and retrain on new data. We help you establish a continuous training pipeline so your model stays current.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Why train a custom model instead of using an API?</summary>
+        <div class="collapse-content text-base-content/80">
+          API-based models are excellent for general-purpose tasks and rapid prototyping. Custom training makes sense when you need: specialised performance on your domain data, predictable costs at high volume, data privacy (no data sent to third parties), offline capability, or a model optimised for your specific latency and throughput requirements. Many teams use a hybrid approach — API for complex reasoning, custom models for high-volume or sensitive tasks.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is Burn production-ready for training?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. Burn v0.20 (January 2026) is actively used in production by teams training and deploying models. It supports automatic differentiation, multiple optimisers (Adam, SGD, AdamW), learning rate scheduling, gradient checkpointing, distributed training via NCCL, and an ergonomic metrics dashboard. The CubeCL kernel system delivers performance competitive with LibTorch. The ecosystem is still newer than PyTorch's, but core training workflows are solid and well-tested.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How much data do I need to train a model?</summary>
+        <div class="collapse-content text-base-content/80">
+          It depends on the approach. Fine-tuning a pre-trained model (via LoRA or QLoRA) can work with as few as 500–1,000 high-quality examples. Training from scratch requires substantially more data — typically tens of thousands to millions of examples depending on model size and task complexity. During the assessment phase, we evaluate your data volume and quality, and recommend the most data-efficient approach.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What hardware do I need for training?</summary>
+        <div class="collapse-content text-base-content/80">
+          For fine-tuning (LoRA/QLoRA), a single consumer GPU with 16–24 GB VRAM (RTX 3090/4090) is often sufficient. Training larger models or training from scratch benefits from professional GPUs (A100, H100, AMD MI250) or multi-GPU setups. Burn supports CUDA, ROCm, and Metal, so you can use NVIDIA, AMD, or Apple hardware. We help you select the right infrastructure — cloud GPU instances are a great starting point before committing to on-prem hardware.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I deploy the trained model without Python?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes — this is the primary advantage of Burn. The trained model is serialised and loaded by a Rust application that compiles to a single static binary (~8 MB). No Python runtime, no virtual environment, no dependency conflicts. The binary can be deployed on bare metal, in a Docker container, on a serverless platform, or even compiled to WebAssembly for browser-based inference.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How do you handle experiment tracking?</summary>
+        <div class="collapse-content text-base-content/80">
+          Burn includes a built-in metrics dashboard for tracking training progress — loss curves, accuracy, learning rate, and custom metrics. For more advanced experiment management, we integrate with external tools via Burn's logging API. We also implement checkpointing so training can resume from any point, and we version both models and datasets for reproducibility.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to train your model?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        Book a consultation and we'll assess your problem, recommend the right training strategy, and design a path from data to deployed model.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
