@@ -8,6 +8,8 @@ A business agent is a persistent AI assistant that lives on your infrastructure 
 
 Think of it as a capable team member who works around the clock: triaging emails, checking calendars, running reports, syncing data across tools, and alerting you when something needs attention. It reaches you on whatever messaging platform you already use and gets more useful the longer it runs.
 
-We recommend Hermes Agent — the open-source, self-improving AI agent built by Nous Research and released in February 2026 under the MIT license. It is the only agent with a built-in learning loop: it creates skills from experience, improves them during use, persists knowledge across sessions, and builds a deepening model of who you are over time.
+We recommend OpenFang — the open-source Agent Operating System built from scratch in Rust. It is not a chatbot framework or a Python wrapper around an LLM. It is a full operating system for autonomous agents, compiling to a single ~32 MB binary with zero external dependencies. 137,000 lines of Rust, 14 modular crates, 1,767+ tests, and 16 discrete security layers.
 
-Our team handles the full lifecycle: infrastructure provisioning, Hermes deployment, data source integration, security hardening with MCP gateways and VLAN isolation, and team training.
+OpenFang ships with 7 built-in autonomous Hands that run on schedules — not just chat agents, but proactive workers that build knowledge graphs, monitor targets, generate leads, manage social media, and deliver results to your dashboard. It connects to 40+ messaging platforms and 26+ LLM providers, all from one binary.
+
+Our team handles the full lifecycle: infrastructure provisioning, OpenFang deployment, data source integration, security hardening with its 16-layer defense-in-depth system, and team training.

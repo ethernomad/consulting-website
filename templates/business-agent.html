@@ -3,6 +3,11 @@
 {% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
 
 {% block content %}
+<style>
+  [data-theme="acuity"] .logo-invert {
+    filter: invert(1);
+  }
+</style>
 <main id="top">
 
   {# ─── Hero ───────────────────────────────────── #}
@@ -29,13 +34,13 @@
             <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
             <ul class="mt-4 space-y-4 text-base-content/80">
               <li>• Always-on — runs 24/7 on your own server or VPS</li>
-              <li>• Persistent memory across every session</li>
-              <li>• Self-improving — writes reusable skills from experience</li>
-              <li>• Multi-platform — Discord, Telegram, Slack, WhatsApp, Signal, CLI</li>
-              <li>• Scheduled automations via natural-language cron jobs</li>
-              <li>• Sub-agent delegation for parallel workstreams</li>
-              <li>• 200+ model backends — no vendor lock-in</li>
-              <li>• MIT licensed — fully open source, no tracking</li>
+              <li>• 7 autonomous Hands that work on schedules, not just chat</li>
+              <li>• Persistent memory via SQLite + vector embeddings + knowledge graphs</li>
+              <li>• 40+ messaging platforms — Telegram, Discord, Slack, WhatsApp, and 36 more</li>
+              <li>• 16 security layers — WASM sandbox, Merkle audit trail, SSRF protection</li>
+              <li>• 53 built-in tools + MCP + A2A cross-framework protocols</li>
+              <li>• 26+ LLM providers — no vendor lock-in</li>
+              <li>• Apache 2.0 licensed — fully open source, auditable</li>
             </ul>
           </div>
         </div>
@@ -133,74 +138,74 @@
     </div>
   </section>
 
-  {# ─── Our Recommendation: Hermes Agent ───────── #}
+  {# ─── Our Recommendation: OpenFang ─────────── #}
   <section class="mx-auto max-w-7xl px-6 pb-24">
     <div class="glass-panel rounded-3xl p-8 lg:p-10">
       <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
         <div class="flex justify-center lg:justify-start">
-          <img src="{{ get_url(path='hermes-logo.png') }}" alt="Hermes Agent" class="w-24 h-24 lg:w-32 lg:h-32" />
+          <img src="{{ get_url(path='openfang-logo.png') }}" alt="OpenFang" class="logo-invert w-24 h-24 lg:w-32 lg:h-32" />
         </div>
         <div class="space-y-4">
           <p class="text-sm font-semibold tracking-wide text-primary/80">Our recommendation</p>
-          <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">Hermes Agent</h2>
+          <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">OpenFang</h2>
           <p class="text-lg text-base-content/80 leading-relaxed">
-            We recommend <strong><a href="https://hermes-agent.org" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">Hermes Agent</a></strong> — the open-source, self-improving AI agent built by <a href="https://nousresearch.com" target="_blank" rel="noopener noreferrer" class="link link-hover">Nous Research</a> and released in February 2026 under the MIT license. It is the only agent with a built-in learning loop: it creates skills from experience, improves them during use, persists knowledge across sessions, and builds a deepening model of who you are over time.
+            We recommend <strong><a href="https://openfang.sh" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">OpenFang</a></strong> — the open-source Agent Operating System built from scratch in Rust. Not a chatbot framework, not a Python wrapper around an LLM, but a full operating system for autonomous agents. It compiles to a single ~32 MB binary with zero external dependencies and runs on any Linux or macOS server.
           </p>
           <p class="text-base-content/80 leading-relaxed">
-            Hermes runs on a $5 VPS, a home server, or serverless infrastructure. It is not tied to your laptop — you can message it from Telegram while it works on a cloud VM. It supports 200+ models via OpenRouter, OpenAI, Anthropic, and local backends, with no code changes to switch.
+            OpenFang ships with 7 built-in autonomous Hands that work for you 24/7 on schedules — generating leads, monitoring targets, managing social media, researching competitors, and delivering reports to your dashboard. It connects to 40+ messaging platforms, supports 26+ LLM providers, and enforces 16 layers of defense-in-depth security. One binary, zero runtime dependencies, no Python or Node required.
           </p>
           <div class="flex flex-wrap gap-3">
-            <a href="https://hermes-agent.org" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit hermes-agent.org</a>
-            <a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+            <a href="https://openfang.sh" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit openfang.sh</a>
+            <a href="https://github.com/RightNow-AI/openfang" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  {# ─── Hermes Features Grid ───────────────────── #}
+  {# ─── OpenFang Features Grid ─────────────────── #}
   <section class="mx-auto max-w-7xl px-6 pb-24">
     <div class="max-w-3xl space-y-4">
       <p class="text-sm font-semibold tracking-wide text-primary/80">Features</p>
-      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Makes Hermes Different</h2>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Makes OpenFang Different</h2>
     </div>
 
     <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Persistent Memory</h3>
-        <p class="mt-3 text-base-content/80">SQLite + LLM summarisation across sessions. No re-explaining context every conversation.</p>
+        <h3 class="text-xl font-bold text-base-content">Built in Rust</h3>
+        <p class="mt-3 text-base-content/80">137K lines of Rust across 14 modular crates. Zero external runtime dependencies — no Python, no Node, no Docker. A single ~32 MB binary that you copy and run.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Automated Skill Creation</h3>
-        <p class="mt-3 text-base-content/80">When Hermes solves a hard problem, it writes a reusable SKILL.md document. Skills are searchable and shareable via the agentskills.io open standard.</p>
+        <h3 class="text-xl font-bold text-base-content">7 Autonomous Hands</h3>
+        <p class="mt-3 text-base-content/80">Pre-built agents that work FOR you — Clip, Lead, Collector, Predictor, Researcher, Twitter, Browser. They run on schedules, build knowledge graphs, and report to your dashboard.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Cron Scheduler</h3>
-        <p class="mt-3 text-base-content/80">Natural-language scheduled jobs — daily reports, weekly audits, morning briefings — delivered to any messaging platform.</p>
+        <h3 class="text-xl font-bold text-base-content">40+ Channel Adapters</h3>
+        <p class="mt-3 text-base-content/80">Telegram, Discord, Slack, WhatsApp, Teams, IRC, Matrix, Feishu, DingTalk, and 32 more. Per-channel model overrides, DM/group policies, and rate limiting.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Sub-Agent Delegation</h3>
-        <p class="mt-3 text-base-content/80">Spawn isolated sub-agents for parallel workstreams. Each gets its own conversation and terminal via RPC.</p>
+        <h3 class="text-xl font-bold text-base-content">16 Security Layers</h3>
+        <p class="mt-3 text-base-content/80">WASM dual-metered sandbox, Merkle hash-chain audit trail, Ed25519 manifest signing, taint tracking, SSRF protection, secret zeroization, prompt injection scanning, and more.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Multi-Platform Gateway</h3>
-        <p class="mt-3 text-base-content/80">Single gateway process for Telegram, Discord, Slack, WhatsApp, Signal, and CLI. Voice memo transcription included.</p>
+        <h3 class="text-xl font-bold text-base-content">WASM Sandboxed Execution</h3>
+        <p class="mt-3 text-base-content/80">Tool code runs inside Wasmtime with dual fuel + epoch metering. File operations are workspace-confined. Subprocesses are env-cleared and timeout-enforced.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Sandboxed Execution</h3>
-        <p class="mt-3 text-base-content/80">Local, Docker, SSH, Modal, Daytona — six terminal backends. Docker provides containerised isolation with read-only root and dropped capabilities.</p>
+        <h3 class="text-xl font-bold text-base-content">53 Tools + MCP + A2A</h3>
+        <p class="mt-3 text-base-content/80">Web search, browser automation, image generation, TTS, Docker, and knowledge graphs. Plus MCP client/server and Google A2A for cross-framework agent communication.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">200+ Model Backends</h3>
-        <p class="mt-3 text-base-content/80">Nous Portal, OpenRouter, OpenAI, Anthropic, local Ollama/vLLM, and any OpenAI-compatible endpoint. Switch with <code class="text-sm">hermes model</code>.</p>
+        <h3 class="text-xl font-bold text-base-content">Unified Memory Substrate</h3>
+        <p class="mt-3 text-base-content/80">SQLite-backed storage with vector embeddings and knowledge graphs. Cross-channel canonical sessions, automatic LLM-based compaction, and JSONL session mirroring.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Permission System</h3>
-        <p class="mt-3 text-base-content/80">Built-in approve/deny prompts in Discord for sensitive actions. Extensible via API hooks for automated approval flows.</p>
+        <h3 class="text-xl font-bold text-base-content">26+ LLM Providers</h3>
+        <p class="mt-3 text-base-content/80">Anthropic, Gemini, OpenAI, Groq, DeepSeek, and 20+ via OpenAI-compatible endpoints. Intelligent model routing with built-in cost tracking.</p>
       </div>
       <div class="metric-card">
-        <h3 class="text-xl font-bold text-base-content">Privacy First</h3>
-        <p class="mt-3 text-base-content/80">Zero telemetry, zero data collection. All data stays in <code class="text-sm">~/.hermes/</code> on your machine. MIT license — audit every line.</p>
+        <h3 class="text-xl font-bold text-base-content">Kernel Architecture</h3>
+        <p class="mt-3 text-base-content/80">Agents are first-class OS processes with spawn, suspend, resume, and kill semantics. Built-in workflow engine with triggers, scheduling, and multi-agent pipelines.</p>
       </div>
     </div>
   </section>
@@ -212,15 +217,16 @@
         <p class="text-sm font-semibold tracking-wide text-secondary/80">Security</p>
         <h2 class="font-display text-3xl font-extrabold text-base-content">Minimising the Blast Radius</h2>
         <p class="text-base-content/80 leading-relaxed">
-          The more capabilities you give an agent, the more useful — and more powerful — it becomes. The same access that enables email triage (read, write, delete) is also a potential attack surface. Our approach is to embrace the power while ruthlessly minimising the blast radius.
+          The more capabilities you give an agent, the more useful — and more powerful — it becomes. The same access that enables email triage (read, write, delete) is also a potential attack surface. Our approach is to embrace the power while ruthlessly minimising the blast radius. OpenFang's 16-layer defense-in-depth security is built into the kernel, not bolted on after the fact.
         </p>
         <ul class="space-y-3 text-base-content/80">
-          <li>• Dedicated hardware or VLAN isolation for the agent</li>
-          <li>• MCP gateway pattern — credentials never live on the agent machine</li>
-          <li>• Least-privilege tool permissions (read-only where possible)</li>
-          <li>• Firewall rules limiting agent-to-NAS communication to specific ports</li>
-          <li>• Off-site backups for data preservation</li>
-          <li>• Permission prompts for destructive or sensitive actions</li>
+          <li>• WASM dual-metered sandbox — tool code cannot escape its environment</li>
+          <li>• Merkle hash-chain audit trail — every action is immutably logged</li>
+          <li>• Ed25519 manifest signing — agents run only approved, signed code</li>
+          <li>• Taint tracking — untrusted input cannot reach critical system functions</li>
+          <li>• SSRF protection — agents cannot probe internal network services</li>
+          <li>• Secret zeroization — API keys wiped from memory when not in use</li>
+          <li>• Prompt injection scanning — malicious instructions detected at runtime</li>
         </ul>
       </div>
 
@@ -229,7 +235,7 @@
         <h2 class="font-display text-2xl font-extrabold text-base-content">What to Know Before You Start</h2>
         <ul class="space-y-4 text-base-content/80">
           <li><strong class="text-base-content">Not a plug-and-play product.</strong> Setting up a business agent securely requires understanding of servers, networking, OAuth, and permission models.</li>
-          <li><strong class="text-base-content">Ongoing operating cost.</strong> The software is free (MIT). You pay for the LLM inference via your chosen provider — typically $20-200/month depending on usage and model choice.</li>
+          <li><strong class="text-base-content">Ongoing operating cost.</strong> The software is free (Apache 2.0). You pay for the LLM inference via your chosen provider — typically $20-200/month depending on usage and model choice.</li>
           <li><strong class="text-base-content">Model selection matters.</strong> Start with frontier models (GPT-5, Claude 4) to define workflows, then swap to smaller, cheaper models once processes are locked in.</li>
           <li><strong class="text-base-content">You are the operator.</strong> A business agent needs oversight, especially in the early days. Review its work, tune its permissions, and iterate on its skills.</li>
         </ul>
@@ -245,7 +251,7 @@
           <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
           <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Deploy a Business Agent</h2>
           <p class="text-base-content/80 leading-relaxed">
-            We design, deploy, and secure a Hermes Agent tailored to your business — connecting the data sources, tools, and platforms you already use.
+            We design, deploy, and secure an OpenFang instance tailored to your business — connecting the data sources, tools, and platforms you already use.
           </p>
         </div>
         <ol class="timeline timeline-vertical max-md:timeline-compact">
@@ -264,7 +270,7 @@
             <div class="timeline-middle text-primary">●</div>
             <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
               <h3 class="font-bold text-base-content">Deploy & Connect</h3>
-              <p class="mt-2 text-sm text-base-content/80">Provision infrastructure (VPS or bare metal), install Hermes, configure messaging gateways, and connect data sources.</p>
+              <p class="mt-2 text-sm text-base-content/80">Provision infrastructure (VPS or bare metal), install OpenFang, configure 40+ channel adapters, and connect data sources.</p>
             </div>
             <hr class="bg-primary" />
           </li>
@@ -310,35 +316,29 @@
       <details class="collapse collapse-arrow glass-panel rounded-2xl">
         <summary class="collapse-title text-lg font-semibold text-base-content">Is my data safe?</summary>
         <div class="collapse-content text-base-content/80">
-          Yes. Hermes Agent is self-hosted on your infrastructure. All data stays in <code class="text-sm">~/.hermes/</code> on your machine. Zero telemetry, zero data collection, MIT license — you can audit every line of code. We implement additional security layers including VLAN isolation and MCP gateways to minimise blast radius.
+          Yes. OpenFang is self-hosted on your infrastructure — your data never leaves your machines. Apache 2.0 licensed, fully auditable. We implement additional security layers including WASM sandboxing, Merkle audit trails, SSRF protection, and VLAN isolation to minimise blast radius.
         </div>
       </details>
 
       <details class="collapse collapse-arrow glass-panel rounded-2xl">
-        <summary class="collapse-title text-lg font-semibold text-base-content">How much does it cost to run?</summary>
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is it hard to set up?</summary>
         <div class="collapse-content text-base-content/80">
-          The software is free (MIT license). You pay for the LLM inference — typically $20-200/month depending on the model and usage volume. A $5/month VPS is enough to run the agent continuously. We help you select the right model and infrastructure for your budget.
+          OpenFang ships as a single binary — there is no Python environment, no Node runtime, no Docker dependency to manage. That said, deploying a business agent securely still requires familiarity with servers, networking, and permission models. That is exactly where we come in. We handle the infrastructure and security so you can focus on using the agent.
         </div>
       </details>
 
-      <details class="collapse collapse-arrow glass-panel rounded-2xl">
-        <summary class="collapse-title text-lg font-semibold text-base-content">Do I need technical skills to use it?</summary>
-        <div class="collapse-content text-base-content/80">
-          Yes — setting up and maintaining a business agent securely requires comfort with servers, networking, OAuth, and permission models. That is exactly where we come in. We handle the infrastructure and security so you can focus on using the agent, not configuring it.
-        </div>
-      </details>
 
       <details class="collapse collapse-arrow glass-panel rounded-2xl">
         <summary class="collapse-title text-lg font-semibold text-base-content">What messaging platforms are supported?</summary>
         <div class="collapse-content text-base-content/80">
-          Discord, Telegram, Slack, WhatsApp, Signal, and direct CLI. All from a single gateway process. Voice memo transcription is also supported on compatible platforms.
+          OpenFang connects to 40+ platforms — Telegram, Discord, Slack, WhatsApp, Teams, Signal, Matrix, Google Chat, Feishu, DingTalk, IRC, and more. All from a single binary. Per-channel model overrides and rate limiting included.
         </div>
       </details>
 
       <details class="collapse collapse-arrow glass-panel rounded-2xl">
         <summary class="collapse-title text-lg font-semibold text-base-content">Can I use my own AI model?</summary>
         <div class="collapse-content text-base-content/80">
-          Absolutely. Hermes is model-agnostic and connects to 200+ models via OpenRouter, OpenAI, Anthropic, Nous Portal, local Ollama/vLLM, or any OpenAI-compatible endpoint. No code changes needed to switch models.
+          Absolutely. OpenFang is model-agnostic and connects to 26+ providers including Anthropic, Gemini, OpenAI, Groq, DeepSeek, and any OpenAI-compatible endpoint via built-in model routing — no code changes needed to switch.
         </div>
       </details>
     </div>
@@ -350,7 +350,7 @@
       <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
       <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to deploy your own business agent?</h2>
       <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
-        We design, deploy, and secure Hermes Agent for business owners who want always-on AI assistance without the security headaches.
+        We design, deploy, and secure OpenFang for business owners who want always-on AI assistance without the security headaches.
       </p>
       <div class="mt-6 flex flex-wrap justify-center gap-4">
         <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
