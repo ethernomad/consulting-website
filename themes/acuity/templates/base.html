@@ -7,14 +7,21 @@
   <meta name="description" content="{{ config.description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ get_url(path='theme.css') }}">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
   <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
     <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
       <div class="navbar-start">
-        <a href="{{ get_url(path='@/_index.md') }}" class="font-display text-lg font-bold text-white">{{ config.extra.brand }}</a>
+        <a href="{{ get_url(path='@/_index.md') }}" class="font-display text-lg font-bold text-base-content">{{ config.extra.brand }}</a>
       </div>
       <div class="navbar-end">
         <div class="dropdown dropdown-end lg:hidden">
@@ -41,6 +48,7 @@
             <li><a href="{{ get_url(path='@/technologies.md') }}">Technologies</a></li>
             <li><a href="{{ get_url(path='@/about.md') }}">About</a></li>
             <li><a href="{{ get_url(path='@/contact.md') }}">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
           </ul>
         </div>
         <div class="hidden lg:flex">
@@ -62,16 +70,22 @@
             <li><a href="{{ get_url(path='@/technologies.md') }}">Technologies</a></li>
             <li><a href="{{ get_url(path='@/about.md') }}">About</a></li>
             <li><a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-sm ml-2">Contact Us</a></li>
+            <li>
+              <button id="theme-toggle" class="btn btn-ghost btn-sm ml-1" aria-label="Toggle theme">
+                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </header>
   {% block content %}{% endblock content %}
-  <footer class="footer sm:footer-horizontal border-t border-white/10 bg-base-200/70 px-6 py-10 text-base-content">
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
     <aside>
-      <a href="#top" class="font-display text-lg font-bold text-white">{{ config.extra.brand }}</a>
-      <p class="text-slate-300">
+      <a href="#top" class="font-display text-lg font-bold text-base-content">{{ config.extra.brand }}</a>
+      <p class="text-base-content/80">
         Practical AI systems for modern businesses and global teams.
         <br>
         Strategy, delivery, and automation that fit real workflows.
@@ -94,5 +108,44 @@
       <a href="{{ get_url(path='@/contact.md') }}" class="link link-hover">Contact</a>
     </nav>
   </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
 </body>
 </html>
