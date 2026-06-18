@@ -10,7 +10,7 @@
 /* ─── Dark theme: warm stone ─── */
 @plugin "daisyui/theme" {
   name: "acuity";
-  default: true;
+  default: false;
   prefersdark: false;
   color-scheme: dark;
 
@@ -35,7 +35,7 @@
 /* ─── Light theme: warm cream ─── */
 @plugin "daisyui/theme" {
   name: "acuity-light";
-  default: false;
+  default: true;
   prefersdark: false;
   color-scheme: light;
 

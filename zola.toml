@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://acuity.tools/"
+base_url = "/"
 title = "Sand Intelligence"
 description = "AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses."
 theme = "acuity"

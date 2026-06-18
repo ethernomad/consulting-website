@@ -1,84 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://acuity.tools/</loc>
+        <loc>/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/about/</loc>
+        <loc>/about/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/agentic-coding/</loc>
+        <loc>/agentic-coding/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/ai-change-management/</loc>
+        <loc>/ai-change-management/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/ai-cost-optimization/</loc>
+        <loc>/ai-cost-optimization/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/ai-governance/</loc>
+        <loc>/ai-governance/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/ai-production-hardening/</loc>
+        <loc>/ai-production-hardening/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/ai-safety/</loc>
+        <loc>/ai-safety/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/ai-strategy/</loc>
+        <loc>/ai-strategy/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/ai-voice-agents/</loc>
+        <loc>/ai-voice-agents/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/app-building/</loc>
+        <loc>/app-building/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/business-agent/</loc>
+        <loc>/business-agent/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/contact/</loc>
+        <loc>/contact/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/custom-agent/</loc>
+        <loc>/custom-agent/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/generative-ai/</loc>
+        <loc>/generative-ai/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/model-training/</loc>
+        <loc>/model-training/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/news/</loc>
+        <loc>/news/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/news/claude-fable-5-shutdown/</loc>
+        <loc>/news/claude-fable-5-shutdown/</loc>
         <lastmod>2026-06-18</lastmod>
     </url>
     <url>
-        <loc>https://acuity.tools/news/glm-52-launch/</loc>
+        <loc>/news/glm-52-launch/</loc>
         <lastmod>2026-06-18</lastmod>
     </url>
     <url>
-        <loc>https://acuity.tools/news/google-okf/</loc>
+        <loc>/news/google-okf/</loc>
         <lastmod>2026-06-18</lastmod>
     </url>
     <url>
-        <loc>https://acuity.tools/news/page/1/</loc>
+        <loc>/news/page/1/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/private-inference/</loc>
+        <loc>/private-inference/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/startup-support/</loc>
+        <loc>/startup-support/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/technology/</loc>
+        <loc>/technology/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/training/</loc>
+        <loc>/training/</loc>
     </url>
     <url>
-        <loc>https://acuity.tools/vn-ai-law/</loc>
+        <loc>/vn-ai-law/</loc>
     </url>
 </urlset>
