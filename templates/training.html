@@ -1,0 +1,393 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(45,212,191,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Training
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Hands-on workshops, cohort programs, and custom curricula that teach your organization to use AI effectively — from executive strategy and governance to hands-on engineering and no-code automation.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#programs" class="btn btn-outline btn-lg">View programs</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Training areas</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Executive AI strategy and leadership development</li>
+              <li>• Hands-on developer training in Rust, agents, and model training</li>
+              <li>• No-code AI automation and workflow building</li>
+              <li>• AI literacy and prompt engineering for all roles</li>
+              <li>• AI governance, compliance, and responsible use</li>
+              <li>• Custom in-house programs tailored to your stack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What We Train ────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What We Train</h2>
+      <p class="text-lg text-base-content/80">
+        AI adoption doesn't stall because of technology. It stalls because people aren't prepared to use it consistently, confidently, and responsibly. We close that gap with hands-on training that connects AI capability to measurable business outcomes.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Our programs go beyond theory. Every session is built around your team's actual workflows, your data, and your technology stack. Participants leave with skills they can apply immediately — not completion certificates they will forget.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Role-based</p>
+        <p class="mt-1 text-sm text-base-content/80">Programs tailored to each audience — executives, engineers, operations, and compliance teams each get relevant, immediately useful content</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Hands-on</p>
+        <p class="mt-1 text-sm text-base-content/80">Real exercises using your actual work scenarios, not generic demos. In-person and live virtual formats with direct instructor access</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Outcome-driven</p>
+        <p class="mt-1 text-sm text-base-content/80">Every program defines clear success metrics tied to business goals — productivity gains, automation wins, and governance confidence</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Training Programs ─────────────────────── #}
+  <section id="programs" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Programs</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Our Training Programs</h2>
+      <p class="text-lg text-base-content/80">
+        Six core programs covering the full spectrum of AI capability building — from the boardroom to the command line. Each is delivered in-person, live virtual, or as a multi-week cohort.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎯</span>
+        <h3 class="text-xl font-bold text-base-content">Executive AI Strategy &amp; Leadership</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Equip C-suite and senior leaders with the strategic frameworks to evaluate AI opportunities, govern risk, and lead enterprise-wide adoption — no technical background required.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• AI opportunity identification and prioritisation</li>
+          <li>• Organisational readiness assessment</li>
+          <li>• Governance, risk, and responsible AI frameworks</li>
+          <li>• AI-driven business model innovation</li>
+          <li>• Leading through AI-enabled transformation</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚙️</span>
+        <h3 class="text-xl font-bold text-base-content">Developer AI Engineering</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Train your engineering teams to build production AI systems using modern tooling — from API integration and prompt chaining to custom agent development and model fine-tuning with Rust.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Building with AI APIs and function calling</li>
+          <li>• Custom agent development (ADK-Rust)</li>
+          <li>• Model fine-tuning with Burn</li>
+          <li>• RAG pipelines and embedding strategies</li>
+          <li>• Production deployment and observability</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🤖</span>
+        <h3 class="text-xl font-bold text-base-content">No-Code AI Automation</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Enable operations, marketing, sales, and support teams to build intelligent workflows and automate repetitive tasks using no-code AI platforms and agent builders.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Workflow automation with AI agents</li>
+          <li>• Lead qualification and content generation</li>
+          <li>• Customer support automation</li>
+          <li>• Data extraction and report generation</li>
+          <li>• Integration with existing business tools</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💬</span>
+        <h3 class="text-xl font-bold text-base-content">AI Literacy &amp; Prompt Engineering</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build foundational AI competence across your organisation. Participants learn how AI works, how to craft effective prompts, and how to use AI tools safely and productively in daily work.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• How AI models work — capabilities and limits</li>
+          <li>• Prompt engineering patterns and techniques</li>
+          <li>• Tool selection: which AI for which task</li>
+          <li>• Secure and ethical AI usage habits</li>
+          <li>• Building personal AI assistants</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🛡️</span>
+        <h3 class="text-xl font-bold text-base-content">AI Governance &amp; Compliance</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Prepare your legal, compliance, and risk teams for the evolving regulatory landscape. Covers the EU AI Act, GDPR requirements for AI systems, and practical governance frameworks.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• EU AI Act risk classification and obligations</li>
+          <li>• GDPR compliance for AI systems</li>
+          <li>• AI charter and policy development</li>
+          <li>• Bias detection and fairness auditing</li>
+          <li>• Vendor risk assessment for AI tools</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4 ring-1 ring-primary/20">
+        <span class="text-3xl">🏗️</span>
+        <h3 class="text-xl font-bold text-base-content">Custom In-House Programs</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          A fully tailored curriculum designed around your organisation's technology stack, data environment, industry context, and strategic priorities. Built for enterprises with specific workflows, compliance requirements, or proprietary tools.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Curriculum designed around your stack</li>
+          <li>• Training on your actual codebase and data</li>
+          <li>• Train-the-trainer enablement packages</li>
+          <li>• Post-program coaching and micro-learning</li>
+          <li>• Measurable skill validation and certification</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Training Formats ─────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Formats</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">How We Deliver Training</h2>
+      <p class="text-lg text-base-content/80">
+        Different goals call for different formats. We match the delivery method to your team's size, location, and learning objectives.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="glass-panel rounded-3xl p-6 space-y-3">
+        <p class="text-3xl">🏫</p>
+        <h3 class="text-xl font-bold text-base-content">In-Person Bootcamp</h3>
+        <p class="text-sm text-base-content/80 leading-relaxed">
+          2–5 day intensive sessions with direct instructor access, hands-on exercises, and cohort-based learning. Highest completion and skill retention rates. Ideal for foundational skill building.
+        </p>
+        <p class="text-xs text-base-content/60">Up to 40 participants</p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-6 space-y-3">
+        <p class="text-3xl">💻</p>
+        <h3 class="text-xl font-bold text-base-content">Live Virtual Cohort</h3>
+        <p class="text-sm text-base-content/80 leading-relaxed">
+          Multi-week programs delivered live online with structured sessions, assignments, and office hours. Combines flexibility with accountability. Best for distributed teams and ongoing learning.
+        </p>
+        <p class="text-xs text-base-content/60">4–8 weekly sessions</p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-6 space-y-3">
+        <p class="text-3xl">🎯</p>
+        <h3 class="text-xl font-bold text-base-content">Half-Day Workshops</h3>
+        <p class="text-sm text-base-content/80 leading-relaxed">
+          Focused 3–4 hour sessions on a single topic — prompt engineering, AI governance, or tool-specific training. Ideal for leadership briefings, team kickoffs, or targeted upskilling.
+        </p>
+        <p class="text-xs text-base-content/60">Up to 15 participants</p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-6 space-y-3">
+        <p class="text-3xl">🔄</p>
+        <h3 class="text-xl font-bold text-base-content">Ongoing Enablement</h3>
+        <p class="text-sm text-base-content/80 leading-relaxed">
+          Post-training micro-learning, coaching calls, and reinforcement nudges delivered over 8–12 weeks. Ensures skills stick and adapt as tools and workflows evolve.
+        </p>
+        <p class="text-xs text-base-content/60">Weekly touchpoints</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Who We Train ─────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Audiences</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Who We Train</h2>
+      <p class="text-lg text-base-content/80">
+        Every program is role-aware. We tailor content, depth, and delivery to each audience so training is immediately relevant and applicable.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🏢</span>
+        <h3 class="text-xl font-bold text-base-content">C-Suite &amp; Executives</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Strategic AI understanding without technical depth. Focus on opportunity identification, governance, investment prioritisation, and leading organisational change. No coding required.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💻</span>
+        <h3 class="text-xl font-bold text-base-content">Engineering Teams</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Hands-on technical training in AI API integration, agent development, model customisation, and production deployment. Builds on your existing tech stack and engineering practices.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📋</span>
+        <h3 class="text-xl font-bold text-base-content">Operations &amp; Business Teams</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Practical AI skills for marketing, sales, HR, finance, and support roles. Automate workflows, generate content, analyse data, and improve decision-making with no-code AI tools.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚖️</span>
+        <h3 class="text-xl font-bold text-base-content">Legal, Risk &amp; Compliance</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Regulatory readiness training covering the EU AI Act, GDPR obligations for AI, and practical governance frameworks. Build AI charters, audit processes, and risk management playbooks.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our process</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Build AI Capability</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We take you from assessment to sustained capability — with a structured process that ensures training delivers measurable business impact, not just awareness.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess &amp; Scope</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map your organisation's AI maturity, identify role clusters and skill gaps, define success metrics, and align the training programme with strategic priorities.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Design Curriculum</h3>
+              <p class="mt-2 text-sm text-base-content/80">Design role-based learning paths with the right format, depth, and duration. Develop custom exercises, materials, and tooling that reflect your actual workflows and data.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deliver &amp; Coach</h3>
+              <p class="mt-2 text-sm text-base-content/80">Deliver the training in your chosen format with experienced practitioners who have built production AI systems. Participants work through real exercises, not toy examples.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Reinforce &amp; Measure</h3>
+              <p class="mt-2 text-sm text-base-content/80">Provide post-program micro-learning, coaching calls, and reinforcement materials. Measure skill application, collect feedback, and iterate on content as tools and needs evolve.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is training different from consulting?</summary>
+        <div class="collapse-content text-base-content/80">
+          Consulting solves a specific business problem for you — we build a system, design an architecture, or deliver a strategy. Training builds your team's own capability so they can solve problems independently. Both are valuable, but they serve different needs. Many clients start with consulting to establish direction, then use training to embed skills across their teams. We can help you determine the right mix during a discovery conversation.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How much does a training programme cost?</summary>
+        <div class="collapse-content text-base-content/80">
+          It depends on format, duration, and level of customisation. Half-day workshops start at $3,000–5,000. Multi-day in-person bootcamps range from $7,000–15,000. Multi-week cohort programs and custom enterprise engagements are scoped individually. We provide a detailed proposal with fixed pricing after an initial scoping call.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you customise content for our industry?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. Every program is adapted to your industry context, regulatory environment, and operational realities. We use your actual workflows, data examples, and tooling during exercises. Generic training is far less effective — we never deliver a one-size-fits-all curriculum.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What if we need to train a large organisation?</summary>
+        <div class="collapse-content text-base-content/80">
+          We run enterprise-scale programmes for organisations with 500+ employees using a train-the-trainer model. We equip your internal L&D team with curriculum materials, facilitator guides, and coaching so they can scale training across departments independently. We remain available for advanced sessions and ongoing support.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do participants receive certification?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. Participants receive a certificate of completion with CEU credits where applicable. For custom programs, we include validated skill assessments and can integrate with your internal competency frameworks. Completion rates for our in-person programmes exceed 95%.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How do you measure training effectiveness?</summary>
+        <div class="collapse-content text-base-content/80">
+          We measure at four levels: participant satisfaction (reaction), skill gain through pre/post assessments (learning), application in daily work (behaviour), and business impact — productivity gains, automation wins, and governance improvements (results). We provide a detailed impact report after each programme.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to upskill your team?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        Book a consultation and we'll assess your organisation's AI readiness, design a tailored training programme, and help your team build the skills to make AI work in practice.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
