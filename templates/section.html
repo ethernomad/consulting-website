@@ -23,24 +23,31 @@
     <div class="space-y-6">
       {% for page in paginator.pages %}
         <article class="glass-panel rounded-3xl p-8 lg:p-10">
-          <div class="max-w-3xl space-y-3">
-            <div class="flex flex-wrap items-center gap-3 text-sm text-base-content/60">
-              {% if page.date %}
-                <time datetime="{{ page.date }}">{{ page.date }}</time>
-              {% endif %}
-              {% if page.authors %}
-                <span>By {{ page.authors | join(sep=", ") }}</span>
-              {% endif %}
-            </div>
-            <h2 class="font-display text-2xl font-extrabold text-base-content">
-              <a href="{{ page.permalink }}" class="hover:text-primary transition-colors">{{ page.title }}</a>
-            </h2>
-            {% if page.description %}
-              <p class="text-base text-base-content/80">{{ page.description }}</p>
+          <div class="flex flex-col sm:flex-row gap-6">
+            {% if page.extra.image %}
+              <img src="{{ get_url(path=page.extra.image) }}" alt="{{ page.title }}"
+                   class="w-full sm:w-48 aspect-video object-cover rounded-xl shrink-0" />
             {% endif %}
-            <a href="{{ page.permalink }}" class="btn btn-primary btn-sm mt-2">Read article</a>
+            <div class="space-y-3 min-w-0">
+              <div class="flex flex-wrap items-center gap-3 text-sm text-base-content/60">
+                {% if page.date %}
+                  <time datetime="{{ page.date }}">{{ page.date }}</time>
+                {% endif %}
+                {% if page.authors %}
+                  <span>By {{ page.authors | join(sep=", ") }}</span>
+                {% endif %}
+              </div>
+              <h2 class="font-display text-2xl font-extrabold text-base-content">
+                <a href="{{ page.permalink }}" class="hover:text-primary transition-colors">{{ page.title }}</a>
+              </h2>
+              {% if page.description %}
+                <p class="text-base text-base-content/80">{{ page.description }}</p>
+              {% endif %}
+              <a href="{{ page.permalink }}" class="btn btn-primary btn-sm mt-2">Read article</a>
+            </div>
           </div>
         </article>
+
       {% endfor %}
     </div>
 
