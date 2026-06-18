@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Agent · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<style>
+  [data-theme="acuity"] .logo-invert {
+    filter: invert(1);
+  }
+</style>
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(167,139,250,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Custom Agent
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Build bespoke AI agent applications with production-grade Rust frameworks for realtime voice agents, autonomous workflows, and agent-to-agent communication.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Rust-native frameworks — compile to small, fast binaries</li>
+              <li>• Voice agents with STT/TTS pipelines</li>
+              <li>• Agent-to-agent protocols for multi-agent systems</li>
+              <li>• Workflow orchestration engines</li>
+              <li>• WASM sandboxed tool execution</li>
+              <li>• 20+ LLM providers with intelligent model routing</li>
+              <li>• Persistent memory with vector embeddings</li>
+              <li>• Fully open source — permissive licenses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is a Custom Agent?</h2>
+      <p class="text-lg text-base-content/80">
+        A custom agent is an AI application purpose-built for your workflow — not a generic chatbot or a pre-packaged product, but a tailored agent system that speaks your domain language, connects to your tools, and executes the specific logic your business needs.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Custom AI development is for organizations that need solutions tailored to their workflows, industry, language, or internal systems. Rather than forcing businesses to adapt to generic tools, we design and build systems around specific needs.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Unlike off-the-shelf AI products, a custom agent is built from the ground up to solve one thing well. It may be a voice agent that handles customer calls in Vietnamese, a coding assistant that knows your codebase's conventions, a RAG pipeline over your proprietary documents, or a multi-agent system that orchestrates research, drafting, and review.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Purpose-built</p>
+        <p class="mt-1 text-sm text-base-content/80">Designed for your specific domain, workflow, and data — not a generic product</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Developer-controlled</p>
+        <p class="mt-1 text-sm text-base-content/80">Full access to every layer — model, memory, tools, security, deployment</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Production-hardened</p>
+        <p class="mt-1 text-sm text-base-content/80">Rust-native performance, WASM sandboxing, and zero-cost abstractions</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Use cases</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Can You Build With a Custom Agent?</h2>
+      <p class="text-lg text-base-content/80">
+        Custom agent applications span a wide range of use cases — from realtime voice agents to autonomous multi-agent systems.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎙️</span>
+        <h3 class="text-xl font-bold text-base-content">Voice Agents</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build realtime voice agents with speech-to-text and text-to-speech pipelines. Use cases include call center analytics, transcription, voice bots, multilingual customer interactions, and voice-enabled workflows — all with low latency.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💻</span>
+        <h3 class="text-xl font-bold text-base-content">Coding Assistants</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build AI coding agents that understand your codebase's architecture, conventions, and patterns. Automate refactoring, test generation, documentation, and code review.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📚</span>
+        <h3 class="text-xl font-bold text-base-content">RAG Pipelines</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build grounded question-answering systems over your proprietary documents, knowledge bases, and data sources — with full control over chunking, embedding, retrieval, and synthesis.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🤖</span>
+        <h3 class="text-xl font-bold text-base-content">Autonomous Workflows</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build agents that plan, execute, observe, and iterate autonomously. Define graph-based workflows with conditional branching, sub-agents, and human-in-the-loop checkpoints.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔗</span>
+        <h3 class="text-xl font-bold text-base-content">Multi-Agent Systems</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build agent-to-agent systems using standard protocols. Specialised agents collaborate — one researches, another drafts, a third reviews — all communicating through a standard protocol.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧩</span>
+        <h3 class="text-xl font-bold text-base-content">Custom Tool Integration</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Connect agents to your APIs, databases, ERP, CRM, HRM, help desk, and workflow systems. Custom tools run in WASM sandboxes for safe, predictable execution.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📊</span>
+        <h3 class="text-xl font-bold text-base-content">Operational Dashboards</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Surface real-time visibility into business performance, bottlenecks, and cost drivers through C-level and operational dashboards that combine AI with workflow tools, RPA, and business systems.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">👥</span>
+        <h3 class="text-xl font-bold text-base-content">HR & Recruitment Screening</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Rank resumes, summarize candidates, and automate repetitive hiring workflows. Screen applicants against role requirements at scale.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💰</span>
+        <h3 class="text-xl font-bold text-base-content">Finance & Accounting Automation</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Automate invoice matching, expense review, payment verification, and anomaly detection. Reduce manual effort in financial workflows.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎯</span>
+        <h3 class="text-xl font-bold text-base-content">Recommendation Engines</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Build custom recommendation engines for e-commerce, media, education, and fintech products. Serve personalised content, product suggestions, and next-best-action recommendations powered by your domain data and business logic.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Frameworks</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Our Recommendations</h2>
+      <p class="text-lg text-base-content/80">
+        We recommend two production-grade Rust frameworks for building custom agent applications. Both are open source, memory-safe, and provider-agnostic. Choose the one that best fits your use case.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-2">
+
+      
+      <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+        <div class="flex items-center gap-6">
+          <img src="https://example.com/adk-rust-logo.svg" alt="ADK-Rust" class="w-20 h-20 lg:w-24 lg:h-24 shrink-0" />
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-primary/80">Recommended framework</p>
+            <h3 class="font-display text-2xl font-extrabold text-base-content">ADK-Rust</h3>
+          </div>
+        </div>
+        <p class="mt-6 text-base-content/80 leading-relaxed">
+          <strong><a href="https://github.com/zavora-ai/adk-rust" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">ADK-Rust</a></strong> is a Google-led open-source AI Development Kit built in Rust. It excels at voice agents with built-in STT/TTS pipelines, the A2A protocol for multi-agent collaboration, graph-based workflow orchestration, and 26+ LLM providers — all from a single binary that deploys anywhere.
+        </p>
+        <div class="mt-auto pt-6 flex flex-wrap gap-3">
+          <a href="https://github.com/zavora-ai/adk-rust" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View on GitHub</a>
+          <a href="https://google.github.io/adk-rust/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Documentation</a>
+        </div>
+      </div>
+
+      
+      <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+        <div class="flex items-center gap-6">
+          <img src="https://example.com/liquidos-logo.svg" alt="LiquidOS" class="w-20 h-20 lg:w-24 lg:h-24 shrink-0" />
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-primary/80">Recommended framework</p>
+            <h3 class="font-display text-2xl font-extrabold text-base-content">AutoAgents (LiquidOS)</h3>
+          </div>
+        </div>
+        <p class="mt-6 text-base-content/80 leading-relaxed">
+          <strong><a href="https://github.com/liquidos-ai/AutoAgents" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">AutoAgents</a></strong> by LiquidOS is an open-source Rust SDK for building multi-agent systems. It features WASM + OS-level process isolation for multi-layer sandboxing, a CodeAct executor that lets agents write and run sandboxed TypeScript, and native support for edge and embedded environments.
+        </p>
+        <div class="mt-auto pt-6 flex flex-wrap gap-3">
+          <a href="https://github.com/liquidos-ai/AutoAgents" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View on GitHub</a>
+          <a href="https://liquidos-ai.github.io/AutoAgents/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Documentation</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Comparison</p>
+      <h2 class="mt-2 font-display text-3xl font-extrabold text-base-content md:text-4xl">ADK-Rust vs AutoAgents</h2>
+      <p class="mt-2 text-base-content/80">A technical breakdown to help you choose the right framework for your project.</p>
+
+      <div class="mt-8 overflow-x-auto">
+        <table class="table w-full">
+          <thead>
+            <tr class="text-base-content/80">
+              <th class="font-semibold">Feature</th>
+              <th class="font-semibold">ADK-Rust (Google)</th>
+              <th class="font-semibold">AutoAgents (LiquidOS)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-semibold">SDK / Framework</td>
+              <td>ADK-Rust (Google)</td>
+              <td>AutoAgents SDK (LiquidOS)</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">License</td>
+              <td>Apache 2.0</td>
+              <td>Open Source</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Multi-Agent Protocol</td>
+              <td>Google A2A Protocol</td>
+              <td>Built-in multi-agent orchestration</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Tool Sandboxing</td>
+              <td>WASM — fuel + epoch metering, workspace-confined file ops, env-cleared subprocesses</td>
+              <td>WASM sandboxing + OS-level process isolation (multi-layer)</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Agent Code Execution</td>
+              <td>—</td>
+              <td>CodeAct executor — agents write &amp; run sandboxed TypeScript</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Voice / STT/TTS</td>
+              <td>Built-in pipeline (speech-to-text, text-to-speech)</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Workflow Orchestration</td>
+              <td>Graph-based DAG — conditional branching, sub-agents, human-in-the-loop checkpoints</td>
+              <td>Multi-agent coordination</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">LLM Provider Support</td>
+              <td>26+ (Anthropic, Gemini, OpenAI, Groq, DeepSeek, etc.)</td>
+              <td>Provider-agnostic (any LLM API)</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Persistent Memory</td>
+              <td>SQLite + vector embeddings (semantic memory, session persistence)</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Streaming / Realtime</td>
+              <td>SSE, WebSocket (stream tokens, audio, tool outputs)</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Edge Deployment</td>
+              <td>Compiles to single binary, runs on any Linux/macOS</td>
+              <td>Native ARM, Jetson, Raspberry Pi support</td>
+            </tr>
+            <tr>
+              <td class="font-semibold">Security Model</td>
+              <td>WASM sandbox + Rust memory safety + secret zeroization</td>
+              <td>Multi-layer: OS process isolation + WASM sandbox + Rust safety</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Security</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Built-In Security Model</h2>
+        <p class="text-base-content/80 leading-relaxed">
+          Both ADK-Rust and AutoAgents are built in Rust, which eliminates entire classes of memory-safety vulnerabilities at compile time. On top of Rust's guarantees, they layer WASM sandboxing and OS-level process isolation for defence-in-depth.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• WASM sandboxing — tool code cannot escape its environment</li>
+          <li>• Fuel metering — prevent runaway execution and denial-of-service</li>
+          <li>• OS-level process isolation — agents run in separate processes with restricted permissions</li>
+          <li>• Workspace-confined file operations — agents cannot access files outside their scope</li>
+          <li>• Env-cleared subprocesses — no leaked environment variables or secrets</li>
+          <li>• Rust's memory safety — no buffer overflows, use-after-free, or null pointer dereferences</li>
+          <li>• Secret zeroization — API keys and credentials wiped from memory when not in use</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Considerations</p>
+        <h2 class="font-display text-2xl font-extrabold text-base-content">What to Know Before You Start</h2>
+        <ul class="space-y-4 text-base-content/80">
+          <li><strong class="text-base-content">A development project, not a product.</strong> Building a custom agent requires a software development team. You are not configuring a pre-built tool — you are building an application from scratch.</li>
+          <li><strong class="text-base-content">Rust expertise helps.</strong> While we handle the heavy lifting, teams that understand Rust will get the most value from customising and extending their agent over time.</li>
+          <li><strong class="text-base-content">Ongoing operating cost.</strong> Both frameworks are free and open source. You pay for LLM inference via your chosen provider and infrastructure costs for hosting your agent binary.</li>
+          <li><strong class="text-base-content">Iterate toward production.</strong> Start with a focused pilot, validate with real users, then expand scope. Custom agents are most successful when built incrementally.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Build a Custom Agent</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We design, build, and deploy custom agent applications with ADK-Rust or AutoAgents (LiquidOS) — from concept to production, with your data, your tools, and your workflows.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess & Design</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map your workflow, identify the agent's role, define success criteria, and design the architecture — agent topology, tool set, memory model, and deployment target.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Build & Integrate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Develop the agent with your chosen framework, connect your APIs and data sources, implement custom tools, and set up the voice or chat interface.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Test & Harden</h3>
+              <p class="mt-2 text-sm text-base-content/80">Test with real data, validate tool execution against edge cases, harden security boundaries, and set up monitoring and observability.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy & Iterate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Deploy to your infrastructure, train your team, establish feedback loops, and iterate on the agent's behaviour over time.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is a custom agent different from a Business Agent?</summary>
+        <div class="collapse-content text-base-content/80">
+          A Business Agent is a pre-built product (OpenFang) that we deploy and configure for you — it is an always-on agent OS that manages communications and automations. A Custom Agent is built from scratch using a Rust agent framework (ADK-Rust or AutoAgents) to solve a specific problem. Think of it as the difference between buying a turnkey piece of software and commissioning custom software development.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is this just a chatbot?</summary>
+        <div class="collapse-content text-base-content/80">
+          No. While a custom agent can include chat interfaces, it is fundamentally an application that uses AI to execute specific logic — voice processing, document analysis, multi-step research, tool orchestration, and more. Chat is one interface among many.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do I need Rust expertise?</summary>
+        <div class="collapse-content text-base-content/80">
+          Not necessarily. We handle the Rust agent development. However, if your team plans to maintain and extend the agent after launch, some Rust familiarity is beneficial. We can include knowledge transfer and training as part of the engagement.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What infrastructure do I need?</summary>
+        <div class="collapse-content text-base-content/80">
+          Both ADK-Rust and AutoAgents compile to native binaries that run on Linux or macOS systems. Deployment options include a VPS, dedicated server, Docker container, or edge environment. We recommend based on your latency, scale, and compliance requirements.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I use my own LLM provider?</summary>
+        <div class="collapse-content text-base-content/80">
+          Absolutely. Both frameworks are provider-agnostic — ADK-Rust supports 26+ providers (Anthropic, Gemini, OpenAI, Groq, DeepSeek, etc.) and AutoAgents works with any LLM API. You choose the model per agent or per task — no code changes needed to switch.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to build your custom agent?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We design, build, and deploy custom agent applications using ADK-Rust or AutoAgents (LiquidOS) — tailored to your workflow, your data, and your infrastructure.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

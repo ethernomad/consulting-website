@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sand Intelligence · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<main id="top">
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.18),transparent_28%),radial-gradient(circle_at_left,rgba(251,113,133,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-16">
+      <div class="relative z-10">
+        <div class="space-y-6">
+          <div class="space-y-5">
+            <p class="text-sm font-semibold tracking-wide text-primary/80">AI consulting and product development for modern businesses</p>
+            <h1 class="select-text font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+              Practical AI systems for modern businesses and global teams.
+            </h1>
+            <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+              We help companies turn AI into practical systems, measurable ROI, and localized experiences for users, teams, and operations. From strategy and advisory to production deployment, we design AI solutions that fit real workflows, compliance needs, and budget realities.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="btn btn-primary btn-lg">Book a strategy call</a>
+            <a href="https://example.com/ai-strategy/" class="btn btn-outline btn-lg">Explore services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Services</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">End-to-end AI consulting and delivery</h2>
+      <p class="text-lg text-base-content/80">
+        We can support leadership teams, product teams, and operations teams at any stage: opportunity discovery, pilot design, data preparation, model development, integration, governance, and ongoing optimization.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💡</span>
+        <h3 class="text-2xl font-bold text-base-content">AI strategy and advisory</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• AI readiness assessments</li>
+          <li>• High-ROI use case identification</li>
+          <li>• AI roadmap development</li>
+          <li>• Build-vs-buy recommendations</li>
+          <li>• Data strategy and governance planning</li>
+          <li>• Executive workshops on AI adoption</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💸</span>
+        <h3 class="text-2xl font-bold text-base-content">AI Cost Optimization</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Full AI spend audit and shadow AI discovery</li>
+          <li>• Model and token optimization</li>
+          <li>• Infrastructure cost engineering</li>
+          <li>• AI FinOps — cost allocation, unit economics, guardrails</li>
+          <li>• ROI measurement and value tracking</li>
+          <li>• Workflow automation cost analysis</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🌐</span>
+        <h3 class="text-2xl font-bold text-base-content">Language AI and localization</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• NLP solutions for specialized domains</li>
+          <li>• Fine-tuning for language-specific tasks</li>
+          <li>• Local-language support chatbots</li>
+          <li>• Sentiment analysis for social and review data</li>
+          <li>• Translation and multilingual AI systems</li>
+          <li>• Voice assistants tuned for accents and dialects</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🤖</span>
+        <h3 class="text-2xl font-bold text-base-content">Process automation</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• AI-powered workflow automation</li>
+          <li>• Intelligent extraction for invoices, contracts, and forms</li>
+          <li>• Email and ticket triage</li>
+          <li>• HR and recruitment screening tools</li>
+          <li>• Finance and accounting automation</li>
+          <li>• Customer service automation</li>
+          <li>• C-level and operational dashboards that provide insight into business operations</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💼</span>
+        <h3 class="text-2xl font-bold text-base-content">Business agent</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Always-on AI assistant for business owners</li>
+          <li>• Email, calendar, and inbox management</li>
+          <li>• Scheduled automations via cron jobs</li>
+          <li>• Persistent memory and self-improving skills</li>
+          <li>• Multi-platform reach (Discord, Telegram, Slack)</li>
+          <li>• Self-hosted on your infrastructure</li>
+          <li>• Powered by Hermes Agent (open source)</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎙️</span>
+        <h3 class="text-2xl font-bold text-base-content">AI Voice Agents</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• 24/7 inbound call answering — no missed opportunities</li>
+          <li>• Lead qualification and appointment booking</li>
+          <li>• Multilingual support (Vietnamese + English)</li>
+          <li>• Integration with CRM, calendar, and knowledge bases</li>
+          <li>• Outbound campaign automation at scale</li>
+          <li>• SaaS or self-hosted open source stack</li>
+          <li>• Powered by Retell AI, LiveKit, or Dograh</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💻</span>
+        <h3 class="text-2xl font-bold text-base-content">Agentic Coding</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Hands-on training with Claude Code, OpenCode, Pi, and Codex</li>
+          <li>• Context engineering and instruction file authoring</li>
+          <li>• Verification loops and quality gate setup</li>
+          <li>• Multi-agent orchestration and sub-agent patterns</li>
+          <li>• Security, sandboxing, and safe autonomous execution</li>
+          <li>• We recommend OpenCode — open source, model-agnostic, privacy-first</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔒</span>
+        <h3 class="text-2xl font-bold text-base-content">Private Inference</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Run AI models on your own infrastructure</li>
+          <li>• Data never leaves your network — compliant with VN AI Law, GDPR</li>
+          <li>• Predictable costs at scale vs per-token API pricing</li>
+          <li>• Self-hosted LLM serving with Candle or xinfer</li>
+          <li>• Single binary deployment — no Python or Node required</li>
+          <li>• Offline capable — runs without internet connectivity</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🛡️</span>
+        <h3 class="text-2xl font-bold text-base-content">AI Production Hardening</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Take MVPs and PoCs from demo to production-ready</li>
+          <li>• Observability — tracing, logging, and monitoring for every LLM call</li>
+          <li>• Guardrails, fallback paths, and graceful degradation</li>
+          <li>• Cost controls, budget limits, and anomaly detection</li>
+          <li>• Evaluations, regression testing, and safe release discipline</li>
+          <li>• Built with Rust for performance and reliability</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📊</span>
+        <h3 class="text-2xl font-bold text-base-content">Data and machine learning services</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Data engineering and pipeline setup</li>
+          <li>• Data cleaning and annotation</li>
+          <li>• C-level and operational dashboards that provide insight into business operations</li>
+          <li>• ML model development and deployment</li>
+          <li>• MLOps and model monitoring</li>
+          <li>• Feature engineering and experimentation</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">✨</span>
+        <h3 class="text-2xl font-bold text-base-content">Generative AI consulting</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Internal knowledge assistants</li>
+          <li>• RAG systems over company documents</li>
+          <li>• Copilots for sales, HR, legal, and operations</li>
+          <li>• Content generation systems</li>
+          <li>• Enterprise AI search</li>
+          <li>• Prompt engineering and evaluation frameworks</li>
+          <li>• Fine-tuning and model customization</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🏭</span>
+        <h3 class="text-2xl font-bold text-base-content">Industry-specific solutions</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Manufacturing, retail, banking, real estate</li>
+          <li>• Healthcare, education, logistics, agriculture</li>
+          <li>• Tailored pilots built around operational constraints and ROI</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔗</span>
+        <h3 class="text-2xl font-bold text-base-content">Integration, training, and governance</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• ERP, CRM, HRM, website, and mobile integrations</li>
+          <li>• API integrations with OpenAI, Anthropic, Google, AWS, Azure</li>
+          <li>• AI literacy and prompt engineering workshops</li>
+          <li>• Policy, ethics, risk, privacy, and responsible AI support</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🚀</span>
+        <h3 class="text-2xl font-bold text-base-content">Managed AI services and startup support</h3>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Monitoring, optimization, retraining, and reporting</li>
+          <li>• AI helpdesk and cost optimization</li>
+          <li>• MVPs, prototypes, investor demos, and product discovery</li>
+          <li>• Technical due diligence for investors and acquirers</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="industries" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Market opportunities</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Differentiate where practical AI creates measurable value</h2>
+        <ul class="space-y-4 text-base-content/80">
+          <li>• Language-aware AI experiences</li>
+          <li>• Automation packages for lean teams</li>
+          <li>• Customer support and sales workflow assistants</li>
+          <li>• Affordable AI adoption for growing businesses</li>
+          <li>• Outsourced AI development for global clients</li>
+          <li>• AI for manufacturing and supply chain operations</li>
+          <li>• Compliance and localization support for expanding companies</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Industry focus</p>
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Manufacturing</h3>
+            <p class="mt-2 text-sm text-base-content/80">Quality inspection, predictive maintenance, demand forecasting</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Retail & e-commerce</h3>
+            <p class="mt-2 text-sm text-base-content/80">Personalization, analytics, inventory forecasting</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Banking & fintech</h3>
+            <p class="mt-2 text-sm text-base-content/80">Fraud detection, KYC automation, customer support AI</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Real estate</h3>
+            <p class="mt-2 text-sm text-base-content/80">Lead scoring, document automation, pricing analytics</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Healthcare & education</h3>
+            <p class="mt-2 text-sm text-base-content/80">Scheduling assistants, medical docs, tutors, grading, learning assistants</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Logistics & agriculture</h3>
+            <p class="mt-2 text-sm text-base-content/80">Route optimization, shipment forecasting, crop monitoring, disease detection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Packaged offerings</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Clear starting points for clients who want focused outcomes</h2>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI Readiness Audit</h3>
+        <p class="mt-3 text-base-content/80">A 2-week assessment covering data, workflows, use cases, and an action roadmap.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI Chatbot Setup</h3>
+        <p class="mt-3 text-base-content/80">Website, messaging, or support chatbot implementation with localized flows.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Document Automation Package</h3>
+        <p class="mt-3 text-base-content/80">Invoice, contract, and form extraction with approval workflows.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Internal Knowledge Assistant</h3>
+        <p class="mt-3 text-base-content/80">RAG over company documents for staff support, search, and faster decisions.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Manufacturing AI Pilot</h3>
+        <p class="mt-3 text-base-content/80">Quality inspection or predictive maintenance pilot with measurable KPIs.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI Training for Leadership Teams</h3>
+        <p class="mt-3 text-base-content/80">A 1-day or 2-day workshop on adoption, governance, and opportunity selection.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI Cost Audit</h3>
+        <p class="mt-3 text-base-content/80">A 2-week assessment of AI spend, model usage, and infrastructure costs with a prioritized optimization roadmap.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI Safety Audit</h3>
+        <p class="mt-3 text-base-content/80">Red teaming, bias analysis, and vulnerability assessment for your AI systems — with a prioritized remediation roadmap.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI Production Readiness Audit</h3>
+        <p class="mt-3 text-base-content/80">A 2-week assessment of your AI system across seven operational layers — observability, guardrails, fallbacks, cost controls, evals, release discipline, and infrastructure — with a scorecard and hardening roadmap.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">How we work</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">From AI strategy to production rollout</h2>
+          <p class="text-base-content/80">We keep projects practical: define value, validate quickly, integrate cleanly, and build governance in from the start.</p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Discover</h3>
+              <p class="mt-2 text-sm text-base-content/80">Assess readiness, map workflows, select high-ROI use cases.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Pilot</h3>
+              <p class="mt-2 text-sm text-base-content/80">Prototype quickly, test with real data, and prove operational value.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy</h3>
+              <p class="mt-2 text-sm text-base-content/80">Integrate with business systems, workflows, and local channels.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Optimize</h3>
+              <p class="mt-2 text-sm text-base-content/80">Monitor, refine prompts and workflows, retrain where needed, and report outcomes.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">What clients say</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Trusted by teams that value practical AI</h2>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-4xl">⭐</p>
+        <p class="text-base-content/80 leading-relaxed">"Jonathan helped us identify three high-ROI AI opportunities we had completely overlooked. Practical, grounded, and refreshingly honest about what works."</p>
+        <div>
+          <p class="font-bold text-base-content">— CEO</p>
+          <p class="text-sm text-base-content/60">Manufacturing, Da Nang</p>
+        </div>
+      </div>
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-4xl">⭐</p>
+        <p class="text-base-content/80 leading-relaxed">"The AI training workshop gave our leadership team a clear roadmap. No hype, just actionable steps we could take back to our teams."</p>
+        <div>
+          <p class="font-bold text-base-content">— CTO</p>
+          <p class="text-sm text-base-content/60">Logistics firm</p>
+        </div>
+      </div>
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-4xl">⭐</p>
+        <p class="text-base-content/80 leading-relaxed">"Our chatbot went from concept to production in six weeks. The localization support was a game-changer for reaching Vietnamese-speaking customers."</p>
+        <div>
+          <p class="font-bold text-base-content">— Product Director</p>
+          <p class="text-sm text-base-content/60">E-commerce brand</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="mx-auto max-w-7xl px-6 pb-24">
+    
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Latest AI News</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Recent developments in AI</h2>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      
+      <article class="glass-panel rounded-3xl p-6 space-y-3">
+        
+          <img src="https://example.com/claude-fable-5-shutdown.jpg" alt="Claude Fable 5 Shutdown: US Government Forces Global Suspension 72 Hours After Launch"
+               class="w-full aspect-video object-cover rounded-xl mb-1" />
+        
+        <div class="flex items-center gap-3 text-sm text-base-content/60">
+          <time datetime="2026-06-18">2026-06-18</time>
+          <span>By AI</span>
+        </div>
+        <h3 class="font-display text-xl font-bold text-base-content">
+          <a href="https:&#x2F;&#x2F;example.com&#x2F;news&#x2F;claude-fable-5-shutdown&#x2F;" class="hover:text-primary transition-colors">Claude Fable 5 Shutdown: US Government Forces Global Suspension 72 Hours After Launch</a>
+        </h3>
+        
+          <p class="text-sm text-base-content/80">Anthropic&#x27;s most capable model was pulled worldwide after an export control directive citing national security concerns over a disputed jailbreak claim.</p>
+        
+        <a href="https:&#x2F;&#x2F;example.com&#x2F;news&#x2F;claude-fable-5-shutdown&#x2F;" class="btn btn-primary btn-sm">Read article</a>
+      </article>
+      
+      <article class="glass-panel rounded-3xl p-6 space-y-3">
+        
+          <img src="https://example.com/glm-52-launch.jpg" alt="Z.ai Launches GLM-5.2: Open-Weight 1M-Context Model Rivals Closed-Source Frontier on Coding"
+               class="w-full aspect-video object-cover rounded-xl mb-1" />
+        
+        <div class="flex items-center gap-3 text-sm text-base-content/60">
+          <time datetime="2026-06-18">2026-06-18</time>
+          <span>By AI</span>
+        </div>
+        <h3 class="font-display text-xl font-bold text-base-content">
+          <a href="https:&#x2F;&#x2F;example.com&#x2F;news&#x2F;glm-52-launch&#x2F;" class="hover:text-primary transition-colors">Z.ai Launches GLM-5.2: Open-Weight 1M-Context Model Rivals Closed-Source Frontier on Coding</a>
+        </h3>
+        
+          <p class="text-sm text-base-content/80">Z.ai releases GLM-5.2 under MIT license with a usable 1M-token context, competitive coding benchmarks, and pricing at roughly one-tenth of Claude or GPT-5.</p>
+        
+        <a href="https:&#x2F;&#x2F;example.com&#x2F;news&#x2F;glm-52-launch&#x2F;" class="btn btn-primary btn-sm">Read article</a>
+      </article>
+      
+      <article class="glass-panel rounded-3xl p-6 space-y-3">
+        
+          <img src="https://example.com/google-okf.jpg" alt="Google Announces Open Knowledge Format (OKF) for AI Agent Knowledge"
+               class="w-full aspect-video object-cover rounded-xl mb-1" />
+        
+        <div class="flex items-center gap-3 text-sm text-base-content/60">
+          <time datetime="2026-06-18">2026-06-18</time>
+          <span>By AI</span>
+        </div>
+        <h3 class="font-display text-xl font-bold text-base-content">
+          <a href="https:&#x2F;&#x2F;example.com&#x2F;news&#x2F;google-okf&#x2F;" class="hover:text-primary transition-colors">Google Announces Open Knowledge Format (OKF) for AI Agent Knowledge</a>
+        </h3>
+        
+          <p class="text-sm text-base-content/80">Google Cloud proposes a vendor-neutral markdown standard for representing organizational knowledge that is readable by both humans and AI agents.</p>
+        
+        <a href="https:&#x2F;&#x2F;example.com&#x2F;news&#x2F;google-okf&#x2F;" class="btn btn-primary btn-sm">Read article</a>
+      </article>
+      
+    </div>
+    <div class="mt-8 text-center">
+      <a href="https://example.com/news/" class="btn btn-outline">View all AI News →</a>
+    </div>
+  </section>
+
+  <section id="contact" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to build your next AI system?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        Let's talk about your project. Get in touch to discuss your goals, challenges, and how we can deliver measurable results.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="mailto:hello@example.com" class="btn btn-primary btn-lg">Book a strategy call</a>
+        <a href="https://example.com/contact/" class="btn btn-outline btn-lg">Send a message</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

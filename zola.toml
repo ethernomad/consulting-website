@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://example.com"
-title = "AI Consulting"
+title = "Sand Intelligence"
 description = "AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses."
 theme = "acuity"
 
@@ -16,7 +16,7 @@ build_search_index = true
 theme = "catppuccin-mocha"
 
 [extra]
-brand = "[Your Firm Name]"
+brand = "Sand Intelligence"
 tagline = "AI consulting and product development for modern businesses"
 mission = "We help companies turn AI into practical systems, measurable ROI, and localized experiences for users, teams, and operations."
 cta_primary = "Book a strategy call"

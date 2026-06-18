@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Cost Optimization · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(245,158,11,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Cost Optimization
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Audit, optimize, and govern your AI spending — from LLM APIs and GPU infrastructure to workflow automation and shadow AI — so every dollar of AI investment drives measurable business value.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-we-help" class="btn btn-outline btn-lg">How we help</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Full AI spend audit — track every dollar across models, APIs, infrastructure, and teams</li>
+              <li>• Model and token optimization — prompt compression, caching, and intelligent model routing</li>
+              <li>• Infrastructure cost engineering — GPU selection, spot instances, self-hosted vs API TCO</li>
+              <li>• AI FinOps — cost allocation, unit economics, and budget guardrails</li>
+              <li>• Shadow AI discovery — find and govern untracked team-level AI spending</li>
+              <li>• ROI measurement — outcome tracking and value realization dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is AI Cost Optimization?</h2>
+      <p class="text-lg text-base-content/80">
+        AI cost optimization is the practice of reducing the total cost of training, deploying, and operating AI workloads while preserving model performance and business value. It combines cost allocation, unit economics measurement, and targeted action on infrastructure, data, and token-level levers.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Most organisations treat AI costs as a single line item, making it impossible to know which models, teams, or features are driving spend — or whether that spend is justified. AI cost optimisation brings visibility, accountability, and continuous improvement to AI investment, so you can scale confidently without waste.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Audit</p>
+        <p class="mt-1 text-sm text-base-content/80">Map every AI cost across models, APIs, infrastructure, platforms, and teams — including shadow AI spend that escapes procurement</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Optimise</p>
+        <p class="mt-1 text-sm text-base-content/80">Apply targeted levers — model selection, prompt engineering, caching, infrastructure right-sizing — to reduce cost without degrading quality</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Govern</p>
+        <p class="mt-1 text-sm text-base-content/80">Establish FinOps practices, cost allocation models, budget guardrails, and ROI dashboards to sustain savings over time</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Services</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What We Offer</h2>
+      <p class="text-lg text-base-content/80">
+        Every engagement is tailored to your organisation's AI maturity, stack, and spending profile. These are the core capabilities we bring to every cost optimisation engagement.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔍</span>
+        <h3 class="text-xl font-bold text-base-content">AI Spend Audit</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Comprehensive discovery of all AI-related spending across the organisation — LLM APIs (OpenAI, Anthropic, Google, etc.), cloud GPU instances, managed AI services, workflow automation platforms, and team-level subscriptions. We identify shadow AI spend that often accounts for 30-50% of total AI costs.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💡</span>
+        <h3 class="text-xl font-bold text-base-content">Model &amp; Token Optimization</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Right-size model selection so simple tasks use cheap, fast models and complex reasoning uses capable ones. Apply prompt compression, semantic caching, context window optimisation, and batching to reduce token consumption by 40-70% without changing output quality.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🖥️</span>
+        <h3 class="text-xl font-bold text-base-content">Infrastructure Cost Engineering</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Analyse GPU instance types, region pricing, reserved vs spot/preemptible instances, and self-hosted vs managed API trade-offs. For suitable workloads, we recommend and implement self-hosted inference with Rust-based engines (Candle, xinfer) that eliminate per-token pricing and deliver predictable infrastructure costs.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📊</span>
+        <h3 class="text-xl font-bold text-base-content">AI FinOps</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Implement cost allocation tagging so every dollar of AI spend is attributed to a specific customer, feature, team, or model. Establish unit economics — cost per inference, cost per conversation, cost per user — and set budget guardrails with automated alerts so cost overruns are caught before they hit the bill.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📈</span>
+        <h3 class="text-xl font-bold text-base-content">ROI Measurement &amp; Value Tracking</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Define KPIs that connect AI spend to business outcomes — revenue uplift, cost savings, productivity gains, customer satisfaction. Build dashboards that track value realisation over time and provide early warning when investments are underperforming. We help you answer: "Is this AI initiative worth what it costs?"
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚙️</span>
+        <h3 class="text-xl font-bold text-base-content">Workflow &amp; Automation Cost Analysis</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Automation platforms like Make.com, Zapier, and n8n can add 200-400% markup on AI API calls. We audit your automation stacks, identify hidden cost multipliers, and recommend direct-integration or self-hosted alternatives that eliminate platform overhead while maintaining or improving reliability.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Approach comparison</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">Managed API vs Self-Hosted Inference</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            One of the largest cost levers in AI is deployment strategy. Managed APIs offer zero upfront setup but charge per token, making costs unpredictable at scale. Self-hosted inference with Rust engines like Candle or xinfer converts variable token costs into predictable infrastructure costs — often reducing total cost by 60-90% for sustained workloads.
+          </p>
+          <p class="text-base-content/80 leading-relaxed">
+            We provide a data-backed TCO analysis for each workload in your stack, recommending the optimal mix of API and self-hosted deployment for your specific usage patterns.
+          </p>
+          <a href="https://example.com/private-inference/" class="link link-hover text-primary font-semibold">Learn more about Private Inference →</a>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="text-primary">Managed API</th>
+                <th class="text-secondary">Self-Hosted (Rust)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-medium text-base-content">Cost model</td>
+                <td>Per-token (variable)</td>
+                <td>Fixed infrastructure cost</td>
+              </tr>
+              <tr>
+                <td class="font-medium text-base-content">Predictability</td>
+                <td>Unpredictable at scale</td>
+                <td>Fully predictable</td>
+              </tr>
+              <tr>
+                <td class="font-medium text-base-content">Latency</td>
+                <td>Network-dependent</td>
+                <td>Low, local inference</td>
+              </tr>
+              <tr>
+                <td class="font-medium text-base-content">Data privacy</td>
+                <td>Data leaves your network</td>
+                <td>Data never leaves</td>
+              </tr>
+              <tr>
+                <td class="font-medium text-base-content">Setup effort</td>
+                <td>Minimal</td>
+                <td>Moderate (single binary)</td>
+              </tr>
+              <tr>
+                <td class="font-medium text-base-content">Best for</td>
+                <td>Low volume, variable workloads</td>
+                <td>Sustained, predictable workloads</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="how-we-help" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our process</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Optimise AI Costs</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We take you from spending blind to cost-confident — with full visibility, actionable recommendations, and ongoing governance. Every engagement produces measurable savings and a clear path to sustain them.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess &amp; Audit</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map all AI spending across models, APIs, cloud infrastructure, automation platforms, and team subscriptions. Interview stakeholders to uncover shadow AI. Build a complete cost baseline with per-workload breakdowns.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Analyse &amp; Prioritise</h3>
+              <p class="mt-2 text-sm text-base-content/80">Identify savings opportunities across model selection, token usage, infrastructure, and workflow automation. Rank by impact and effort. Model TCO scenarios for self-hosted vs API for each workload.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Implement &amp; Optimise</h3>
+              <p class="mt-2 text-sm text-base-content/80">Deploy the highest-impact changes — model routing, prompt optimisation, caching, infrastructure migration, or self-hosted inference — with before/after measurements to validate savings. Establish cost allocation tags and budget guardrails.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Monitor &amp; Govern</h3>
+              <p class="mt-2 text-sm text-base-content/80">Set up dashboards, automated alerts, and regular review cadences. We provide ongoing advisory to adapt optimisation strategies as usage patterns, models, and pricing evolve — ensuring savings compound over time.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Deliverables</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What You Get</h2>
+      <p class="text-lg text-base-content/80">
+        Every engagement produces concrete, data-backed outputs. No generic reports — each deliverable is specific to your organisation's AI stack, spending profile, and business goals.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI Spend Baseline Report</h3>
+        <p class="mt-3 text-base-content/80">Complete inventory of all AI-related spending — LLM APIs, cloud GPU, managed services, automation platforms, subscriptions — with per-workload, per-team, and per-model cost breakdowns.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Optimisation Roadmap</h3>
+        <p class="mt-3 text-base-content/80">Prioritised list of savings opportunities ranked by impact and complexity, with estimated cost reduction for each. Includes model right-sizing, infrastructure changes, and workflow automation improvements.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">TCO Comparison Model</h3>
+        <p class="mt-3 text-base-content/80">Data-driven total cost of ownership analysis comparing current spend against self-hosted (Rust/Candle/xinfer), alternative API providers, and hybrid deployment options for each workload.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">FinOps Framework</h3>
+        <p class="mt-3 text-base-content/80">Cost allocation tagging strategy, unit economics definitions (cost per inference, cost per customer), budget policies, alert thresholds, and team-level accountability structures.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">ROI Dashboard</h3>
+        <p class="mt-3 text-base-content/80">Live dashboard tracking AI spend against business outcomes — cost savings realised, revenue uplift, productivity gains, and customer satisfaction impact. Updated continuously after implementation.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Executive Briefing</h3>
+        <p class="mt-3 text-base-content/80">Leadership-ready summary of findings, savings achieved, and ongoing governance recommendations. Includes benchmark comparisons against industry peers and clear next steps.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How much can I expect to save?</summary>
+        <div class="collapse-content text-base-content/80">
+          Typical clients reduce AI spend by 30-60% in the first engagement. Model and token optimisation alone can cut costs by 40-70% without affecting output quality. Infrastructure changes (self-hosted inference, spot instances, cross-cloud arbitrage) often add another 20-40% on top. Every engagement starts with a baseline audit so savings are measured, not estimated.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How long does an AI cost optimisation engagement take?</summary>
+        <div class="collapse-content text-base-content/80">
+          A focused spend audit and optimisation roadmap typically takes 2-4 weeks. Implementation of high-impact changes depends on scope — model routing and prompt optimisation can roll out in days, while infrastructure migration (e.g., moving to self-hosted inference) may take 2-4 weeks. We also offer a rapid 1-week assessment for organisations that need quick visibility on spending.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you work with any AI platform or provider?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. We are vendor- and platform-agnostic. We optimise costs across OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, together.ai, self-hosted models, and any other provider in your stack. Our recommendations are based purely on cost, quality, and latency trade-offs for your specific workloads — not on partnerships or commissions.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What is shadow AI and why does it matter?</summary>
+        <div class="collapse-content text-base-content/80">
+          Shadow AI refers to AI tools, API subscriptions, and model usage that teams adopt without IT or procurement oversight. In most organisations, this accounts for 30-50% of total AI spend. It creates security, compliance, and cost risks — especially under regulations like the Vietnam AI Law. Our audit process discovers shadow AI and brings it under governance without disrupting team productivity.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you also implement the optimisation changes?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. Many clients start with an audit and roadmap, then engage us to implement the highest-impact changes — model routing systems, prompt optimisation, caching infrastructure, or self-hosted inference deployment with Rust engines (Candle, xinfer). The audit phase is always optional and independent; there is no obligation to continue with implementation.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is this different from your AI Strategy service?</summary>
+        <div class="collapse-content text-base-content/80">
+          AI Strategy focuses on identifying where to apply AI for maximum business value — use case selection, roadmap development, build-vs-buy analysis. AI Cost Optimization focuses on maximising efficiency of existing AI investments — reducing waste, right-sizing models, and optimising infrastructure. They complement each other: Strategy tells you what to build, Cost Optimization tells you how to run it efficiently. Many clients do both.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to optimise your AI spend?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help you audit, optimise, and govern AI costs so every dollar of investment drives measurable business value — freeing up budget for the innovations that matter.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

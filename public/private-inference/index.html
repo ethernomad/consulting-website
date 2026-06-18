@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private Inference · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<style>
+  [data-theme="acuity"] .logo-invert {
+    filter: invert(1);
+  }
+</style>
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(167,139,250,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Private Inference
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Run AI models on your own infrastructure — no data leaves your network, no per-token bills, no vendor lock-in. Predictable costs, full compliance, and production-grade performance.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Why self-host inference?</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Data never leaves your network — no third-party API calls</li>
+              <li>• Predictable costs — no per-token pricing surprises at scale</li>
+              <li>• Compliance-ready — VN AI Law, GDPR, banking secrecy, air-gapped environments</li>
+              <li>• Low latency — no network hop to external providers</li>
+              <li>• Full control — choose any model, swap anytime, no vendor lock-in</li>
+              <li>• Offline capable — runs without internet connectivity</li>
+              <li>• Single binary — deploy Candle or xinfer with zero runtime dependencies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is Private Inference?</h2>
+      <p class="text-lg text-base-content/80">
+        Private inference means running AI models on hardware you control — your servers, your VPS, or your edge devices — instead of sending data to third-party API providers. The models are the same frontier and open-weight models you would use via Anthropic, OpenAI, or Google, but inference happens locally.
+      </p>
+      <p class="text-lg text-base-content/80">
+        This is not about training models. It is about serving them. You download a pre-trained model, deploy an inference engine on your infrastructure, and make predictions via a local API — just like calling OpenAI, but every request stays inside your network boundary.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Your data</p>
+        <p class="mt-1 text-sm text-base-content/80">Inference runs on your hardware — no data ever leaves your network boundary</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Your model</p>
+        <p class="mt-1 text-sm text-base-content/80">Choose any open-weight model, swap anytime, no vendor lock-in</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Your infrastructure</p>
+        <p class="mt-1 text-sm text-base-content/80">Single binary deployment — no Python, no Node, no Docker required</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Comparison</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">API vs Self-Hosted Inference</h2>
+      <p class="text-lg text-base-content/80">
+        Most teams should start with API-based inference (Claude, GPT, Gemini) — it is the fastest path to value. Self-hosting makes sense when volume, privacy, or compliance requirements outweigh the operational overhead.
+      </p>
+    </div>
+
+    <div class="mt-10 overflow-x-auto">
+      <table class="table w-full max-w-4xl">
+        <thead>
+          <tr class="text-base-content/80">
+            <th></th>
+            <th class="text-center">API-Based</th>
+            <th class="text-center">Self-Hosted</th>
+          </tr>
+        </thead>
+        <tbody class="text-base-content/80">
+          <tr>
+            <td class="font-semibold text-base-content">Time to value</td>
+            <td class="text-center text-success">Minutes — sign up and call an API</td>
+            <td class="text-center text-warning">Days — provision hardware, download model, configure engine</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Cost at low volume</td>
+            <td class="text-center text-success">Pay per token — no fixed cost</td>
+            <td class="text-center text-warning">Fixed GPU/server cost regardless of usage</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Cost at high volume</td>
+            <td class="text-center text-warning">Per-token cost grows linearly with usage</td>
+            <td class="text-center text-success">Fixed cost — marginal cost per request near zero</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Data privacy</td>
+            <td class="text-center text-warning">Data sent to third-party servers</td>
+            <td class="text-center text-success">Data stays on your hardware</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Compliance</td>
+            <td class="text-center text-warning">Depends on provider's certifications</td>
+            <td class="text-center text-success">Full control — meet any regulatory requirement</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Model selection</td>
+            <td class="text-center text-success">Access to frontier models (Claude 4, GPT-5, Gemini 2.5)</td>
+            <td class="text-center text-warning">Limited to open-weight models</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Latency</td>
+            <td class="text-center text-warning">Adds network round-trip time</td>
+            <td class="text-center text-success">Sub-millisecond local API calls</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Offline capable</td>
+            <td class="text-center text-error">Requires internet connectivity</td>
+            <td class="text-center text-success">Runs fully offline</td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-base-content">Operational overhead</td>
+            <td class="text-center text-success">Zero — provider manages infrastructure</td>
+            <td class="text-center text-warning">You manage hardware, model updates, monitoring</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 glass-panel rounded-3xl p-6 max-w-4xl">
+      <p class="text-base-content/80 leading-relaxed">
+        <strong class="text-base-content">Our recommendation:</strong> Start with API-based inference to validate your use case and prove ROI. Migrate to self-hosted when your volume justifies the fixed infrastructure cost, your data privacy requirements demand it, or you need offline capability. We help you plan the transition at the right time.
+      </p>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Technology</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Inference Engines We Recommend</h2>
+      <p class="text-lg text-base-content/80">
+        We recommend open-source Rust-based inference engines — they produce small, fast binaries with zero external dependencies, ideal for production deployment on modest hardware.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-2">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-primary/80">General purpose</p>
+        <h3 class="font-display text-2xl font-extrabold text-base-content">Candle</h3>
+        <p class="text-base-content/80 leading-relaxed">
+          Minimalist ML framework from Hugging Face. Ideal for most self-hosted inference scenarios — small binary (~8 MB), broad model support (Llama, Mistral, Phi, Gemma, Stable Diffusion, Whisper, YOLO), GPU acceleration via CUDA and Metal, and first-class WASM support for browser or edge deployment.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/80">
+          <li>• 20k+ GitHub stars, 260+ contributors — large, active community</li>
+          <li>• Quantization support via GGUF — run models on consumer GPUs</li>
+          <li>• Apache 2.0 licensed — fully open source</li>
+        </ul>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="https://github.com/huggingface/candle" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Large models, single GPU</p>
+        <h3 class="font-display text-2xl font-extrabold text-base-content">xinfer</h3>
+        <p class="text-base-content/80 leading-relaxed">
+          Blazing-fast LLM inference in pure Rust with zero Python dependencies. Designed for running 30B+ parameter models on single consumer GPUs. Achieves up to 197 tok/s decode for large models with aggressive KV cache compression (TurboQuant 2-4 bit) and continuous batching.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/80">
+          <li>• Flash attention, FlashInfer, CUDA Graphs, prefix caching</li>
+          <li>• Runs on older GPUs (V100) with NVFP4 support</li>
+          <li>• OpenAI and Anthropic-compatible API — drop-in replacement</li>
+          <li>• Built-in Web UI and MCP tool calling</li>
+        </ul>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="https://github.com/guoqingbao/xinfer" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 glass-panel rounded-3xl p-6">
+      <p class="text-base-content/80 leading-relaxed text-sm">
+        <strong class="text-base-content">Which one should you use?</strong> Start with <strong>Candle</strong> for most workloads — it supports the widest range of models and use cases (text, image, audio, vision) with a tiny footprint. Use <strong>xinfer</strong> when you need to run large language models (30B+ params) on a single GPU and need maximum throughput per watt. Both produce single-binary deployments with zero Python or Node dependencies. We help you evaluate, choose, and deploy the right engine for your specific workload.
+      </p>
+    </div>
+  </section>
+
+  
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Use cases</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">When Private Inference Makes Sense</h2>
+      <p class="text-lg text-base-content/80">
+        These are the scenarios where self-hosting inference delivers clear advantages over API-based approaches.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📄</span>
+        <h3 class="text-xl font-bold text-base-content">Document Processing &amp; OCR</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Extract data from invoices, contracts, forms, applications, receipts, and business records using OCR automation and document AI. Private inference ensures document contents never leave your network — critical for banking, legal, and healthcare compliance.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔒</span>
+        <h3 class="text-xl font-bold text-base-content">Internal Knowledge Assistants</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          RAG over proprietary documents, internal wikis, and confidential data. Self-hosted inference keeps both the document corpus and the queries inside your infrastructure — no proprietary data ever reaches a third-party API.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🏛️</span>
+        <h3 class="text-xl font-bold text-base-content">Regulated Chatbots</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Customer-facing AI in regulated industries (banking, insurance, healthcare) where data residency laws prohibit sending customer data to foreign API providers. Vietnam AI Law compliance is a common driver.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚡</span>
+        <h3 class="text-xl font-bold text-base-content">Batch Processing</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          High-volume classification, summarisation, or extraction workloads where per-token API costs accumulate quickly. At scale, self-hosted inference provides predictable fixed costs and near-zero marginal cost per request.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📡</span>
+        <h3 class="text-xl font-bold text-base-content">Offline & Edge Environments</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Manufacturing plants, remote sites, ships, or military installations with limited or no internet connectivity. Candle compiles to WASM and runs in the browser — inference without any network dependency whatsoever.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💰</span>
+        <h3 class="text-xl font-bold text-base-content">Cost Control at Scale</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Teams processing millions of requests per month often find self-hosted inference breaks even within 3-6 months vs API pricing. After break-even, every additional request is nearly free.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">👁️</span>
+        <h3 class="text-xl font-bold text-base-content">Computer Vision</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Run vision models locally for defect detection, ID verification, traffic analysis, retail shelf monitoring, and workplace safety. Self-hosted inference keeps video feeds and images on your infrastructure — essential for manufacturing, logistics, and security applications.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Deploy Private Inference</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We assess your workload, recommend the right model and engine, deploy on your infrastructure, and set up monitoring so your team can focus on building with AI instead of managing infrastructure.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess & Recommend</h3>
+              <p class="mt-2 text-sm text-base-content/80">Evaluate your workload: throughput, latency, model size, privacy requirements, and budget. Recommend the optimal engine (Candle or xinfer) and hardware configuration.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy & Optimise</h3>
+              <p class="mt-2 text-sm text-base-content/80">Provision infrastructure, deploy the inference engine as a single binary, load and quantise your chosen model, configure the API layer, and optimise for throughput and latency.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Integrate & Harden</h3>
+              <p class="mt-2 text-sm text-base-content/80">Connect your application to the local API endpoint, set up authentication and rate limiting, implement monitoring and alerting, and establish backup and recovery procedures.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Monitor & Iterate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Track inference metrics, model performance, and cost savings. Recommend model updates, hardware scaling, or API fallback strategies as your usage evolves.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is self-hosted inference as good as API-based models?</summary>
+        <div class="collapse-content text-base-content/80">
+          For many workloads, yes. Open-weight models (Llama 3, Mistral, Qwen, Gemma, Phi) are competitive with frontier models on specific tasks. The trade-off is that frontier models (Claude 4, GPT-5, Gemini 2.5) are only available via API. We help you evaluate which tasks need frontier models and which can be served by self-hosted open-weight models — most teams find a hybrid approach works best.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What hardware do I need?</summary>
+        <div class="collapse-content text-base-content/80">
+          It depends on the model size and throughput requirements. Smaller models (7B-8B params) run well on a single consumer GPU (RTX 3090/4090, 24 GB VRAM). Larger models (30B-70B) benefit from professional GPUs (A100, H100) or multiple consumer GPUs. With quantisation and KV cache compression, xinfer can run 30B+ models on single 24-48 GB GPUs. We assess your workload and recommend the minimum viable hardware — often starting with a cloud GPU instance before committing to on-prem hardware.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How much does it cost compared to API pricing?</summary>
+        <div class="collapse-content text-base-content/80">
+          At low volume (<1M tokens/month), API pricing is cheaper because there is no fixed infrastructure cost. At high volume (10M+ tokens/month), self-hosted typically breaks even within 3-6 months. After break-even, the marginal cost of each additional request is near zero — just electricity and GPU wear. We build a cost model for your specific workload during the assessment phase so you know the numbers before committing.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is it hard to set up and maintain?</summary>
+        <div class="collapse-content text-base-content/80">
+          Candle and xinfer are designed to minimise operational overhead — they ship as single static binaries with no Python, Node, or Docker dependencies. Deploying the initial setup typically takes 1-2 days. Ongoing maintenance involves model updates (a few times per year) and hardware monitoring. We handle the initial deployment and can provide ongoing managed services if your team prefers not to operate the infrastructure directly.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I use a hybrid approach — API for some workloads, self-hosted for others?</summary>
+        <div class="collapse-content text-base-content/80">
+          Absolutely. This is the recommended architecture. Use frontier API models for complex reasoning, creative tasks, and anything requiring the latest capabilities. Route high-volume, sensitive, or latency-critical tasks to your self-hosted inference server. Both Candle and xinfer expose OpenAI-compatible APIs, so your application code treats both the same way — just point at a different endpoint. We help you design and implement this routing.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to move inference in-house?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help you evaluate, deploy, and operate private inference on your infrastructure — with the right model, the right engine, and the right hardware for your workload.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

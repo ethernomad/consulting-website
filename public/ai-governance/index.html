@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Governance &amp; Regulatory Compliance · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(167,139,250,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(34,197,94,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Board-level advisory</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Governance &amp; Regulatory Compliance
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Five major regulatory frameworks apply to AI in 2026. Most organisations are in scope of at least one — and most do not know it yet.
+          </p>
+          <p class="text-base-content/60">
+            The AI regulatory landscape has crystallised. The EU AI Act enforces high-risk obligations from <strong class="text-base-content">August 2026</strong>, Vietnam's AI Law took effect March 2026, US regulators increasingly reference the NIST AI RMF, SOC 2 auditors are demanding AI-specific controls, and HIPAA's proposed Security Rule update brings AI systems handling health data into scope. Boards need a coherent governance strategy that addresses all of them.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a governance review</a>
+            <a href="#frameworks" class="btn btn-outline btn-lg">The five frameworks</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key facts</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• EU AI Act high-risk obligations enforceable from <strong class="text-base-content">2 Aug 2026</strong></li>
+              <li>• NIST AI RMF is the de facto US standard — referenced by FTC, SEC, FDA, DOD</li>
+              <li>• 66% of B2B buyers demand SOC 2 reports from AI vendors</li>
+              <li>• HIPAA Security Rule update proposes AI-specific inventory and authorisation requirements</li>
+              <li>• VN AI Law effective 1 Mar 2026 — first standalone AI law in Southeast Asia</li>
+              <li>• 45 of 50 US states have introduced AI legislation as of early 2026</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">2026 urgency</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Why governance is a board-level issue now</h2>
+      <p class="text-lg text-base-content/80">
+        Multiple regulatory timelines converge in 2026. The window for proactive governance is closing.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Aug 2026</p>
+        <p class="mt-1 text-sm text-base-content/80">EU AI Act high-risk obligations become fully enforceable — penalties up to €35M or 7% of global turnover</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Mar 2026</p>
+        <p class="mt-1 text-sm text-base-content/80">VN AI Law takes effect — compliance deadline March 2027 for most organisations</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">2026</p>
+        <p class="mt-1 text-sm text-base-content/80">SOC 2 auditors now requiring AI-specific control evidence even without formal AICPA guidance</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-warning">Proposed</p>
+        <p class="mt-1 text-sm text-base-content/80">HIPAA Security Rule NPRM would mandate AI system inventory and authorisation for ePHI-handling systems</p>
+      </div>
+    </div>
+
+    <div class="mt-6 glass-panel rounded-3xl p-8">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">The board's question</p>
+      <p class="mt-2 text-base-content/80">"Which frameworks apply to our organisation, what gaps exist in our current governance, and what is the most efficient path to compliance?" The answer is different for every organisation — it depends on geographic presence, sector, customer base, and the AI systems in use. A structured governance assessment answers this question before regulators ask it.</p>
+    </div>
+  </section>
+
+  
+  <section id="frameworks" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Regulatory landscape</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">The five frameworks shaping AI governance in 2026</h2>
+      <p class="text-lg text-base-content/80">
+        Each framework addresses different risks and applies to different contexts. Most organisations need a strategy that addresses multiple frameworks simultaneously.
+      </p>
+    </div>
+
+    
+    <div class="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-error">High priority</span>
+        <p class="text-sm font-semibold tracking-wide text-primary/80">EU AI Act</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Regulation (EU) 2024/1689</h2>
+        <p class="text-base-content/80">
+          The world's first comprehensive legal framework for artificial intelligence — and it applies extraterritorially. Any organisation whose AI systems affect EU citizens is in scope, regardless of where it is headquartered.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• <strong class="text-base-content">Four risk tiers:</strong> Unacceptable (prohibited), High-risk, Limited risk, Minimal risk</li>
+          <li>• <strong class="text-base-content">Enforcement:</strong> Prohibited practices since Feb 2025, GPAI rules since Aug 2025, high-risk obligations from <strong class="text-base-content">2 Aug 2026</strong></li>
+          <li>• <strong class="text-base-content">Penalties:</strong> Up to €35 million or 7% of global annual turnover</li>
+          <li>• <strong class="text-base-content">High-risk requirements:</strong> Risk management, data governance, technical documentation, transparency, human oversight, accuracy and security, conformity assessment, post-market monitoring</li>
+          <li>• <strong class="text-base-content">FRIA required:</strong> Fundamental Rights Impact Assessment for high-risk systems — broader than GDPR's DPIA</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">How we help</p>
+        <div class="mt-6 grid gap-4">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Classification &amp; inventory</h3>
+            <p class="mt-2 text-sm text-base-content/80">Identify which of your AI systems fall under which risk tier — including shadow AI deployed without central oversight.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Gap analysis &amp; remediation</h3>
+            <p class="mt-2 text-sm text-base-content/80">Map current practices against the Act's 35+ obligations for high-risk systems. Deliver a prioritised remediation roadmap.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Documentation &amp; conformity</h3>
+            <p class="mt-2 text-sm text-base-content/80">Prepare technical documentation, risk management system, and conformity assessment artefacts required for CE marking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-info">US standard</span>
+        <p class="text-sm font-semibold tracking-wide text-primary/80">NIST AI Risk Management Framework</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">NIST AI 100-1</h2>
+        <p class="text-base-content/80">
+          While voluntary, the NIST AI RMF is rapidly becoming the US standard of care for AI governance. Federal regulators — including the FTC, SEC, FDA, CFPB, and DOD — reference its principles in enforcement guidance and procurement requirements.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• <strong class="text-base-content">Four core functions:</strong> <strong class="text-secondary">Govern</strong> (policies, roles, risk tolerance), <strong class="text-secondary">Map</strong> (context, risks, impacts), <strong class="text-secondary">Measure</strong> (testing, evaluation, monitoring), <strong class="text-secondary">Manage</strong> (response, recovery, communication)</li>
+          <li>• <strong class="text-base-content">GenAI Profile:</strong> NIST AI 600-1 (July 2024) extends the RMF with 12 generative AI-specific risk categories</li>
+          <li>• <strong class="text-base-content">Crosswalk available:</strong> Official NIST mapping aligns AI RMF subcategories to ISO/IEC 42001 for organisations seeking certification</li>
+          <li>• <strong class="text-base-content">Colorado AI Act:</strong> Grants affirmative defence to businesses demonstrating alignment with NIST AI RMF</li>
+          <li>• <strong class="text-base-content">Cyber AI Profile:</strong> NIST IR 8596 (draft Dec 2025) bridges AI RMF with Cybersecurity Framework 2.0</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">How we help</p>
+        <div class="mt-6 grid gap-4">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">AI RMF alignment assessment</h3>
+            <p class="mt-2 text-sm text-base-content/80">Evaluate current governance against all four functions and 30+ subcategories. Score maturity and identify gaps.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Governance framework design</h3>
+            <p class="mt-2 text-sm text-base-content/80">Build policies, RACI matrices, oversight bodies, and risk tolerance thresholds aligned to AI RMF's Govern function.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Playbook implementation</h3>
+            <p class="mt-2 text-sm text-base-content/80">Operationalise the AI RMF Playbook with practical actions, templates, and monitoring cadences for each subcategory.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Safety audits</h3>
+            <p class="mt-2 text-sm text-base-content/80">Technical AI safety testing that validates your governance framework's controls are actually working in practice — red teaming, bias analysis, and adversarial testing.</p>
+            <a href="https://example.com/ai-safety/" class="link link-hover text-primary font-semibold text-sm mt-2 inline-block">AI Safety services →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-info">B2B trust</span>
+        <p class="text-sm font-semibold tracking-wide text-primary/80">SOC 2</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">System and Organization Controls 2</h2>
+        <p class="text-base-content/80">
+          SOC 2 has become a de facto requirement for B2B AI companies. While the AICPA has not yet published an AI-specific standard, auditors in 2026 are demanding AI-specific control evidence in real engagements.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• <strong class="text-base-content">Five trust principles:</strong> Security, Availability, Processing Integrity, Confidentiality, Privacy</li>
+          <li>• <strong class="text-base-content">Market reality:</strong> Roughly 66% of B2B buyers now demand a SOC 2 report before considering a vendor</li>
+          <li>• <strong class="text-base-content">AI control expectations:</strong> Data governance, model risk management, transparency and bias controls, secure development lifecycle, vendor management, incident response</li>
+          <li>• <strong class="text-base-content">Type I vs Type II:</strong> Most buyers require a Type II report covering at least 6 months of operational evidence</li>
+          <li>• <strong class="text-base-content">Cross-framework integration:</strong> SOC 2 AI controls increasingly align with NIST AI RMF and ISO 42001 expectations</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">How we help</p>
+        <div class="mt-6 grid gap-4">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">AI control design</h3>
+            <p class="mt-2 text-sm text-base-content/80">Design and document controls for AI-specific risks — model governance, data provenance, output monitoring, bias testing — mapped to SOC 2 trust principles.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Readiness assessment</h3>
+            <p class="mt-2 text-sm text-base-content/80">Evaluate current control environment against SOC 2 criteria and AI-specific auditor expectations. Identify gaps and remediation priorities.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Audit support</h3>
+            <p class="mt-2 text-sm text-base-content/80">Prepare evidence packages, support auditor walkthroughs, and manage the SOC 2 examination lifecycle for AI systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-warning">Healthcare</span>
+        <p class="text-sm font-semibold tracking-wide text-primary/80">HIPAA AI Governance</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Health Insurance Portability and Accountability Act</h2>
+        <p class="text-base-content/80">
+          AI systems handling protected health information introduce new compliance dimensions under HIPAA. The proposed 2026 Security Rule update would make AI-specific inventory and risk analysis mandatory, and rapidly expanding state AI laws add further obligations.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• <strong class="text-base-content">Proposed Security Rule (NPRM):</strong> Would mandate AI system inventory, authorisation, and documentation for all systems touching ePHI. Encryption, MFA, and logging would become mandatory rather than addressable.</li>
+          <li>• <strong class="text-base-content">BAA requirements:</strong> Any AI vendor processing PHI must have a Business Associate Agreement defining permitted uses, safeguards, and breach reporting.</li>
+          <li>• <strong class="text-base-content">State legislation:</strong> 45 of 50 US states have introduced AI legislation in 2026. Texas, Utah, California, and Colorado have enacted AI laws affecting healthcare specifically.</li>
+          <li>• <strong class="text-base-content">Key risks:</strong> PHI leakage via AI model outputs, prompt injection exposing training data, minimum necessary rule compliance, clinical oversight of AI-assisted decisions</li>
+          <li>• <strong class="text-base-content">FDA overlap:</strong> AI/ML-enabled medical devices (SaMD) face additional FDA premarket review and Predetermined Change Control Plan requirements</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">How we help</p>
+        <div class="mt-6 grid gap-4">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">HIPAA AI risk assessment</h3>
+            <p class="mt-2 text-sm text-base-content/80">Map AI data flows end-to-end, identify ePHI exposure points, assess compliance with Privacy and Security Rules, and document findings.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">BAA &amp; vendor review</h3>
+            <p class="mt-2 text-sm text-base-content/80">Review and strengthen Business Associate Agreements for AI vendors. Ensure subcontractor obligations and breach reporting timelines are defined.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Governance program design</h3>
+            <p class="mt-2 text-sm text-base-content/80">Build AI governance policies covering clinical oversight, patient disclosure, minimum necessary use, de-identification, and incident response.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="mt-6 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-success">Southeast Asia</span>
+        <p class="text-sm font-semibold tracking-wide text-primary/80">VN AI Law</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Law 134/2025/QH15</h2>
+        <p class="text-base-content/80">
+          Vietnam's first standalone AI Law took effect on 1 March 2026 — the first comprehensive AI regulation in Southeast Asia. It applies to domestic and foreign entities developing, providing, deploying, or using AI systems that affect Vietnamese users.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• <strong class="text-base-content">Three-tier framework:</strong> High-risk (strict controls, pre-market conformity), Medium-risk (transparency and monitoring), Low-risk (minimal oversight)</li>
+          <li>• <strong class="text-base-content">Compliance deadline:</strong> 1 March 2027 (12-month grace period). Health, education, and financial services: 1 September 2027</li>
+          <li>• <strong class="text-base-content">Key obligations:</strong> AI inventory, risk classification, human oversight, technical documentation, registration on national AI portal, AI literacy</li>
+          <li>• <strong class="text-base-content">Foreign providers:</strong> High-risk AI providers must establish a local presence or appoint an authorised representative in Vietnam</li>
+        </ul>
+        <div class="mt-4">
+          <a href="https://example.com/vn-ai-law/" class="link link-hover text-primary font-semibold">Full VN AI Law compliance guide →</a>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">How we help</p>
+        <div class="mt-6 grid gap-4">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">AI inventory &amp; risk classification</h3>
+            <p class="mt-2 text-sm text-base-content/80">Audit all AI systems in use across the organisation and classify each under the law's three-tier framework.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Gap analysis &amp; remediation</h3>
+            <p class="mt-2 text-sm text-base-content/80">Identify gaps in documentation, oversight, registration, and literacy obligations. Deliver a prioritised roadmap to compliance.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Representative services</h3>
+            <p class="mt-2 text-sm text-base-content/80">Support for foreign providers needing authorised representative setup, registration submission, and ongoing compliance monitoring.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Integration</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How the frameworks fit together</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            These five frameworks are not silos. Work done for one directly contributes to readiness for the others. A unified governance program is more efficient than managing each framework independently.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">NIST AI RMF → EU AI Act</h3>
+            <p class="mt-2 text-sm text-base-content/80">The AI RMF's Map function supports EU AI Act risk classification. Measure supports conformity assessment. Manage supports post-market monitoring. The European Commission has acknowledged AI RMF as a useful reference for implementation.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">NIST AI RMF → ISO 42001</h3>
+            <p class="mt-2 text-sm text-base-content/80">NIST published an official crosswalk mapping AI RMF subcategories to ISO 42001 clauses. Use the RMF for operational guidance and ISO 42001 for formal certification.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">SOC 2 → All frameworks</h3>
+            <p class="mt-2 text-sm text-base-content/80">SOC 2's trust principles provide a control foundation that supports compliance across all regulatory frameworks. AI-specific controls designed for SOC 2 map to EU AI Act documentation requirements, NIST AI RMF Measure function, and HIPAA Security Rule safeguards.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">VN AI Law → EU AI Act</h3>
+            <p class="mt-2 text-sm text-base-content/80">Vietnam's risk-based three-tier framework mirrors the EU approach. Organisations already aligned with the EU AI Act will find significant conceptual overlap with VN AI Law obligations — though implementation details and deadlines differ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How we help you build an AI governance program</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We help boards and leadership teams understand which frameworks apply, assess current governance posture, and build a practical, integrated compliance program that addresses multiple regulatory requirements simultaneously.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Scoping &amp; framework mapping</h3>
+              <p class="mt-2 text-sm text-base-content/80">Identify which frameworks apply based on your geographic presence, sector, customer base, and AI systems in use. Map obligations across frameworks to find overlaps and efficiencies.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Governance gap assessment</h3>
+              <p class="mt-2 text-sm text-base-content/80">Evaluate current AI governance against applicable frameworks. Assess AI inventory completeness, risk classification, documentation, oversight mechanisms, and control effectiveness.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Governance framework design</h3>
+              <p class="mt-2 text-sm text-base-content/80">Design policies, roles, oversight bodies, and risk tolerance thresholds. Build a unified governance framework that satisfies multiple regulatory requirements with a single set of controls.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Roadmap &amp; board briefing</h3>
+              <p class="mt-2 text-sm text-base-content/80">Prioritised implementation roadmap with milestones, resource requirements, and timelines aligned to regulatory deadlines. Board-ready briefing on risk exposure, recommended actions, and investment case.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Deliverables</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What you get</h2>
+      <p class="text-lg text-base-content/80">
+        Every governance engagement produces concrete, board-ready deliverables that support real compliance decisions.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Regulatory exposure assessment</h3>
+        <p class="mt-3 text-base-content/80">Definitive mapping of which frameworks apply to your organisation, which AI systems are in scope, and the compliance deadlines you face.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI inventory &amp; risk register</h3>
+        <p class="mt-3 text-base-content/80">Complete inventory of all AI systems in use — including shadow AI — classified by risk tier under each applicable framework.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Gap analysis &amp; remediation plan</h3>
+        <p class="mt-3 text-base-content/80">Current-state vs required-state comparison across all applicable frameworks. Prioritised remediation actions with effort estimates and deadline alignment.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Governance framework &amp; policies</h3>
+        <p class="mt-3 text-base-content/80">Unified governance framework — policies, RACI matrix, oversight body charter, risk tolerance thresholds — designed to satisfy multiple regulatory requirements simultaneously.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Implementation roadmap</h3>
+        <p class="mt-3 text-base-content/80">Phased plan with milestones mapped to each framework's compliance deadlines. Resource requirements, dependency mapping, and go/no-go decision points.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Board briefing pack</h3>
+        <p class="mt-3 text-base-content/80">Executive-ready summary of regulatory exposure, risk assessment, recommended governance structure, investment case, and timeline to compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="faq" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Which AI regulations apply to my organisation?</summary>
+        <div class="collapse-content text-base-content/80">
+          It depends on three factors: <strong class="text-base-content">geography</strong> (where you operate and where your users are), <strong class="text-base-content">sector</strong> (healthcare, finance, education, and public sector face additional obligations), and <strong class="text-base-content">customer type</strong> (B2B enterprises increasingly require SOC 2 as a contractual condition). A structured regulatory exposure assessment maps every applicable framework to your specific context.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do I need to comply with all five frameworks?</summary>
+        <div class="collapse-content text-base-content/80">
+          Probably not all five, but most organisations are in scope of at least two or three. A US-based B2B SaaS company likely needs NIST AI RMF alignment and SOC 2. If it also has EU customers, the EU AI Act applies. If it handles health data, HIPAA applies. If it operates in Vietnam or serves Vietnamese users, VN AI Law applies. The key is identifying which frameworks apply to <strong class="text-base-content">your</strong> specific situation — then building a unified governance program that addresses them efficiently.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How do these frameworks overlap?</summary>
+        <div class="collapse-content text-base-content/80">
+          Substantially. NIST AI RMF's four functions provide an operational methodology that satisfies requirements across EU AI Act (risk management, documentation, monitoring), SOC 2 (control design and evidence), and HIPAA (risk analysis and safeguards). Vietnam's risk-based framework mirrors the EU approach. Work done for one framework directly contributes to readiness for others. A unified governance program is more efficient and cost-effective than managing each framework independently.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What is the most urgent deadline in 2026?</summary>
+        <div class="collapse-content text-base-content/80">
+          <strong class="text-base-content">2 August 2026</strong> — the EU AI Act's enforcement date for high-risk AI obligations. This is the most pressing deadline for any organisation whose AI systems affect EU citizens. Penalties reach €35 million or 7% of global annual turnover. For organisations not subject to the EU AI Act, the VN AI Law compliance deadline of March 2027 and US state-level AI legislation (45 states have introduced bills) represent the next wave of regulatory pressure.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I use NIST AI RMF instead of the EU AI Act?</summary>
+        <div class="collapse-content text-base-content/80">
+          No — the EU AI Act is binding regulation; NIST AI RMF is voluntary guidance. However, the AI RMF can serve as a practical implementation methodology for meeting EU AI Act requirements. The European Commission has acknowledged the AI RMF as a useful reference. Many organisations use the AI RMF as their operational framework while addressing EU AI Act-specific obligations (conformity assessment, CE marking, FRIA) as a compliance overlay.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How long does a governance engagement take?</summary>
+        <div class="collapse-content text-base-content/80">
+          A focused governance gap assessment and framework design typically takes 4-6 weeks. A full governance program implementation — including policy creation, control design, documentation, and board briefing — ranges from 8-12 weeks depending on organisation size, AI system count, and the number of applicable frameworks. We also offer scaled-down board briefings (1-2 days) for organisations that need an immediate understanding of their regulatory exposure.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Understand your regulatory exposure</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help boards and leadership teams navigate the AI regulatory landscape — identifying which frameworks apply, assessing current governance posture, and building a practical, integrated compliance roadmap for 2026 and beyond.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a governance review</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

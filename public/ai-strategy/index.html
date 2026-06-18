@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Strategy and Advisory · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(20,184,166,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Strategy &amp; Advisory
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Strategic AI guidance to identify where artificial intelligence creates measurable value, align leadership on priorities, and build a practical, low-risk adoption roadmap — tailored to your business, your data, and your goals.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-we-help" class="btn btn-outline btn-lg">How we help</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• AI readiness assessments — data, maturity, and capability evaluation</li>
+              <li>• Use case identification and prioritisation by business value and feasibility</li>
+              <li>• Phased AI roadmap development from discovery to production scale</li>
+              <li>• Build-vs-buy analysis — vendor-agnostic, ROI-backed recommendations</li>
+              <li>• Data strategy and governance planning for responsible AI adoption</li>
+              <li>• Executive workshops and leadership alignment sessions</li>
+              <li>• Private and on-prem deployment assessment for compliance-heavy environments</li>
+              <li>• KPI frameworks to measure adoption, impact, and ROI over time</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is AI Strategy?</h2>
+      <p class="text-lg text-base-content/80">
+        AI strategy is the practice of defining where and how artificial intelligence should be used in an organisation to create measurable business value — and building a realistic, phased plan to get there. It is not about chasing the latest technology. It is about making deliberate choices: which problems to solve, what data is needed, whether to build or buy, and how to govern AI responsibly from day one.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Many businesses are interested in AI but do not know where to start, what use cases matter most, or how to align AI investments with real business goals. A sound AI strategy answers those questions before a single line of code is written — reducing risk, avoiding costly mistakes, and ensuring every initiative has a clear line of sight to business outcomes.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Discover</p>
+        <p class="mt-1 text-sm text-base-content/80">Assess current capabilities, data readiness, and organisational maturity to identify where AI can have real impact</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Plan</p>
+        <p class="mt-1 text-sm text-base-content/80">Prioritise use cases, design the roadmap, and build the business case — grounded in your specific context and constraints</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Execute</p>
+        <p class="mt-1 text-sm text-base-content/80">Implement with a phased approach, establish governance, measure outcomes, and scale what works</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Services</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What We Offer</h2>
+      <p class="text-lg text-base-content/80">
+        Every engagement is tailored to your organisation's context, industry, and goals. These are the core capabilities we bring to every AI strategy engagement.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📋</span>
+        <h3 class="text-xl font-bold text-base-content">AI Readiness Assessment</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Evaluate data quality, digital maturity, technical capabilities, team readiness, and leadership alignment. We score each dimension against what production AI actually requires — not what a prototype needs — and identify the gaps that must be closed before development begins.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎯</span>
+        <h3 class="text-xl font-bold text-base-content">Use Case Identification &amp; Prioritisation</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Find high-ROI opportunities across sales, customer service, operations, finance, HR, and product development. Each use case is scored on business value, feasibility, data readiness, and risk — producing a ranked matrix that makes investment decisions clear.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🗺️</span>
+        <h3 class="text-xl font-bold text-base-content">AI Roadmap Development</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Break adoption into phases — discovery, pilot, integration, rollout, and optimisation. Each phase includes clear milestones, resource requirements, cost estimates, and success criteria. The roadmap sequences initiatives so early wins build capability for later phases.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔍</span>
+        <h3 class="text-xl font-bold text-base-content">Build-vs-Buy Analysis</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Unbiased, vendor-agnostic recommendations on whether to use off-the-shelf tools, customise existing platforms, or build proprietary systems. Each option is evaluated against total cost of ownership, integration complexity, time to value, and long-term flexibility.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🛡️</span>
+        <h3 class="text-xl font-bold text-base-content">Data Strategy &amp; Governance</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Ensure the organisation has the right data infrastructure, policies, and processes for AI implementation. Covers data quality, lineage, access controls, privacy compliance, ethical guidelines, and the governance framework needed to operate AI systems responsibly.
+        </p>
+        <a href="https://example.com/ai-governance/" class="link link-hover text-primary font-semibold text-sm">See our AI Governance &amp; Regulatory Compliance advisory →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">👥</span>
+        <h3 class="text-xl font-bold text-base-content">Executive Workshops &amp; Briefings</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Align leadership on AI opportunities, risks, costs, and change management requirements. Workshops are tailored to your organisation's context and designed to build shared understanding across technical, operational, and executive stakeholders.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  
+  <section id="how-we-help" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our process</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Build an AI Strategy</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We take you from ambiguity to a clear, defensible AI strategy — grounded in your data, your operations, and your business goals. Every engagement produces decision-ready outputs, not theoretical reports.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Discover &amp; Assess</h3>
+              <p class="mt-2 text-sm text-base-content/80">Understand your business context, map current AI activity, evaluate data maturity and technical readiness, and identify the strategic questions driving the engagement. We interview stakeholders across teams to build a complete picture.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Strategise &amp; Prioritise</h3>
+              <p class="mt-2 text-sm text-base-content/80">Identify and score use cases by business value, feasibility, data readiness, and risk. Recommend build-vs-buy for each opportunity. Design the target operating model and governance framework. Build the business case with ROI modelling.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Roadmap &amp; Plan</h3>
+              <p class="mt-2 text-sm text-base-content/80">Develop a phased implementation roadmap with clear milestones, resource requirements, cost estimates, and dependency mapping. Define KPIs and success metrics for each phase. Sequence initiatives so early delivery builds momentum and capability.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Enable &amp; Scale</h3>
+              <p class="mt-2 text-sm text-base-content/80">Align leadership on the strategy, establish the governance body, set up AI literacy programs, and kick off the first pilot. We provide ongoing advisory support as you move through the roadmap, helping you adapt to new opportunities and challenges.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Deliverables</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What You Get</h2>
+      <p class="text-lg text-base-content/80">
+        Every engagement produces concrete, decision-ready deliverables. No generic reports — each output is specific to your organisation's context and designed to support real investment decisions.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Current-State Assessment</h3>
+        <p class="mt-3 text-base-content/80">Comprehensive evaluation of AI activity, data maturity, technical readiness, team capabilities, and governance posture across the organisation — including shadow AI discovered during the audit.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Prioritised Use Case Matrix</h3>
+        <p class="mt-3 text-base-content/80">Every identified opportunity ranked by business value, feasibility, data readiness, integration complexity, and risk. Each use case includes a high-level scope estimate and recommendation.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Business Case Analysis</h3>
+        <p class="mt-3 text-base-content/80">ROI models for prioritised initiatives — projected costs, expected benefits, break-even analysis, and sensitivity scenarios. Designed for CFO review and board-level investment decisions.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Implementation Roadmap</h3>
+        <p class="mt-3 text-base-content/80">Phased plan with milestones, dependencies, resource requirements, and investment estimates. Each phase includes success criteria and go/no-go decision points before progressing to the next stage.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Governance Framework</h3>
+        <p class="mt-3 text-base-content/80">Policies, roles, and processes for responsible AI operation — covering risk classification, human oversight, documentation standards, incident response, and compliance with applicable regulations.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Executive Briefing &amp; KPI Dashboard</h3>
+        <p class="mt-3 text-base-content/80">Leadership-ready summary of findings, recommendations, and roadmap. Defined KPIs to track AI adoption impact, ROI realisation, and maturity progression over time — with baseline measurements from the assessment.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do I need an AI strategy before building anything?</summary>
+        <div class="collapse-content text-base-content/80">
+          Not always. If you are running a quick experiment or proof of concept, the fastest path is to build something and learn. An AI strategy engagement is most valuable when you are ready to move beyond experiments — when you need to decide which opportunities to fund, how to sequence them, and what infrastructure and governance to put in place. That said, even a half-day strategy workshop early on can prevent costly detours.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How long does an AI strategy engagement take?</summary>
+        <div class="collapse-content text-base-content/80">
+          A focused strategy engagement typically takes 4-8 weeks, depending on organisation size, scope of AI activity, and the number of stakeholders involved. We also offer scaled-down workshops (1-2 days) for smaller organisations or specific departmental needs. During the initial conversation, we scope the engagement to match your timeline and budget.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you recommend specific vendors or tools?</summary>
+        <div class="collapse-content text-base-content/80">
+          We are vendor-agnostic. Our recommendations are based on your specific requirements, existing infrastructure, and long-term goals — not on partnerships or commissions. We evaluate off-the-shelf tools, custom development, and hybrid approaches, and recommend the path that delivers the best ROI for your context. If a particular vendor or framework is the right fit, we will say so. If building in-house makes more sense, we will say that too.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What if my data is not ready for AI?</summary>
+        <div class="collapse-content text-base-content/80">
+          That is common, and it is exactly what the readiness assessment uncovers. Data gaps are not a dead end — they are a starting point. Our roadmap includes data engineering and infrastructure investments as early milestones, sequenced so that data preparation happens in parallel with pilot work on use cases that are already viable. Most organisations have at least one area where data quality is sufficient to start.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you also implement the strategy?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes, if that is what you need. Many clients start with strategy and advisory, then engage us for implementation once the roadmap is approved. We build AI applications with Rust — agent systems, inference pipelines, model training, and cross-platform apps — so we can execute the full scope of the roadmap. The strategy phase is always optional and independent; there is no obligation to continue.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How do I know if my organisation is ready for AI?</summary>
+        <div class="collapse-content text-base-content/80">
+          Organisational readiness is about more than data and technology. It is also about leadership alignment, team skills, risk tolerance, and change management capacity. The readiness assessment evaluates all of these dimensions and gives you a scored, objective picture of where you stand — not a generic maturity model, but a practical assessment of what it will take to succeed in your specific context.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to build your AI strategy?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help you assess where AI can create value, prioritise the right opportunities, and build a practical roadmap for adoption — grounded in your business, your data, and your goals.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VN AI Law Compliance · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(167,139,250,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Law 134/2025/QH15</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Vietnam AI Law Compliance
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            The law is in effect. Compliance deadlines begin March 2027. Most organisations are already in scope and do not know it.
+          </p>
+          <p class="text-base-content/60">
+            On 10 December 2025, the National Assembly passed Vietnam's first standalone AI Law. It took effect on <strong class="text-base-content">1 March 2026</strong>, making Vietnam the first country in Southeast Asia to establish a comprehensive, risk-based AI regulatory framework.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#review" class="btn btn-primary btn-lg">Book a compliance review</a>
+            <a href="#faq" class="btn btn-outline btn-lg">View FAQ</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key facts</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• First standalone AI law in Southeast Asia</li>
+              <li>• 35 articles, risk-based framework</li>
+              <li>• Applies to domestic and foreign entities</li>
+              <li>• Human-centric: AI serves as a support tool</li>
+              <li>• 12-month grace period (18 for health/edu/finance)</li>
+              <li>• Implementing Decree 142/2026/NĐ-CP effective 1 May 2026</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Timeline</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What's in force and when</h2>
+      <p class="text-lg text-base-content/80">
+        The law introduces obligations in phases. The compliance clock is running — and most organisations have not yet conducted an AI inventory.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8">
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">10 Dec 2025</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Law passed</h3>
+              <p class="mt-2 text-sm text-base-content/80">National Assembly passes Law 134/2025/QH15 with 90.7% approval.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">1 Mar 2026</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Law takes effect</h3>
+              <p class="mt-2 text-sm text-base-content/80">All organisations must begin risk classification of AI systems. Human-centric principle and prohibited practices enforceable.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">1 May 2026</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Implementing decree</h3>
+              <p class="mt-2 text-sm text-base-content/80">Decree 142/2026/NĐ-CP provides implementation guidance for providers, developers, deployers, and users.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">1 Mar 2027</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Compliance deadline</h3>
+              <p class="mt-2 text-sm text-base-content/80">All AI systems must comply. High-risk systems require registration, documentation, human oversight, and conformity assessment.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">1 Sep 2027</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Extended deadline</h3>
+              <p class="mt-2 text-sm text-base-content/80">Health, education, and financial sector AI systems have an additional 6 months to comply.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Why now matters</p>
+        <ul class="space-y-4 text-base-content/80">
+          <li>• Prohibited practices — including real-time biometric surveillance and social scoring — have been enforceable since the law took effect</li>
+          <li>• Risk classification is not optional; every organisation using AI must categorise their systems</li>
+          <li>• Foreign providers of high-risk AI systems must establish a commercial presence or appoint an authorised representative in Vietnam</li>
+          <li>• The national AI portal for registration is operational — high-risk systems must be registered before the March 2027 deadline</li>
+          <li>• Non-compliance penalties are outlined in the implementing decree and enforcement mechanisms are being stood up</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Risk classification</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Three-tier risk-based framework</h2>
+      <p class="text-lg text-base-content/80">
+        Mirroring global regulatory trends, the AI Law categorises systems by their potential impact on human rights, safety, security, and public interests.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-error">High-risk</span>
+        <h3 class="text-2xl font-bold text-base-content">Strict regulatory controls</h3>
+        <p class="text-base-content/80">Systems that pose significant potential harm to life, health, national security, or lawful rights.</p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Pre-market conformity assessment</li>
+          <li>• Ongoing risk management</li>
+          <li>• Human oversight mechanisms</li>
+          <li>• Registration via national AI portal</li>
+          <li>• Foreign providers: local presence or authorised rep required</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-warning">Medium-risk</span>
+        <h3 class="text-2xl font-bold text-base-content">Monitoring and transparency</h3>
+        <p class="text-base-content/80">Systems carrying risks such as user confusion or minor market disruptions.</p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Ongoing monitoring reports</li>
+          <li>• Sample audits by authorities</li>
+          <li>• Transparency disclosures to users</li>
+          <li>• Documentation of system purpose and scope</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="badge badge-success">Low-risk</span>
+        <h3 class="text-2xl font-bold text-base-content">Minimal oversight</h3>
+        <p class="text-base-content/80">Systems with minimal impact on rights, safety, or public interests.</p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Minimal regulatory oversight</li>
+          <li>• Incident monitoring</li>
+          <li>• Voluntary best-practice guidelines encouraged</li>
+          <li>• AI literacy obligation still applies</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="mt-6 glass-panel rounded-3xl p-8">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Note</p>
+      <p class="mt-2 text-base-content/80">The exact list of high-risk AI systems will be issued by the Prime Minister in a separate decision. The Ministry of Science and Technology is preparing this list. Until then, organisations should classify based on the law's general criteria: potential harm to life, health, national security, and lawful rights.</p>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Exposure</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Most organisations are in scope and do not know it</h2>
+        <p class="text-base-content/80">
+          The law applies to <strong class="text-base-content">five distinct roles</strong> in the AI value chain. Most organisations occupy at least one — often more than one — without having formally identified their position.
+        </p>
+        <p class="text-base-content/80">
+          Shadow AI adoption across departments means exposure is frequently wider than leadership believes. If your organisation uses a third-party AI tool in a high-risk context, the deployer obligations sit with you. The vendor relationship does not transfer liability.
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-primary">Developer</h3>
+            <p class="mt-2 text-sm text-base-content/80">Designs, builds, trains, or refines AI models with control over technical methods and training data.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-secondary">Provider</h3>
+            <p class="mt-2 text-sm text-base-content/80">Markets AI systems under their own name, brand, or trademark — regardless of who built it.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-accent">Deployer</h3>
+            <p class="mt-2 text-sm text-base-content/80">Integrates or uses AI systems as part of their service offerings or internal operations.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">User</h3>
+            <p class="mt-2 text-sm text-base-content/80">Directly interacts with AI systems or relies on their outputs in decision-making.</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6 md:col-span-2">
+            <h3 class="font-bold text-warning">Affected Party</h3>
+            <p class="mt-2 text-sm text-base-content/80">Entities whose lawful rights, life, health, property, reputation, or access to services are impacted by AI deployment or outputs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Obligations</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What compliance requires</h2>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI inventory</h3>
+        <p class="mt-3 text-base-content/80">Identify and document every AI system in use across the organisation — including shadow AI adopted without IT knowledge.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Risk classification</h3>
+        <p class="mt-3 text-base-content/80">Classify each system as high, medium, or low risk under the law's criteria. Document the rationale for each classification.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Human oversight</h3>
+        <p class="mt-3 text-base-content/80">Design and implement mechanisms that keep humans in the loop for all high-risk AI decisions. The law requires humans to remain the final arbiter.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Technical documentation</h3>
+        <p class="mt-3 text-base-content/80">Maintain comprehensive records: system purpose, training data, performance metrics, risk assessment, and operational logs.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Registration</h3>
+        <p class="mt-3 text-base-content/80">High-risk systems must be registered on the national AI portal before the compliance deadline. Foreign providers: local presence or authorised rep required.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI literacy</h3>
+        <p class="mt-3 text-base-content/80">Ensure staff who develop, deploy, or use AI systems have appropriate AI literacy — understanding capabilities, limitations, risks, and governance obligations.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Highest obligation</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Which sectors face the highest obligation</h2>
+        <ul class="space-y-4 text-base-content/80">
+          <li>• Manufacturing — quality inspection AI, predictive maintenance, production analytics</li>
+          <li>• Banking and fintech — fraud detection, credit scoring, KYC automation, customer support AI</li>
+          <li>• Healthcare — clinical decision support, diagnostic assistance, patient triage (extended deadline)</li>
+          <li>• Education — AI tutors, automated grading, student analytics (extended deadline)</li>
+          <li>• HR and recruitment — AI-assisted shortlisting, candidate assessment, workforce planning</li>
+          <li>• Retail and e-commerce — recommendation engines, customer analytics, pricing algorithms</li>
+          <li>• State bodies — automated processing of citizen applications, eligibility decisions</li>
+          <li>• Legal and professional services — AI used in contract review, due diligence, document analysis</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Sector deadlines</p>
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-primary">Manufacturing</h3>
+            <p class="mt-2 text-sm text-base-content/80">Deadline: <strong class="text-base-content">1 Mar 2027</strong></p>
+            <p class="mt-1 text-sm text-base-content/60">45% of Vietnamese manufacturers already use AI</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-secondary">Banking & fintech</h3>
+            <p class="mt-2 text-sm text-base-content/80">Deadline: <strong class="text-base-content">1 Mar 2027</strong></p>
+            <p class="mt-1 text-sm text-base-content/60">KYC, fraud detection, credit scoring in scope</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-warning">Healthcare</h3>
+            <p class="mt-2 text-sm text-base-content/80">Deadline: <strong class="text-base-content">1 Sep 2027</strong></p>
+            <p class="mt-1 text-sm text-base-content/60">Extended deadline applies</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-warning">Education</h3>
+            <p class="mt-2 text-sm text-base-content/80">Deadline: <strong class="text-base-content">1 Sep 2027</strong></p>
+            <p class="mt-1 text-sm text-base-content/60">Extended deadline applies</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-base-content">Retail & e-commerce</h3>
+            <p class="mt-2 text-sm text-base-content/80">Deadline: <strong class="text-base-content">1 Mar 2027</strong></p>
+            <p class="mt-1 text-sm text-base-content/60">Recommendation systems, pricing algorithms</p>
+          </div>
+          <div class="rounded-2xl bg-base-200/80 p-6">
+            <h3 class="font-bold text-accent">HR & recruitment</h3>
+            <p class="mt-2 text-sm text-base-content/80">Deadline: <strong class="text-base-content">1 Mar 2027</strong></p>
+            <p class="mt-1 text-sm text-base-content/60">AI screening tools are high-risk</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How we help you comply</h2>
+          <p class="text-base-content/80">We help organisations understand their obligations under the VN AI Law and build practical compliance programs that fit real operations.</p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">AI inventory</h3>
+              <p class="mt-2 text-sm text-base-content/80">Audit all AI systems in use across the organisation — including shadow AI.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Risk classification</h3>
+              <p class="mt-2 text-sm text-base-content/80">Classify each system under the law's three-tier framework.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Gap analysis</h3>
+              <p class="mt-2 text-sm text-base-content/80">Identify where your current practices fall short of obligations.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Remediation roadmap</h3>
+              <p class="mt-2 text-sm text-base-content/80">Prioritised plan to close gaps before the March 2027 deadline.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="faq" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Does the VN AI Law apply to my organisation?</summary>
+        <div class="collapse-content text-base-content/80">
+          If your organisation develops, provides, deploys, or uses AI systems in Vietnam — or sells AI products or services to Vietnamese customers — the law applies. This includes foreign entities. Even if you use a third-party AI tool, deployer obligations sit with you. Most organisations are already in scope without knowing it.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What is the compliance deadline?</summary>
+        <div class="collapse-content text-base-content/80">
+          <strong class="text-base-content">1 March 2027</strong> for most AI systems (12 months from the law's effective date). Organisations with AI systems in healthcare, education, and financial services have until <strong class="text-base-content">1 September 2027</strong> (18 months). Prohibited practices have been enforceable since the law took effect.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do I need a local presence in Vietnam?</summary>
+        <div class="collapse-content text-base-content/80">
+          Foreign providers of <strong class="text-base-content">high-risk</strong> AI systems that require pre-market conformity assessment must establish a commercial presence in Vietnam or appoint an authorised representative. This requirement does not apply to medium- and low-risk systems, but foreign entities are still subject to the law's other obligations.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What are the penalties for non-compliance?</summary>
+        <div class="collapse-content text-base-content/80">
+          The law establishes that violations are subject to administrative sanctions, revocation of licences, suspension of AI system operations, and potential criminal liability depending on the severity. Specific penalty amounts and enforcement mechanisms are being detailed in implementing decrees currently under development.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is "AI system" defined under the law?</summary>
+        <div class="collapse-content text-base-content/80">
+          The law defines AI as "the implementation, through electronic means, of human intellectual capabilities, including learning, reasoning, perception, judgment, and natural language understanding." This definition is borrowed from Korea's AI Act and captures a broad range of systems — from simple automation to advanced generative AI.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What counts as a high-risk AI system?</summary>
+        <div class="collapse-content text-base-content/80">
+          High-risk systems are those that pose significant potential harm to life, health, national security, or lawful rights. The Ministry of Science and Technology is preparing a Prime Ministerial decision listing specific high-risk categories. Until then, organisations should classify based on the law's general criteria. Typical examples include: credit scoring, recruitment screening, biometric identification, access to essential services, and safety-critical components in products.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section id="review" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">VN AI Law compliance review</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Know your obligation. Start with a readiness review.</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        Fixed-fee, four-week engagement. We audit your AI systems, classify them under the law's risk framework, identify gaps, and deliver a prioritised remediation roadmap.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Start a conversation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

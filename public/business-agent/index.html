@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Agent · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<style>
+  [data-theme="acuity"] .logo-invert {
+    filter: invert(1);
+  }
+</style>
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(167,139,250,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Business Agent
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Deploy an always-on AI agent that manages communications, automates workflows, runs on your own infrastructure, and gets smarter the longer it runs.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Always-on — runs 24/7 on your own server or VPS</li>
+              <li>• 7 autonomous Hands that work on schedules, not just chat</li>
+              <li>• Persistent memory via SQLite + vector embeddings + knowledge graphs</li>
+              <li>• 40+ messaging platforms — Telegram, Discord, Slack, WhatsApp, and 36 more</li>
+              <li>• 16 security layers — WASM sandbox, Merkle audit trail, SSRF protection</li>
+              <li>• 53 built-in tools + MCP + A2A cross-framework protocols</li>
+              <li>• 26+ LLM providers — no vendor lock-in</li>
+              <li>• Apache 2.0 licensed — fully open source, auditable</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is a Business Agent?</h2>
+      <p class="text-lg text-base-content/80">
+        A business agent is a persistent AI assistant that lives on your infrastructure — not in a company's cloud. It plans, acts, observes results, and loops until tasks are done. Unlike chatbots or copilots, it maintains state, memory, and learned skills across sessions, so it doesn't start from zero every time you talk to it.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Think of it as a capable team member who works around the clock: triaging emails, checking calendars, running reports, syncing data across tools, and alerting you when something needs attention. It reaches you on whatever messaging platform you already use and gets more useful the longer it runs.
+      </p>
+      <p class="text-lg text-base-content/80">
+        For SMEs, a business agent handles customer support triage, lead qualification, document processing, and repetitive admin work — simple automations with measurable time savings.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">24/7</p>
+        <p class="mt-1 text-sm text-base-content/80">Always-on operation — no session limits, no timeouts</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Self-hosted</p>
+        <p class="mt-1 text-sm text-base-content/80">Your data stays on your machines under your control</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Self-improving</p>
+        <p class="mt-1 text-sm text-base-content/80">Builds reusable skills automatically from experience</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Capabilities</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">How It Empowers Business Owners</h2>
+      <p class="text-lg text-base-content/80">
+        Business owners wear many hats. A business agent offloads the administrative overhead that fragments focus, so you can spend time on work that actually moves the business forward.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📬</span>
+        <h3 class="text-xl font-bold text-base-content">Email & Ticket Triage</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Triage multiple inboxes, flag urgent items, draft replies, and route tasks to the right teams automatically. The agent learns your priorities over time.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📅</span>
+        <h3 class="text-xl font-bold text-base-content">Calendar & Scheduling</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Check availability, schedule meetings, send reminders, and reschedule conflicts. It can coordinate across time zones and sync with your email for travel confirmations.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⏰</span>
+        <h3 class="text-xl font-bold text-base-content">Scheduled Automations</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Set up daily briefings, weekly digests, nightly backups, and recurring reports — all in natural language. The agent runs them unattended on your schedule.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔗</span>
+        <h3 class="text-xl font-bold text-base-content">Cross-Platform Reach</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Interact via Discord, Telegram, Slack, WhatsApp, Signal, or CLI from a single agent. Start a conversation on one platform, pick it up on another seamlessly.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧠</span>
+        <h3 class="text-xl font-bold text-base-content">Persistent Memory & Skills</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Remembers your preferences, projects, and environment across sessions. When it solves a hard problem, it writes a reusable skill so it never forgets how.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧩</span>
+        <h3 class="text-xl font-bold text-base-content">Data & Tool Integration</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Connect Gmail, Google Drive, Notion, Todoist, Slack, CRM systems, databases, ERP, HRM, accounting, help desk, and workflow systems. The agent can read, summarise, and act across your entire toolchain.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💬</span>
+        <h3 class="text-xl font-bold text-base-content">Customer-Facing Chatbots</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Deploy AI-powered chatbots and virtual assistants for customer support, sales, internal help desks, and employee self-service. Handle routine inquiries, qualify leads, and escalate complex issues — all through the same persistent, self-improving agent platform.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
+        <div class="flex justify-center lg:justify-start">
+          <img src="https://example.com/openfang-logo.png" alt="OpenFang" class="logo-invert w-24 h-24 lg:w-32 lg:h-32" />
+        </div>
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Our recommendation</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">OpenFang</h2>
+          <p class="text-lg text-base-content/80 leading-relaxed">
+            We recommend <strong><a href="https://openfang.sh" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">OpenFang</a></strong> — the open-source Agent Operating System built from scratch in Rust. Not a chatbot framework, not a Python wrapper around an LLM, but a full operating system for autonomous agents. It compiles to a single ~32 MB binary with zero external dependencies and runs on any Linux or macOS server.
+          </p>
+          <p class="text-base-content/80 leading-relaxed">
+            OpenFang ships with 7 built-in autonomous Hands that work for you 24/7 on schedules — generating leads, monitoring targets, managing social media, researching competitors, and delivering reports to your dashboard. It connects to 40+ messaging platforms, supports 26+ LLM providers, and enforces 16 layers of defense-in-depth security. One binary, zero runtime dependencies, no Python or Node required.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://openfang.sh" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit openfang.sh</a>
+            <a href="https://github.com/RightNow-AI/openfang" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Features</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Makes OpenFang Different</h2>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Built in Rust</h3>
+        <p class="mt-3 text-base-content/80">137K lines of Rust across 14 modular crates. Zero external runtime dependencies — no Python, no Node, no Docker. A single ~32 MB binary that you copy and run.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">7 Autonomous Hands</h3>
+        <p class="mt-3 text-base-content/80">Pre-built agents that work FOR you — Clip, Lead, Collector, Predictor, Researcher, Twitter, Browser. They run on schedules, build knowledge graphs, and report to your dashboard.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">40+ Channel Adapters</h3>
+        <p class="mt-3 text-base-content/80">Telegram, Discord, Slack, WhatsApp, Teams, IRC, Matrix, Feishu, DingTalk, and 32 more. Per-channel model overrides, DM/group policies, and rate limiting.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">16 Security Layers</h3>
+        <p class="mt-3 text-base-content/80">WASM dual-metered sandbox, Merkle hash-chain audit trail, Ed25519 manifest signing, taint tracking, SSRF protection, secret zeroization, prompt injection scanning, and more.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">WASM Sandboxed Execution</h3>
+        <p class="mt-3 text-base-content/80">Tool code runs inside Wasmtime with dual fuel + epoch metering. File operations are workspace-confined. Subprocesses are env-cleared and timeout-enforced.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">53 Tools + MCP + A2A</h3>
+        <p class="mt-3 text-base-content/80">Web search, browser automation, image generation, TTS, Docker, and knowledge graphs. Plus MCP client/server and Google A2A for cross-framework agent communication.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Unified Memory Substrate</h3>
+        <p class="mt-3 text-base-content/80">SQLite-backed storage with vector embeddings and knowledge graphs. Cross-channel canonical sessions, automatic LLM-based compaction, and JSONL session mirroring.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">26+ LLM Providers</h3>
+        <p class="mt-3 text-base-content/80">Anthropic, Gemini, OpenAI, Groq, DeepSeek, and 20+ via OpenAI-compatible endpoints. Intelligent model routing with built-in cost tracking.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Kernel Architecture</h3>
+        <p class="mt-3 text-base-content/80">Agents are first-class OS processes with spawn, suspend, resume, and kill semantics. Built-in workflow engine with triggers, scheduling, and multi-agent pipelines.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Security</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content">Minimising the Blast Radius</h2>
+        <p class="text-base-content/80 leading-relaxed">
+          The more capabilities you give an agent, the more useful — and more powerful — it becomes. The same access that enables email triage (read, write, delete) is also a potential attack surface. Our approach is to embrace the power while ruthlessly minimising the blast radius. OpenFang's 16-layer defense-in-depth security is built into the kernel, not bolted on after the fact.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• WASM dual-metered sandbox — tool code cannot escape its environment</li>
+          <li>• Merkle hash-chain audit trail — every action is immutably logged</li>
+          <li>• Ed25519 manifest signing — agents run only approved, signed code</li>
+          <li>• Taint tracking — untrusted input cannot reach critical system functions</li>
+          <li>• SSRF protection — agents cannot probe internal network services</li>
+          <li>• Secret zeroization — API keys wiped from memory when not in use</li>
+          <li>• Prompt injection scanning — malicious instructions detected at runtime</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Considerations</p>
+        <h2 class="font-display text-2xl font-extrabold text-base-content">What to Know Before You Start</h2>
+        <ul class="space-y-4 text-base-content/80">
+          <li><strong class="text-base-content">Not a plug-and-play product.</strong> Setting up a business agent securely requires understanding of servers, networking, OAuth, and permission models.</li>
+          <li><strong class="text-base-content">Ongoing operating cost.</strong> The software is free (Apache 2.0). You pay for the LLM inference via your chosen provider — typically $20-200/month depending on usage and model choice.</li>
+          <li><strong class="text-base-content">Model selection matters.</strong> Start with frontier models (GPT-5, Claude 4) to define workflows, then swap to smaller, cheaper models once processes are locked in.</li>
+          <li><strong class="text-base-content">You are the operator.</strong> A business agent needs oversight, especially in the early days. Review its work, tune its permissions, and iterate on its skills.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Deploy a Business Agent</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We design, deploy, and secure an OpenFang instance tailored to your business — connecting the data sources, tools, and platforms you already use.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess & Design</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map your workflows, identify high-value automations, and design the agent's toolset, permissions, and security model.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy & Connect</h3>
+              <p class="mt-2 text-sm text-base-content/80">Provision infrastructure (VPS or bare metal), install OpenFang, configure 40+ channel adapters, and connect data sources.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Harden Security</h3>
+              <p class="mt-2 text-sm text-base-content/80">Set up VLAN isolation, MCP gateway, firewall rules, least-privilege permissions, and off-site backup strategy.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Configure & Train</h3>
+              <p class="mt-2 text-sm text-base-content/80">Set up cron jobs, skill libraries, and interaction patterns. Train your team on how to work with the agent effectively.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is a business agent different from ChatGPT or Claude?</summary>
+        <div class="collapse-content text-base-content/80">
+          Standard chatbots are stateless — each conversation starts fresh. A business agent runs persistently, remembers everything across sessions, writes its own skills, executes scheduled tasks, and takes multi-step actions on your behalf. It is an employee, not a conversation.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is my data safe?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. OpenFang is self-hosted on your infrastructure — your data never leaves your machines. Apache 2.0 licensed, fully auditable. We implement additional security layers including WASM sandboxing, Merkle audit trails, SSRF protection, and VLAN isolation to minimise blast radius.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is it hard to set up?</summary>
+        <div class="collapse-content text-base-content/80">
+          OpenFang ships as a single binary — there is no Python environment, no Node runtime, no Docker dependency to manage. That said, deploying a business agent securely still requires familiarity with servers, networking, and permission models. That is exactly where we come in. We handle the infrastructure and security so you can focus on using the agent.
+        </div>
+      </details>
+
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What messaging platforms are supported?</summary>
+        <div class="collapse-content text-base-content/80">
+          OpenFang connects to 40+ platforms — Telegram, Discord, Slack, WhatsApp, Teams, Signal, Matrix, Google Chat, Feishu, DingTalk, IRC, and more. All from a single binary. Per-channel model overrides and rate limiting included.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I use my own AI model?</summary>
+        <div class="collapse-content text-base-content/80">
+          Absolutely. OpenFang is model-agnostic and connects to 26+ providers including Anthropic, Gemini, OpenAI, Groq, DeepSeek, and any OpenAI-compatible endpoint via built-in model routing — no code changes needed to switch.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to deploy your own business agent?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We design, deploy, and secure OpenFang for business owners who want always-on AI assistance without the security headaches.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

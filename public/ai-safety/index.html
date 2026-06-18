@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="acuity">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Safety Audit &amp; Red Teaming · Sand Intelligence</title>
+  <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://example.com/theme.css">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
+    <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
+      <div class="navbar-start">
+        <a href="https://example.com/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      </div>
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
+        <div class="dropdown dropdown-end lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+                  <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="https://example.com/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul>
+                  <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+                  <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+                  <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+                  <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="https://example.com/app-building/">App Building</a></li>
+                  <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+                  <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Governance</summary>
+                <ul>
+                  <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                  <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                  <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/">Contact Us</a></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/ai-strategy/">AI Strategy</a></li>
+              <li><a href="https://example.com/ai-cost-optimization/">AI Cost Optimization</a></li>
+              <li><a href="https://example.com/ai-production-hardening/">AI Production Hardening</a></li>
+              <li><a href="https://example.com/startup-support/">Startup Support</a></li>
+              <li><a href="https://example.com/ai-change-management/">AI Change Management</a></li>
+              <li><a href="https://example.com/training/">Training</a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="https://example.com/model-training/">AI Model Training</a></li>
+              <li><a href="https://example.com/ai-voice-agents/">AI Voice Agents</a></li>
+              <li><a href="https://example.com/generative-ai/">Generative AI</a></li>
+              <li><a href="https://example.com/business-agent/">Business Agent</a></li>
+              <li><a href="https://example.com/agentic-coding/">Agentic Coding</a></li>
+              <li><a href="https://example.com/app-building/">App Building</a></li>
+              <li><a href="https://example.com/custom-agent/">Custom Agent</a></li>
+              <li><a href="https://example.com/private-inference/">Private Inference</a></li>
+            </ul>
+          </li>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="https://example.com/ai-governance/">AI Governance</a></li>
+                <li><a href="https://example.com/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="https://example.com/ai-safety/">AI Safety</a></li>
+              </ul>
+            </li>
+            <li><a href="https://example.com/about/">About</a></li>
+            <li><a href="https://example.com/news/">AI News</a></li>
+            <li><a href="https://example.com/contact/" class="btn btn-primary btn-sm">Contact Us</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<main id="top">
+
+  
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(167,139,250,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Technical assurance</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Safety Audit &amp; Red Teaming
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Test your AI systems for vulnerabilities, bias, and failure modes before they reach production.
+          </p>
+          <p class="text-base-content/60">
+            AI Governance tells you what to comply with. AI Safety tells you whether your system is <strong class="text-base-content">actually safe</strong>. You need both. We provide the technical assurance layer — red teaming, model behavior analysis, adversarial testing, and runtime guardrails — that validates your governance framework is working in practice.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a safety audit</a>
+            <a href="#services" class="btn btn-outline btn-lg">Our services</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Why safety matters now</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• <strong class="text-base-content">93%</strong> of enterprises experienced an AI security incident in the past year</li>
+              <li>• Prompt injection is the <strong class="text-base-content">#1 vulnerability</strong> on the OWASP Top 10 for LLMs</li>
+              <li>• EU AI Act high-risk systems require conformity assessment — including safety testing — by <strong class="text-base-content">Aug 2026</strong></li>
+              <li>• Average cost of an AI-related data breach: <strong class="text-base-content">$4.8M</strong></li>
+              <li>• Bias and fairness failures are the leading cause of AI-related litigation in 2026</li>
+              <li>• <strong class="text-base-content">76%</strong> of enterprises say safety concerns are slowing AI deployment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is AI Safety?</h2>
+      <p class="text-lg text-base-content/80">
+        AI safety is the technical practice of testing whether AI systems behave as intended — even under adversarial conditions, edge cases, or unexpected inputs. It covers model robustness, output reliability, bias measurement, failure mode analysis, and runtime monitoring.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Where <strong>AI Governance</strong> addresses compliance frameworks, policies, and board-level oversight, <strong>AI Safety</strong> validates that the actual system is secure, fair, and reliable. A governance policy that isn't backed by safety testing is a paper shield. We provide the technical depth that makes governance real.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Detect</p>
+        <p class="mt-1 text-sm text-base-content/80">Find vulnerabilities before attackers or failures impact your business</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Measure</p>
+        <p class="mt-1 text-sm text-base-content/80">Quantify model bias, output reliability, and robustness against adversarial inputs</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Remediate</p>
+        <p class="mt-1 text-sm text-base-content/80">Actionable fixes — guardrails, monitoring, and engineering changes — not just a report</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Monitor</p>
+        <p class="mt-1 text-sm text-base-content/80">Ongoing safety observability so you stay ahead of drift, abuse, and emerging threats</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="services" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Services</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">AI Safety Services</h2>
+      <p class="text-lg text-base-content/80">
+        Four capability areas that together provide complete technical assurance for AI systems in production.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔍</span>
+        <h3 class="text-2xl font-bold text-base-content">AI Safety Audit</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          A comprehensive evaluation of your AI system's risk posture. We review data pipelines, model behavior, output quality, integration points, and operational controls to identify vulnerabilities before they impact your business.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Risk and vulnerability assessment across the full AI stack</li>
+          <li>• Data privacy and security review</li>
+          <li>• Model performance and reliability testing</li>
+          <li>• Operational control evaluation</li>
+          <li>• Compliance gap analysis mapped to applicable regulations</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚔️</span>
+        <h3 class="text-2xl font-bold text-base-content">Red Teaming</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Adversarial testing against your AI systems using structured attack methodologies. We simulate real-world threats — prompt injection, jailbreaking, data exfiltration, and bias amplification — to find weaknesses before attackers do.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Automated prompt injection testing (50–200 adversarial prompts)</li>
+          <li>• Manual deep-dive jailbreak attempts by experienced security engineers</li>
+          <li>• Data leakage and extraction testing</li>
+          <li>• Role-playing and social engineering scenarios</li>
+          <li>• Severity-scored vulnerability report with CVSS alignment</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📊</span>
+        <h3 class="text-2xl font-bold text-base-content">Model Behavior &amp; Bias Analysis</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Systematic evaluation of your model's outputs across diverse inputs, populations, and edge cases. We measure fairness, consistency, and drift so you can deploy with confidence that your system treats all users equitably.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Output consistency and reliability testing across diverse inputs</li>
+          <li>• Demographic fairness evaluation (race, gender, age, language)</li>
+          <li>• Edge case and failure mode identification</li>
+          <li>• Drift monitoring baseline establishment</li>
+          <li>• Model card documentation and safety datasheet creation</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🛡️</span>
+        <h3 class="text-2xl font-bold text-base-content">Safety Guardrails &amp; Monitoring</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Design and deploy runtime safety controls so your AI systems stay safe in production. Content filters, input/output validation, PII redaction, rate limiting, and real-time observability that catches issues as they happen.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Input and output guardrail design and deployment</li>
+          <li>• PII detection, classification, and redaction</li>
+          <li>• Content policy enforcement (toxicity, NSFW, policy violations)</li>
+          <li>• Real-time safety monitoring and alerting</li>
+          <li>• Incident response playbook and escalation procedures</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our process</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Deliver AI Safety</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            Every engagement follows a structured four-phase process. We start by understanding your system architecture and threat model, then execute rigorous testing, deliver actionable findings, and set up ongoing safety operations.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Phase 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess &amp; Scope</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map your AI systems, data flows, and architecture. Identify threat models, regulatory requirements, and business priorities. Define the scope and testing methodology.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Phase 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Test &amp; Measure</h3>
+              <p class="mt-2 text-sm text-base-content/80">Execute automated and manual safety testing — red teaming, bias analysis, robustness evaluation, and adversarial probing. Results are severity-scored and documented with reproducible steps.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Phase 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Remediate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Deliver a prioritised remediation roadmap with actionable fixes. Implement guardrails, content filters, and monitoring. Support your team through engineering changes.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Phase 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Monitor &amp; Iterate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Deploy runtime monitoring and alerting. Establish ongoing safety review cadence. Retest after remediation to verify fixes. Regular health checks for evolving systems.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Deliverables</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What you get</h2>
+      <p class="text-lg text-base-content/80">
+        Every engagement produces concrete, actionable deliverables that your engineering and compliance teams can use immediately.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">AI system risk assessment</h3>
+        <p class="mt-3 text-base-content/80">Comprehensive evaluation of risk across data, model, infrastructure, and operational layers with severity scoring.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Vulnerability report</h3>
+        <p class="mt-3 text-base-content/80">Severity-scored findings with CVSS alignment, reproducible test cases, and prioritized remediation guidance.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Bias analysis report</h3>
+        <p class="mt-3 text-base-content/80">Fairness evaluation across demographic dimensions with statistical measures, edge case documentation, and mitigation recommendations.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Guardrail configuration</h3>
+        <p class="mt-3 text-base-content/80">Deployed input/output filters, content policies, PII redaction rules, and rate limits tailored to your use case.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Remediation roadmap</h3>
+        <p class="mt-3 text-base-content/80">Prioritized action plan with effort estimates, dependency mapping, and retesting milestones aligned to deployment timelines.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Safety monitoring dashboard</h3>
+        <p class="mt-3 text-base-content/80">Real-time observability with alerts for drift, abuse patterns, policy violations, and system anomalies.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What is the difference between AI safety and AI governance?</summary>
+        <div class="collapse-content text-base-content/80">
+          <strong class="text-base-content">AI Governance</strong> is about compliance, policy, and board-level oversight — frameworks like the EU AI Act, NIST AI RMF, and SOC 2. It answers "are we following the rules?" <strong class="text-base-content">AI Safety</strong> is about technical system integrity — red teaming, bias analysis, adversarial testing, and runtime guardrails. It answers "is our system actually safe?" Governance without safety is a paper shield; safety without governance lacks structure. You need both.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What AI systems can you test?</summary>
+        <div class="collapse-content text-base-content/80">
+          Any system that uses AI or ML — LLM-powered chatbots and agents, RAG pipelines, classification systems, recommendation engines, computer vision models, voice agents, and decision-support systems. We test both API-based (Claude, GPT, Gemini) and self-hosted models. If it uses AI, we can assess its safety posture.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you need access to our source code or data?</summary>
+        <div class="collapse-content text-base-content/80">
+          It depends on the scope. For red teaming and API-level testing, we typically need access to a running instance of the system — not source code. For deeper model behavior analysis and bias testing, we may need access to model weights, test datasets, or inference logs. All testing can be conducted on your infrastructure using your data, with no third-party exposure. We follow your security and data handling protocols.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How long does a safety audit take?</summary>
+        <div class="collapse-content text-base-content/80">
+          A focused AI safety audit typically takes 2–4 weeks depending on system complexity, number of models or agents, and testing depth. Red teaming engagements range from 1–2 weeks. Full safety programs including guardrail deployment and monitoring setup span 4–8 weeks. We'll scope the timeline during the initial assessment.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How much does a safety audit cost?</summary>
+        <div class="collapse-content text-base-content/80">
+          Pricing depends on scope and depth. A focused AI safety audit covering a single system starts at $2,500. Comprehensive engagements — multiple systems, full red teaming, bias analysis, and guardrail deployment — are scoped individually with fixed pricing. You know the cost before we start, with no hourly billing or scope creep.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you offer retesting after remediation?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. After you implement the remediation recommendations, we retest to verify that findings have been addressed and no new vulnerabilities have been introduced. Retesting is included in the scope of comprehensive engagements and available as a standalone service for focused audits. We also offer quarterly safety health checks for ongoing assurance.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to test your AI systems?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help you identify vulnerabilities, measure bias, and deploy safety controls so you can scale AI with confidence — knowing your systems are safe, fair, and resilient.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://example.com/contact/" class="btn btn-primary btn-lg">Book a safety audit</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+    <aside>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <p class="text-base-content/80">
+        Practical AI systems for modern businesses and global teams.
+        <br>
+        Strategy, delivery, and automation that fit real workflows.
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Consulting</h6>
+      <a href="https://example.com/ai-strategy/" class="link link-hover">AI Strategy</a>
+      <a href="https://example.com/ai-cost-optimization/" class="link link-hover">AI Cost Optimization</a>
+      <a href="https://example.com/ai-production-hardening/" class="link link-hover">AI Production Hardening</a>
+      <a href="https://example.com/startup-support/" class="link link-hover">Startup Support</a>
+      <a href="https://example.com/ai-change-management/" class="link link-hover">AI Change Management</a>
+      <a href="https://example.com/training/" class="link link-hover">Training</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Development</h6>
+      <a href="https://example.com/model-training/" class="link link-hover">AI Model Training</a>
+      <a href="https://example.com/ai-voice-agents/" class="link link-hover">AI Voice Agents</a>
+      <a href="https://example.com/generative-ai/" class="link link-hover">Generative AI</a>
+      <a href="https://example.com/business-agent/" class="link link-hover">Business Agent</a>
+      <a href="https://example.com/agentic-coding/" class="link link-hover">Agentic Coding</a>
+      <a href="https://example.com/app-building/" class="link link-hover">App Building</a>
+      <a href="https://example.com/custom-agent/" class="link link-hover">Custom Agent</a>
+      <a href="https://example.com/private-inference/" class="link link-hover">Private Inference</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">About</h6>
+      <a href="https://example.com/about/" class="link link-hover">About Jonathan</a>
+      <a href="https://example.com/technology/" class="link link-hover">Technology</a>
+      <a href="https://example.com/news/" class="link link-hover">AI News</a>
+      <a href="https://example.com/contact/" class="link link-hover">Contact</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Governance</h6>
+      <a href="https://example.com/ai-governance/" class="link link-hover">AI Governance</a>
+      <a href="https://example.com/vn-ai-law/" class="link link-hover">VN AI Law</a>
+      <a href="https://example.com/ai-safety/" class="link link-hover">AI Safety</a>
+    </nav>
+  </footer>
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var toggleMobile = document.getElementById('theme-toggle-mobile');
+      var sun = document.getElementById('sun-icon');
+      var moon = document.getElementById('moon-icon');
+      var html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (sun && moon) {
+          if (theme === 'acuity-light') {
+            sun.classList.remove('hidden');
+            moon.classList.add('hidden');
+          } else {
+            sun.classList.add('hidden');
+            moon.classList.remove('hidden');
+          }
+        }
+      }
+
+      function toggleTheme() {
+        var current = html.getAttribute('data-theme');
+        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+      }
+
+      if (sun && moon) {
+        var initial = html.getAttribute('data-theme');
+        if (initial === 'acuity-light') {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+      if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

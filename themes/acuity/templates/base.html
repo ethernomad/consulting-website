@@ -23,7 +23,7 @@
       <div class="navbar-start">
         <a href="{{ get_url(path='@/_index.md') }}" class="font-display text-lg font-bold text-base-content">{{ config.extra.brand }}</a>
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end" style="width:auto;flex:1 1 0%">
         <div class="dropdown dropdown-end lg:hidden">
           <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
@@ -75,56 +75,48 @@
             <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
           </ul>
         </div>
-        <div class="hidden lg:flex">
-          <ul class="menu menu-horizontal items-center gap-1 px-1">
-          <li>
-            <details>
-              <summary>Consulting</summary>
-              <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
-                <li><a href="{{ get_url(path='@/ai-strategy.md') }}">AI Strategy</a></li>
-                <li><a href="{{ get_url(path='@/ai-cost-optimization.md') }}">AI Cost Optimization</a></li>
-                <li><a href="{{ get_url(path='@/ai-production-hardening.md') }}">AI Production Hardening</a></li>
-                <li><a href="{{ get_url(path='@/startup-support.md') }}">Startup Support</a></li>
-                <li><a href="{{ get_url(path='@/ai-change-management.md') }}">AI Change Management</a></li>
-                <li><a href="{{ get_url(path='@/training.md') }}">Training</a></li>
-              </ul>
-            </details>
+        <div class="hidden lg:flex items-center gap-1">
+            <ul class="menu menu-horizontal items-center gap-0 px-1 flex-nowrap">
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Consulting</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="{{ get_url(path='@/ai-strategy.md') }}">AI Strategy</a></li>
+              <li><a href="{{ get_url(path='@/ai-cost-optimization.md') }}">AI Cost Optimization</a></li>
+              <li><a href="{{ get_url(path='@/ai-production-hardening.md') }}">AI Production Hardening</a></li>
+              <li><a href="{{ get_url(path='@/startup-support.md') }}">Startup Support</a></li>
+              <li><a href="{{ get_url(path='@/ai-change-management.md') }}">AI Change Management</a></li>
+              <li><a href="{{ get_url(path='@/training.md') }}">Training</a></li>
+            </ul>
           </li>
-          <li>
-            <details>
-              <summary>Development</summary>
-              <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
-                <li><a href="{{ get_url(path='@/model-training.md') }}">AI Model Training</a></li>
-                <li><a href="{{ get_url(path='@/ai-voice-agents.md') }}">AI Voice Agents</a></li>
-                <li><a href="{{ get_url(path='@/generative-ai.md') }}">Generative AI</a></li>
-                <li><a href="{{ get_url(path='@/business-agent.md') }}">Business Agent</a></li>
-                <li><a href="{{ get_url(path='@/agentic-coding.md') }}">Agentic Coding</a></li>
-                <li><a href="{{ get_url(path='@/app-building.md') }}">App Building</a></li>
-                <li><a href="{{ get_url(path='@/custom-agent.md') }}">Custom Agent</a></li>
-                <li><a href="{{ get_url(path='@/private-inference.md') }}">Private Inference</a></li>
-              </ul>
-            </details>
+          <li class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="menu-dropdown-toggle">Development</div>
+            <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2">
+              <li><a href="{{ get_url(path='@/model-training.md') }}">AI Model Training</a></li>
+              <li><a href="{{ get_url(path='@/ai-voice-agents.md') }}">AI Voice Agents</a></li>
+              <li><a href="{{ get_url(path='@/generative-ai.md') }}">Generative AI</a></li>
+              <li><a href="{{ get_url(path='@/business-agent.md') }}">Business Agent</a></li>
+              <li><a href="{{ get_url(path='@/agentic-coding.md') }}">Agentic Coding</a></li>
+              <li><a href="{{ get_url(path='@/app-building.md') }}">App Building</a></li>
+              <li><a href="{{ get_url(path='@/custom-agent.md') }}">Custom Agent</a></li>
+              <li><a href="{{ get_url(path='@/private-inference.md') }}">Private Inference</a></li>
+            </ul>
           </li>
-            <li>
-              <details>
-                <summary>Governance</summary>
-                <ul class="bg-base-200 rounded-box z-50 w-48 p-2">
-                  <li><a href="{{ get_url(path='@/ai-governance.md') }}">AI Governance</a></li>
-                  <li><a href="{{ get_url(path='@/vn-ai-law.md') }}">VN AI Law</a></li>
-                  <li><a href="{{ get_url(path='@/ai-safety.md') }}">AI Safety</a></li>
-                </ul>
-              </details>
+            <li class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="menu-dropdown-toggle">Governance</div>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2">
+                <li><a href="{{ get_url(path='@/ai-governance.md') }}">AI Governance</a></li>
+                <li><a href="{{ get_url(path='@/vn-ai-law.md') }}">VN AI Law</a></li>
+                <li><a href="{{ get_url(path='@/ai-safety.md') }}">AI Safety</a></li>
+              </ul>
             </li>
             <li><a href="{{ get_url(path='@/about.md') }}">About</a></li>
             <li><a href="{{ get_url(path='@/news/_index.md') }}">AI News</a></li>
-            <li><a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-sm ml-2">Contact Us</a></li>
-            <li>
-              <button id="theme-toggle" class="btn btn-ghost btn-sm ml-1" aria-label="Toggle theme">
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-              </button>
-            </li>
+            <li><a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-sm">Contact Us</a></li>
           </ul>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
         </div>
       </div>
     </div>
