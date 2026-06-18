@@ -7,7 +7,7 @@
   <section class="hero-grid relative overflow-hidden">
     <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.18),transparent_28%),radial-gradient(circle_at_left,rgba(251,113,133,0.12),transparent_30%)]"></div>
     <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-16">
-      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+      <div class="relative z-10">
         <div class="space-y-6">
           <div class="space-y-5">
             <p class="text-sm font-semibold tracking-wide text-primary/80">{{ config.extra.tagline }}</p>
@@ -21,40 +21,6 @@
           <div class="flex flex-wrap gap-4">
             <a href="{{ config.extra.cta_primary_url }}" class="btn btn-primary btn-lg">{{ config.extra.cta_primary }}</a>
             <a href="{{ get_url(path='@/ai-strategy.md') }}" class="btn btn-outline btn-lg">{{ config.extra.cta_secondary }}</a>
-          </div>
-
-        </div>
-
-        <div class="space-y-4">
-          <div class="metric-card">
-            <p class="text-sm font-semibold tracking-wide text-base-content/60">What we help with</p>
-            <div class="mt-4 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl bg-base-200/80 p-6">
-                <p class="text-3xl font-extrabold text-base-content">AI</p>
-                <p class="mt-2 text-sm text-base-content/80">Strategy, roadmaps, and ROI-focused use case selection</p>
-              </div>
-              <div class="rounded-2xl bg-base-200/80 p-6">
-                <p class="text-3xl font-extrabold text-base-content">Lang</p>
-                <p class="mt-2 text-sm text-base-content/80">Language AI, localization, multilingual support, and channel-specific experiences</p>
-              </div>
-              <div class="rounded-2xl bg-base-200/80 p-6">
-                <p class="text-3xl font-extrabold text-base-content">Ops</p>
-                <p class="mt-2 text-sm text-base-content/80">Automation for documents, support, HR, finance, and internal workflows</p>
-              </div>
-              <div class="rounded-2xl bg-base-200/80 p-6">
-                <p class="text-3xl font-extrabold text-base-content">GenAI</p>
-                <p class="mt-2 text-sm text-base-content/80">RAG assistants, copilots, search, prompt evaluation, and model customization</p>
-              </div>
-            </div>
-          </div>
-          <div class="glass-panel rounded-3xl p-8">
-            <p class="text-sm font-semibold tracking-wide text-secondary/80">Execution advantage</p>
-            <ul class="mt-4 space-y-4 text-base-content/80">
-              <li>• Language-aware AI for support, search, and internal knowledge</li>
-              <li>• Websites, mobile apps, messaging platforms, and enterprise systems</li>
-              <li>• Automation packages with fast time-to-value</li>
-              <li>• Delivery for in-house teams, agencies, and outsourced product builds</li>
-            </ul>
           </div>
         </div>
       </div>
