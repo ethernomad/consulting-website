@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://ethernomad.github.io/consulting-website/sitemap.xml
+Sitemap: https://acuity.tools/sitemap.xml
