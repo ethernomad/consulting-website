@@ -1,0 +1,418 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(167,139,250,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(245,158,11,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Production Hardening
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Take AI prototypes and MVPs to production-ready systems — with observability, guardrails, fallback paths, cost controls, and the operational layer that makes AI reliable under real traffic.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-we-help" class="btn btn-outline btn-lg">How we help</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">The 7 operational layers</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Observability &amp; tracing — know what every LLM call did and why</li>
+              <li>• Guardrails &amp; safety — input/output validation, PII redaction, content policies</li>
+              <li>• Fallback paths &amp; resilience — model cascades, circuit breakers, graceful degradation</li>
+              <li>• Cost controls &amp; budget limits — per-feature tracking, kill switches, anomaly alerts</li>
+              <li>• Evaluations &amp; regression testing — golden datasets, CI/CD for prompts, drift detection</li>
+              <li>• Prompt &amp; release discipline — versioned registries, shadow testing, rollback plans</li>
+              <li>• Infrastructure &amp; deployment — async queues, rate limiting, multi-region redundancy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What Is Production Hardening ──────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What is Production Hardening?</h2>
+      <p class="text-lg text-base-content/80">
+        AI Production Hardening is the practice of taking working prototypes and MVPs — systems that work in demos but break under real traffic — and adding the operational layer that makes them reliable, observable, and safe for real users.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Most AI failures in production are not about the model. They come from weak controls around the model: prompts buried in code, tools with broad access, no budget limits, poor traces, and no evals to catch regressions. Hardening addresses these gaps systematically, turning a brittle prototype into a system you can depend on.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Observe</p>
+        <p class="mt-1 text-sm text-base-content/80">Tracing, logging, and metrics for every LLM call — so failures become debuggable in minutes, not days</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Control</p>
+        <p class="mt-1 text-sm text-base-content/80">Guardrails, cost limits, and release discipline — so the system stays safe and predictable as it evolves</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Survive</p>
+        <p class="mt-1 text-sm text-base-content/80">Fallback paths, retries with backoff, circuit breakers — so the system degrades gracefully instead of failing hard</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── The 7 Layers ─────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Framework</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">The Seven Operational Layers</h2>
+      <p class="text-lg text-base-content/80">
+        Every hardening engagement uses the same seven-layer framework. It gives you a practical way to assess, prioritise, and fix the gaps between prototype and production.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔍</span>
+        <h3 class="text-xl font-bold text-base-content">Observability &amp; Tracing</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Trace every prompt, model response, tool call, and retrieval step — linked back to the user session that triggered it. Includes latency distributions, error rates, and quality dashboards so your team can see what the system is doing in real time.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• End-to-end trace ID injection for every LLM call</li>
+          <li>• Langfuse, OpenTelemetry, or your existing observability stack</li>
+          <li>• Dashboards for latency, error rates, token usage, and quality</li>
+          <li>• Alerting for spikes, failures, and drift</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🛡️</span>
+        <h3 class="text-xl font-bold text-base-content">Guardrails &amp; Safety</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Deploy runtime controls that validate inputs and outputs, enforce content policies, redact sensitive data, and block adversarial prompts — applied consistently across every workflow and model.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Input and output validation against policy rules</li>
+          <li>• PII detection, classification, and redaction</li>
+          <li>• Tool permission allowlists and action policies</li>
+          <li>• Content safety and toxicity filtering</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔄</span>
+        <h3 class="text-xl font-bold text-base-content">Fallback Paths &amp; Resilience</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Ensure the system never shows a raw error to the user. When a model is unavailable, returns garbage, or times out, the system degrades gracefully — switching to a backup model, a cached response, or a fallback workflow.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Model cascades — primary → backup → deterministic fallback</li>
+          <li>• Circuit breakers that trip on error rate thresholds</li>
+          <li>• Retries with exponential backoff and jitter</li>
+          <li>• Graceful degradation paths for every feature</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💰</span>
+        <h3 class="text-xl font-bold text-base-content">Cost Controls &amp; Budget Limits</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Make AI costs predictable with per-feature and per-user tracking, hard spending limits, and anomaly detection. One bad loop or fan-out path should not become a surprise bill.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Per-feature and per-user cost attribution</li>
+          <li>• Hard budget limits with kill switches</li>
+          <li>• Anomaly detection for runaway loops</li>
+          <li>• Cost dashboards with trend alerts</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📊</span>
+        <h3 class="text-xl font-bold text-base-content">Evaluations &amp; Regression Testing</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Catch regressions before they reach users. Build golden evaluation datasets, run them on every prompt or model change, and measure accuracy, latency, cost, and safety metrics automatically in CI/CD.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Golden evaluation datasets for your use case</li>
+          <li>• Automated eval runs in CI/CD pipelines</li>
+          <li>• Quality and drift monitoring dashboards</li>
+          <li>• Shadow testing for new models and prompts</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📝</span>
+        <h3 class="text-xl font-bold text-base-content">Prompt &amp; Release Discipline</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Stop editing prompts in production. Version every prompt template, test changes against evals before rollout, and keep the ability to roll back instantly when something breaks.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Versioned prompt registries with change history</li>
+          <li>• Staged rollouts — canary → partial → full deploy</li>
+          <li>• One-click rollback to previous prompt versions</li>
+          <li>• Prompt review and approval workflows</li>
+        </ul>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚙️</span>
+        <h3 class="text-xl font-bold text-base-content">Infrastructure &amp; Deployment</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Deploy with reliability patterns that handle real-world traffic. Async queues prevent API timeouts from crashing the app, rate limiting protects downstream systems, and multi-region redundancy keeps the system up during provider outages.
+        </p>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li>• Async worker queues with job status tracking</li>
+          <li>• Rate limiting and concurrency controls</li>
+          <li>• Multi-region and multi-provider redundancy</li>
+          <li>• CI/CD pipelines with automated testing</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Signs You Need Hardening ──────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Warning signs</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Signs You Need Production Hardening</h2>
+      <p class="text-lg text-base-content/80">
+        If any of these sound familiar, your AI system is ready for hardening — before customers or regulators discover the gaps for you.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎭</span>
+        <h3 class="text-xl font-bold text-base-content">Works in Demos, Fails Under Load</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Your prototype handles a few careful queries perfectly — but when real users arrive, it times out, returns garbage, or crashes entirely. Production is not a demo; hardening builds the resilience layer real traffic demands.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">❓</span>
+        <h3 class="text-xl font-bold text-base-content">Can't Explain Why It Answered That Way</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          A customer gets a bad answer and your team cannot trace what happened — which prompt, which model, which retrieved documents. Without observability, every incident is a scavenger hunt. Hardening adds the traceability your team needs.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📈</span>
+        <h3 class="text-xl font-bold text-base-content">Costs Are Unpredictable</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Your AI bill varies wildly month to month with no clear attribution to features, users, or models. Without cost controls and anomaly detection, a single runaway loop can wreck your budget before anyone notices.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⏪</span>
+        <h3 class="text-xl font-bold text-base-content">No Rollback Path</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          When a prompt update or model change breaks something, you have no way to revert quickly. The system is a black box — changes go in, and you hope for the best. Hardening adds versioned release discipline with tested rollback plans.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔇</span>
+        <h3 class="text-xl font-bold text-base-content">Model Changes Break Your App Silently</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Providers deprecate models, change behavior, or degrade quality — and you only find out because users complain. Without eval suites and shadow testing, regressions go undetected until they impact customers.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🚀</span>
+        <h3 class="text-xl font-bold text-base-content">Launching to Customers Soon</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          You are about to expose your AI system to paying customers, a broader user base, or a regulated environment. You need confidence that it will survive real usage — and that you can sleep after launch.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section id="how-we-help" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our process</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Harden AI Systems</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            Every engagement starts with a structured audit, then moves to targeted fixes, and can extend into ongoing operational support. You choose the depth that matches your current risk and timeline.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Audit</h3>
+              <p class="mt-2 text-sm text-base-content/80">Assess your system across all seven operational layers. Map architecture, data flows, model access, tool permissions, prompts, monitoring, and cost visibility. Produce a seven-layer scorecard, risk register with severity/owner/fix, and a prioritised hardening roadmap.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Plan</h3>
+              <p class="mt-2 text-sm text-base-content/80">Turn the audit findings into a concrete 30, 60, and 90 day hardening plan. Prioritise by risk severity and implementation effort. Define success criteria and measurement for each fix. You get a clear budget and timeline before any implementation work begins.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Harden</h3>
+              <p class="mt-2 text-sm text-base-content/80">Implement the highest-priority fixes in focused sprints — tracing and observability, guardrails, fallback paths, cost controls, eval suites, prompt registries, release pipelines. Each sprint produces measurable improvement against the audit baseline.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Operate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Ongoing reliability partnership — incident review, cost monitoring, model change assessment, eval maintenance, and regular health checks. Your team gets the operational support to keep the system healthy as it evolves.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Packaged Offerings ───────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Packaged offerings</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Three Ways to Engage</h2>
+      <p class="text-lg text-base-content/80">
+        Every engagement uses the same seven-layer framework. The depth and duration depend on your current stage, risk profile, and timeline.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="metric-card">
+        <span class="text-3xl">📋</span>
+        <h3 class="mt-4 text-xl font-bold text-base-content">Production Readiness Audit</h3>
+        <p class="mt-1 text-sm text-base-content/80">A 2-week technical assessment of your AI system across all seven layers. You get a scorecard, risk register, and prioritised hardening roadmap — without any implementation commitment.</p>
+        <ul class="mt-4 space-y-2 text-sm text-base-content/70">
+          <li>• Seven-layer production scorecard</li>
+          <li>• Risk register with severity, owner, and suggested fix</li>
+          <li>• 30, 60, and 90 day hardening roadmap</li>
+          <li>• Executive summary and technical appendix</li>
+        </ul>
+      </div>
+
+      <div class="metric-card">
+        <span class="text-3xl">🔧</span>
+        <h3 class="mt-4 text-xl font-bold text-base-content">Hardening Sprint</h3>
+        <p class="mt-1 text-sm text-base-content/80">A 4-week implementation sprint that fixes the highest-risk gaps identified in the audit. Includes tracing deployment, guardrail configuration, fallback path implementation, cost controls, and eval setup.</p>
+        <ul class="mt-4 space-y-2 text-sm text-base-content/70">
+          <li>• Deployed observability and tracing</li>
+          <li>• Guardrails and fallback paths in production</li>
+          <li>• Cost controls and budget alerts active</li>
+          <li>• Eval suite and release pipeline established</li>
+        </ul>
+      </div>
+
+      <div class="metric-card">
+        <span class="text-3xl">🤝</span>
+        <h3 class="mt-4 text-xl font-bold text-base-content">Fractional AI Reliability</h3>
+        <p class="mt-1 text-sm text-base-content/80">Ongoing operational support for teams that need regular incident review, model change assessment, cost monitoring, and release governance — without hiring a full-time AI reliability engineer.</p>
+        <ul class="mt-4 space-y-2 text-sm text-base-content/70">
+          <li>• Weekly incident and cost review</li>
+          <li>• Model change impact assessment</li>
+          <li>• Release decision support and runbook maintenance</li>
+          <li>• Quarterly health checks and roadmap updates</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is Production Hardening different from AI Safety?</summary>
+        <div class="collapse-content text-base-content/80">
+          <strong class="text-base-content">AI Safety</strong> focuses on testing vulnerabilities, bias, and failure modes — red teaming, adversarial testing, model behavior analysis. <strong class="text-base-content">Production Hardening</strong> is broader: it covers observability, cost controls, release discipline, infrastructure reliability, and fallback paths — the full operational layer that makes a system safe to run at scale. Safety is one essential component of hardening; hardening is the complete production readiness programme.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is this different from Startup Support or Generative AI?</summary>
+        <div class="collapse-content text-base-content/80">
+          <strong class="text-base-content">Startup Support</strong> builds MVPs and prototypes from scratch — getting from idea to working demo. <strong class="text-base-content">Generative AI</strong> builds the actual RAG systems, copilots, and knowledge assistants. <strong class="text-base-content">Production Hardening</strong> takes an existing system — whether built by us, your team, or another vendor — and adds the operational layer that makes it production-ready. Think of it as the step between "it works" and "it works for 10,000 users without waking me up at 3am."
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is this different from AI Cost Optimization?</summary>
+        <div class="collapse-content text-base-content/80">
+          <strong class="text-base-content">AI Cost Optimization</strong> focuses exclusively on reducing and governing AI spend. <strong class="text-base-content">Production Hardening</strong> covers cost controls as one of seven operational layers — alongside observability, guardrails, resilience, evals, release discipline, and infrastructure. If your primary concern is cost, start with the Cost Optimization service. If you need the full production readiness treatment, start with a Readiness Audit.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How long does a hardening engagement take?</summary>
+        <div class="collapse-content text-base-content/80">
+          The Readiness Audit takes 2 weeks. A Hardening Sprint takes 4 weeks. A full programme — audit, plan, harden, and handover — typically runs 6-12 weeks depending on the number of gaps and system complexity. The Fractional AI Reliability partnership is ongoing, with monthly or weekly cadence depending on your needs.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you work with any tech stack or model provider?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. We are model- and provider-agnostic. We harden systems built with OpenAI, Anthropic, Google, AWS Bedrock, open-weight models, or any combination. Your codebase can be in Python, TypeScript, Rust, or another language. For the control-plane components — model gateways, tracing infrastructure, guardrail enforcement — we recommend Rust for its reliability and performance, but we integrate with your existing stack. The audit and plan phases require no code access at all.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can I start with just an audit and decide later?</summary>
+        <div class="collapse-content text-base-content/80">
+          Absolutely. The Production Readiness Audit is designed as a standalone engagement — you get the scorecard, risk register, and roadmap regardless of whether you proceed to implementation. There is no obligation to continue, and the audit output is yours to act on with your team or another partner. Many clients use the audit to build an internal business case for hardening investment.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to make your AI prototype production-ready?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help you assess, plan, and implement the operational layer that turns brittle prototypes into reliable production systems — with observability, guardrails, fallback paths, and cost controls built in from day one of your production journey.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
