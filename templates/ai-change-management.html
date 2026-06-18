@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.18),transparent_28%),radial-gradient(circle_at_right,rgba(20,184,166,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Change Management &amp; Adoption
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            The #1 reason AI projects fail isn't the technology — it's non-adoption. We help you close that gap with workshops, internal champions, documentation, and post-launch office hours that get your team actually using AI, day in and day out.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-we-help" class="btn btn-outline btn-lg">How we help</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Adoption readiness assessments — people, process, and culture</li>
+              <li>• Stakeholder mapping and change agent identification</li>
+              <li>• Executive alignment and sponsorship development</li>
+              <li>• Internal champion program design and launch</li>
+              <li>• Hands-on adoption workshops for end users and managers</li>
+              <li>• Playbooks, quick-reference guides, and video documentation</li>
+              <li>• Post-launch office hours and drop-in support</li>
+              <li>• Adoption KPIs, pulse surveys, and impact measurement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Overview ──────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Why Adoption Fails</h2>
+      <p class="text-lg text-base-content/80">
+        Most organisations treat AI adoption as a technical implementation. They build the system, deploy it, and expect people to start using it. That almost never works. New tools create uncertainty, change existing workflows, and challenge established habits — and without deliberate support, teams default back to what they know.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Change management closes that gap. It is the structured practice of preparing, enabling, and reinforcing new behaviours until they stick. Applied to AI, it means treating adoption as a first-class workstream — with the same rigour, resourcing, and attention as the technical build.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">Prepare</p>
+        <p class="mt-1 text-sm text-base-content/80">Assess readiness, align leadership, identify champions, and address resistance before launch so the organisation is ready to adopt</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">Enable</p>
+        <p class="mt-1 text-sm text-base-content/80">Equip every stakeholder with the skills, documentation, and support they need to use the AI system confidently in their daily work</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">Reinforce</p>
+        <p class="mt-1 text-sm text-base-content/80">Sustain adoption through office hours, champions, pulse checks, and continuous improvement loops that adapt as workflows evolve</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Services ─────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Services</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What We Offer</h2>
+      <p class="text-lg text-base-content/80">
+        Every engagement is tailored to your organisation's culture, team structure, and the specific AI system being adopted. These are the core capabilities we bring.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📋</span>
+        <h3 class="text-xl font-bold text-base-content">Adoption Readiness Assessment</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Evaluate organisational readiness across culture, leadership alignment, team技能, and change capacity. We identify potential friction points, resistance patterns, and the stakeholder groups that need the most support — before launch.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">👥</span>
+        <h3 class="text-xl font-bold text-base-content">Stakeholder &amp; Champion Programs</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Identify and train internal champions across departments who advocate for the new system, support their peers, and provide real-time feedback to the implementation team. We give them the playbooks, talking points, and escalation paths they need to succeed.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎓</span>
+        <h3 class="text-xl font-bold text-base-content">Adoption Workshops</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Role-specific, hands-on workshops that teach people not just how the AI system works, but how to integrate it into their actual workflows. Each session is built around real scenarios from your organisation — not generic demos.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📚</span>
+        <h3 class="text-xl font-bold text-base-content">Documentation &amp; Playbooks</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Clear, role-based documentation that teams actually use — quick-reference guides, workflow walkthroughs, troubleshooting playbooks, and video tutorials. Written in plain language, not technical jargon.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💬</span>
+        <h3 class="text-xl font-bold text-base-content">Post-Launch Office Hours</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Scheduled drop-in support sessions after go-live where team members can ask questions, troubleshoot edge cases, and get hands-on help. Available in-person or via video call, at regular intervals for the first 4–12 weeks post-launch.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📊</span>
+        <h3 class="text-xl font-bold text-base-content">Adoption Tracking &amp; KPIs</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Define and measure adoption success — usage rates, task completion times, error rates, user satisfaction, and business impact. We set up pulse surveys, usage analytics dashboards, and regular reporting cadences so you know what is working and what needs adjustment.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section id="how-we-help" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our process</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Drive Adoption</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We treat adoption as a structured programme from Day 1 — not an afterthought. Our process runs alongside the technical build, so users are ready the moment the system goes live.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Phase 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess &amp; Plan</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map stakeholders, assess organisational readiness, identify champions, and build the adoption plan alongside the technical roadmap. Define success metrics and establish baseline measurements.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Phase 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Prepare &amp; Enable</h3>
+              <p class="mt-2 text-sm text-base-content/80">Train champions, develop role-based documentation and playbooks, design and run adoption workshops, and set up support channels. Stakeholders know what is coming and how it affects their work.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Phase 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Launch &amp; Support</h3>
+              <p class="mt-2 text-sm text-base-content/80">Coordinate go-live communications, activate champions, begin office hours, and provide real-time support. Monitor adoption metrics and address friction points immediately.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Phase 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Reinforce &amp; Optimise</h3>
+              <p class="mt-2 text-sm text-base-content/80">Sustain adoption through ongoing office hours, pulse surveys, refresher workshops, and continuous improvement. Transition ownership to internal champions and provide handoff documentation.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Why Adoption Fails ───────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Common challenges</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Why AI Adoption Stalls</h2>
+      <p class="text-lg text-base-content/80">
+        We see the same patterns across organisations. Recognising them early is the first step to avoiding them.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">No leadership alignment</h3>
+        <p class="mt-3 text-base-content/80">Executives approve the budget but don't model usage. Teams follow what leaders prioritise — if leaders don't use the AI system, neither will the teams.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">No user involvement in design</h3>
+        <p class="mt-3 text-base-content/80">Systems built without end-user input produce workflows that don't match how people actually work. The result: workarounds, shadow processes, and eventual abandonment.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Inadequate training</h3>
+        <p class="mt-3 text-base-content/80">Generic, one-size-fits-all training that doesn't account for different roles, skill levels, or workflows. People don't know how to apply the tool to their actual job, so they don't bother.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">No post-launch support</h3>
+        <p class="mt-3 text-base-content/80">Training happens before go-live, but questions and friction emerge after. Without ongoing support, small frustrations compound into full abandonment within weeks.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">Cultural resistance</h3>
+        <p class="mt-3 text-base-content/80">Fear of job displacement, distrust of AI decisions, or simple fatigue from constant tool changes. These concerns are rational and need to be addressed directly, not ignored.</p>
+      </div>
+      <div class="metric-card">
+        <h3 class="text-xl font-bold text-base-content">No adoption measurement</h3>
+        <p class="mt-3 text-base-content/80">If you aren't tracking adoption metrics, you won't know you have a problem until the system has already failed. Early warning signs are invisible without deliberate measurement.</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is change management different from training?</summary>
+        <div class="collapse-content text-base-content/80">
+          Training builds capability — it teaches someone how to use a tool. Change management builds willingness and habit — it addresses fear, uncertainty, workflow disruption, and the organisational dynamics that prevent adoption. Both are necessary, but they serve different purposes. We often deliver change management as a complement to technical training, ensuring the skills taught in the classroom actually stick in daily work.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">When should we start adoption planning?</summary>
+        <div class="collapse-content text-base-content/80">
+          As early as possible. Ideal timing is during the AI strategy or pilot phase — before the system is built. This allows the adoption plan to influence system design (workflows, UX, rollout sequencing) rather than retrofitting adoption after launch. For existing systems that have already stalled, we can do a rapid adoption assessment and design a recovery plan within 2-3 weeks.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How do you handle resistance from teams?</summary>
+        <div class="collapse-content text-base-content/80">
+          Resistance is almost always a signal, not a problem. It usually means someone's concerns haven't been heard, their workflow hasn't been considered, or they lack the support to make the transition. We surface resistance early through stakeholder interviews and pulse surveys, address the underlying causes directly, and work with champions to turn skeptics into advocates. Most resistance dissolves when people feel heard and equipped.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How long does an adoption programme run?</summary>
+        <div class="collapse-content text-base-content/80">
+          A typical engagement spans 8-16 weeks: 2-4 weeks of assessment and planning, 2-4 weeks of preparation and workshop delivery, and 4-8 weeks of post-launch office hours and reinforcement. We structure the programme so internal champions can sustain adoption independently after the engagement ends. For smaller rollouts, we offer a scaled-down 4-6 week programme.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you work with existing AI systems that aren't being adopted?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. We frequently help organisations recover stalled AI investments. We do a rapid adoption diagnostic to understand why the system isn't being used, identify the blockers, and design a targeted intervention — which might include refresher workshops, improved documentation, champion reactivation, workflow adjustments, or leadership alignment sessions.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How do you measure adoption success?</summary>
+        <div class="collapse-content text-base-content/80">
+          We track a combination of leading and lagging indicators: active usage rates, feature adoption depth, task completion efficiency, user satisfaction (via pulse surveys), support ticket volume, and business impact metrics tied to the system's original ROI case. We establish baseline measurements before launch and report progress weekly during the engagement, then transition reporting to your internal team.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to make your AI investment stick?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help you close the gap between deployment and daily use — with structured change management, hands-on workshops, and post-launch support that turns AI projects into lasting capabilities.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
