@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="acuity">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/theme.css">
   <script>
-    (function() {
-      var theme = localStorage.getItem('theme');
-      if (!theme) theme = window.matchMedia('(prefers-color-scheme:light)').matches ? 'acuity-light' : 'acuity';
-      document.documentElement.setAttribute('data-theme', theme);
+    (function () {
+      document.documentElement.setAttribute('data-theme', 'acuity-light');
     })();
   </script>
 </head>
+
 <body>
   <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
     <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
@@ -72,39 +72,40 @@
             <li><a href="/about/">About</a></li>
             <li><a href="/news/">AI News</a></li>
             <li><a href="/contact/">Contact Us</a></li>
-            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle theme</button></li>
+            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle
+                theme</button></li>
           </ul>
         </div>
         <div class="hidden lg:flex">
           <ul class="menu menu-horizontal items-center gap-1 px-1">
-          <li>
-            <details>
-              <summary>Consulting</summary>
-              <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
-                <li><a href="/ai-strategy/">AI Strategy</a></li>
-                <li><a href="/ai-cost-optimization/">AI Cost Optimization</a></li>
-                <li><a href="/ai-production-hardening/">AI Production Hardening</a></li>
-                <li><a href="/startup-support/">Startup Support</a></li>
-                <li><a href="/ai-change-management/">AI Change Management</a></li>
-                <li><a href="/training/">Training</a></li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>Development</summary>
-              <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
-                <li><a href="/model-training/">AI Model Training</a></li>
-                <li><a href="/ai-voice-agents/">AI Voice Agents</a></li>
-                <li><a href="/generative-ai/">Generative AI</a></li>
-                <li><a href="/business-agent/">Business Agent</a></li>
-                <li><a href="/agentic-coding/">Agentic Coding</a></li>
-                <li><a href="/app-building/">App Building</a></li>
-                <li><a href="/custom-agent/">Custom Agent</a></li>
-                <li><a href="/private-inference/">Private Inference</a></li>
-              </ul>
-            </details>
-          </li>
+            <li>
+              <details>
+                <summary>Consulting</summary>
+                <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
+                  <li><a href="/ai-strategy/">AI Strategy</a></li>
+                  <li><a href="/ai-cost-optimization/">AI Cost Optimization</a></li>
+                  <li><a href="/ai-production-hardening/">AI Production Hardening</a></li>
+                  <li><a href="/startup-support/">Startup Support</a></li>
+                  <li><a href="/ai-change-management/">AI Change Management</a></li>
+                  <li><a href="/training/">Training</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Development</summary>
+                <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
+                  <li><a href="/model-training/">AI Model Training</a></li>
+                  <li><a href="/ai-voice-agents/">AI Voice Agents</a></li>
+                  <li><a href="/generative-ai/">Generative AI</a></li>
+                  <li><a href="/business-agent/">Business Agent</a></li>
+                  <li><a href="/agentic-coding/">Agentic Coding</a></li>
+                  <li><a href="/app-building/">App Building</a></li>
+                  <li><a href="/custom-agent/">Custom Agent</a></li>
+                  <li><a href="/private-inference/">Private Inference</a></li>
+                </ul>
+              </details>
+            </li>
             <li>
               <details>
                 <summary>Governance</summary>
@@ -118,12 +119,6 @@
             <li><a href="/about/">About</a></li>
             <li><a href="/news/">AI News</a></li>
             <li><a href="/contact/" class="btn btn-primary btn-sm ml-2">Contact Us</a></li>
-            <li>
-              <button id="theme-toggle" class="btn btn-ghost btn-sm ml-1" aria-label="Toggle theme">
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-              </button>
-            </li>
           </ul>
         </div>
       </div>
@@ -449,7 +444,8 @@
 
 </main>
 
-  <footer class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
+  <footer
+    class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
     <aside>
       <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
       <p class="text-base-content/80">
@@ -493,7 +489,7 @@
     </nav>
   </footer>
   <script>
-    (function() {
+    (function () {
       var toggle = document.getElementById('theme-toggle');
       var toggleMobile = document.getElementById('theme-toggle-mobile');
       var sun = document.getElementById('sun-icon');
@@ -532,4 +528,5 @@
     })();
   </script>
 </body>
+
 </html>
