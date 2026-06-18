@@ -1,0 +1,611 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<style>
+  [data-theme="acuity"] .logo-invert {
+    filter: invert(1);
+  }
+</style>
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(45,212,191,0.18),transparent_28%),radial-gradient(circle_at_left,rgba(245,158,11,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            AI Voice Agents
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            Deploy intelligent AI voice agents that handle inbound and outbound calls 24/7 — lead qualification, appointment booking, customer support, and multilingual receptionist capabilities.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Key capabilities</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• Natural conversation with real-time speech recognition</li>
+              <li>• 24/7 inbound call answering — never miss an opportunity</li>
+              <li>• Lead qualification and appointment booking</li>
+              <li>• CRM, calendar, and knowledge base integration</li>
+              <li>• Multilingual support (30+ languages)</li>
+              <li>• Warm transfer to human agents when needed</li>
+              <li>• Batch calling for high-volume outbound campaigns</li>
+              <li>• Post-call analytics and conversation insights</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Overview ───────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Overview</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Are AI Voice Agents?</h2>
+      <p class="text-lg text-base-content/80">
+        AI voice agents are AI-powered systems that understand speech, process it intelligently, and respond with natural-sounding voice in real time. They combine speech recognition (STT), large language models (LLM), and text-to-speech (TTS) into a seamless conversation loop.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Unlike traditional IVR systems that force callers through rigid menu trees, AI voice agents understand intent, handle complex conversations, and adapt dynamically. They integrate with your CRM, calendar, and knowledge bases to provide personalized, context-aware interactions.
+      </p>
+      <p class="text-lg text-base-content/80">
+        Businesses using AI voice agents report up to <strong>90% reduction in call center operational costs</strong>, while handling 20-30% more calls. The average business answers just 37.8% of incoming calls — and 85% of callers who reach voicemail never call back. AI voice agents close that gap completely.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-primary">90%</p>
+        <p class="mt-1 text-sm text-base-content/80">Average reduction in call center operating costs with AI voice agents</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-secondary">37.8%</p>
+        <p class="mt-1 text-sm text-base-content/80">Average inbound call answer rate for small businesses without AI</p>
+      </div>
+      <div class="metric-card">
+        <p class="text-3xl font-extrabold text-accent">85%</p>
+        <p class="mt-1 text-sm text-base-content/80">Of callers who reach voicemail will not call back — lost revenue</p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Use Cases ────────────────────────── #}
+  <section id="how-it-works" class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Use cases</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">What Can You Do With AI Voice Agents?</h2>
+      <p class="text-lg text-base-content/80">
+        AI voice agents handle a wide range of call operations — from inbound customer service to outbound lead generation.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📞</span>
+        <h3 class="text-xl font-bold text-base-content">Inbound Call Answering</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Answer every inbound call instantly, 24/7. No hold music, no voicemail, no missed opportunities. The agent handles the conversation, qualifies the lead, and routes to the right person when needed.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎯</span>
+        <h3 class="text-xl font-bold text-base-content">Lead Qualification</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Qualify inbound leads automatically — capture contact details, assess interest level, identify needs, and book qualified appointments. Pass only high-intent leads to your sales team.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📅</span>
+        <h3 class="text-xl font-bold text-base-content">Appointment Booking</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Let callers book appointments naturally through conversation. The agent checks your calendar, finds available slots, confirms bookings, and sends SMS reminders — all without human involvement.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💬</span>
+        <h3 class="text-xl font-bold text-base-content">Customer Support</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Handle common support inquiries — order status, shipping questions, policy lookups, billing issues — by connecting to your knowledge base and CRM. Escalate complex cases to human agents via warm transfer.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📢</span>
+        <h3 class="text-xl font-bold text-base-content">Outbound Campaigns</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Run high-volume outbound calling campaigns for sales follow-ups, appointment reminders, surveys, and debt collection. Batch calling lets you reach hundreds of contacts simultaneously.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🌐</span>
+        <h3 class="text-xl font-bold text-base-content">Multilingual Receptionist</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Act as a 24/7 multilingual receptionist that detects the caller's language and responds in kind. Perfect for businesses serving diverse communities or operating across multiple countries.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Proprietary Platforms: Side by Side ────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">SaaS platforms</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Proprietary Voice Agent Platforms</h2>
+      <p class="text-lg text-base-content/80">
+        SaaS platforms provide the fastest path to deployment. They bundle STT, LLM, TTS, and telephony into a managed service — you pay per minute and get started in hours, not weeks.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-2">
+
+      {# ─── Retell AI Panel ──────── #}
+      <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+        <div class="flex items-center gap-6">
+          <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
+            <span class="text-3xl font-extrabold text-primary">R</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-primary/80">Recommended platform</p>
+            <h3 class="font-display text-2xl font-extrabold text-base-content">Retell AI</h3>
+          </div>
+        </div>
+        <p class="mt-6 text-base-content/80 leading-relaxed">
+          <strong><a href="https://www.retellai.com" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">Retell AI</a></strong> is a leading voice AI platform offering transparent pay-as-you-go pricing at $0.07/min for the full stack. It delivers ~600ms latency, supports 31+ languages, and includes features like knowledge base integration, warm transfer, batch calling, branded caller ID, and post-call analytics. Retell AI is SOC 2 and HIPAA compliant.
+        </p>
+        <div class="mt-auto pt-6 flex flex-wrap gap-3">
+          <a href="https://www.retellai.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit site</a>
+          <a href="https://www.retellai.com/pricing" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Pricing</a>
+        </div>
+      </div>
+
+      {# ─── Synthflow Panel ─────── #}
+      <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+        <div class="flex items-center gap-6">
+          <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
+            <span class="text-3xl font-extrabold text-secondary">S</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Recommended platform</p>
+            <h3 class="font-display text-2xl font-extrabold text-base-content">Synthflow</h3>
+          </div>
+        </div>
+        <p class="mt-6 text-base-content/80 leading-relaxed">
+          <strong><a href="https://synthflow.ai" target="_blank" rel="noopener noreferrer" class="link link-hover text-secondary">Synthflow</a></strong> offers a no-code voice agent builder that lets non-technical teams deploy production agents in under 3 weeks. Pricing starts at $0.08/min with GPT-4o included. It features a visual workflow editor, CRM integration, voice cloning, and built-in STT/TTS from ElevenLabs. SOC 2, HIPAA, and GDPR compliant.
+        </p>
+        <div class="mt-auto pt-6 flex flex-wrap gap-3">
+          <a href="https://synthflow.ai" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit site</a>
+          <a href="https://synthflow.ai/pricing" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Pricing</a>
+        </div>
+      </div>
+
+    </div>
+
+    {# ─── Proprietary Comparison Table ───── #}
+    <div class="mt-8">
+      <div class="glass-panel rounded-3xl p-8 lg:p-10">
+        <p class="text-sm font-semibold tracking-wide text-primary/80">Comparison</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold text-base-content md:text-4xl">Proprietary Platforms Compared</h2>
+        <p class="mt-2 text-base-content/80">A feature breakdown of leading SaaS voice agent platforms to help you choose the right fit.</p>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="table w-full">
+            <thead>
+              <tr class="text-base-content/80">
+                <th class="font-semibold">Feature</th>
+                <th class="font-semibold">Retell AI</th>
+                <th class="font-semibold">Synthflow</th>
+                <th class="font-semibold">Vapi</th>
+                <th class="font-semibold">Bland AI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-semibold">Pricing model</td>
+                <td>Pay-as-you-go</td>
+                <td>Pay-as-you-go</td>
+                <td>Platform + BYO providers</td>
+                <td>Subscription + usage</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Per-minute cost</td>
+                <td>$0.07 bundled</td>
+                <td>$0.08–0.16</td>
+                <td>$0.05 plat. + stack = $0.13–0.33</td>
+                <td>$0.11–0.14</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Latency</td>
+                <td>~600ms</td>
+                <td>~800ms</td>
+                <td>~500ms</td>
+                <td>~700ms</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Languages</td>
+                <td>31+</td>
+                <td>30+</td>
+                <td>100+</td>
+                <td>30+</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">No-code builder</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Partial</td>
+                <td>❌</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Self-hostable</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+                <td>❌</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Batch calling</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>API-based</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Warm transfer</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Compliance</td>
+                <td>SOC 2, HIPAA</td>
+                <td>SOC 2, HIPAA, GDPR</td>
+                <td>SOC 2, HIPAA, PCI</td>
+                <td>SOC 2</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Best for</td>
+                <td>Balanced quality/price</td>
+                <td>No-code rapid deployment</td>
+                <td>Developer-led teams</td>
+                <td>High-volume outbound</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Open Source Platforms: Side by Side ─────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Open source</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Self-Hosted Open Source Solutions</h2>
+      <p class="text-lg text-base-content/80">
+        Open source voice agent platforms give you full control over your data, infrastructure, and costs. You pay only for your own STT/TTS/LLM API keys and hosting — no per-minute platform fees, no vendor lock-in.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-2">
+
+      {# ─── LiveKit Panel ──────── #}
+      <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+        <div class="flex items-center gap-6">
+          <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
+            <span class="text-3xl font-extrabold text-primary">L</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-primary/80">Recommended framework</p>
+            <h3 class="font-display text-2xl font-extrabold text-base-content">LiveKit Agents</h3>
+          </div>
+        </div>
+        <p class="mt-6 text-base-content/80 leading-relaxed">
+          <strong><a href="https://livekit.io" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary">LiveKit Agents</a></strong> (Apache 2.0, 11K+ GitHub stars) is the most mature open source voice agent framework. It powers ChatGPT's Advanced Voice Mode. Available in Python and Node.js, it handles WebRTC streaming, SIP telephony integration, turn detection, tool use, multi-agent handoffs, and vision input. Built on LiveKit's open source WebRTC server.
+        </p>
+        <div class="mt-auto pt-6 flex flex-wrap gap-3">
+          <a href="https://livekit.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit site</a>
+          <a href="https://github.com/livekit/agents" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+        </div>
+      </div>
+
+      {# ─── Dograh Panel ─────── #}
+      <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+        <div class="flex items-center gap-6">
+          <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
+            <span class="text-3xl font-extrabold text-secondary">D</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">Recommended platform</p>
+            <h3 class="font-display text-2xl font-extrabold text-base-content">Dograh</h3>
+          </div>
+        </div>
+        <p class="mt-6 text-base-content/80 leading-relaxed">
+          <strong><a href="https://www.dograh.com" target="_blank" rel="noopener noreferrer" class="link link-hover text-secondary">Dograh</a></strong> (BSD 2-Clause) is the open source, self-hosted alternative to Vapi and Retell. It features a visual drag-and-drop workflow builder, MCP-native architecture, telephony support (Twilio, Vonage), and deploys with a single Docker command. Includes built-in STT/TTS/LLM stack, or bring your own providers. Free to self-host forever.
+        </p>
+        <div class="mt-auto pt-6 flex flex-wrap gap-3">
+          <a href="https://www.dograh.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit site</a>
+          <a href="https://github.com/dograh-hq/dograh" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">View on GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+    {# ─── Open Source Comparison Table ───── #}
+    <div class="mt-8">
+      <div class="glass-panel rounded-3xl p-8 lg:p-10">
+        <p class="text-sm font-semibold tracking-wide text-primary/80">Comparison</p>
+        <h2 class="mt-2 font-display text-3xl font-extrabold text-base-content md:text-4xl">Open Source Platforms Compared</h2>
+        <p class="mt-2 text-base-content/80">A technical breakdown of the leading open source voice agent frameworks and platforms.</p>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="table w-full">
+            <thead>
+              <tr class="text-base-content/80">
+                <th class="font-semibold">Feature</th>
+                <th class="font-semibold">LiveKit Agents</th>
+                <th class="font-semibold">Dograh</th>
+                <th class="font-semibold">Pipecat</th>
+                <th class="font-semibold">ADK-Rust (Google)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-semibold">License</td>
+                <td>Apache 2.0</td>
+                <td>BSD 2-Clause</td>
+                <td>MIT</td>
+                <td>Apache 2.0</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Language</td>
+                <td>Python, Node.js</td>
+                <td>Python (Docker)</td>
+                <td>Python</td>
+                <td>Rust</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">GitHub stars</td>
+                <td>11K+</td>
+                <td>Growing</td>
+                <td>10.6K+</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Self-hostable</td>
+                <td>✅</td>
+                <td>✅ (one Docker command)</td>
+                <td>✅</td>
+                <td>✅ (single binary)</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Visual builder</td>
+                <td>❌</td>
+                <td>✅ (drag-and-drop)</td>
+                <td>❌</td>
+                <td>✅ (ADK Studio)</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Telephony / SIP</td>
+                <td>✅ Built-in SIP</td>
+                <td>✅ Twilio, Vonage</td>
+                <td>✅ Twilio, Vonage, Plivo</td>
+                <td>Via LiveKit bridge</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">MCP support</td>
+                <td>✅</td>
+                <td>✅ Native</td>
+                <td>✅ Subagents</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Multi-agent</td>
+                <td>✅ Handoffs</td>
+                <td>✅ Multi-agent flows</td>
+                <td>✅ Subagents</td>
+                <td>✅ A2A protocol</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Latency</td>
+                <td>~400-800ms</td>
+                <td>~500-900ms</td>
+                <td>~300-800ms</td>
+                <td>~400-700ms</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Cloud version</td>
+                <td>✅ LiveKit Cloud</td>
+                <td>✅ Dograh Cloud</td>
+                <td>✅ Pipecat Cloud</td>
+                <td>❌</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Used by</td>
+                <td>OpenAI ChatGPT Voice</td>
+                <td>Early-stage teams</td>
+                <td>Daily.co ecosystem</td>
+                <td>Google ecosystem</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Best for</td>
+                <td>Full-stack voice infra</td>
+                <td>No-code + self-hosted</td>
+                <td>Pipeline control</td>
+                <td>Performance-critical</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── How We Help ──────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">Our services</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">How We Help You Deploy AI Voice Agents</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            We guide you from assessment to production — choosing the right platform, designing conversation flows, integrating with your systems, and optimizing for your specific use case. Whether you want a turnkey SaaS deployment or a fully self-hosted open source stack, we handle the full lifecycle.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Assess Call Operations</h3>
+              <p class="mt-2 text-sm text-base-content/80">Map your call flows, identify highest-ROI use cases, define success metrics, and choose the right platform — SaaS or open source — based on your budget, compliance needs, and timeline.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Build & Integrate</h3>
+              <p class="mt-2 text-sm text-base-content/80">Design conversation scripts, configure STT/TTS/LLM stack, integrate with your CRM, calendar, and knowledge base, and set up telephony (phone numbers, SIP trunking, IVR routing).</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Test & Harden</h3>
+              <p class="mt-2 text-sm text-base-content/80">Test with real call scenarios, validate edge cases (barge-in, interruptions, accents), tune latency, set up monitoring and observability, and establish compliance guardrails.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 4</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Deploy & Optimize</h3>
+              <p class="mt-2 text-sm text-base-content/80">Go live with production call handling, train your team on oversight and escalation, establish feedback loops, and continuously optimize prompts, routing, and model choices.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── Considerations ──────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="grid gap-6 lg:grid-cols-2">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-secondary/80">Data privacy</p>
+        <h2 class="font-display text-2xl font-extrabold text-base-content">Open Source for Regulated Industries</h2>
+        <p class="text-base-content/80 leading-relaxed">
+          For businesses subject to VN AI Law, GDPR, HIPAA, or other data residency requirements, self-hosted open source solutions ensure your call data never leaves your infrastructure. Your security team can audit every line of code before deployment.
+        </p>
+        <ul class="space-y-3 text-base-content/80">
+          <li>• Full data residency — audio, transcripts, and logs stay on your servers</li>
+          <li>• No vendor compliance reviews needed — you control the stack</li>
+          <li>• Open source code is auditable and forkable</li>
+          <li>• BYO encryption keys and access controls</li>
+        </ul>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-accent/80">Considerations</p>
+        <h2 class="font-display text-2xl font-extrabold text-base-content">What to Know Before You Start</h2>
+        <ul class="space-y-4 text-base-content/80">
+          <li><strong class="text-base-content">Costs add up beyond per-minute fees.</strong> SaaS platform pricing is just the start. Telephony (Twilio/Vonage), phone numbers, and compliance add-ons can significantly increase your monthly bill.</li>
+          <li><strong class="text-base-content">Open source requires more setup.</strong> Self-hosted solutions give you full control but require infrastructure management. We handle the deployment so you don't have to.</li>
+          <li><strong class="text-base-content">Voice agents need ongoing tuning.</strong> Conversation flows, prompts, and model choices need iteration based on real call data. Plan for continuous optimization.</li>
+          <li><strong class="text-base-content">Compliance is your responsibility.</strong> Whether SaaS or self-hosted, you are ultimately responsible for compliance with telemarketing regulations, data protection laws, and industry requirements.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">How is an AI voice agent different from an IVR system?</summary>
+        <div class="collapse-content text-base-content/80">
+          Traditional IVR systems force callers through rigid "Press 1 for sales" menu trees. AI voice agents understand natural speech, interpret intent, and hold dynamic conversations. They adapt to what the caller says rather than forcing them to follow predefined paths.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Will the voice agent sound robotic?</summary>
+        <div class="collapse-content text-base-content/80">
+          Modern AI voice agents use advanced text-to-speech models (ElevenLabs, Cartesia) and voice cloning to produce natural-sounding speech with proper tone, pacing, and emotion. Combined with turn detection and backchanneling ("uh-huh," "I see"), conversations feel natural and human-like.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Can the agent transfer to a human when needed?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. AI voice agents can perform warm transfers — they brief the human agent on the conversation context before handing off, so the caller never has to repeat themselves. You define the conditions for escalation based on intent, sentiment, or complexity.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Should I choose SaaS or self-hosted open source?</summary>
+        <div class="collapse-content text-base-content/80">
+          SaaS (Retell AI, Synthflow) is best for fast deployment, predictable per-minute pricing, and minimal infrastructure overhead. Self-hosted open source (LiveKit, Dograh) is best when you need full data control, regulatory compliance, no per-minute fees, and the ability to customize every layer of the stack.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What languages do AI voice agents support?</summary>
+        <div class="collapse-content text-base-content/80">
+          Leading platforms support 30-100+ languages including Vietnamese, English, Mandarin, Spanish, French, German, Japanese, Korean, and more. The best platforms can auto-detect the caller's language and respond in kind without configuration.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What integrations are needed?</summary>
+        <div class="collapse-content text-base-content/80">
+          Most deployments integrate with CRM (HubSpot, Salesforce), calendar (Google Calendar, Outlook), knowledge base (docs, FAQs, product info), and telephony (Twilio, Vonage). We handle all integrations as part of the engagement.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready to deploy AI voice agents?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        We help you choose the right platform, design your conversation flows, integrate with your systems, and deploy to production — whether SaaS or self-hosted open source.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book a consultation</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}
