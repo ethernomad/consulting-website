@@ -24,6 +24,10 @@
         <a href="/" class="font-display text-lg font-bold text-base-content">AI Agency</a>
       </div>
       <div class="navbar-end">
+        <button id="theme-toggle-mobile" class="btn btn-ghost btn-sm lg:hidden" aria-label="Toggle theme">
+          <svg id="sun-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg id="moon-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
         <div class="dropdown dropdown-end lg:hidden">
           <div tabindex="0" role="button" class="btn btn-ghost btn-sm" aria-label="Open navigation menu">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-5 w-5 stroke-current">
@@ -55,8 +59,7 @@
             <li><a href="/about/">About</a></li>
             <li><a href="/news/">AI News</a></li>
             <li><a href="/contact/">Contact Us</a></li>
-            <li><button id="theme-toggle-mobile" class="menu-item w-full text-left px-4 py-2 text-sm">Toggle
-                theme</button></li>
+
           </ul>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-1">
@@ -111,7 +114,11 @@
             <li><a href="/about/">About</a></li>
             <li><a href="/news/">AI News</a></li>
           </ul>
-          <a href="/contact/" class="btn btn-primary btn-sm shrink-0">Contact Us</a>
+          <a href="/contact/" class="btn btn-primary btn-sm shrink-0 ml-2">Contact Us</a>
+          <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -594,20 +601,27 @@
       var toggleMobile = document.getElementById('theme-toggle-mobile');
       var sun = document.getElementById('sun-icon');
       var moon = document.getElementById('moon-icon');
+      var sunMobile = document.getElementById('sun-icon-mobile');
+      var moonMobile = document.getElementById('moon-icon-mobile');
       var html = document.documentElement;
 
       function setTheme(theme) {
         html.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        if (sun && moon) {
-          if (theme === 'acuity-light') {
-            sun.classList.remove('hidden');
-            moon.classList.add('hidden');
-          } else {
-            sun.classList.add('hidden');
-            moon.classList.remove('hidden');
+        [
+          { show: sun, hide: moon },
+          { show: sunMobile, hide: moonMobile }
+        ].forEach(function (pair) {
+          if (pair.show && pair.hide) {
+            if (theme === 'acuity-light') {
+              pair.show.classList.remove('hidden');
+              pair.hide.classList.add('hidden');
+            } else {
+              pair.show.classList.add('hidden');
+              pair.hide.classList.remove('hidden');
+            }
           }
-        }
+        });
       }
 
       function toggleTheme() {
@@ -615,13 +629,25 @@
         setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
       }
 
-      if (sun && moon) {
-        var initial = html.getAttribute('data-theme');
-        if (initial === 'acuity-light') {
-          sun.classList.remove('hidden');
-          moon.classList.add('hidden');
-        }
+      function syncIcons(theme) {
+        [
+          { show: sun, hide: moon },
+          { show: sunMobile, hide: moonMobile }
+        ].forEach(function (pair) {
+          if (pair.show && pair.hide) {
+            if (theme === 'acuity-light') {
+              pair.show.classList.remove('hidden');
+              pair.hide.classList.add('hidden');
+            } else {
+              pair.show.classList.add('hidden');
+              pair.hide.classList.remove('hidden');
+            }
+          }
+        });
       }
+
+      var initial = html.getAttribute('data-theme');
+      syncIcons(initial);
 
       if (toggle) toggle.addEventListener('click', toggleTheme);
       if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
