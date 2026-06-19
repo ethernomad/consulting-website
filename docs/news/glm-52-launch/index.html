@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="/theme.css">
   <script>
     (function () {
-      document.documentElement.setAttribute('data-theme', 'acuity-light');
+      var saved = localStorage.getItem('theme');
+      document.documentElement.setAttribute('data-theme', saved || 'acuity-light');
     })();
   </script>
 </head>
@@ -21,7 +22,7 @@
   <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
     <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
       <div class="navbar-start">
-        <a href="/" class="font-display text-lg font-bold text-base-content">AI Agency</a>
+        <a href="/" class="font-display text-lg font-bold text-base-content pl-2">AI Agency</a>
       </div>
       <div class="navbar-end">
         <button id="theme-toggle-mobile" class="btn btn-ghost btn-sm lg:hidden" aria-label="Toggle theme">
@@ -252,16 +253,22 @@
         ].forEach(function (pair) {
           if (pair.show && pair.hide) {
             if (theme === 'acuity-light') {
-              pair.show.classList.remove('hidden');
-              pair.hide.classList.add('hidden');
-            } else {
+              // In light mode, show the moon (click to switch to dark)
               pair.show.classList.add('hidden');
               pair.hide.classList.remove('hidden');
+            } else {
+              // In dark mode, show the sun (click to switch to light)
+              pair.show.classList.remove('hidden');
+              pair.hide.classList.add('hidden');
             }
           }
         });
       }
 
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+      }
       var initial = html.getAttribute('data-theme');
       syncIcons(initial);
 
