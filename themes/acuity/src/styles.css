@@ -7,25 +7,25 @@
   themes: false;
 }
 
-/* ─── Dark theme: warm stone ─── */
+/* ─── Dark theme: cool charcoal ─── */
 @plugin "daisyui/theme" {
   name: "acuity";
   default: false;
   prefersdark: false;
   color-scheme: dark;
 
-  --color-primary: #f59e0b;
-  --color-primary-content: #1c1917;
+  --color-primary: #818cf8;
+  --color-primary-content: #0c0a09;
   --color-secondary: #fb7185;
-  --color-secondary-content: #1c1917;
+  --color-secondary-content: #0c0a09;
   --color-accent: #2dd4bf;
-  --color-accent-content: #1c1917;
-  --color-neutral: #292524;
-  --color-neutral-content: #f5f5f4;
-  --color-base-100: #1c1917;
-  --color-base-200: #292524;
-  --color-base-300: #44403c;
-  --color-base-content: #f5f5f4;
+  --color-accent-content: #0c0a09;
+  --color-neutral: #27272a;
+  --color-neutral-content: #fafafa;
+  --color-base-100: #0c0a09;
+  --color-base-200: #18181b;
+  --color-base-300: #27272a;
+  --color-base-content: #fafafa;
   --color-info: #38bdf8;
   --color-success: #a3e635;
   --color-warning: #fbbf24;
@@ -60,7 +60,7 @@
 @theme {
   --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Nunito", ui-sans-serif, system-ui, sans-serif;
-  --shadow-glow: 0 0 0 1px rgb(245 158 11 / 0.2), 0 20px 80px rgb(245 158 11 / 0.2);
+  --shadow-glow: 0 0 0 1px rgb(45 212 191 / 0.2), 0 20px 80px rgb(45 212 191 / 0.2);
 }
 
 @layer base {
@@ -87,7 +87,7 @@
 
 
 @utility hero-grid {
-  background-image: radial-gradient(circle at 1px 1px, rgb(120 113 108 / 0.15) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgb(113 113 122 / 0.15) 1px, transparent 0);
   background-size: 28px 28px;
 }
 
