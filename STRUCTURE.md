@@ -59,6 +59,12 @@ Output is published to the `docs/` directory (GitHub Pages style).
 │
 ├── static/                   # Static assets (copied as-is to output)
 │   ├── CNAME                 # Custom domain for GitHub Pages
+│   ├── fonts/                 # Self-hosted Nunito woff2 fonts (latin + latin-ext + vietnamese)
+│   │   ├── nunito-400.woff2
+│   │   ├── nunito-500.woff2
+│   │   ├── nunito-600.woff2
+│   │   ├── nunito-700.woff2
+│   │   └── nunito-800.woff2
 │   ├── adk-rust-logo.svg
 │   ├── liquidos-logo.svg
 │   ├── opencode-logo-dark.svg
