@@ -105,3 +105,17 @@
   padding: 1.5rem;
   box-shadow: var(--shadow-glow);
 }
+
+/* ─── Mobile dropdown fix ─── */
+/* DaisyUI v5 uses CSS Anchor Positioning (position-area) on the .dropdown parent,
+   which Firefox mobile handles differently than desktop (even in responsive mode).
+   This override falls back to standard absolute positioning for the mobile menu. */
+@media (width < 64rem) {
+  .navbar-end .dropdown.dropdown-end {
+    position-area: unset;
+  }
+  .navbar-end .dropdown.dropdown-end .dropdown-content {
+    inset-inline-end: 0;
+    translate: 0;
+  }
+}

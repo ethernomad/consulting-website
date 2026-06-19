@@ -180,11 +180,12 @@ Theme toggle persisted in `localStorage` via inline JS in `base.html`.
 
 ### Custom utilities (defined in styles.css)
 
-| Utility        | Purpose |
-|----------------|---------|
-| `hero-grid`    | Dot-grid background for the hero section |
-| `glass-panel`  | Frosted-glass card (border + backdrop blur) |
-| `metric-card`  | Glass card with glow shadow |
+| Utility / Override   | Purpose |
+|----------------------|---------|
+| `hero-grid`          | Dot-grid background for the hero section |
+| `glass-panel`        | Frosted-glass card (border + backdrop blur) |
+| `metric-card`        | Glass card with glow shadow |
+| Mobile dropdown fix  | `@media (width < 64rem)` override in `styles.css` that resets `position-area` on the mobile dropdown container. DaisyUI v5 uses CSS Anchor Positioning (`position-area`) on the `.dropdown` parent, which Firefox mobile handles differently than desktop responsive mode, causing the dropdown to render narrow. Resets to standard `position: absolute` + `inset-inline-end: 0` positioning. |
 
 ### CSS source → output
 
