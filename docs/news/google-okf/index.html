@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Google Announces Open Knowledge Format (OKF) for AI Agent Knowledge · Sand Intelligence</title>
+  <title>Google Announces Open Knowledge Format (OKF) for AI Agent Knowledge · AI Agency</title>
   <meta name="description" content="AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
   <header class="relative z-50 mx-auto max-w-7xl px-6 pt-6" style="isolation: isolate;">
     <div class="navbar relative z-50 rounded-box glass-panel overflow-visible">
       <div class="navbar-start">
-        <a href="/" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+        <a href="/" class="font-display text-lg font-bold text-base-content">AI Agency</a>
       </div>
       <div class="navbar-end">
         <div class="dropdown dropdown-end lg:hidden">
@@ -31,43 +31,37 @@
             </svg>
           </div>
           <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-64 p-2 shadow">
-            <li>
-              <details>
-                <summary>Consulting</summary>
-                <ul>
-                  <li><a href="/ai-strategy/">AI Strategy</a></li>
-                  <li><a href="/ai-cost-optimization/">AI Cost Optimization</a></li>
-                  <li><a href="/ai-production-hardening/">AI Production Hardening</a></li>
-                  <li><a href="/startup-support/">Startup Support</a></li>
-                  <li><a href="/ai-change-management/">AI Change Management</a></li>
-                  <li><a href="/training/">Training</a></li>
-                </ul>
-              </details>
+            <li class="dropdown dropdown-end">
+              <a tabindex="0" role="button" class="menu-item">Consulting</a>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-52 p-2 shadow-lg">
+                <li><a href="/ai-strategy/">AI Strategy</a></li>
+                <li><a href="/ai-cost-optimization/">AI Cost Optimization</a></li>
+                <li><a href="/ai-production-hardening/">AI Production Hardening</a></li>
+                <li><a href="/startup-support/">Startup Support</a></li>
+                <li><a href="/ai-change-management/">AI Change Management</a></li>
+                <li><a href="/training/">Training</a></li>
+              </ul>
             </li>
-            <li>
-              <details>
-                <summary>Development</summary>
-                <ul>
-                  <li><a href="/model-training/">AI Model Training</a></li>
-                  <li><a href="/ai-voice-agents/">AI Voice Agents</a></li>
-                  <li><a href="/generative-ai/">Generative AI</a></li>
-                  <li><a href="/business-agent/">Business Agent</a></li>
-                  <li><a href="/agentic-coding/">Agentic Coding</a></li>
-                  <li><a href="/app-building/">App Building</a></li>
-                  <li><a href="/custom-agent/">Custom Agent</a></li>
-                  <li><a href="/private-inference/">Private Inference</a></li>
-                </ul>
-              </details>
+            <li class="dropdown dropdown-end">
+              <a tabindex="0" role="button" class="menu-item">Development</a>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-52 p-2 shadow-lg">
+                <li><a href="/model-training/">AI Model Training</a></li>
+                <li><a href="/ai-voice-agents/">AI Voice Agents</a></li>
+                <li><a href="/generative-ai/">Generative AI</a></li>
+                <li><a href="/business-agent/">Business Agent</a></li>
+                <li><a href="/agentic-coding/">Agentic Coding</a></li>
+                <li><a href="/app-building/">App Building</a></li>
+                <li><a href="/custom-agent/">Custom Agent</a></li>
+                <li><a href="/private-inference/">Private Inference</a></li>
+              </ul>
             </li>
-            <li>
-              <details>
-                <summary>Governance</summary>
-                <ul>
-                  <li><a href="/ai-governance/">AI Governance</a></li>
-                  <li><a href="/vn-ai-law/">VN AI Law</a></li>
-                  <li><a href="/ai-safety/">AI Safety</a></li>
-                </ul>
-              </details>
+            <li class="dropdown dropdown-end">
+              <a tabindex="0" role="button" class="menu-item">Governance</a>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2 shadow-lg">
+                <li><a href="/ai-governance/">AI Governance</a></li>
+                <li><a href="/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="/ai-safety/">AI Safety</a></li>
+              </ul>
             </li>
             <li><a href="/about/">About</a></li>
             <li><a href="/news/">AI News</a></li>
@@ -76,50 +70,59 @@
                 theme</button></li>
           </ul>
         </div>
-        <div class="hidden lg:flex">
-          <ul class="menu menu-horizontal items-center gap-1 px-1">
-            <li>
-              <details>
-                <summary>Consulting</summary>
-                <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
-                  <li><a href="/ai-strategy/">AI Strategy</a></li>
-                  <li><a href="/ai-cost-optimization/">AI Cost Optimization</a></li>
-                  <li><a href="/ai-production-hardening/">AI Production Hardening</a></li>
-                  <li><a href="/startup-support/">Startup Support</a></li>
-                  <li><a href="/ai-change-management/">AI Change Management</a></li>
-                  <li><a href="/training/">Training</a></li>
-                </ul>
-              </details>
+        <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-1">
+          <ul class="menu menu-horizontal items-center gap-1 px-1 flex-nowrap">
+            <li class="dropdown dropdown-hover">
+              <a tabindex="0" role="button" class="menu-item">
+                Consulting
+                <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                </svg>
+              </a>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2 mt-0 -ml-3 shadow-lg">
+                <li><a href="/ai-strategy/">AI Strategy</a></li>
+                <li><a href="/ai-cost-optimization/">AI Cost Optimization</a></li>
+                <li><a href="/ai-production-hardening/">AI Production Hardening</a></li>
+                <li><a href="/startup-support/">Startup Support</a></li>
+                <li><a href="/ai-change-management/">AI Change Management</a></li>
+                <li><a href="/training/">Training</a></li>
+              </ul>
             </li>
-            <li>
-              <details>
-                <summary>Development</summary>
-                <ul class="bg-base-200 rounded-box z-50 w-56 p-2">
-                  <li><a href="/model-training/">AI Model Training</a></li>
-                  <li><a href="/ai-voice-agents/">AI Voice Agents</a></li>
-                  <li><a href="/generative-ai/">Generative AI</a></li>
-                  <li><a href="/business-agent/">Business Agent</a></li>
-                  <li><a href="/agentic-coding/">Agentic Coding</a></li>
-                  <li><a href="/app-building/">App Building</a></li>
-                  <li><a href="/custom-agent/">Custom Agent</a></li>
-                  <li><a href="/private-inference/">Private Inference</a></li>
-                </ul>
-              </details>
+            <li class="dropdown dropdown-hover">
+              <a tabindex="0" role="button" class="menu-item">
+                Development
+                <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                </svg>
+              </a>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-56 p-2 mt-0 -ml-3 shadow-lg">
+                <li><a href="/model-training/">AI Model Training</a></li>
+                <li><a href="/ai-voice-agents/">AI Voice Agents</a></li>
+                <li><a href="/generative-ai/">Generative AI</a></li>
+                <li><a href="/business-agent/">Business Agent</a></li>
+                <li><a href="/agentic-coding/">Agentic Coding</a></li>
+                <li><a href="/app-building/">App Building</a></li>
+                <li><a href="/custom-agent/">Custom Agent</a></li>
+                <li><a href="/private-inference/">Private Inference</a></li>
+              </ul>
             </li>
-            <li>
-              <details>
-                <summary>Governance</summary>
-                <ul class="bg-base-200 rounded-box z-50 w-48 p-2">
-                  <li><a href="/ai-governance/">AI Governance</a></li>
-                  <li><a href="/vn-ai-law/">VN AI Law</a></li>
-                  <li><a href="/ai-safety/">AI Safety</a></li>
-                </ul>
-              </details>
+            <li class="dropdown dropdown-hover">
+              <a tabindex="0" role="button" class="menu-item">
+                Governance
+                <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+                </svg>
+              </a>
+              <ul class="dropdown-content menu bg-base-200 rounded-box z-50 w-48 p-2 mt-0 -ml-3 shadow-lg">
+                <li><a href="/ai-governance/">AI Governance</a></li>
+                <li><a href="/vn-ai-law/">VN AI Law</a></li>
+                <li><a href="/ai-safety/">AI Safety</a></li>
+              </ul>
             </li>
             <li><a href="/about/">About</a></li>
             <li><a href="/news/">AI News</a></li>
-            <li><a href="/contact/" class="btn btn-primary btn-sm ml-2">Contact Us</a></li>
           </ul>
+          <a href="/contact/" class="btn btn-primary btn-sm shrink-0">Contact Us</a>
         </div>
       </div>
     </div>
@@ -196,7 +199,7 @@
   <footer
     class="footer sm:footer-horizontal border-t border-base-content/10 bg-base-200/70 px-6 py-10 text-base-content">
     <aside>
-      <a href="#top" class="font-display text-lg font-bold text-base-content">Sand Intelligence</a>
+      <a href="#top" class="font-display text-lg font-bold text-base-content">AI Agency</a>
       <p class="text-base-content/80">
         Practical AI systems for modern businesses and global teams.
         <br>

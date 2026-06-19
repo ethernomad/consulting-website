@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "/"
-title = "Sand Intelligence"
+title = "AI Agency"
 description = "AI strategy, custom solutions, language AI, automation, and generative AI services for growing businesses."
 theme = "acuity"
 
@@ -9,6 +9,7 @@ compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+output_dir = "docs"
 
 [markdown]
 
@@ -16,7 +17,7 @@ build_search_index = true
 theme = "catppuccin-mocha"
 
 [extra]
-brand = "Sand Intelligence"
+brand = "AI Agency"
 tagline = "AI consulting and product development for modern businesses"
 mission = "We help companies turn AI into practical systems, measurable ROI, and localized experiences for users, teams, and operations."
 cta_primary = "Book a strategy call"

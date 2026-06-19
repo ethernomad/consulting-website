@@ -15,7 +15,7 @@ css-build:
 css-watch:
     pnpm run dev:css
 
-# Build the site into public/
+# Build the site into docs/
 build: css-build
     zola build
 
@@ -37,7 +37,7 @@ check:
 
 # Clean generated output
 clean:
-    rm -rf public themes/acuity/static/app.css node_modules package-lock.json pnpm-lock.yaml
+    rm -rf docs themes/acuity/static/app.css node_modules package-lock.json pnpm-lock.yaml
 
 # Open the local dev server after starting it
 open:

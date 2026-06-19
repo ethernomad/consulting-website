@@ -1,4 +1,4 @@
-# Zola build output
+# Zola build output (not used anymore, output goes to docs/)
 /public/
 
 # Generated theme assets
