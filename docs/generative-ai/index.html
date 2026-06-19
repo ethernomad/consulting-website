@@ -498,55 +498,25 @@
       var moonMobile = document.getElementById('moon-icon-mobile');
       var html = document.documentElement;
 
-      function setTheme(theme) {
-        html.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        [
-          { show: sun, hide: moon },
-          { show: sunMobile, hide: moonMobile }
-        ].forEach(function (pair) {
-          if (pair.show && pair.hide) {
-            if (theme === 'acuity-light') {
-              pair.show.classList.remove('hidden');
-              pair.hide.classList.add('hidden');
-            } else {
-              pair.show.classList.add('hidden');
-              pair.hide.classList.remove('hidden');
-            }
-          }
-        });
+      function syncIcons(theme) {
+        // Show target-state icon: moon in light mode, sun in dark mode
+        var isLight = theme === 'acuity-light';
+        sun.classList.toggle('hidden', isLight);
+        moon.classList.toggle('hidden', !isLight);
+        sunMobile.classList.toggle('hidden', isLight);
+        moonMobile.classList.toggle('hidden', !isLight);
       }
 
       function toggleTheme() {
         var current = html.getAttribute('data-theme');
-        setTheme(current === 'acuity-light' ? 'acuity' : 'acuity-light');
+        var next = current === 'acuity-light' ? 'acuity' : 'acuity-light';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        syncIcons(next);
       }
 
-      function syncIcons(theme) {
-        [
-          { show: sun, hide: moon },
-          { show: sunMobile, hide: moonMobile }
-        ].forEach(function (pair) {
-          if (pair.show && pair.hide) {
-            if (theme === 'acuity-light') {
-              // In light mode, show the moon (click to switch to dark)
-              pair.show.classList.add('hidden');
-              pair.hide.classList.remove('hidden');
-            } else {
-              // In dark mode, show the sun (click to switch to light)
-              pair.show.classList.remove('hidden');
-              pair.hide.classList.add('hidden');
-            }
-          }
-        });
-      }
-
-      var savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        html.setAttribute('data-theme', savedTheme);
-      }
-      var initial = html.getAttribute('data-theme');
-      syncIcons(initial);
+      // Sync icons to the theme already set by the <head> script
+      syncIcons(html.getAttribute('data-theme'));
 
       if (toggle) toggle.addEventListener('click', toggleTheme);
       if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
