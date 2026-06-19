@@ -7,6 +7,9 @@
   [data-theme="acuity"] .logo-invert {
     filter: invert(1);
   }
+  [data-theme="acuity-light"] .logo-invert-light {
+    filter: invert(1);
+  }
 </style>
 <main id="top">
 
@@ -306,9 +309,7 @@
       {# ─── LiveKit Panel ──────── #}
       <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
         <div class="flex items-center gap-6">
-          <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
-            <span class="text-3xl font-extrabold text-primary">L</span>
-          </div>
+          <img src="{{ get_url(path='livekit-logo.svg') }}" alt="LiveKit Agents" class="w-28 lg:w-36 h-auto shrink-0 logo-invert-light" />
           <div>
             <p class="text-sm font-semibold tracking-wide text-primary/80">Recommended framework</p>
             <h3 class="font-display text-2xl font-extrabold text-base-content">LiveKit Agents</h3>
@@ -326,9 +327,7 @@
       {# ─── Dograh Panel ─────── #}
       <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
         <div class="flex items-center gap-6">
-          <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
-            <span class="text-3xl font-extrabold text-secondary">D</span>
-          </div>
+          <img src="{{ get_url(path='dograh-logo.png') }}" alt="Dograh" class="w-28 lg:w-36 h-auto shrink-0 logo-invert-light" />
           <div>
             <p class="text-sm font-semibold tracking-wide text-secondary/80">Recommended platform</p>
             <h3 class="font-display text-2xl font-extrabold text-base-content">Dograh</h3>

@@ -66,7 +66,9 @@ Output is published to the `docs/` directory (GitHub Pages style).
 │   │   ├── nunito-700.woff2
 │   │   └── nunito-800.woff2
 │   ├── adk-rust-logo.svg
+│   ├── dograh-logo.svg
 │   ├── liquidos-logo.svg
+│   ├── livekit-logo.svg
 │   ├── opencode-logo-dark.svg
 │   └── opencode-logo-light.svg
 │
