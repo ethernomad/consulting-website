@@ -119,8 +119,27 @@ Every `.md` file in `content/` uses Zola's TOML frontmatter (`+++`):
 | `description`  | yes      | Meta description + card excerpt |
 | `date`         | no       | ISO date (used by `news/*.md` for sorting) |
 | `authors`      | no       | Array of strings (e.g., `["AI"]`) |
-| `[extra]`      | no       | Optional extra fields |
+| `[extra]`      | no       | Optional extra fields (see below for structured variants) |
 | `extra.image`  | no       | Hero/thumbnail image filename (relative to static/) |
+
+**Structured extra fields** (used by `about.md`):
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `extra.social` | Array of `{name, url, icon}` | Social/profile links rendered as buttons (supports `icon: "github"` \| `"linkedin"`) |
+| `extra.skills` | Array of `{name, icon}` | Skill badges displayed in the expertise section |
+
+Example:
+```toml
+[[extra.social]]
+name = "GitHub"
+url = "https://github.com/jbrown"
+icon = "github"
+
+[[extra.skills]]
+name = "Rust"
+icon = "🦀"
+```
 
 **News section** (`content/news/_index.md`):
 - `sort_by = "date"` — pages sorted newest-first
@@ -168,6 +187,7 @@ Home (_index.md)
 base.html                  ← Everything extends this
 ├── index.html             ← Home/landing page (hero, services grid, testimonials, news preview)
 ├── page.html              ← Individual content page (article layout with optional image)
+├── about.html             ← Custom about page with hero, timeline, skills grid, projects, philosophy, CTA
 └── section.html           ← Listing page (for news pagination and service category listing)
 ```
 
@@ -195,6 +215,7 @@ Theme toggle persisted in `localStorage` via inline JS in `base.html`.
 | `hero-grid`          | Dot-grid background for the hero section |
 | `glass-panel`        | Frosted-glass card (border + backdrop blur) |
 | `metric-card`        | Glass card with glow shadow |
+| `.prose` (base layer)  | Typography styles for `h2`, `h3`, `p`, `strong`, `a` inside `.prose` containers. No `@tailwindcss/typography` plugin — these are hand-written. |
 | Mobile dropdown fix  | `@media (width < 64rem)` override in `styles.css` that resets `position-area` on the mobile dropdown container. DaisyUI v5 uses CSS Anchor Positioning (`position-area`) on the `.dropdown` parent, which Firefox mobile handles differently than desktop responsive mode, causing the dropdown to render narrow. Resets to standard `position: absolute` + `inset-inline-end: 0` positioning. |
 
 ### CSS source → output
