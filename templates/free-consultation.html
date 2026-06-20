@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main id="top">
+
+  {# ─── Hero ───────────────────────────────────── #}
+  <section class="hero-grid relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(45,212,191,0.2),transparent_28%),radial-gradient(circle_at_left,rgba(56,189,248,0.15),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-6 lg:pt-20">
+      <div class="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div class="space-y-6">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">Free Service</p>
+          <h1 class="font-display text-5xl font-black tracking-tight text-base-content md:text-6xl xl:text-7xl">
+            Free AI&nbsp;Consultation
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-base-content/80 md:text-xl">
+            A 30-minute, no-obligation strategy call to discuss your AI challenges, identify opportunities, and walk away with a clear next step — at zero cost.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book your free call</a>
+            <a href="#what-you-get" class="btn btn-outline btn-lg">What you get</a>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="glass-panel rounded-3xl p-8">
+            <p class="text-sm font-semibold tracking-wide text-secondary/80">In your free consultation</p>
+            <ul class="mt-4 space-y-4 text-base-content/80">
+              <li>• 30-minute focused conversation with an experienced AI engineer</li>
+              <li>• Honest assessment of your AI opportunities and challenges</li>
+              <li>• Practical, vendor-agnostic advice — no sales pitch</li>
+              <li>• Clear understanding of what's feasible, what it costs, and what's next</li>
+              <li>• Written summary and recommendations after the call</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-center gap-2 text-sm text-base-content/60">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-success">
+              <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516 11.209 11.209 0 0 1-7.877-3.08Z" clip-rule="evenodd" />
+            </svg>
+            <span>No commitment. No credit card. No follow-up pressure.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ─── What You Get ─────────────────────────── #}
+  <section id="what-you-get" class="mx-auto max-w-7xl px-6 py-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">What you get</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Clarity, direction, and a real next step</h2>
+      <p class="text-lg text-base-content/80">
+        This is not a generic sales call with a script. You will speak directly with Jonathan, an experienced AI engineer and consultant who has been building production systems for over 20 years. The goal is to give you actionable insight — whether or not you ever become a client.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎯</span>
+        <h3 class="text-xl font-bold text-base-content">Clarity on your AI opportunities</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          We will discuss your business context, the problems you are trying to solve, and where AI might actually help. You will leave with a clearer picture of what is worth pursuing — and what is not.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🗺️</span>
+        <h3 class="text-xl font-bold text-base-content">A practical roadmap</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Based on what we hear, we will outline a realistic path forward — including recommended approaches, potential tooling, timeline estimates, and likely costs. No fluff, no overpromising.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">💡</span>
+        <h3 class="text-xl font-bold text-base-content">Honest, vendor-agnostic advice</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          We do not represent any platform or vendor. Our recommendations are based entirely on what makes sense for your situation — even if that means advising you to hold off on AI for now.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📝</span>
+        <h3 class="text-xl font-bold text-base-content">Written summary</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          After the call, you will receive a written summary of our discussion along with the key recommendations and any resources we referenced. Something concrete you can share with your team or stakeholders.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🚀</span>
+        <h3 class="text-xl font-bold text-base-content">Clear next steps</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Whether it is a proposal for a deeper engagement, a referral to a tool or resource, or a suggestion to pause and revisit later — you will know exactly what to do next.
+        </p>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔒</span>
+        <h3 class="text-xl font-bold text-base-content">Complete confidentiality</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          Everything we discuss is treated as confidential. We do not share client information, project details, or business contexts with anyone — period.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  {# ─── Who This Is For ──────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Who this is for</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Is the free consultation right for you?</h2>
+      <p class="text-lg text-base-content/80">
+        This call is designed for anyone who is serious about exploring AI for their business or project. You might be:
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🏢</span>
+        <h3 class="text-xl font-bold text-base-content">A business leader or founder</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          You know AI could help your business but are not sure where to start, what is realistic, or how much it costs. You want an honest conversation with someone who has built real AI systems — not a sales pitch.
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💻</span>
+        <h3 class="text-xl font-bold text-base-content">A technical leader or team</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          You have a specific AI project in mind — an agent, a RAG system, a voice assistant, or a custom model — and want a technical sparring session to validate your approach, explore architecture options, or get a second opinion.
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🚀</span>
+        <h3 class="text-xl font-bold text-base-content">A startup founder</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          You are building an AI-powered product and need guidance on technology choices, architecture, timeline, or fundraising preparation. We can help you sharpen your plan and avoid common early-stage pitfalls.
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🏛️</span>
+        <h3 class="text-xl font-bold text-base-content">An investor or board member</h3>
+        <p class="text-base-content/80 leading-relaxed text-sm">
+          You are evaluating a portfolio company's AI strategy, conducting technical due diligence, or need an independent perspective on an AI investment. The free consultation is an opportunity to explore how we might help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {# ─── How It Works ─────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10">
+      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <p class="text-sm font-semibold tracking-wide text-secondary/80">How it works</p>
+          <h2 class="font-display text-3xl font-extrabold text-base-content">From sign-up to actionable insight</h2>
+          <p class="text-base-content/80 leading-relaxed">
+            The process is simple and designed to respect your time. From the moment you reach out, you are in control of the pace.
+          </p>
+        </div>
+        <ol class="timeline timeline-vertical max-md:timeline-compact">
+          <li>
+            <div class="timeline-start text-sm text-base-content/60">Step 1</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Reach out</h3>
+              <p class="mt-2 text-sm text-base-content/80">Send us a brief message through the contact form or email. Tell us a little about your business and what you are hoping to explore. We will respond within 1–2 business days to schedule a time.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 2</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">30-minute call</h3>
+              <p class="mt-2 text-sm text-base-content/80">We will meet over a video call or phone — whatever works best for you. We will discuss your context, goals, and challenges. Come with questions; this is your time. No slides, no script.</p>
+            </div>
+            <hr class="bg-primary" />
+          </li>
+          <li>
+            <hr class="bg-primary" />
+            <div class="timeline-start text-sm text-base-content/60">Step 3</div>
+            <div class="timeline-middle text-primary">●</div>
+            <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
+              <h3 class="font-bold text-base-content">Written summary</h3>
+              <p class="mt-2 text-sm text-base-content/80">Within a few days, you will receive a written summary of our conversation, the key insights, and recommended next steps — along with any relevant resources. No follow-up pressure, no obligation.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {# ─── FAQ ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">FAQ</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Common Questions</h2>
+    </div>
+
+    <div class="mt-10 space-y-4 max-w-3xl">
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Is this really free? No hidden costs?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes, it is genuinely free. There is no obligation to buy anything, no credit card required, and no follow-up pressure. We offer this because the best client relationships start with honest conversation — and that begins with understanding your context before talking about budgets or proposals.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What happens after the call? Will I be contacted repeatedly?</summary>
+        <div class="collapse-content text-base-content/80">
+          No. You will receive a written summary of our discussion and recommendations. That is it. We do not have a sales team, automated email sequences, or follow-up campaigns. If you want to continue the conversation, you are welcome to reach out. If not, we wish you well.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What kind of questions can I ask?</summary>
+        <div class="collapse-content text-base-content/80">
+          Anything related to AI, technology strategy, or your specific project. Common topics include: whether AI makes sense for your business, what kind of solution fits your needs, build-vs-buy decisions, technology stack recommendations, cost estimates, timeline guidance, architecture validation, and governance or compliance considerations. If we cannot answer your question, we will tell you honestly and point you to someone who can.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Who will I speak with?</summary>
+        <div class="collapse-content text-base-content/80">
+          You will speak directly with Jonathan, the founder and lead consultant. He has 20+ years of experience building production systems — from multiplayer game engines and enterprise Drupal platforms to blockchain indexers and AI agent systems. He works hands-on with every client and does not outsource consultations.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">What if I need more than 30 minutes?</summary>
+        <div class="collapse-content text-base-content/80">
+          If it is clear that your situation requires a deeper engagement, we will be upfront about it during the call and outline what a paid engagement would look like — scope, timeline, and cost. There is no pressure to commit on the call. The free consultation is designed to help you make an informed decision about whether and how to proceed.
+        </div>
+      </details>
+
+      <details class="collapse collapse-arrow glass-panel rounded-2xl">
+        <summary class="collapse-title text-lg font-semibold text-base-content">Do you offer this in Vietnamese?</summary>
+        <div class="collapse-content text-base-content/80">
+          Yes. Jonathan has been based in Da Nang, Vietnam since 2015 and works regularly with Vietnamese-speaking clients. The consultation can be conducted in Vietnamese or English — whichever you prefer.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  {# ─── CTA ─────────────────────────────────── #}
+  <section class="mx-auto max-w-7xl px-6 pb-24">
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 text-center">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Next step</p>
+      <h2 class="mt-4 font-display text-3xl font-extrabold text-base-content md:text-5xl">Ready for an honest conversation about AI?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-base-content/80">
+        Book your free 30-minute consultation. No slides, no sales pitch — just practical advice from an experienced AI engineer who builds what he recommends.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-primary btn-lg">Book your free call</a>
+        <a href="#top" class="btn btn-outline btn-lg">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}

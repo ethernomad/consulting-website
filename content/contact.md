@@ -5,6 +5,12 @@ description = "Tell us what you're building and where you need help with AI stra
 
 We help companies turn AI ideas into practical systems, workflows, and measurable outcomes.
 
+## Start with a free consultation
+
+Not sure where to begin? [Book a free 30-minute strategy call →](/free-consultation/)
+
+No obligation, no sales pitch — just an honest conversation about your AI opportunities, challenges, and next steps.
+
 ## How to reach us
 
 - **Email:** [hello@example.com](mailto:hello@example.com)

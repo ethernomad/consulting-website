@@ -130,6 +130,7 @@ Every `.md` file in `content/` uses Zola's TOML frontmatter (`+++`):
 
 ```
 Home (_index.md)
+├── Free Consultation
 ├── About
 ├── Contact
 ├── Technology
