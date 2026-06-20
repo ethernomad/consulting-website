@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}404 — Page Not Found · {{ config.title }}{% endblock title %}
+
+{% block og_title %}404 — Page Not Found · {{ config.title }}{% endblock %}
+{% block og_description %}The page you're looking for doesn't exist. Let's get you back on track.{% endblock %}
+{% block twitter_title %}404 — Page Not Found · {{ config.title }}{% endblock %}
+{% block twitter_description %}The page you're looking for doesn't exist. Let's get you back on track.{% endblock %}
+
+{% block content %}
+<main id="top">
+  <section class="hero-grid relative overflow-hidden min-h-[calc(100vh-12rem)] flex items-center">
+    <div class="pointer-events-none absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(45,212,191,0.15),transparent_28%),radial-gradient(circle_at_left,rgba(56,189,248,0.12),transparent_30%)]"></div>
+    <div class="mx-auto max-w-7xl px-6 py-24">
+      <div class="relative z-10 text-center">
+        <div class="space-y-8">
+          <p class="text-sm font-semibold tracking-wide text-primary/80">404</p>
+          <h1 class="font-display text-8xl font-black tracking-tight text-base-content md:text-9xl">
+            404
+          </h1>
+          <div class="max-w-lg mx-auto space-y-4">
+            <p class="text-2xl font-bold text-base-content">Page not found</p>
+            <p class="text-base-content/70 leading-relaxed">
+              The page you're looking for doesn't exist or has been moved. Let's get you back on track.
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-4 pt-4">
+            <a href="{{ get_url(path='@/_index.md') }}" class="btn btn-primary btn-lg">Back to home</a>
+            <a href="{{ get_url(path='@/contact.md') }}" class="btn btn-outline btn-lg">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}

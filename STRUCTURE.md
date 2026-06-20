@@ -41,6 +41,7 @@ Output is published to the `docs/` directory (GitHub Pages style).
 │       └── google-okf.md
 │
 ├── templates/                # Project-level template overrides (takes precedence over theme)
+│   ├── 404.html              # Custom 404 page (extends base.html, renders via hero-grid)
 │   ├── section.html          # Overrides theme's section.html for listing pages
 │   └── ...                   # One-per-page service templates (optional overrides)
 │
