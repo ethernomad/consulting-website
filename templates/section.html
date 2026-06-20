@@ -2,6 +2,11 @@
 
 {% block title %}{{ section.title }} · {{ config.title }}{% endblock title %}
 
+{% block og_title %}{% if section.title != config.title %}{{ section.title }} · {{ config.title }}{% else %}{{ config.title }}{% endif %}{% endblock %}
+{% block og_description %}{{ section.description }}{% endblock %}
+{% block twitter_title %}{% if section.title != config.title %}{{ section.title }} · {{ config.title }}{% else %}{{ config.title }}{% endif %}{% endblock %}
+{% block twitter_description %}{{ section.description }}{% endblock %}
+
 {% block content %}
 <main class="mx-auto max-w-7xl px-6 py-24">
   <section class="glass-panel rounded-3xl p-8 lg:p-10 mb-10">

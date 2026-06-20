@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a09"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-grad)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dot-grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#71717a" fill-opacity="0.12"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dot-grid)"/>
+
+  <!-- Accent glow -->
+  <ellipse cx="900" cy="80" rx="400" ry="280" fill="url(#accent-grad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="100" r="220" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.15"/>
+  <circle cx="1050" cy="100" r="140" fill="none" stroke="#2dd4bf" stroke-width="1" stroke-opacity="0.10"/>
+
+  <!-- Brand -->
+  <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="80" font-weight="800" fill="#fafafa" letter-spacing="-0.02em">AI Agency</text>
+
+  <text x="80" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#a1a1aa" letter-spacing="-0.01em">Practical AI systems for</text>
+  <text x="80" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#a1a1aa" letter-spacing="-0.01em">modern businesses and global teams.</text>
+
+  <!-- Accent line -->
+  <rect x="80" y="420" width="80" height="4" rx="2" fill="#818cf8"/>
+
+  <!-- Tagline -->
+  <text x="80" y="470" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500" fill="#818cf8" letter-spacing="0.04em">AI CONSULTING · DEVELOPMENT · AUTOMATION</text>
+
+  <!-- Footer bar -->
+  <rect x="0" y="610" width="1200" height="20" fill="#818cf8" fill-opacity="0.06"/>
+  <text x="80" y="625" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#52525b">acuity.wiki</text>
+</svg>
