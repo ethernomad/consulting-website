@@ -42,8 +42,13 @@ Output is published to the `docs/` directory (GitHub Pages style).
 │
 ├── templates/                # Project-level template overrides (takes precedence over theme)
 │   ├── 404.html              # Custom 404 page (extends base.html, renders via hero-grid)
+│   ├── about.html            # Custom About page (unique layout)
+│   ├── free-consultation.html # Custom Free Consultation page (unique layout)
 │   ├── section.html          # Overrides theme's section.html for listing pages
-│   └── ...                   # One-per-page service templates (optional overrides)
+│   └── service.html          # Generic service template — all 17 service pages use this
+│                              # Content is driven by structured frontmatter in .md files
+│                              # Suppported sections: hero, overview, services, process,
+│                              #   info_cards, metric_grid, deliverables, FAQ, CTA
 │
 ├── themes/acuity/            # Acuity theme
 │   ├── theme.toml            # Theme metadata (name, min Zola version)
@@ -128,6 +133,38 @@ Every `.md` file in `content/` uses Zola's TOML frontmatter (`+++`):
 |-------|------|-------------|
 | `extra.social` | Array of `{name, url, icon}` | Social/profile links rendered as buttons (supports `icon: "github"` \| `"linkedin"`) |
 | `extra.skills` | Array of `{name, icon}` | Skill badges displayed in the expertise section |
+
+**Service page frontmatter** (all fields in `[extra]` for pages using `service.html`):
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `category` | String | Label shown above hero title (e.g., "Service", "Board-level advisory") |
+| `hero_gradients` | Array[String] | Two CSS gradient color stops for the hero background |
+| `hero_tagline` | String (optional) | Bold statement below the title |
+| `hero_sub` | String (optional) | Supporting paragraph in the hero (HTML safe) |
+| `hero_secondary` | String | Label for the secondary CTA button |
+| `hero_secondary_url` | String | URL for the secondary CTA button |
+| `key_capabilities` | Array[String] | Bullet list in the hero sidebar |
+| `overview_title` | String | Heading for the overview section |
+| `overview_body` | Array[String] | Paragraphs for the overview |
+| `overview_metrics` | Array[{label, description}] | Up to 3 metric cards in the overview |
+| `services_grid_title` | String | Heading for the services grid |
+| `services_grid_items` | Array[{icon, title, description}] | Service cards in the grid |
+| `process_title` | String | Heading for the process/timeline section |
+| `process_steps` | Array[{step, title, description}] | Timeline steps |
+| `deliverables_title` | String | Heading for deliverables section |
+| `deliverables_items` | Array[{title, description}] | Deliverable metric cards |
+| `faq_title` | String | Heading for FAQ section |
+| `faq_items` | Array[{question, answer}] | Collapse accordion FAQ items |
+| `cta_title` | String | Heading for final CTA section |
+| `cta_body` | String | Body text for final CTA |
+| `cta_primary` / `cta_primary_url` | String | Primary CTA button label and URL |
+| `info_cards_title` / `info_cards_items` (optional) | String / Array | 2-col card grid for "who we help", "warning signs", etc. |
+| `metric_grid_items` (optional) | Array[{label, description, color}] | 4-col metric grid for timelines, key dates, etc. |
+
+**Important TOML rule**: All scalar `[extra]` fields must be defined before any `[[extra.xxx]]` array-of-tables lines. Mixing them causes TOML parser errors in Zola.
+
+**Custom sections**: Pages with unique content (comparison tables, detailed feature lists, etc.) can put HTML in the markdown body after `+++`. The template renders this via `page.content` in the `prose` section.
 
 Example:
 ```toml
@@ -264,7 +301,11 @@ Footer mirrors the nav structure using the `footer` DaisyUI component.
 ```bash
 zola new content/my-new-service.md
 ```
-Then add the page frontmatter, optionally create `templates/my-new-service.html` if needed.
+Edit the file to add:
+- `template = "service.html"` in frontmatter
+- Structured `[extra]` fields with all service content (see section above for available fields)
+- All scalar fields must come before any `[[extra.xxx]]` array-of-tables
+- No per-service template needed — the single `templates/service.html` handles all sections
 
 ### Add a news article
 ```bash
