@@ -1,6 +1,6 @@
 +++
 title = "Generative AI"
-description = "Design and deploy generative AI systems that reason over your data, automate knowledge work, and deliver grounded, verifiable results."
+description = "Design and deploy generative AI systems that reason over your data, automate knowledge work, and deliver grounded, verifiable results — built with Rust for production-grade performance and privacy."
 template = "service.html"
 
 [extra]
@@ -79,9 +79,9 @@ icon = "🎧"
 title = "Customer Support Automation"
 body = ["AI-powered support agents that resolve common issues, route complex cases to human agents, and maintain conversation context across channels. Built with retrieval-augmented generation over your knowledge base, product documentation, and support history. Measurable outcomes include faster resolution times, higher CSAT scores, and reduced support costs."]
 highlights = [
-  "• Multi-channel — chat, email, Slack, and API",
-  "• Seamless escalation to human agents with full context",
-  "• Sentiment analysis and conversation quality monitoring",
+  "Multi-channel — chat, email, Slack, and API",
+  "Seamless escalation to human agents with full context",
+  "Sentiment analysis and conversation quality monitoring",
 ]
 
 [[extra.info_cards_items]]
@@ -89,9 +89,9 @@ icon = "📄"
 title = "Document Processing & Analysis"
 body = ["Extract, summarise, and classify information from contracts, reports, invoices, and forms. Systems handle PDFs, scanned documents, and structured data — surfacing insights that would take teams hours to find manually. Built with vision-language models for document understanding and structured extraction pipelines."]
 highlights = [
-  "• Contract clause extraction and risk flagging",
-  "• Invoice data capture with validation rules",
-  "• Report summarisation with source citations",
+  "Contract clause extraction and risk flagging",
+  "Invoice data capture with validation rules",
+  "Report summarisation with source citations",
 ]
 
 [[extra.info_cards_items]]
@@ -99,9 +99,9 @@ icon = "📊"
 title = "Sales & Revenue Enablement"
 body = ["Equip sales teams with AI that drafts proposals, prepares meeting briefs, surfaces account intelligence, and suggests next-best actions. Copilots integrate with CRM data, product catalogs, and historical win-loss analysis to deliver relevant, timely support."]
 highlights = [
-  "• Automated proposal and RFP response drafting",
-  "• Pre-meeting briefs with account insights",
-  "• Deal risk scoring and next-action recommendations",
+  "Automated proposal and RFP response drafting",
+  "Pre-meeting briefs with account insights",
+  "Deal risk scoring and next-action recommendations",
 ]
 
 [[extra.info_cards_items]]
@@ -109,9 +109,9 @@ icon = "⚖️"
 title = "Compliance & Policy Automation"
 body = ["Help employees and compliance teams navigate regulatory requirements, internal policies, and industry standards. Systems answer policy questions, flag potential violations, and automate compliance reporting — with full audit trails and version-controlled knowledge bases."]
 highlights = [
-  "• Policy question-answering with citation trails",
-  "• Automated compliance checks on business processes",
-  "• Regulatory change monitoring and impact analysis",
+  "Policy question-answering with citation trails",
+  "Automated compliance checks on business processes",
+  "Regulatory change monitoring and impact analysis",
 ]
 
 process_label = "Our process"

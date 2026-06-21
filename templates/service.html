@@ -142,7 +142,7 @@
       {% if item.highlights %}
       <ul class="space-y-2 text-sm text-base-content/70">
         {% for h in item.highlights %}
-        <li>{{ h | safe }}</li>
+        <li>• {{ h | safe }}</li>
         {% endfor %}
       </ul>
       {% endif %}
@@ -169,7 +169,7 @@
     <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">{{ extra.info_cards_title }}</h2>
     {% endif %}
     {% if extra.info_cards_description %}
-    <p class="text-lg text-base-content/80">{{ extra.info_cards_description }}</p>
+    <p class="text-lg text-base-content/80">{{ extra.info_cards_description | safe }}</p>
     {% endif %}
   </div>
 
@@ -191,7 +191,7 @@
       {% if item.highlights %}
       <ul class="space-y-2 text-sm text-base-content/70">
         {% for h in item.highlights %}
-        <li>{{ h | safe }}</li>
+        <li>• {{ h | safe }}</li>
         {% endfor %}
       </ul>
       {% endif %}
@@ -271,7 +271,7 @@
       {% if item.highlights %}
       <ul class="mt-4 space-y-2 text-sm text-base-content/70">
         {% for h in item.highlights %}
-        <li>{{ h | safe }}</li>
+        <li>• {{ h | safe }}</li>
         {% endfor %}
       </ul>
       {% endif %}
@@ -392,7 +392,7 @@
       {% if col.features %}
       <ul class="mt-6 space-y-3 text-base-content/80">
         {% for f in col.features %}
-        <li>{{ f | safe }}</li>
+        <li>• {{ f | safe }}</li>
         {% endfor %}
       </ul>
       {% endif %}
@@ -449,7 +449,7 @@
       {% if col.features %}
       <ul class="mt-6 space-y-3 text-base-content/80">
         {% for f in col.features %}
-        <li>{{ f | safe }}</li>
+        <li>• {{ f | safe }}</li>
         {% endfor %}
       </ul>
       {% endif %}

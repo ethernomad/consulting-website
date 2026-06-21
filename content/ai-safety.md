@@ -1,6 +1,6 @@
 +++
 title = "AI Safety Audit & Red Teaming"
-description = "Test your AI systems for vulnerabilities, bias, and failure modes before they reach production."
+description = "Technical AI safety assessments — red teaming, model bias analysis, adversarial testing, and safety guardrails for production AI systems."
 template = "service.html"
 
 [extra]
@@ -43,11 +43,11 @@ icon = "🔍"
 title = "AI Safety Audit"
 description = "A comprehensive evaluation of your AI system's risk posture. We review data pipelines, model behavior, output quality, integration points, and operational controls to identify vulnerabilities before they impact your business."
 highlights = [
-  "• Risk and vulnerability assessment across the full AI stack",
-  "• Data privacy and security review",
-  "• Model performance and reliability testing",
-  "• Operational control evaluation",
-  "• Compliance gap analysis mapped to applicable regulations"
+  "Risk and vulnerability assessment across the full AI stack",
+  "Data privacy and security review",
+  "Model performance and reliability testing",
+  "Operational control evaluation",
+  "Compliance gap analysis mapped to applicable regulations"
 ]
 
 [[extra.services_grid_items]]
@@ -55,11 +55,11 @@ icon = "⚔️"
 title = "Red Teaming"
 description = "Adversarial testing against your AI systems using structured attack methodologies. We simulate real-world threats — prompt injection, jailbreaking, data exfiltration, and bias amplification — to find weaknesses before attackers do."
 highlights = [
-  "• Automated prompt injection testing (50–200 adversarial prompts)",
-  "• Manual deep-dive jailbreak attempts by experienced security engineers",
-  "• Data leakage and extraction testing",
-  "• Role-playing and social engineering scenarios",
-  "• Severity-scored vulnerability report with CVSS alignment"
+  "Automated prompt injection testing (50–200 adversarial prompts)",
+  "Manual deep-dive jailbreak attempts by experienced security engineers",
+  "Data leakage and extraction testing",
+  "Role-playing and social engineering scenarios",
+  "Severity-scored vulnerability report with CVSS alignment"
 ]
 
 [[extra.services_grid_items]]
@@ -67,11 +67,11 @@ icon = "📊"
 title = "Model Behavior & Bias Analysis"
 description = "Systematic evaluation of your model's outputs across diverse inputs, populations, and edge cases. We measure fairness, consistency, and drift so you can deploy with confidence that your system treats all users equitably."
 highlights = [
-  "• Output consistency and reliability testing across diverse inputs",
-  "• Demographic fairness evaluation (race, gender, age, language)",
-  "• Edge case and failure mode identification",
-  "• Drift monitoring baseline establishment",
-  "• Model card documentation and safety datasheet creation"
+  "Output consistency and reliability testing across diverse inputs",
+  "Demographic fairness evaluation (race, gender, age, language)",
+  "Edge case and failure mode identification",
+  "Drift monitoring baseline establishment",
+  "Model card documentation and safety datasheet creation"
 ]
 
 [[extra.services_grid_items]]
@@ -79,11 +79,11 @@ icon = "🛡️"
 title = "Safety Guardrails & Monitoring"
 description = "Design and deploy runtime safety controls so your AI systems stay safe in production. Content filters, input/output validation, PII redaction, rate limiting, and real-time observability that catches issues as they happen."
 highlights = [
-  "• Input and output guardrail design and deployment",
-  "• PII detection, classification, and redaction",
-  "• Content policy enforcement (toxicity, NSFW, policy violations)",
-  "• Real-time safety monitoring and alerting",
-  "• Incident response playbook and escalation procedures"
+  "Input and output guardrail design and deployment",
+  "PII detection, classification, and redaction",
+  "Content policy enforcement (toxicity, NSFW, policy violations)",
+  "Real-time safety monitoring and alerting",
+  "Incident response playbook and escalation procedures"
 ]
 
 info_cards_label = "Our process"

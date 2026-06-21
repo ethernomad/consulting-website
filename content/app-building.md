@@ -1,6 +1,6 @@
 +++
 title = "App Building"
-description = "Build cross-platform desktop, mobile, and web applications from a single Rust codebase with Dioxus."
+description = "Build cross-platform desktop, mobile, and web applications from a single Rust codebase. We recommend Dioxus — combining the developer experience of React with the performance and safety of Rust."
 template = "service.html"
 
 [extra]
@@ -44,10 +44,10 @@ icon = "🌐"
 title = "Web Applications"
 description = "Progressive web apps and single-page applications compiled to WebAssembly. Server-side rendering for fast initial loads, hydration for interactivity. Deploy to any CDN, cloud storage, or server — no runtime dependencies."
 highlights = [
-  "• WASM bundles competitive with JavaScript frameworks",
-  "• SSR, hydration, and streaming HTML",
-  "• Fullstack with server-side Rust functions",
-  "• Subsecond hot-reloading during development",
+  "WASM bundles competitive with JavaScript frameworks",
+  "SSR, hydration, and streaming HTML",
+  "Fullstack with server-side Rust functions",
+  "Subsecond hot-reloading during development",
 ]
 
 [[extra.services_grid_items]]
@@ -55,10 +55,10 @@ icon = "💻"
 title = "Desktop Applications"
 description = "Native desktop apps for macOS, Windows, and Linux with full filesystem, network, and system API access. Portable binaries under 3mb — no Electron-style runtime bundling. Menus, tray icons, global shortcuts, and native window management included."
 highlights = [
-  "• Single-binary distribution for all platforms",
-  "• Full native API access — filesystem, network, hardware",
-  "• Menubar, tray icons, and global shortcuts",
-  "• Auto-update and installer packaging",
+  "Single-binary distribution for all platforms",
+  "Full native API access — filesystem, network, hardware",
+  "Menubar, tray icons, and global shortcuts",
+  "Auto-update and installer packaging",
 ]
 recommended = true
 
@@ -67,10 +67,10 @@ icon = "📱"
 title = "Mobile Applications"
 description = "Native iOS and Android applications compiled directly from your Rust codebase. Direct platform API access via JNI and Objective-C FFI — no JavaScript bridge overhead. Deploy to the Apple App Store and Google Play Store."
 highlights = [
-  "• iOS and Android native builds from one codebase",
-  "• Direct platform API calls — no bridge",
-  "• iOS widgets and live activities support",
-  "• App store submission and management",
+  "iOS and Android native builds from one codebase",
+  "Direct platform API calls — no bridge",
+  "iOS widgets and live activities support",
+  "App store submission and management",
 ]
 
 deliverables_label = "Deliverables"
@@ -111,10 +111,10 @@ icon = "🤖"
 title = "AI Chat & Assistant Apps"
 body = ["Real-time chat applications with streaming LLM responses, conversation management, and multi-model support. Deploy as a web app, desktop app, or mobile app — with full backend integration for authentication, history, and analytics."]
 highlights = [
-  "• Streaming token-by-token responses",
-  "• Multi-model support — OpenAI, Anthropic, open-source",
-  "• Conversation history and context management",
-  "• Cross-platform — web, desktop, and mobile",
+  "Streaming token-by-token responses",
+  "Multi-model support — OpenAI, Anthropic, open-source",
+  "Conversation history and context management",
+  "Cross-platform — web, desktop, and mobile",
 ]
 
 [[extra.info_cards_items]]
@@ -122,10 +122,10 @@ icon = "📊"
 title = "Dashboards & Analytics"
 body = ["Real-time data analytics dashboards with dynamic visualizations, metric tracking, and data source integration. Fullstack Rust — frontend with Dioxus and backend server functions — deployable as a single binary or Docker container."]
 highlights = [
-  "• Real-time data visualisations and charts",
-  "• Server-side data aggregation and processing",
-  "• Single-binary or Docker deployment",
-  "• Composable dashboard widgets",
+  "Real-time data visualisations and charts",
+  "Server-side data aggregation and processing",
+  "Single-binary or Docker deployment",
+  "Composable dashboard widgets",
 ]
 
 [[extra.info_cards_items]]
@@ -133,10 +133,10 @@ icon = "⚙️"
 title = "Business Tools & Portals"
 body = ["Full-featured business applications — admin portals, CRM interfaces, inventory management, and internal tools. CRUD operations, data tables, forms, notifications, and role-based access control. Runs on web and desktop from one codebase."]
 highlights = [
-  "• Role-based access and authentication",
-  "• Responsive data tables and forms",
-  "• Dark/light theme and accessibility",
-  "• Desktop + web from one codebase",
+  "Role-based access and authentication",
+  "Responsive data tables and forms",
+  "Dark/light theme and accessibility",
+  "Desktop + web from one codebase",
 ]
 
 featured_panel_logo = "dioxus-logo.png"

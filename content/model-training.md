@@ -1,6 +1,6 @@
 +++
 title = "AI Model Training"
-description = "Train custom deep learning models with Rust and Burn — the native Rust framework that delivers PyTorch-class performance with C-level portability."
+description = "Train custom AI models with Rust and Burn — efficient, portable deep learning without Python overhead."
 template = "service.html"
 
 [extra]
@@ -73,10 +73,10 @@ icon = "🏗️"
 title = "Train from Scratch"
 description = "Design and train a custom neural network architecture for your specific problem. Best when you have substantial domain-specific data, unique input modalities, or hard performance/latency constraints that off-the-shelf models cannot meet."
 highlights = [
-  "• Custom architecture design",
-  "• Full training pipeline from scratch",
-  "• Maximum control over model behaviour",
-  "• Ideal for vision, audio, or tabular domains",
+  "Custom architecture design",
+  "Full training pipeline from scratch",
+  "Maximum control over model behaviour",
+  "Ideal for vision, audio, or tabular domains",
 ]
 
 [[extra.services_grid_items]]
@@ -84,10 +84,10 @@ icon = "🔄"
 title = "Fine-Tune & Adapt"
 description = "Start from a pre-trained open-weight model (Llama, Mistral, Qwen, Gemma, Phi) and fine-tune on your domain data. LoRA, QLoRA, and full fine-tuning options. The fastest path to a specialised model with minimal data requirements."
 highlights = [
-  "• LoRA / QLoRA for efficient fine-tuning",
-  "• Domain adaptation with as little as 1K examples",
-  "• Catastrophic forgetting mitigation",
-  "• HuggingFace model import via Candle bridge",
+  "LoRA / QLoRA for efficient fine-tuning",
+  "Domain adaptation with as little as 1K examples",
+  "Catastrophic forgetting mitigation",
+  "HuggingFace model import via Candle bridge",
 ]
 
 [[extra.services_grid_items]]
@@ -95,10 +95,10 @@ icon = "🧩"
 title = "RAG & Adapters"
 description = "Augment a pre-trained model with external knowledge or task-specific adapters without modifying the base model weights. Best for knowledge-intensive tasks, multi-tenant setups, or when model updates must be isolated per customer."
 highlights = [
-  "• Retrieval-Augmented Generation pipelines",
-  "• Lightweight adapter modules",
-  "• Per-tenant model personalisation",
-  "• Hot-swappable knowledge bases",
+  "Retrieval-Augmented Generation pipelines",
+  "Lightweight adapter modules",
+  "Per-tenant model personalisation",
+  "Hot-swappable knowledge bases",
 ]
 
 [[extra.comparison_cols_items]]

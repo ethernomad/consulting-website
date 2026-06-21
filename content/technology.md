@@ -1,6 +1,6 @@
 +++
 title = "Why Rust & Open Source"
-description = "Performance, portability, security, and transparency — every technology we use is open source, permissively licensed, and built in Rust."
+description = "Why we build with Rust and open source — performance, portability, security, and transparency without compromise."
 template = "service.html"
 
 [extra]

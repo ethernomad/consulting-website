@@ -58,10 +58,10 @@ icon = "🔍"
 title = "Observability & Tracing"
 description = "Trace every prompt, model response, tool call, and retrieval step — linked back to the user session that triggered it. Includes latency distributions, error rates, and quality dashboards so your team can see what the system is doing in real time."
 highlights = [
-  "• End-to-end trace ID injection for every LLM call",
-  "• Langfuse, OpenTelemetry, or your existing observability stack",
-  "• Dashboards for latency, error rates, token usage, and quality",
-  "• Alerting for spikes, failures, and drift"
+  "End-to-end trace ID injection for every LLM call",
+  "Langfuse, OpenTelemetry, or your existing observability stack",
+  "Dashboards for latency, error rates, token usage, and quality",
+  "Alerting for spikes, failures, and drift"
 ]
 
 [[extra.services_grid_items]]
@@ -69,10 +69,10 @@ icon = "🛡️"
 title = "Guardrails & Safety"
 description = "Deploy runtime controls that validate inputs and outputs, enforce content policies, redact sensitive data, and block adversarial prompts — applied consistently across every workflow and model."
 highlights = [
-  "• Input and output validation against policy rules",
-  "• PII detection, classification, and redaction",
-  "• Tool permission allowlists and action policies",
-  "• Content safety and toxicity filtering"
+  "Input and output validation against policy rules",
+  "PII detection, classification, and redaction",
+  "Tool permission allowlists and action policies",
+  "Content safety and toxicity filtering"
 ]
 
 [[extra.services_grid_items]]
@@ -80,10 +80,10 @@ icon = "🔄"
 title = "Fallback Paths & Resilience"
 description = "Ensure the system never shows a raw error to the user. When a model is unavailable, returns garbage, or times out, the system degrades gracefully — switching to a backup model, a cached response, or a fallback workflow."
 highlights = [
-  "• Model cascades — primary → backup → deterministic fallback",
-  "• Circuit breakers that trip on error rate thresholds",
-  "• Retries with exponential backoff and jitter",
-  "• Graceful degradation paths for every feature"
+  "Model cascades — primary → backup → deterministic fallback",
+  "Circuit breakers that trip on error rate thresholds",
+  "Retries with exponential backoff and jitter",
+  "Graceful degradation paths for every feature"
 ]
 
 [[extra.services_grid_items]]
@@ -91,10 +91,10 @@ icon = "💰"
 title = "Cost Controls & Budget Limits"
 description = "Make AI costs predictable with per-feature and per-user tracking, hard spending limits, and anomaly detection. One bad loop or fan-out path should not become a surprise bill."
 highlights = [
-  "• Per-feature and per-user cost attribution",
-  "• Hard budget limits with kill switches",
-  "• Anomaly detection for runaway loops",
-  "• Cost dashboards with trend alerts"
+  "Per-feature and per-user cost attribution",
+  "Hard budget limits with kill switches",
+  "Anomaly detection for runaway loops",
+  "Cost dashboards with trend alerts"
 ]
 
 [[extra.services_grid_items]]
@@ -102,10 +102,10 @@ icon = "📊"
 title = "Evaluations & Regression Testing"
 description = "Catch regressions before they reach users. Build golden evaluation datasets, run them on every prompt or model change, and measure accuracy, latency, cost, and safety metrics automatically in CI/CD."
 highlights = [
-  "• Golden evaluation datasets for your use case",
-  "• Automated eval runs in CI/CD pipelines",
-  "• Quality and drift monitoring dashboards",
-  "• Shadow testing for new models and prompts"
+  "Golden evaluation datasets for your use case",
+  "Automated eval runs in CI/CD pipelines",
+  "Quality and drift monitoring dashboards",
+  "Shadow testing for new models and prompts"
 ]
 
 [[extra.services_grid_items]]
@@ -113,10 +113,10 @@ icon = "📝"
 title = "Prompt & Release Discipline"
 description = "Stop editing prompts in production. Version every prompt template, test changes against evals before rollout, and keep the ability to roll back instantly when something breaks."
 highlights = [
-  "• Versioned prompt registries with change history",
-  "• Staged rollouts — canary → partial → full deploy",
-  "• One-click rollback to previous prompt versions",
-  "• Prompt review and approval workflows"
+  "Versioned prompt registries with change history",
+  "Staged rollouts — canary → partial → full deploy",
+  "One-click rollback to previous prompt versions",
+  "Prompt review and approval workflows"
 ]
 
 [[extra.services_grid_items]]
@@ -124,10 +124,10 @@ icon = "⚙️"
 title = "Infrastructure & Deployment"
 description = "Deploy with reliability patterns that handle real-world traffic. Async queues prevent API timeouts from crashing the app, rate limiting protects downstream systems, and multi-region redundancy keeps the system up during provider outages."
 highlights = [
-  "• Async worker queues with job status tracking",
-  "• Rate limiting and concurrency controls",
-  "• Multi-region and multi-provider redundancy",
-  "• CI/CD pipelines with automated testing"
+  "Async worker queues with job status tracking",
+  "Rate limiting and concurrency controls",
+  "Multi-region and multi-provider redundancy",
+  "CI/CD pipelines with automated testing"
 ]
 
 [[extra.info_cards_items]]
@@ -197,10 +197,10 @@ icon = "📋"
 title = "Production Readiness Audit"
 description = "A 2-week technical assessment of your AI system across all seven layers. You get a scorecard, risk register, and prioritised hardening roadmap — without any implementation commitment."
 highlights = [
-  "• Seven-layer production scorecard",
-  "• Risk register with severity, owner, and suggested fix",
-  "• 30, 60, and 90 day hardening roadmap",
-  "• Executive summary and technical appendix"
+  "Seven-layer production scorecard",
+  "Risk register with severity, owner, and suggested fix",
+  "30, 60, and 90 day hardening roadmap",
+  "Executive summary and technical appendix"
 ]
 
 [[extra.deliverables_items]]
@@ -208,10 +208,10 @@ icon = "🔧"
 title = "Hardening Sprint"
 description = "A 4-week implementation sprint that fixes the highest-risk gaps identified in the audit. Includes tracing deployment, guardrail configuration, fallback path implementation, cost controls, and eval setup."
 highlights = [
-  "• Deployed observability and tracing",
-  "• Guardrails and fallback paths in production",
-  "• Cost controls and budget alerts active",
-  "• Eval suite and release pipeline established"
+  "Deployed observability and tracing",
+  "Guardrails and fallback paths in production",
+  "Cost controls and budget alerts active",
+  "Eval suite and release pipeline established"
 ]
 
 [[extra.deliverables_items]]
@@ -219,10 +219,10 @@ icon = "🤝"
 title = "Fractional AI Reliability"
 description = "Ongoing operational support for teams that need regular incident review, model change assessment, cost monitoring, and release governance — without hiring a full-time AI reliability engineer."
 highlights = [
-  "• Weekly incident and cost review",
-  "• Model change impact assessment",
-  "• Release decision support and runbook maintenance",
-  "• Quarterly health checks and roadmap updates"
+  "Weekly incident and cost review",
+  "Model change impact assessment",
+  "Release decision support and runbook maintenance",
+  "Quarterly health checks and roadmap updates"
 ]
 
 [[extra.faq_items]]

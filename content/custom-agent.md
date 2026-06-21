@@ -155,13 +155,13 @@ body = [
   "Both ADK-Rust and AutoAgents are built in Rust, which eliminates entire classes of memory-safety vulnerabilities at compile time. On top of Rust's guarantees, they layer WASM sandboxing and OS-level process isolation for defence-in-depth.",
 ]
 highlights = [
-  "• WASM sandboxing — tool code cannot escape its environment",
-  "• Fuel metering — prevent runaway execution and denial-of-service",
-  "• OS-level process isolation — agents run in separate processes with restricted permissions",
-  "• Workspace-confined file operations — agents cannot access files outside their scope",
-  "• Env-cleared subprocesses — no leaked environment variables or secrets",
-  "• Rust's memory safety — no buffer overflows, use-after-free, or null pointer dereferences",
-  "• Secret zeroization — API keys and credentials wiped from memory when not in use",
+  "WASM sandboxing — tool code cannot escape its environment",
+  "Fuel metering — prevent runaway execution and denial-of-service",
+  "OS-level process isolation — agents run in separate processes with restricted permissions",
+  "Workspace-confined file operations — agents cannot access files outside their scope",
+  "Env-cleared subprocesses — no leaked environment variables or secrets",
+  "Rust's memory safety — no buffer overflows, use-after-free, or null pointer dereferences",
+  "Secret zeroization — API keys and credentials wiped from memory when not in use",
 ]
 
 [[extra.info_cards_items]]

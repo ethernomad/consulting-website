@@ -1,6 +1,6 @@
 +++
 title = "Private Inference"
-description = "Run AI models on your own infrastructure — no data leaves your network, no per-token bills, no vendor lock-in. Predictable costs, full compliance, and production-grade performance."
+description = "Run AI models on your own infrastructure — private, cost-predictable, and compliant."
 template = "service.html"
 
 [extra]
@@ -95,9 +95,9 @@ body = [
   "Minimalist ML framework from Hugging Face. Ideal for most self-hosted inference scenarios — small binary (~8 MB), broad model support (Llama, Mistral, Phi, Gemma, Stable Diffusion, Whisper, YOLO), GPU acceleration via CUDA and Metal, and first-class WASM support for browser or edge deployment.",
 ]
 highlights = [
-  "• 20k+ GitHub stars, 260+ contributors — large, active community",
-  "• Quantization support via GGUF — run models on consumer GPUs",
-  "• Apache 2.0 licensed — fully open source",
+  "20k+ GitHub stars, 260+ contributors — large, active community",
+  "Quantization support via GGUF — run models on consumer GPUs",
+  "Apache 2.0 licensed — fully open source",
 ]
 buttons = [
   { url = "https://github.com/huggingface/candle", label = "View on GitHub", style = "outline", external = true },
@@ -111,10 +111,10 @@ body = [
   "Blazing-fast LLM inference in pure Rust with zero Python dependencies. Designed for running 30B+ parameter models on single consumer GPUs. Achieves up to 197 tok/s decode for large models with aggressive KV cache compression (TurboQuant 2–4 bit) and continuous batching.",
 ]
 highlights = [
-  "• Flash attention, FlashInfer, CUDA Graphs, prefix caching",
-  "• Runs on older GPUs (V100) with NVFP4 support",
-  "• OpenAI and Anthropic-compatible API — drop-in replacement",
-  "• Built-in Web UI and MCP tool calling",
+  "Flash attention, FlashInfer, CUDA Graphs, prefix caching",
+  "Runs on older GPUs (V100) with NVFP4 support",
+  "OpenAI and Anthropic-compatible API — drop-in replacement",
+  "Built-in Web UI and MCP tool calling",
 ]
 buttons = [
   { url = "https://github.com/guoqingbao/xinfer", label = "View on GitHub", style = "outline", external = true },

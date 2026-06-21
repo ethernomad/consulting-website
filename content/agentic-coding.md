@@ -73,10 +73,10 @@ icon = "🔵"
 title = "Claude Code"
 description = "Anthropic's official CLI for agentic coding. Runs in your terminal with full filesystem and command access. Deep Claude model integration with Agent Teams, background scheduling, and computer use."
 highlights = [
-  "• Best-in-class Claude model integration",
-  "• Agent Teams for parallel sub-agents",
-  "• Scheduled background tasks",
-  "• Proprietary, Claude models only"
+  "Best-in-class Claude model integration",
+  "Agent Teams for parallel sub-agents",
+  "Scheduled background tasks",
+  "Proprietary, Claude models only"
 ]
 
 [[extra.services_grid_items]]
@@ -85,10 +85,10 @@ title = "OpenCode"
 recommended = true
 description = "Our top recommendation. Open-source (MIT) terminal-based agent with 175K+ GitHub stars. Supports 75+ LLM providers, LSP integration, parallel agents, and session sharing. Model-agnostic and privacy-first."
 highlights = [
-  "• 175K+ GitHub stars, MIT license",
-  "• 75+ providers via models.dev",
-  "• LSP integration for deep code understanding",
-  "• Plan mode — read-only analysis before edits"
+  "175K+ GitHub stars, MIT license",
+  "75+ providers via models.dev",
+  "LSP integration for deep code understanding",
+  "Plan mode — read-only analysis before edits"
 ]
 
 [[extra.services_grid_items]]
@@ -96,10 +96,10 @@ icon = "🟣"
 title = "Pi"
 description = "Minimalist, open-source coding agent with a primitives-first design philosophy. Four core tools (read, write, edit, bash), fast execution, and excellent local model support via MLX and GGUF."
 highlights = [
-  "• ~1,000-token system prompt — minimal overhead",
-  "• RPC mode for embedding in automation systems",
-  "• Excellent local model performance (MLX, GGUF)",
-  "• 15+ provider support, extensible via MCP"
+  "~1,000-token system prompt — minimal overhead",
+  "RPC mode for embedding in automation systems",
+  "Excellent local model performance (MLX, GGUF)",
+  "15+ provider support, extensible via MCP"
 ]
 
 [[extra.services_grid_items]]
@@ -107,10 +107,10 @@ icon = "🟠"
 title = "Codex CLI"
 description = "OpenAI's agentic coding CLI, deeply integrated with the GPT model family. Strong reasoning capabilities and native tool calling. Best for teams already in the OpenAI ecosystem."
 highlights = [
-  "• Native GPT-5/5.5 integration",
-  "• Strong reasoning and planning",
-  "• OpenAI ecosystem integration",
-  "• Less mature than Claude Code or OpenCode"
+  "Native GPT-5/5.5 integration",
+  "Strong reasoning and planning",
+  "OpenAI ecosystem integration",
+  "Less mature than Claude Code or OpenCode"
 ]
 
 [[extra.info_cards_items]]
@@ -155,10 +155,10 @@ body = [
   "Test your AI agents against prompt injection, tool misuse, and autonomous action risks. We apply adversarial methodologies specifically designed for agentic systems — where unintended actions compound across tool calls and long execution chains."
 ]
 highlights = [
-  "• Agent-specific red teaming and adversarial testing",
-  "• Tool misuse and permission escalation scenarios",
-  "• Multi-step attack chain simulation",
-  "• Output validation and action audit testing"
+  "Agent-specific red teaming and adversarial testing",
+  "Tool misuse and permission escalation scenarios",
+  "Multi-step attack chain simulation",
+  "Output validation and action audit testing"
 ]
 buttons = [
   { url = "/ai-safety/", label = "Full AI Safety services →", style = "primary" }

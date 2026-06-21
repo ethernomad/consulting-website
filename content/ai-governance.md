@@ -43,11 +43,11 @@ icon = "🇪🇺"
 title = "EU AI Act — Regulation (EU) 2024/1689"
 description = "The world\u2019s first comprehensive legal framework for artificial intelligence \u2014 and it applies extraterritorially. Any organisation whose AI systems affect EU citizens is in scope, regardless of where it is headquartered."
 highlights = [
-  "• <strong>Four risk tiers:</strong> Unacceptable (prohibited), High-risk, Limited risk, Minimal risk",
-  "• <strong>Enforcement:</strong> Prohibited practices since Feb 2025, GPAI rules since Aug 2025, high-risk obligations from <strong>2 Aug 2026</strong>",
-  "• <strong>Penalties:</strong> Up to \u20AC35 million or 7% of global annual turnover",
-  "• <strong>High-risk requirements:</strong> Risk management, data governance, technical documentation, transparency, human oversight, accuracy and security, conformity assessment, post-market monitoring",
-  "• <strong>FRIA required:</strong> Fundamental Rights Impact Assessment for high-risk systems \u2014 broader than GDPR\u2019s DPIA"
+  "<strong>Four risk tiers:</strong> Unacceptable (prohibited), High-risk, Limited risk, Minimal risk",
+  "<strong>Enforcement:</strong> Prohibited practices since Feb 2025, GPAI rules since Aug 2025, high-risk obligations from <strong>2 Aug 2026</strong>",
+  "<strong>Penalties:</strong> Up to \u20AC35 million or 7% of global annual turnover",
+  "<strong>High-risk requirements:</strong> Risk management, data governance, technical documentation, transparency, human oversight, accuracy and security, conformity assessment, post-market monitoring",
+  "<strong>FRIA required:</strong> Fundamental Rights Impact Assessment for high-risk systems \u2014 broader than GDPR\u2019s DPIA"
 ]
 
 [[extra.services_grid_items]]
@@ -55,11 +55,11 @@ icon = "🏛️"
 title = "NIST AI Risk Management Framework"
 description = "While voluntary, the NIST AI RMF is rapidly becoming the US standard of care for AI governance. Federal regulators \u2014 including the FTC, SEC, FDA, CFPB, and DOD \u2014 reference its principles in enforcement guidance and procurement requirements."
 highlights = [
-  "• <strong>Four core functions:</strong> <strong>Govern</strong> (policies, roles, risk tolerance), <strong>Map</strong> (context, risks, impacts), <strong>Measure</strong> (testing, evaluation, monitoring), <strong>Manage</strong> (response, recovery, communication)",
-  "• <strong>GenAI Profile:</strong> NIST AI 600-1 (July 2024) extends the RMF with 12 generative AI-specific risk categories",
-  "• <strong>Crosswalk available:</strong> Official NIST mapping aligns AI RMF subcategories to ISO/IEC 42001 for organisations seeking certification",
-  "• <strong>Colorado AI Act:</strong> Grants affirmative defence to businesses demonstrating alignment with NIST AI RMF",
-  "• <strong>Cyber AI Profile:</strong> NIST IR 8596 (draft Dec 2025) bridges AI RMF with Cybersecurity Framework 2.0"
+  "<strong>Four core functions:</strong> <strong>Govern</strong> (policies, roles, risk tolerance), <strong>Map</strong> (context, risks, impacts), <strong>Measure</strong> (testing, evaluation, monitoring), <strong>Manage</strong> (response, recovery, communication)",
+  "<strong>GenAI Profile:</strong> NIST AI 600-1 (July 2024) extends the RMF with 12 generative AI-specific risk categories",
+  "<strong>Crosswalk available:</strong> Official NIST mapping aligns AI RMF subcategories to ISO/IEC 42001 for organisations seeking certification",
+  "<strong>Colorado AI Act:</strong> Grants affirmative defence to businesses demonstrating alignment with NIST AI RMF",
+  "<strong>Cyber AI Profile:</strong> NIST IR 8596 (draft Dec 2025) bridges AI RMF with Cybersecurity Framework 2.0"
 ]
 
 [[extra.services_grid_items]]
@@ -67,11 +67,11 @@ icon = "🔒"
 title = "SOC 2"
 description = "SOC 2 has become a de facto requirement for B2B AI companies. While the AICPA has not yet published an AI-specific standard, auditors in 2026 are demanding AI-specific control evidence in real engagements."
 highlights = [
-  "• <strong>Five trust principles:</strong> Security, Availability, Processing Integrity, Confidentiality, Privacy",
-  "• <strong>Market reality:</strong> Roughly 66% of B2B buyers now demand a SOC 2 report before considering a vendor",
-  "• <strong>AI control expectations:</strong> Data governance, model risk management, transparency and bias controls, secure development lifecycle, vendor management, incident response",
-  "• <strong>Type I vs Type II:</strong> Most buyers require a Type II report covering at least 6 months of operational evidence",
-  "• <strong>Cross-framework integration:</strong> SOC 2 AI controls increasingly align with NIST AI RMF and ISO 42001 expectations"
+  "<strong>Five trust principles:</strong> Security, Availability, Processing Integrity, Confidentiality, Privacy",
+  "<strong>Market reality:</strong> Roughly 66% of B2B buyers now demand a SOC 2 report before considering a vendor",
+  "<strong>AI control expectations:</strong> Data governance, model risk management, transparency and bias controls, secure development lifecycle, vendor management, incident response",
+  "<strong>Type I vs Type II:</strong> Most buyers require a Type II report covering at least 6 months of operational evidence",
+  "<strong>Cross-framework integration:</strong> SOC 2 AI controls increasingly align with NIST AI RMF and ISO 42001 expectations"
 ]
 
 [[extra.services_grid_items]]
@@ -79,11 +79,11 @@ icon = "🏥"
 title = "HIPAA AI Governance"
 description = "AI systems handling protected health information introduce new compliance dimensions under HIPAA. The proposed 2026 Security Rule update would make AI-specific inventory and risk analysis mandatory, and rapidly expanding state AI laws add further obligations."
 highlights = [
-  "• <strong>Proposed Security Rule (NPRM):</strong> Would mandate AI system inventory, authorisation, and documentation for all systems touching ePHI. Encryption, MFA, and logging would become mandatory rather than addressable.",
-  "• <strong>BAA requirements:</strong> Any AI vendor processing PHI must have a Business Associate Agreement defining permitted uses, safeguards, and breach reporting.",
-  "• <strong>State legislation:</strong> 45 of 50 US states have introduced AI legislation in 2026. Texas, Utah, California, and Colorado have enacted AI laws affecting healthcare specifically.",
-  "• <strong>Key risks:</strong> PHI leakage via AI model outputs, prompt injection exposing training data, minimum necessary rule compliance, clinical oversight of AI-assisted decisions",
-  "• <strong>FDA overlap:</strong> AI/ML-enabled medical devices (SaMD) face additional FDA premarket review and Predetermined Change Control Plan requirements"
+  "<strong>Proposed Security Rule (NPRM):</strong> Would mandate AI system inventory, authorisation, and documentation for all systems touching ePHI. Encryption, MFA, and logging would become mandatory rather than addressable.",
+  "<strong>BAA requirements:</strong> Any AI vendor processing PHI must have a Business Associate Agreement defining permitted uses, safeguards, and breach reporting.",
+  "<strong>State legislation:</strong> 45 of 50 US states have introduced AI legislation in 2026. Texas, Utah, California, and Colorado have enacted AI laws affecting healthcare specifically.",
+  "<strong>Key risks:</strong> PHI leakage via AI model outputs, prompt injection exposing training data, minimum necessary rule compliance, clinical oversight of AI-assisted decisions",
+  "<strong>FDA overlap:</strong> AI/ML-enabled medical devices (SaMD) face additional FDA premarket review and Predetermined Change Control Plan requirements"
 ]
 
 [[extra.services_grid_items]]
@@ -91,10 +91,10 @@ icon = "🇻🇳"
 title = "VN AI Law — Law 134/2025/QH15"
 description = "Vietnam\u2019s first standalone AI Law took effect on 1 March 2026 \u2014 the first comprehensive AI regulation in Southeast Asia. It applies to domestic and foreign entities developing, providing, deploying, or using AI systems that affect Vietnamese users."
 highlights = [
-  "• <strong>Three-tier framework:</strong> High-risk (strict controls, pre-market conformity), Medium-risk (transparency and monitoring), Low-risk (minimal oversight)",
-  "• <strong>Compliance deadline:</strong> 1 March 2027 (12-month grace period). Health, education, and financial services: 1 September 2027",
-  "• <strong>Key obligations:</strong> AI inventory, risk classification, human oversight, technical documentation, registration on national AI portal, AI literacy",
-  "• <strong>Foreign providers:</strong> High-risk AI providers must establish a local presence or appoint an authorised representative in Vietnam"
+  "<strong>Three-tier framework:</strong> High-risk (strict controls, pre-market conformity), Medium-risk (transparency and monitoring), Low-risk (minimal oversight)",
+  "<strong>Compliance deadline:</strong> 1 March 2027 (12-month grace period). Health, education, and financial services: 1 September 2027",
+  "<strong>Key obligations:</strong> AI inventory, risk classification, human oversight, technical documentation, registration on national AI portal, AI literacy",
+  "<strong>Foreign providers:</strong> High-risk AI providers must establish a local presence or appoint an authorised representative in Vietnam"
 ]
 
 info_cards_cols = 2

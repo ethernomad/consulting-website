@@ -1,6 +1,6 @@
 +++
 title = "Business Agent"
-description = "Deploy an always-on AI agent that manages communications, automates workflows, runs on your own infrastructure, and gets smarter the longer it runs."
+description = "Deploy an always-on AI agent that manages communications, automates workflows, and gets smarter over time."
 template = "service.html"
 
 [extra]
@@ -144,13 +144,13 @@ body = [
   "The more capabilities you give an agent, the more useful — and more powerful — it becomes. The same access that enables email triage (read, write, delete) is also a potential attack surface. Our approach is to embrace the power while ruthlessly minimising the blast radius. OpenFang's 16-layer defense-in-depth security is built into the kernel, not bolted on after the fact.",
 ]
 features = [
-  "• WASM dual-metered sandbox — tool code cannot escape its environment",
-  "• Merkle hash-chain audit trail — every action is immutably logged",
-  "• Ed25519 manifest signing — agents run only approved, signed code",
-  "• Taint tracking — untrusted input cannot reach critical system functions",
-  "• SSRF protection — agents cannot probe internal network services",
-  "• Secret zeroization — API keys wiped from memory when not in use",
-  "• Prompt injection scanning — malicious instructions detected at runtime",
+  "WASM dual-metered sandbox — tool code cannot escape its environment",
+  "Merkle hash-chain audit trail — every action is immutably logged",
+  "Ed25519 manifest signing — agents run only approved, signed code",
+  "Taint tracking — untrusted input cannot reach critical system functions",
+  "SSRF protection — agents cannot probe internal network services",
+  "Secret zeroization — API keys wiped from memory when not in use",
+  "Prompt injection scanning — malicious instructions detected at runtime",
 ]
 
 [[extra.comparison_cols_2_items]]

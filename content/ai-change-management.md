@@ -1,6 +1,6 @@
 +++
 title = "AI Change Management & Adoption"
-description = "The #1 reason AI projects fail is non-adoption. We close that gap with workshops, champions, and post-launch support."
+description = "Workshops, internal champions, documentation, and office hours that get your team actually using AI — because the #1 reason AI projects fail is non-adoption."
 template = "service.html"
 
 [extra]

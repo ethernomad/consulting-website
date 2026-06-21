@@ -1,6 +1,6 @@
 +++
 title = "VN AI Law Compliance"
-description = "Vietnam's AI Law took effect March 2026. Compliance deadlines begin March 2027."
+description = "Vietnam's AI Law (Law 134/2025/QH15) took effect 1 March 2026. Compliance deadlines begin March 2027. Most organisations are already in scope."
 template = "service.html"
 
 [extra]
@@ -236,74 +236,3 @@ question = "What counts as a high-risk AI system?"
 answer = "High-risk systems are those that pose significant potential harm to life, health, national security, or lawful rights. The Ministry of Science and Technology is preparing a Prime Ministerial decision listing specific high-risk categories. Until then, organisations should classify based on the law's general criteria. Typical examples include: credit scoring, recruitment screening, biometric identification, access to essential services, and safety-critical components in products."
 
 +++
-
-<div class="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-  <div class="glass-panel rounded-3xl p-8">
-    <ol class="timeline timeline-vertical max-md:timeline-compact">
-      <li>
-        <div class="timeline-start text-sm text-base-content/60">10 Dec 2025</div>
-        <div class="timeline-middle text-primary">●</div>
-        <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
-          <h3 class="font-bold text-base-content">Law passed</h3>
-          <p class="mt-2 text-sm text-base-content/80">National Assembly passes Law 134/2025/QH15 with 90.7% approval.</p>
-        </div>
-        <hr class="bg-primary" />
-      </li>
-      <li>
-        <hr class="bg-primary" />
-        <div class="timeline-start text-sm text-base-content/60">1 Mar 2026</div>
-        <div class="timeline-middle text-primary">●</div>
-        <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
-          <h3 class="font-bold text-base-content">Law takes effect</h3>
-          <p class="mt-2 text-sm text-base-content/80">All organisations must begin risk classification of AI systems. Human-centric principle and prohibited practices enforceable.</p>
-        </div>
-        <hr class="bg-primary" />
-      </li>
-      <li>
-        <hr class="bg-primary" />
-        <div class="timeline-start text-sm text-base-content/60">1 May 2026</div>
-        <div class="timeline-middle text-primary">●</div>
-        <div class="timeline-end mb-10 rounded-2xl bg-base-200/80 p-6">
-          <h3 class="font-bold text-base-content">Implementing decree</h3>
-          <p class="mt-2 text-sm text-base-content/80">Decree 142/2026/NĐ-CP provides implementation guidance for providers, developers, deployers, and users.</p>
-        </div>
-        <hr class="bg-primary" />
-      </li>
-      <li>
-        <hr class="bg-primary" />
-        <div class="timeline-start text-sm text-base-content/60">1 Mar 2027</div>
-        <div class="timeline-middle text-primary">●</div>
-        <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
-          <h3 class="font-bold text-base-content">Compliance deadline</h3>
-          <p class="mt-2 text-sm text-base-content/80">All AI systems must comply. High-risk systems require registration, documentation, human oversight, and conformity assessment.</p>
-        </div>
-        <hr class="bg-primary" />
-      </li>
-      <li>
-        <hr class="bg-primary" />
-        <div class="timeline-start text-sm text-base-content/60">1 Sep 2027</div>
-        <div class="timeline-middle text-primary">●</div>
-        <div class="timeline-end rounded-2xl bg-base-200/80 p-6">
-          <h3 class="font-bold text-base-content">Extended deadline</h3>
-          <p class="mt-2 text-sm text-base-content/80">Health, education, and financial sector AI systems have an additional 6 months to comply.</p>
-        </div>
-      </li>
-    </ol>
-  </div>
-
-  <div class="glass-panel rounded-3xl p-8 space-y-4">
-    <p class="text-sm font-semibold tracking-wide text-accent/80">Why now matters</p>
-    <ul class="space-y-4 text-base-content/80">
-      <li>Prohibited practices — including real-time biometric surveillance and social scoring — have been enforceable since the law took effect</li>
-      <li>Risk classification is not optional; every organisation using AI must categorise their systems</li>
-      <li>Foreign providers of high-risk AI systems must establish a commercial presence or appoint an authorised representative in Vietnam</li>
-      <li>The national AI portal for registration is operational — high-risk systems must be registered before the March 2027 deadline</li>
-      <li>Non-compliance penalties are outlined in the implementing decree and enforcement mechanisms are being stood up</li>
-    </ul>
-  </div>
-</div>
-
-<div class="mt-6 glass-panel rounded-3xl p-8">
-  <p class="text-sm font-semibold tracking-wide text-primary/80">Note</p>
-  <p class="mt-2 text-base-content/80">The exact list of high-risk AI systems will be issued by the Prime Minister in a separate decision. The Ministry of Science and Technology is preparing this list. Until then, organisations should classify based on the law's general criteria: potential harm to life, health, national security, and lawful rights.</p>
-</div>
