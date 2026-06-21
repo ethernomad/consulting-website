@@ -138,33 +138,47 @@ Every `.md` file in `content/` uses Zola's TOML frontmatter (`+++`):
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `category` | String | Label shown above hero title (e.g., "Service", "Board-level advisory") |
-| `hero_gradients` | Array[String] | Two CSS gradient color stops for the hero background |
+| `category` | String | Label above hero title (e.g., "Service", "Board-level advisory") |
+| `hero_gradients` | Array[String] | Two CSS gradient stops for the hero background |
 | `hero_tagline` | String (optional) | Bold statement below the title |
 | `hero_sub` | String (optional) | Supporting paragraph in the hero (HTML safe) |
 | `hero_secondary` | String | Label for the secondary CTA button |
 | `hero_secondary_url` | String | URL for the secondary CTA button |
-| `key_capabilities` | Array[String] | Bullet list in the hero sidebar |
-| `overview_title` | String | Heading for the overview section |
+| `key_capabilities` / `key_capabilities_title` | Array[String] / String | Bullet list + heading in the hero sidebar |
+| `overview_title` / `overview_label` | String | Heading + label for the overview section |
 | `overview_body` | Array[String] | Paragraphs for the overview |
-| `overview_metrics` | Array[{label, description}] | Up to 3 metric cards in the overview |
-| `services_grid_title` | String | Heading for the services grid |
-| `services_grid_items` | Array[{icon, title, description}] | Service cards in the grid |
-| `process_title` | String | Heading for the process/timeline section |
+| `overview_metrics` | Array[{label, description}] | Metric cards in the overview (2-4 cols auto) |
+| `services_grid_title` / `services_grid_label` / `services_grid_description` / `services_grid_cols` | String / String / String / Number | Section header + column count (default 3) |
+| `services_grid_items` | Array[{icon, title, description, highlights[], recommended, link, link_text}] | Service cards with optional bullet list & link |
+| `info_cards_title` / `info_cards_label` / `info_cards_description` / `info_cards_cols` | String / String / String / Number | 2-col card grid (configurable cols) |
+| `info_cards_items` | Array[{icon, title, body[], highlights[], buttons[]}] | Cards with paragraphs, lists, and CTA buttons |
+| `process_title` / `process_label` / `process_body` | String | Heading + body for the process/timeline section |
 | `process_steps` | Array[{step, title, description}] | Timeline steps |
-| `deliverables_title` | String | Heading for deliverables section |
-| `deliverables_items` | Array[{title, description}] | Deliverable metric cards |
-| `faq_title` | String | Heading for FAQ section |
+| `deliverables_title` / `deliverables_label` / `deliverables_description` | String | Heading for deliverables section |
+| `deliverables_items` | Array[{icon, title, description, highlights[]}] | Deliverable metric cards |
+| `metric_grid_title` / `metric_grid_label` / `metric_grid_body` / `metric_grid_cols` | String / String / String / Number | Metric grid header + column count (default 4) |
+| `metric_grid_items` | Array[{label, description, color}] | Metric cards for timelines, key dates, etc. |
+| `faq_title` / `faq_label` | String | Heading for FAQ section |
 | `faq_items` | Array[{question, answer}] | Collapse accordion FAQ items |
-| `cta_title` | String | Heading for final CTA section |
+| `cta_title` / `cta_label` | String | Heading for final CTA section |
 | `cta_body` | String | Body text for final CTA |
 | `cta_primary` / `cta_primary_url` | String | Primary CTA button label and URL |
-| `info_cards_title` / `info_cards_items` (optional) | String / Array | 2-col card grid for "who we help", "warning signs", etc. |
-| `metric_grid_items` (optional) | Array[{label, description, color}] | 4-col metric grid for timelines, key dates, etc. |
+| `cta_secondary` / `cta_secondary_url` | String (optional) | Secondary CTA button label and URL |
+| `featured_panel_title` / `featured_panel_label` / `featured_panel_logo` | String | Deep-dive recommendation panel (logo optional) |
+| `featured_panel_body` | Array[String] | Paragraphs for the featured panel |
+| `featured_panel_metrics` | Array[{value, label, color}] | Stat badges in the featured panel |
+| `featured_panel_buttons` | Array[{url, label, style, external}] | CTA buttons in the featured panel |
+| `comparison_cols_title` / `comparison_cols_label` / `comparison_cols_description` | String | Side-by-side comparison section header |
+| `comparison_cols_items` | Array[{title, label, label_color, logo, logo_text, logo_color, body[], features[], buttons[]}] | 2-column comparison cards with logos & CTAs |
+| `comparison_cols_2_*` | (same as above) | Second comparison columns section |
+| `comparison_table_title` / `comparison_table_label` / `comparison_table_description` | String | Feature comparison table header |
+| `comparison_table_headers` | Array[String] | Column headers for comparison table |
+| `comparison_table_rows` | Array[Array[String]] | Table data rows (first col is bold) |
+| `comparison_table_2_*` | (same as above) | Second comparison table section |
 
 **Important TOML rule**: All scalar `[extra]` fields must be defined before any `[[extra.xxx]]` array-of-tables lines. Mixing them causes TOML parser errors in Zola.
 
-**Custom sections**: Pages with unique content (comparison tables, detailed feature lists, etc.) can put HTML in the markdown body after `+++`. The template renders this via `page.content` in the `prose` section.
+**Custom sections**: Pages with unique content (timeline milestones, framework deep-dives, etc.) can use the markdown body after `+++`. The template renders this via `page.content` in the `prose` section.
 
 Example:
 ```toml

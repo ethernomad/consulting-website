@@ -96,13 +96,15 @@
     <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">{{ extra.overview_title }}</h2>
     {% if extra.overview_body %}
     {% for p in extra.overview_body %}
-    <p class="text-lg text-base-content/80">{{ p }}</p>
+    <p class="text-lg text-base-content/80">{{ p | safe }}</p>
     {% endfor %}
     {% endif %}
   </div>
 
   {% if extra.overview_metrics %}
-  <div class="mt-10 grid gap-6 md:grid-cols-{{ extra.overview_metrics | length }}">
+  {% set om_len = extra.overview_metrics | length %}
+  {% if om_len == 4 %}{% set om_cols = "md:grid-cols-2 lg:grid-cols-4" %}{% elif om_len == 3 %}{% set om_cols = "md:grid-cols-3" %}{% elif om_len == 2 %}{% set om_cols = "md:grid-cols-2" %}{% else %}{% set om_cols = "md:grid-cols-{" ~ om_len ~ "}" %}{% endif %}
+  <div class="mt-10 grid gap-6 {{ om_cols }}">
     {% for m in extra.overview_metrics %}
     <div class="metric-card">
       <p class="text-3xl font-extrabold text-primary">{{ m.label }}</p>
@@ -130,18 +132,22 @@
   </div>
 
   {% if extra.services_grid_items %}
-  <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  {% set sg_cols = extra.services_grid_cols | default(value=3) %}
+  <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-{{ sg_cols }}">
     {% for item in extra.services_grid_items %}
-    <article class="glass-panel rounded-3xl p-8 space-y-4">
+    <article class="glass-panel rounded-3xl p-8 space-y-4 {% if item.recommended %}ring-1 ring-primary/30{% endif %}">
       {% if item.icon %}<span class="text-3xl">{{ item.icon }}</span>{% endif %}
       <h3 class="text-xl font-bold text-base-content">{{ item.title }}</h3>
       <p class="text-base-content/80 leading-relaxed text-sm">{{ item.description }}</p>
       {% if item.highlights %}
       <ul class="space-y-2 text-sm text-base-content/70">
         {% for h in item.highlights %}
-        <li>{{ h }}</li>
+        <li>{{ h | safe }}</li>
         {% endfor %}
       </ul>
+      {% endif %}
+      {% if item.link %}
+      <a href="{{ get_url(path=item.link) }}" class="link link-hover text-primary font-semibold text-sm">{{ item.link_text | default(value="Learn more") }} →</a>
       {% endif %}
     </article>
     {% endfor %}
@@ -151,8 +157,7 @@
 {% endif %}
 
 {# ═══════════════════════════════════════════ #}
-{# INFO CARDS (2-col grid, for "who we help"  #}
-{# or "why adoption fails" etc.)               #}
+{# INFO CARDS (configurable grid cols)         #}
 {# ═══════════════════════════════════════════ #}
 {% if extra.info_cards_items %}
 <section class="mx-auto max-w-7xl px-6 pb-24">
@@ -160,25 +165,42 @@
     {% if extra.info_cards_label %}
     <p class="text-sm font-semibold tracking-wide text-primary/80">{{ extra.info_cards_label }}</p>
     {% endif %}
+    {% if extra.info_cards_title %}
     <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">{{ extra.info_cards_title }}</h2>
+    {% endif %}
     {% if extra.info_cards_description %}
     <p class="text-lg text-base-content/80">{{ extra.info_cards_description }}</p>
     {% endif %}
   </div>
 
   {% if extra.info_cards_items %}
-  <div class="mt-10 grid gap-6 md:grid-cols-{{ extra.info_cards_cols | default(value=2) }}">
+  {% set ic_cols = extra.info_cards_cols | default(value=2) %}
+  <div class="mt-10 grid gap-6 md:grid-cols-{{ ic_cols }}">
     {% for item in extra.info_cards_items %}
     <article class="glass-panel rounded-3xl p-8 space-y-4">
       {% if item.icon %}<span class="text-3xl">{{ item.icon }}</span>{% endif %}
+      {% if item.label %}<p class="text-sm font-semibold tracking-wide text-secondary/80">{{ item.label | safe }}</p>{% endif %}
       <h3 class="text-xl font-bold text-base-content">{{ item.title }}</h3>
-      <p class="text-base-content/80 leading-relaxed text-sm">{{ item.description }}</p>
+      {% if item.body %}
+      {% for p in item.body %}
+      <p class="text-base-content/80 leading-relaxed text-sm">{{ p | safe }}</p>
+      {% endfor %}
+      {% else %}
+      <p class="text-base-content/80 leading-relaxed text-sm">{{ item.description | safe }}</p>
+      {% endif %}
       {% if item.highlights %}
       <ul class="space-y-2 text-sm text-base-content/70">
         {% for h in item.highlights %}
-        <li>{{ h }}</li>
+        <li>{{ h | safe }}</li>
         {% endfor %}
       </ul>
+      {% endif %}
+      {% if item.buttons %}
+      <div class="flex flex-wrap gap-3">
+        {% for btn in item.buttons %}
+        <a href="{{ btn.url }}" class="btn btn-{{ btn.style | default(value='primary') }} btn-sm" {% if btn.external %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ btn.label }}</a>
+        {% endfor %}
+      </div>
       {% endif %}
     </article>
     {% endfor %}
@@ -245,11 +267,11 @@
     <div class="metric-card">
       {% if item.icon %}<span class="text-3xl">{{ item.icon }}</span>{% endif %}
       <h3 class="mt-{% if item.icon %}4{% else %}0{% endif %} text-xl font-bold text-base-content">{{ item.title }}</h3>
-      <p class="mt-3 text-base-content/80">{{ item.description }}</p>
+      <p class="mt-3 text-base-content/80">{{ item.description | safe }}</p>
       {% if item.highlights %}
       <ul class="mt-4 space-y-2 text-sm text-base-content/70">
         {% for h in item.highlights %}
-        <li>{{ h }}</li>
+        <li>{{ h | safe }}</li>
         {% endfor %}
       </ul>
       {% endif %}
@@ -261,7 +283,7 @@
 {% endif %}
 
 {# ═══════════════════════════════════════════ #}
-{# 4-COLUMN METRIC GRID (for timelines)        #}
+{# METRIC GRID (4-col default)                 #}
 {# ═══════════════════════════════════════════ #}
 {% if extra.metric_grid_items %}
 <section class="mx-auto max-w-7xl px-6 pb-24">
@@ -278,7 +300,8 @@
   {% endif %}
 
   {% if extra.metric_grid_items %}
-  <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+  {% set mg_cols = extra.metric_grid_cols | default(value=4) %}
+  <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-{{ mg_cols }}">
     {% for item in extra.metric_grid_items %}
     <div class="metric-card">
       <p class="text-3xl font-extrabold text-{{ item.color | default(value='primary') }}">{{ item.label }}</p>
@@ -287,6 +310,229 @@
     {% endfor %}
   </div>
   {% endif %}
+</section>
+{% endif %}
+
+{# ═══════════════════════════════════════════ #}
+{# FEATURED PANEL (deep-dive with stats, CTAs) #}
+{# ═══════════════════════════════════════════ #}
+{% if extra.featured_panel_title %}
+<section class="mx-auto max-w-7xl px-6 pb-24">
+  <div class="glass-panel rounded-3xl p-8 lg:p-10 ring-1 ring-primary/20">
+    <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-center">
+      {% if extra.featured_panel_logo %}
+      <div class="flex justify-center lg:justify-start">
+        <img src="{{ get_url(path=extra.featured_panel_logo) }}" alt="{{ extra.featured_panel_title }} logo" class="w-48 lg:w-56" />
+      </div>
+      {% endif %}
+      <div class="space-y-4">
+        <p class="text-sm font-semibold tracking-wide text-primary/80">{{ extra.featured_panel_label | default(value="Our recommendation") }}</p>
+        <h2 class="font-display text-3xl font-extrabold text-base-content md:text-4xl">{{ extra.featured_panel_title }}</h2>
+        {% for p in extra.featured_panel_body %}
+        <p class="text-base-content/80 leading-relaxed">{{ p }}</p>
+        {% endfor %}
+        {% if extra.featured_panel_metrics %}
+        <div class="grid gap-4 sm:grid-cols-{{ extra.featured_panel_metrics | length }}">
+          {% for m in extra.featured_panel_metrics %}
+          <div class="rounded-2xl bg-base-200/80 p-4 text-center">
+            <p class="text-2xl font-extrabold text-{{ m.color | default(value='primary') }}">{{ m.value }}</p>
+            <p class="text-xs text-base-content/70">{{ m.label }}</p>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <div class="flex flex-wrap gap-3">
+          {% for btn in extra.featured_panel_buttons %}
+          <a href="{{ btn.url }}" class="btn btn-{{ btn.style | default(value='primary') }} btn-sm" {% if btn.external %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ btn.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ═══════════════════════════════════════════ #}
+{# SIDE-BY-SIDE COMPARISON COLUMNS             #}
+{# ═══════════════════════════════════════════ #}
+{% if extra.comparison_cols_items %}
+<section class="mx-auto max-w-7xl px-6 pb-24">
+  <div class="max-w-3xl space-y-4">
+    {% if extra.comparison_cols_label %}
+    <p class="text-sm font-semibold tracking-wide text-primary/80">{{ extra.comparison_cols_label }}</p>
+    {% endif %}
+    <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">{{ extra.comparison_cols_title }}</h2>
+    {% if extra.comparison_cols_description %}
+    <p class="text-lg text-base-content/80">{{ extra.comparison_cols_description }}</p>
+    {% endif %}
+  </div>
+  <div class="mt-10 grid gap-8 lg:grid-cols-2">
+    {% for col in extra.comparison_cols_items %}
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+      {% if col.logo or col.logo_text %}
+      <div class="flex items-center gap-6">
+        {% if col.logo %}
+        <img src="{{ get_url(path=col.logo) }}" alt="{{ col.title }}" class="w-28 lg:w-36 h-auto shrink-0 logo-invert-light" />
+        {% elif col.logo_text %}
+        <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
+          <span class="text-3xl font-extrabold text-{{ col.logo_color | default(value='primary') }}">{{ col.logo_text }}</span>
+        </div>
+        {% endif %}
+        <div>
+          {% if col.label %}<p class="text-sm font-semibold tracking-wide text-{{ col.label_color | default(value='primary') }}/80">{{ col.label }}</p>{% endif %}
+          <h3 class="font-display text-2xl font-extrabold text-base-content">{{ col.title }}</h3>
+        </div>
+      </div>
+      {% else %}
+      <h3 class="text-xl font-bold text-base-content">{{ col.title }}</h3>
+      {% endif %}
+      {% for p in col.body %}
+      <p class="mt-6 text-base-content/80 leading-relaxed">{{ p | safe }}</p>
+      {% endfor %}
+      {% if col.features %}
+      <ul class="mt-6 space-y-3 text-base-content/80">
+        {% for f in col.features %}
+        <li>{{ f | safe }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if col.buttons %}
+      <div class="mt-auto pt-6 flex flex-wrap gap-3">
+        {% for btn in col.buttons %}
+        <a href="{{ btn.url }}" class="btn btn-{{ btn.style | default(value='primary') }} btn-sm" {% if btn.external %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ btn.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# ═══════════════════════════════════════════ #}
+{# SIDE-BY-SIDE COMPARISON COLUMNS 2           #}
+{# ═══════════════════════════════════════════ #}
+{% if extra.comparison_cols_2_items %}
+<section class="mx-auto max-w-7xl px-6 pb-24">
+  <div class="max-w-3xl space-y-4">
+    {% if extra.comparison_cols_2_label %}
+    <p class="text-sm font-semibold tracking-wide text-primary/80">{{ extra.comparison_cols_2_label }}</p>
+    {% endif %}
+    <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">{{ extra.comparison_cols_2_title }}</h2>
+    {% if extra.comparison_cols_2_description %}
+    <p class="text-lg text-base-content/80">{{ extra.comparison_cols_2_description }}</p>
+    {% endif %}
+  </div>
+  <div class="mt-10 grid gap-8 lg:grid-cols-2">
+    {% for col in extra.comparison_cols_2_items %}
+    <div class="glass-panel rounded-3xl p-8 lg:p-10 flex flex-col">
+      {% if col.logo or col.logo_text %}
+      <div class="flex items-center gap-6">
+        {% if col.logo %}
+        <img src="{{ get_url(path=col.logo) }}" alt="{{ col.title }}" class="w-28 lg:w-36 h-auto shrink-0 logo-invert-light" />
+        {% elif col.logo_text %}
+        <div class="w-20 h-20 lg:w-24 lg:h-24 shrink-0 rounded-2xl bg-base-200/80 flex items-center justify-center">
+          <span class="text-3xl font-extrabold text-{{ col.logo_color | default(value='primary') }}">{{ col.logo_text }}</span>
+        </div>
+        {% endif %}
+        <div>
+          {% if col.label %}<p class="text-sm font-semibold tracking-wide text-{{ col.label_color | default(value='primary') }}/80">{{ col.label }}</p>{% endif %}
+          <h3 class="font-display text-2xl font-extrabold text-base-content">{{ col.title }}</h3>
+        </div>
+      </div>
+      {% else %}
+      <h3 class="text-xl font-bold text-base-content">{{ col.title }}</h3>
+      {% endif %}
+      {% for p in col.body %}
+      <p class="mt-6 text-base-content/80 leading-relaxed">{{ p | safe }}</p>
+      {% endfor %}
+      {% if col.features %}
+      <ul class="mt-6 space-y-3 text-base-content/80">
+        {% for f in col.features %}
+        <li>{{ f | safe }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if col.buttons %}
+      <div class="mt-auto pt-6 flex flex-wrap gap-3">
+        {% for btn in col.buttons %}
+        <a href="{{ btn.url }}" class="btn btn-{{ btn.style | default(value='primary') }} btn-sm" {% if btn.external %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ btn.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# ═══════════════════════════════════════════ #}
+{# COMPARISON TABLE                            #}
+{# ═══════════════════════════════════════════ #}
+{% if extra.comparison_table_rows %}
+<section class="mx-auto max-w-7xl px-6 pb-24">
+  <div class="glass-panel rounded-3xl p-8 lg:p-10">
+    <p class="text-sm font-semibold tracking-wide text-primary/80">{{ extra.comparison_table_label | default(value="Comparison") }}</p>
+    <h2 class="mt-2 font-display text-3xl font-extrabold text-base-content md:text-4xl">{{ extra.comparison_table_title }}</h2>
+    {% if extra.comparison_table_description %}
+    <p class="mt-2 text-base-content/80">{{ extra.comparison_table_description }}</p>
+    {% endif %}
+    <div class="mt-8 overflow-x-auto">
+      <table class="table w-full">
+        <thead>
+          <tr class="text-base-content/80">
+            {% for h in extra.comparison_table_headers %}
+            <th class="font-semibold">{{ h }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in extra.comparison_table_rows %}
+          <tr>
+            {% for val in row %}
+            <td{% if loop.first %} class="font-semibold"{% endif %}>{{ val | safe }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ═══════════════════════════════════════════ #}
+{# COMPARISON TABLE 2                          #}
+{# ═══════════════════════════════════════════ #}
+{% if extra.comparison_table_2_rows %}
+<section class="mx-auto max-w-7xl px-6 pb-24">
+  <div class="glass-panel rounded-3xl p-8 lg:p-10">
+    <p class="text-sm font-semibold tracking-wide text-primary/80">{{ extra.comparison_table_2_label | default(value="Comparison") }}</p>
+    <h2 class="mt-2 font-display text-3xl font-extrabold text-base-content md:text-4xl">{{ extra.comparison_table_2_title }}</h2>
+    {% if extra.comparison_table_2_description %}
+    <p class="mt-2 text-base-content/80">{{ extra.comparison_table_2_description }}</p>
+    {% endif %}
+    <div class="mt-8 overflow-x-auto">
+      <table class="table w-full">
+        <thead>
+          <tr class="text-base-content/80">
+            {% for h in extra.comparison_table_2_headers %}
+            <th class="font-semibold">{{ h }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in extra.comparison_table_2_rows %}
+          <tr>
+            {% for val in row %}
+            <td{% if loop.first %} class="font-semibold"{% endif %}>{{ val | safe }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
 {% endif %}
 
