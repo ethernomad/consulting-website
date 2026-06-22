@@ -25,200 +25,198 @@
           </div>
           <div class="flex flex-wrap gap-4">
             <a href="{{ config.extra.cta_primary_url }}" class="btn btn-primary btn-lg">{{ config.extra.cta_primary }}</a>
-            <a href="{{ get_url(path='@/ai-strategy.md') }}" class="btn btn-outline btn-lg">{{ config.extra.cta_secondary }}</a>
+            <a href="#consulting" class="btn btn-outline btn-lg">Explore services</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="mx-auto max-w-7xl px-6 py-24">
+  <!-- Consulting Section -->
+  <section id="consulting" class="mx-auto max-w-7xl px-6 pt-16 md:pt-20 pb-16 md:pb-20">
     <div class="max-w-3xl space-y-4">
-      <p class="text-sm font-semibold tracking-wide text-primary/80">Services</p>
-      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">End-to-end AI consulting and delivery</h2>
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Consulting</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Strategic advisory and guidance</h2>
       <p class="text-lg text-base-content/80">
-        We can support leadership teams, product teams, and operations teams at any stage: opportunity discovery, pilot design, data preparation, model development, integration, governance, and ongoing optimization.
+        From readiness assessments to change management, we help leadership teams make smart, informed decisions about AI adoption — grounded in real-world results, not hype.
       </p>
     </div>
-
     <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <article class="glass-panel rounded-3xl p-8 space-y-4">
         <span class="text-3xl">💡</span>
-        <h3 class="text-2xl font-bold text-base-content">AI strategy and advisory</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• AI readiness assessments</li>
-          <li>• High-ROI use case identification</li>
-          <li>• AI roadmap development</li>
-          <li>• Build-vs-buy recommendations</li>
-          <li>• Data strategy and governance planning</li>
-          <li>• Executive workshops on AI adoption</li>
-        </ul>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/ai-strategy.md') }}" class="hover:text-primary transition-colors">AI Strategy & Advisory</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Strategic AI guidance to identify where artificial intelligence creates measurable value, align leadership on priorities, and build a practical adoption roadmap.</p>
+        <a href="{{ get_url(path='@/ai-strategy.md') }}" class="link link-primary text-sm">Learn more →</a>
       </article>
 
       <article class="glass-panel rounded-3xl p-8 space-y-4">
         <span class="text-3xl">💸</span>
-        <h3 class="text-2xl font-bold text-base-content">AI Cost Optimization</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Full AI spend audit and shadow AI discovery</li>
-          <li>• Model and token optimization</li>
-          <li>• Infrastructure cost engineering</li>
-          <li>• AI FinOps — cost allocation, unit economics, guardrails</li>
-          <li>• ROI measurement and value tracking</li>
-          <li>• Workflow automation cost analysis</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🌐</span>
-        <h3 class="text-2xl font-bold text-base-content">Language AI and localization</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• NLP solutions for specialized domains</li>
-          <li>• Fine-tuning for language-specific tasks</li>
-          <li>• Local-language support chatbots</li>
-          <li>• Sentiment analysis for social and review data</li>
-          <li>• Translation and multilingual AI systems</li>
-          <li>• Voice assistants tuned for accents and dialects</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🤖</span>
-        <h3 class="text-2xl font-bold text-base-content">Process automation</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• AI-powered workflow automation</li>
-          <li>• Intelligent extraction for invoices, contracts, and forms</li>
-          <li>• Email and ticket triage</li>
-          <li>• HR and recruitment screening tools</li>
-          <li>• Finance and accounting automation</li>
-          <li>• Customer service automation</li>
-          <li>• C-level and operational dashboards that provide insight into business operations</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🧑‍💼</span>
-        <h3 class="text-2xl font-bold text-base-content">Business agent</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Always-on AI assistant for business owners</li>
-          <li>• Email, calendar, and inbox management</li>
-          <li>• Scheduled automations via cron jobs</li>
-          <li>• Persistent memory and self-improving skills</li>
-          <li>• Multi-platform reach (Discord, Telegram, Slack)</li>
-          <li>• Self-hosted on your infrastructure</li>
-          <li>• Powered by Hermes Agent (open source)</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🎙️</span>
-        <h3 class="text-2xl font-bold text-base-content">AI Voice Agents</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• 24/7 inbound call answering — no missed opportunities</li>
-          <li>• Lead qualification and appointment booking</li>
-          <li>• Multilingual support (Vietnamese + English)</li>
-          <li>• Integration with CRM, calendar, and knowledge bases</li>
-          <li>• Outbound campaign automation at scale</li>
-          <li>• SaaS or self-hosted open source stack</li>
-          <li>• Powered by Retell AI, LiveKit, or Dograh</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🧑‍💻</span>
-        <h3 class="text-2xl font-bold text-base-content">Agentic Coding</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Hands-on training with Claude Code, OpenCode, Pi, and Codex</li>
-          <li>• Context engineering and instruction file authoring</li>
-          <li>• Verification loops and quality gate setup</li>
-          <li>• Multi-agent orchestration and sub-agent patterns</li>
-          <li>• Security, sandboxing, and safe autonomous execution</li>
-          <li>• We recommend OpenCode — open source, model-agnostic, privacy-first</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🔒</span>
-        <h3 class="text-2xl font-bold text-base-content">Private Inference</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Run AI models on your own infrastructure</li>
-          <li>• Data never leaves your network — compliant with VN AI Law, GDPR</li>
-          <li>• Predictable costs at scale vs per-token API pricing</li>
-          <li>• Self-hosted LLM serving with Candle or xinfer</li>
-          <li>• Single binary deployment — no Python or Node required</li>
-          <li>• Offline capable — runs without internet connectivity</li>
-        </ul>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/ai-cost-optimization.md') }}" class="hover:text-primary transition-colors">AI Cost Optimization</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Audit, optimize, and govern your AI spending — from LLM APIs and GPU infrastructure to workflow automation and shadow AI — so every dollar drives measurable value.</p>
+        <a href="{{ get_url(path='@/ai-cost-optimization.md') }}" class="link link-primary text-sm">Learn more →</a>
       </article>
 
       <article class="glass-panel rounded-3xl p-8 space-y-4">
         <span class="text-3xl">🛡️</span>
-        <h3 class="text-2xl font-bold text-base-content">AI Production Hardening</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Take MVPs and PoCs from demo to production-ready</li>
-          <li>• Observability — tracing, logging, and monitoring for every LLM call</li>
-          <li>• Guardrails, fallback paths, and graceful degradation</li>
-          <li>• Cost controls, budget limits, and anomaly detection</li>
-          <li>• Evaluations, regression testing, and safe release discipline</li>
-          <li>• Built with Rust for performance and reliability</li>
-        </ul>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/ai-production-hardening.md') }}" class="hover:text-primary transition-colors">AI Production Hardening</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Take AI prototypes and MVPs to production-ready systems with observability, guardrails, fallback paths, cost controls, and the operational layer that makes AI reliable.</p>
+        <a href="{{ get_url(path='@/ai-production-hardening.md') }}" class="link link-primary text-sm">Learn more →</a>
       </article>
 
       <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">📊</span>
-        <h3 class="text-2xl font-bold text-base-content">Data and machine learning services</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Data engineering and pipeline setup</li>
-          <li>• Data cleaning and annotation</li>
-          <li>• C-level and operational dashboards that provide insight into business operations</li>
-          <li>• ML model development and deployment</li>
-          <li>• MLOps and model monitoring</li>
-          <li>• Feature engineering and experimentation</li>
-        </ul>
+        <span class="text-3xl">🔄</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/ai-change-management.md') }}" class="hover:text-primary transition-colors">AI Change Management</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Workshops, internal champions, documentation, and office hours that get your team actually using AI — because the #1 reason AI projects fail is non-adoption.</p>
+        <a href="{{ get_url(path='@/ai-change-management.md') }}" class="link link-primary text-sm">Learn more →</a>
       </article>
 
       <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">✨</span>
-        <h3 class="text-2xl font-bold text-base-content">Generative AI consulting</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Internal knowledge assistants</li>
-          <li>• RAG systems over company documents</li>
-          <li>• Copilots for sales, HR, legal, and operations</li>
-          <li>• Content generation systems</li>
-          <li>• Enterprise AI search</li>
-          <li>• Prompt engineering and evaluation frameworks</li>
-          <li>• Fine-tuning and model customization</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🏭</span>
-        <h3 class="text-2xl font-bold text-base-content">Industry-specific solutions</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Manufacturing, retail, banking, real estate</li>
-          <li>• Healthcare, education, logistics, agriculture</li>
-          <li>• Tailored pilots built around operational constraints and ROI</li>
-        </ul>
-      </article>
-
-      <article class="glass-panel rounded-3xl p-8 space-y-4">
-        <span class="text-3xl">🔗</span>
-        <h3 class="text-2xl font-bold text-base-content">Integration, training, and governance</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• ERP, CRM, HRM, website, and mobile integrations</li>
-          <li>• API integrations with OpenAI, Anthropic, Google, AWS, Azure</li>
-          <li>• AI literacy and prompt engineering workshops</li>
-          <li>• Policy, ethics, risk, privacy, and responsible AI support</li>
-        </ul>
+        <span class="text-3xl">🎓</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/training.md') }}" class="hover:text-primary transition-colors">Training</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Hands-on workshops, cohort programs, and custom curricula that teach your organization to use AI effectively — from executive strategy to hands-on engineering.</p>
+        <a href="{{ get_url(path='@/training.md') }}" class="link link-primary text-sm">Learn more →</a>
       </article>
 
       <article class="glass-panel rounded-3xl p-8 space-y-4">
         <span class="text-3xl">🚀</span>
-        <h3 class="text-2xl font-bold text-base-content">Managed AI services and startup support</h3>
-        <ul class="space-y-3 text-base-content/80">
-          <li>• Monitoring, optimization, retraining, and reporting</li>
-          <li>• AI helpdesk and cost optimization</li>
-          <li>• MVPs, prototypes, investor demos, and product discovery</li>
-          <li>• Technical due diligence for investors and acquirers</li>
-        </ul>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/startup-support.md') }}" class="hover:text-primary transition-colors">Startup Support</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Rapid AI prototyping, MVP development, and product validation for startups, incubators, and corporate innovation teams — from idea to investor demo in weeks.</p>
+        <a href="{{ get_url(path='@/startup-support.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Development Section -->
+  <section id="development" class="mx-auto max-w-7xl px-6 pb-16 md:pb-20">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Development</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Build and deploy AI systems</h2>
+      <p class="text-lg text-base-content/80">
+        From generative AI and voice agents to custom model training and private inference — we design, build, and deploy production-grade AI solutions with Rust.
+      </p>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">✨</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/generative-ai.md') }}" class="hover:text-primary transition-colors">Generative AI</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Design and deploy generative AI systems that reason over your data, automate knowledge work, and deliver grounded, verifiable results.</p>
+        <a href="{{ get_url(path='@/generative-ai.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🎙️</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/ai-voice-agents.md') }}" class="hover:text-primary transition-colors">AI Voice Agents</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Deploy intelligent AI voice agents that handle inbound and outbound calls 24/7 — lead qualification, appointment booking, and multilingual support.</p>
+        <a href="{{ get_url(path='@/ai-voice-agents.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💻</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/agentic-coding.md') }}" class="hover:text-primary transition-colors">Agentic Coding</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Learn to write software effectively with AI coding agents — from solo practice to enterprise team workflows with Claude Code, OpenCode, and Pi.</p>
+        <a href="{{ get_url(path='@/agentic-coding.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧑‍💼</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/business-agent.md') }}" class="hover:text-primary transition-colors">Business Agent</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Deploy an always-on AI agent that manages communications, automates workflows, and gets smarter over time — across Discord, Telegram, and Slack.</p>
+        <a href="{{ get_url(path='@/business-agent.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🤖</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/custom-agent.md') }}" class="hover:text-primary transition-colors">Custom Agent</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Build bespoke AI agent applications with production-grade Rust frameworks for realtime voice agents, autonomous workflows, and agent-to-agent communication.</p>
+        <a href="{{ get_url(path='@/custom-agent.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📱</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/app-building.md') }}" class="hover:text-primary transition-colors">App Building</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Build cross-platform desktop, mobile, and web applications from a single Rust codebase with Dioxus — combining the DX of React with Rust performance.</p>
+        <a href="{{ get_url(path='@/app-building.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🔒</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/private-inference.md') }}" class="hover:text-primary transition-colors">Private Inference</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Run AI models on your own infrastructure — no data leaves your network, no per-token bills, no vendor lock-in. Full compliance and predictable costs.</p>
+        <a href="{{ get_url(path='@/private-inference.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🧠</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/model-training.md') }}" class="hover:text-primary transition-colors">AI Model Training</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Train custom deep learning models with Rust and Burn — the native Rust framework that delivers PyTorch-class performance with zero Python overhead.</p>
+        <a href="{{ get_url(path='@/model-training.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Governance Section -->
+  <section id="governance" class="mx-auto max-w-7xl px-6 pb-16 md:pb-20">
+    <div class="max-w-3xl space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-primary/80">Governance</p>
+      <h2 class="font-display text-3xl font-extrabold text-base-content md:text-5xl">Compliance, safety, and responsible AI</h2>
+      <p class="text-lg text-base-content/80">
+        Board-level advisory and technical assurance for AI governance frameworks, regulatory compliance, and safety testing — covering EU AI Act, NIST AI RMF, VN AI Law, and more.
+      </p>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">⚖️</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/ai-governance.md') }}" class="hover:text-primary transition-colors">AI Governance</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Board-level AI governance advisory covering EU AI Act, NIST AI RMF, SOC 2, HIPAA, and VN AI Law — gap assessments, framework alignment, and compliance roadmaps.</p>
+        <a href="{{ get_url(path='@/ai-governance.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">📜</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/vn-ai-law.md') }}" class="hover:text-primary transition-colors">VN AI Law Compliance</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Vietnam's AI Law (Law 134/2025/QH15) took effect 1 March 2026. Compliance deadlines begin March 2027. Most organisations are already in scope.</p>
+        <a href="{{ get_url(path='@/vn-ai-law.md') }}" class="link link-primary text-sm">Learn more →</a>
+      </article>
+
+      <article class="glass-panel rounded-3xl p-8 space-y-4">
+        <span class="text-3xl">🛡️</span>
+        <h3 class="text-xl font-bold text-base-content">
+          <a href="{{ get_url(path='@/ai-safety.md') }}" class="hover:text-primary transition-colors">AI Safety Audit & Red Teaming</a>
+        </h3>
+        <p class="text-base-content/70 leading-relaxed text-sm">Technical AI safety assessments — red teaming, model bias analysis, adversarial testing, and safety guardrails for production AI systems.</p>
+        <a href="{{ get_url(path='@/ai-safety.md') }}" class="link link-primary text-sm">Learn more →</a>
       </article>
     </div>
   </section>

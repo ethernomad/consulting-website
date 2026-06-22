@@ -236,7 +236,7 @@ Home (_index.md)
 
 ```
 base.html                  ← Everything extends this
-├── index.html             ← Home/landing page (hero, services grid, testimonials, news preview)
+├── index.html             ← Home/landing page (hero, consulting, development, governance panels, testimonials, news preview, CTA)
 ├── page.html              ← Individual content page (article layout with optional image)
 ├── about.html             ← Custom about page with hero, timeline, skills grid, projects, philosophy, CTA
 └── section.html           ← Listing page (for news pagination and service category listing)
